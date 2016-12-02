@@ -7,25 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */; };
+		3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BB7011DDFF92B00A6479C /* BrandList.plist */; };
 		3C0D31741DDD9D9500D78924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31731DDD9D9500D78924 /* main.m */; };
 		3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31761DDD9D9500D78924 /* AppDelegate.m */; };
-		3C0D317A1DDD9D9500D78924 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31791DDD9D9500D78924 /* ViewController.m */; };
 		3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D317B1DDD9D9500D78924 /* Main.storyboard */; };
 		3C0D317F1DDD9D9500D78924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D317E1DDD9D9500D78924 /* Assets.xcassets */; };
 		3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */; };
+		3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D318B1DDDA3A600D78924 /* MainController.m */; };
+		3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */; };
+		3C0D31921DDEDA5D00D78924 /* ModelVersionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */; };
+		3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */; };
+		3CDB74351DE2E4A9008CC61D /* NSE_Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0BB7011DDFF92B00A6479C /* BrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BrandList.plist; sourceTree = "<group>"; };
 		3C0D316F1DDD9D9500D78924 /* BinMarker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinMarker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0D31731DDD9D9500D78924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C0D31751DDD9D9500D78924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C0D31761DDD9D9500D78924 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C0D31781DDD9D9500D78924 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C0D31791DDD9D9500D78924 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C0D317C1DDD9D9500D78924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C0D317E1DDD9D9500D78924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C0D31811DDD9D9500D78924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C0D31831DDD9D9500D78924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C0D318A1DDDA3A600D78924 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		3C0D318B1DDDA3A600D78924 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceController.h; sourceTree = "<group>"; };
+		3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceController.m; sourceTree = "<group>"; };
+		3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BinMarker-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelVersionController.swift; sourceTree = "<group>"; };
+		3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
+		3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSE_Database.sqlite; sourceTree = "<group>"; };
+		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
+		98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BinMarker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B06F660B7C0797452319BB /* Pods-BinMarker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +61,8 @@
 			children = (
 				3C0D31711DDD9D9500D78924 /* BinMarker */,
 				3C0D31701DDD9D9500D78924 /* Products */,
+				C93512C1FF97EC979024132C /* Pods */,
+				D87B68AA47A996CB743B73D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +77,9 @@
 		3C0D31711DDD9D9500D78924 /* BinMarker */ = {
 			isa = PBXGroup;
 			children = (
+				3C0D31891DDDA38800D78924 /* New Group */,
 				3C0D31751DDD9D9500D78924 /* AppDelegate.h */,
 				3C0D31761DDD9D9500D78924 /* AppDelegate.m */,
-				3C0D31781DDD9D9500D78924 /* ViewController.h */,
-				3C0D31791DDD9D9500D78924 /* ViewController.m */,
 				3C0D317B1DDD9D9500D78924 /* Main.storyboard */,
 				3C0D317E1DDD9D9500D78924 /* Assets.xcassets */,
 				3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */,
@@ -74,9 +92,42 @@
 		3C0D31721DDD9D9500D78924 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */,
 				3C0D31731DDD9D9500D78924 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3C0D31891DDDA38800D78924 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3C0D318A1DDDA3A600D78924 /* MainController.h */,
+				3C0D318B1DDDA3A600D78924 /* MainController.m */,
+				3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */,
+				3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */,
+				3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */,
+				3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */,
+				3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */,
+				3C0BB7011DDFF92B00A6479C /* BrandList.plist */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		C93512C1FF97EC979024132C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0B06F660B7C0797452319BB /* Pods-BinMarker.debug.xcconfig */,
+				6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D87B68AA47A996CB743B73D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C0D31861DDD9D9500D78924 /* Build configuration list for PBXNativeTarget "BinMarker" */;
 			buildPhases = (
+				71CFB5528B851F6ADD2A19B5 /* [CP] Check Pods Manifest.lock */,
 				3C0D316B1DDD9D9400D78924 /* Sources */,
 				3C0D316C1DDD9D9400D78924 /* Frameworks */,
 				3C0D316D1DDD9D9400D78924 /* Resources */,
+				AE2976ED3E76D9DCDA67BD7C /* [CP] Embed Pods Frameworks */,
+				D66DC7A0FF4305940CCA1B6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,8 +164,9 @@
 				TargetAttributes = {
 					3C0D316E1DDD9D9400D78924 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = XKGRM7N2Q8;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 7BLZ9JWB5U;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -138,6 +193,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CDB74351DE2E4A9008CC61D /* NSE_Database.sqlite in Resources */,
+				3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C0D317F1DDD9D9500D78924 /* Assets.xcassets in Resources */,
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
@@ -146,13 +203,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		71CFB5528B851F6ADD2A19B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2976ED3E76D9DCDA67BD7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66DC7A0FF4305940CCA1B6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C0D316B1DDD9D9400D78924 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0D317A1DDD9D9500D78924 /* ViewController.m in Sources */,
 				3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */,
+				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
+				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
+				3C0D31921DDEDA5D00D78924 /* ModelVersionController.swift in Sources */,
+				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,25 +379,43 @@
 		};
 		3C0D31871DDD9D9500D78924 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0B06F660B7C0797452319BB /* Pods-BinMarker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XKGRM7N2Q8;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
 				INFOPLIST_FILE = BinMarker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.BinMarker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d20eec34-560b-44b5-a1aa-0236592a1ba5";
+				PROVISIONING_PROFILE_SPECIFIER = Development_General_Test_2016_07_20;
+				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		3C0D31881DDD9D9500D78924 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XKGRM7N2Q8;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
 				INFOPLIST_FILE = BinMarker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.BinMarker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5b7f8126-2776-4541-85dd-306ca3f3df67";
+				PROVISIONING_PROFILE_SPECIFIER = Distribution_BinMaker_2016_11_23;
+				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
@@ -312,6 +438,7 @@
 				3C0D31881DDD9D9500D78924 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

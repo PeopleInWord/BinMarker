@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AIR</key>
+	<array>
+		<dict>
+			<key>长虹</key>
+			<array>
+				<string>sada</string>
+				<string>sadasd</string>
+			</array>
+			<key>AUX</key>
+			<array>
+				<string>cccccc</string>
+				<string>sdacvb</string>
+			</array>
+			<key>TCL</key>
+			<array>
+				<string>85BL</string>
+				<string>85BL</string>
+				<string>85BL</string>
+				<string>85BL</string>
+				<string>85BL</string>
+			</array>
+		</dict>
+	</array>
+	<key>TV</key>
+	<array>
+		<dict>
+			<key>长虹</key>
+			<array/>
+			<key>AUX</key>
+			<array/>
+			<key>TCL</key>
+			<dict>
+				<key>TD 1410</key>
+				<string>1051</string>
+				<key>7551</key>
+				<string>225</string>
+				<key>T - 68 T 17</key>
+				<string>585</string>
+				<key>SOME MODELS TV</key>
+				<string>601</string>
+				<key>EC 2189</key>
+				<string>114</string>
+			</dict>
+		</dict>
+	</array>
+	<key>DVD</key>
+	<array/>
+	<key>AMP</key>
+	<array/>
+</dict>
+</plist>
