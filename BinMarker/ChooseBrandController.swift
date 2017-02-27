@@ -67,7 +67,6 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
                     
                 }
                 let brandName=deviceBrandList.object(at: (sender as! NSIndexPath).row) as! String
-//                select DISTINCT (brand) from RemoteIndex where DeviceType = "SAT" AND Brand ="GBS" order by brand
                 let sqlStr="select DISTINCT (Model) from RemoteIndex where DeviceType = " + (deviceTypeStr as String) + " AND Brand ="+"\"" + brandName+"\""+" order by brand"
                 print(sqlStr)
                 let result=db?.executeQuery(sqlStr, withArgumentsIn: nil)

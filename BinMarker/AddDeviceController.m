@@ -10,6 +10,7 @@
 #import "AddDeviceController.h"
 #import "BinMarker-swift.h"
 #import "FMDB.h"
+
 @interface AddDeviceController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *mainView;
@@ -61,7 +62,7 @@
 {
     return UIEdgeInsetsMake(10, 10, 0, 10);
 }
-
+//67346768
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {

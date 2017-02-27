@@ -3,4 +3,8 @@
 //
 
 #import "AddDeviceController.h"
+#import "MainController.h"
 #import "FMDB.h"
+#import "FTPopOverMenu.h"
+#import "BluetoothManager.h"
+#import "MBProgressHUD.h"

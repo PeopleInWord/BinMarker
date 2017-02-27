@@ -7,18 +7,28 @@
 //
 
 #import "MainController.h"
+#import "ReactiveObjC.h"
+#import "BinMarker-swift.h"
+#import "FTPopOverMenu.h"
+#import "BluetoothManager.h"
+#import "AppDelegate.h"
 
-@interface MainController ()<UITableViewDelegate,UITableViewDataSource>
+
+static NSString *const targetName=@"IrRemoteControllerA";
+
+@interface MainController ()<UITableViewDelegate,UITableViewDataSource,UIDocumentInteractionControllerDelegate,UIApplicationDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-@property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,NSString *>*>*alldevices;
-
+@property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,id>*>*alldevices;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *testItem;
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
+@property (weak, nonatomic) IBOutlet UIButton *selectDevice;
 
 @end
 
 
 @implementation MainController
 
--(NSMutableArray< NSDictionary<NSString *, NSString *  > *> *)alldevices
+-(NSMutableArray< NSDictionary<NSString *, id> *> *)alldevices
 {
     if (!_alldevices) {
         _alldevices=[NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]objectForKey:@"deviceInfo"]];
@@ -26,10 +36,18 @@
     return _alldevices;
 }
 
+-(NSMutableArray<NSString *> *)nearRemote
+{
+    if (!_nearRemote) {
+        _nearRemote=[NSMutableArray array];
+    }
+    return _nearRemote;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@",[[NSUserDefaults standardUserDefaults]dictionaryRepresentation]);
-    // Do any additional setup after loading the view.
+    [self loadBluetooth];
+        // Do any additional setup after loading the view.
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -37,33 +55,146 @@
     [super viewWillAppear:animated];
     _alldevices=nil;
     [self.mainTableView reloadData];
+    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    if (!app.autoScan.valid) {
+        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
+        [app.autoScan fire];
+    }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+    if (app.autoScan.valid) {
+        [app.autoScan invalidate];
+    }
+}
+
+
+
+- (void)autoScan:(id)sender {
+    NSLogMethodArgs(@"autoScan");
+    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+}
+
+
+-(void)loadBluetooth
+{
+    [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];;
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"peripheralsInfo"]) {
+        [[BluetoothManager getInstance].peripheralsInfo enumerateObjectsUsingBlock:
+         ^(__kindof NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+        {
+            NSString *deviceName=obj[AdvertisementData][@"kCBAdvDataLocalName"];
+            if ([deviceName containsString:targetName]) {
+                if (![self.nearRemote containsObject:deviceName]) {
+                    [self.nearRemote addObject:deviceName];
+                }
+                
+                if (self.nearRemote.count==1) {
+                    [self.selectDevice setTitle:deviceName forState:UIControlStateNormal];
+                    [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[0] forKey:@"CurrentDevice"];
+                    [[NSUserDefaults standardUserDefaults]synchronize];
+                }
+            }
+        }];
+    }
+}
+
+- (IBAction)chooseRemote:(UIButton *)sender {
+    [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=180;
+    [FTPopOverMenu showForSender:sender withMenuArray:self.nearRemote doneBlock:^(NSInteger selectedIndex) {
+        [sender setTitle:self.nearRemote[selectedIndex] forState:UIControlStateNormal];
+        [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[selectedIndex] forKey:@"CurrentDevice"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
+    } dismissBlock:^{
+        
+    }];
+    
+    
+}
+
+
+
 - (IBAction)addDevice:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"addDevice" sender:nil];
+    if (self.alldevices.count<4) {
+        [self performSegueWithIdentifier:@"addDevice" sender:nil];
+    }
+    else
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"最多添加4个设备,请删除多余的设备" preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
-    
-    
-    
+    self.alldevices=[self addIndex:self.alldevices];
+    BinMakeManger *manger=[BinMakeManger shareInstance];
+    NSString *binPath=[manger makeTypeWith:self.alldevices];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"成功" message:@"下一步,用Starter打开" preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"用刷固件软件打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self openWithPath:[NSURL fileURLWithPath:binPath]];
+    }];
+    [alertController addAction:OKAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
+
+-(void)openWithPath:(NSURL *)url
+{
+    _documentController=[UIDocumentInteractionController interactionControllerWithURL:url];
+    _documentController.delegate=self;
+    [_documentController presentOptionsMenuFromRect: CGRectMake(self.view.frame.size.width/2,self.view.frame.size.height/2, 0.0, 0.0) inView:self.view animated:YES];
+}
+
+
+-(void)documentInteractionControllerWillPresentOpenInMenu:(UIDocumentInteractionController *)controller
+{
+    NSLog(@"documentInteractionControllerWillPresentOpenInMenu");
+}
+
+-(void)documentInteractionControllerWillPresentOptionsMenu:(UIDocumentInteractionController *)controller
+{
+    NSLog(@"documentInteractionControllerWillPresentOptionsMenu");
+}
+
+-(void)documentInteractionControllerDidEndPreview:(UIDocumentInteractionController *)controller
+{
+    NSLog(@"documentInteractionControllerDidEndPreview");
+}
+
+-(void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application
+{
+    NSLog(@"willBeginSendingToApplication");
+}
+
+
+-(NSMutableArray *)addIndex:(NSMutableArray < NSDictionary<NSString *, id> *> *)array
+{
+    NSMutableArray *tempArray=[NSMutableArray arrayWithArray:array];
+    [tempArray enumerateObjectsUsingBlock:^(NSDictionary<NSString *,id> * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSMutableDictionary *temp=[NSMutableDictionary dictionaryWithDictionary:obj];
+        temp[@"index"]=@(idx);
+        array[idx]=temp;
+    }];
+    return array;
+}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.view.bounds.size.height/5;
+    return (self.view.bounds.size.height-64)/5;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.alldevices.count<4) {
-        return self.alldevices.count+1;
-    }
-    else
-    {
-        return 4;
-    }
+    return self.alldevices.count+1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,20 +218,21 @@
         cell=[tableView dequeueReusableCellWithIdentifier:@"empty" forIndexPath:indexPath];
         UIButton *btn=[cell viewWithTag:1000];
         btn.tag=10000+indexPath.row;
+        
     }
     return cell;
 }
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return YES;
+    return indexPath.row==_alldevices.count?NO:YES;
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle ==UITableViewCellEditingStyleDelete) {
         [_alldevices removeObjectAtIndex:indexPath.row];
-        if (_alldevices.count==3) {
+        if (_alldevices.count==4) {
             [tableView reloadData];
         }
         else

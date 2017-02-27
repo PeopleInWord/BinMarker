@@ -47,25 +47,7 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
         }
         
         let deviceSubInfoDic:Dictionary<String,String>=["deviceType" : deviceTypeStr,"brandName" : brandName,"versionName" : (versionList.object(at: indexPath.row) as? String)!]
-        
-        let user = UserDefaults.init()
-        if (user.array(forKey: "deviceInfo") != nil) {
-            let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
-            if deviceInfoArr.count<4 {
-                deviceInfoArr .add(deviceSubInfoDic)
-                user.set(deviceInfoArr, forKey: "deviceInfo")
-            }
-        }
-        else
-        {
-            let deviceInfoArr = NSMutableArray.init()
-            deviceInfoArr .add(deviceSubInfoDic)
-            user.set(deviceInfoArr, forKey: "deviceInfo")
-        }
-        
-        user.synchronize()
-        print(user.dictionaryRepresentation())
-        self.navigationController?.popToRootViewController(animated: true)
+        self.performSegue(withIdentifier: "debug", sender: deviceSubInfoDic)
     }
     
     
@@ -76,14 +58,22 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "debug" {
+            let target=segue.destination as! TestController;
+            let deviceSubInfoDic:Dictionary<String,String>=sender as! Dictionary
+            
+            target.version=deviceSubInfoDic["versionName"]
+            target.brandName=deviceSubInfoDic["brandName"]
+            target.deviceType=deviceSubInfoDic["deviceType"]
+        }
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
      }
-     */
+    
     
 }
