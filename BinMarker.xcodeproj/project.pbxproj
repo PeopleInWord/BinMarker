@@ -18,6 +18,9 @@
 		3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */; };
 		3C0D31921DDEDA5D00D78924 /* ModelVersionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */; };
 		3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */; };
+		3C2746031E6402CF00CC931C /* P14AAA_03.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746021E6402CF00CC931C /* P14AAA_03.bin */; };
+		3C2746051E6402DE00CC931C /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */; };
+		3C2746071E64030200CC931C /* P14AAA_16.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746061E64030200CC931C /* P14AAA_16.bin */; };
 		3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */; };
 		3C589D761E5ED4E3002D3637 /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
@@ -47,6 +50,9 @@
 		3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BinMarker-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelVersionController.swift; sourceTree = "<group>"; };
 		3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBrandController.swift; sourceTree = "<group>"; };
+		3C2746021E6402CF00CC931C /* P14AAA_03.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_03.bin; sourceTree = "<group>"; };
+		3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_08FE.bin; sourceTree = "<group>"; };
+		3C2746061E64030200CC931C /* P14AAA_16.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_16.bin; sourceTree = "<group>"; };
 		3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_40EF.bin; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,9 @@
 		3C0D31721DDD9D9500D78924 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C2746021E6402CF00CC931C /* P14AAA_03.bin */,
+				3C2746061E64030200CC931C /* P14AAA_16.bin */,
+				3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */,
 				3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */,
 				3C66073B1E2CC0B900FF548F /* T32DBA_01FE.bin */,
 				3C6607391E2CBFB500FF548F /* P14AAA_0A.bin */,
@@ -233,13 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CDB74351DE2E4A9008CC61D /* NSE_Database.sqlite in Resources */,
+				3C2746071E64030200CC931C /* P14AAA_16.bin in Resources */,
 				3C66073C1E2CC0B900FF548F /* T32DBA_01FE.bin in Resources */,
 				3C589DA21E603021002D3637 /* DeviceTypeList.plist in Resources */,
 				3C66073A1E2CBFB500FF548F /* P14AAA_0A.bin in Resources */,
+				3C2746051E6402DE00CC931C /* T32DBA_08FE.bin in Resources */,
 				3C589D761E5ED4E3002D3637 /* T32DBA_40EF.bin in Resources */,
 				3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C6607381E2CBDFB00FF548F /* Ir_Remote_ImageB.bin in Resources */,
+				3C2746031E6402CF00CC931C /* P14AAA_03.bin in Resources */,
 				3C0D317F1DDD9D9500D78924 /* Assets.xcassets in Resources */,
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
 			);

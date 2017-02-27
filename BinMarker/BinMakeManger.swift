@@ -28,11 +28,26 @@ class BinMakeManger: NSObject {
     
     func makeType(with deviceArray:Array<Dictionary <String,Any>>) -> String {
         for deviceInfo in deviceArray {
-            let sourcePath=Bundle.main.path(forResource: "T32DBA_40EF", ofType: "bin")
-            let postion:NSNumber=deviceInfo["index"] as! NSNumber
-            self.pushBin(with: sourcePath!, into: BinPostion(rawValue: postion.uint64Value)!)
+            let postionNum:NSNumber=deviceInfo["index"] as! NSNumber
+            let postion = BinPostion(rawValue: postionNum.uint64Value)
+            let sourcePath=Bundle.main.path(forResource: self.resourceName(postion!), ofType: "bin")
+            self.pushBin(with: sourcePath!, into: postion!)
         }
         return self.pushIntoTotalData(templatePath)
+    }
+    
+    private func resourceName(_ Postion:BinPostion) -> String
+    {
+        switch Postion {
+        case .One:
+            return "T32DBA_40EF"
+        case .Two:
+            return "P14AAA_03"
+        case .Three:
+            return "T32DBA_08FE"
+        case .Four:
+            return "P14AAA_16"
+        }
     }
     
     func pushBin(with sourcePath:String,into postion:BinPostion) -> Void {
@@ -78,9 +93,5 @@ class BinMakeManger: NSObject {
         targetHandle?.closeFile()
         return totalDataPath;
     }
-    
-//    class func translate(with Code:String) ->String {
-//        
-//    }
-    
+
 }
