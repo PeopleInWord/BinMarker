@@ -73,7 +73,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 
 - (void)autoScan:(id)sender {
-    NSLogMethodArgs(@"autoScan");
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
 }
 
@@ -199,7 +198,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=[[UITableViewCell alloc]init];
+    UITableViewCell *cell=nil;
     if (indexPath.row<self.alldevices.count) {
         NSDictionary *subDic=_alldevices[indexPath.row];
         NSDictionary *imageDic=@{@"TV":@"icon_tv",@"DVD":@"icon_dvd",@"COMBI":@"icon_amp",@"SAT":@"icon_box"};

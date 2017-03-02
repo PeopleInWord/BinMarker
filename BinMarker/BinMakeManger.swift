@@ -28,10 +28,13 @@ class BinMakeManger: NSObject {
     
     func makeType(with deviceArray:Array<Dictionary <String,Any>>) -> String {
         for deviceInfo in deviceArray {
-            let postionNum:NSNumber=deviceInfo["index"] as! NSNumber
-            let postion = BinPostion(rawValue: postionNum.uint64Value)
-            let sourcePath=Bundle.main.path(forResource: self.resourceName(postion!), ofType: "bin")
-            self.pushBin(with: sourcePath!, into: postion!)
+            let binName:String=deviceInfo["codeString"] as! String
+            if (Bundle.main.path(forResource: binName, ofType: "bin") != nil) {
+                let postionNum:NSNumber=deviceInfo["index"] as! NSNumber
+                let postion = BinPostion(rawValue: postionNum.uint64Value)
+                let sourcePath=Bundle.main.path(forResource: binName, ofType: "bin")
+                self.pushBin(with: sourcePath!, into: postion!)
+            }
         }
         return self.pushIntoTotalData(templatePath)
     }

@@ -13,8 +13,8 @@ class TestController: UIViewController {
     public var version : String!
     public var deviceType : String!
     public var brandName : String!
-    public let codeList:[String]=["Power","Vol-","Vol+","Up","Down","Left","Right","OK"]//这个暂时写死,应该由上级传到这里
-    
+//    public let codeList:[String]=["Power","Vol-","Vol+","Up","Down","Left","Right","OK"]//这个暂时写死,应该由上级传到这里
+    public var codeList:[String]!
     
     @IBOutlet weak var chooseDeviceBtn: UIButton!
     @IBOutlet weak var currentInfoLab: UILabel!
@@ -25,11 +25,28 @@ class TestController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currentInfoLab.text = brandName + " " + version
+        
+        if self.isContain(codeList[0]) {
+            currentCode.text=codeList[0]
+        }
+        else{
+            currentCode.text=codeList[0] + "(不支持)"
+        }
+        
         if UserDefaults.standard.string(forKey: "CurrentDevice") != nil {
             chooseDeviceBtn.setTitle(UserDefaults.standard.string(forKey: "CurrentDevice"), for: .normal)
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    private func isContain(_ code:String) ->Bool{
+        var isContain:Bool=false
+        if (Bundle.main.path(forResource: code, ofType: "bin") != nil) {
+            isContain=true
+        }
+        
+        return isContain;
     }
     @IBAction func chooseDevice(_ sender: UIButton) {
         FTPopOverMenuConfiguration.default().menuWidth=180
@@ -50,9 +67,10 @@ class TestController: UIViewController {
 
     @IBAction func powerTest(_ sender: UIButton) {
         //调试代码
-        let mbp=MBProgressHUD.init(view: self.view)
+        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
+        mbp.removeFromSuperViewOnHide=true
         mbp.show(animated: true)
-        
+        mbp.label.text="发送中"
         if (UserDefaults.standard.string(forKey: "CurrentDevice") == nil) {
             let alert=UIAlertController.init(title: "警告", message: "先点击标题添加设备", preferredStyle: .alert)
             let ok=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
@@ -78,8 +96,12 @@ class TestController: UIViewController {
                  "250132170085021021063008008008008000000000255002253000000"]
             
             BluetoothManager.getInstance()?.sendByteCommand(with: code[currentIndex], deviceID: deviceID, sendType: .remote, success: { (returnData) in
-                mbp.hide(animated: true, afterDelay: 1.0)
+                mbp.detailsLabel.text=returnData?.description
+                mbp.hide(animated: true, afterDelay: 0.5)
             }, fail: { (failString) -> UInt in
+                mbp.label.text="操作失败"
+                mbp.detailsLabel.text=failString
+                mbp.hide(animated: true, afterDelay: 1.5)
                 return 0
             })
         }

@@ -34,27 +34,17 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self .performSegue(withIdentifier: "chooseVersion", sender: indexPath);
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "chooseVersion"
-        {
-            let target=segue.destination as! ModelVersionController
-            let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
-            let db=FMDatabase.init(path: path);
+        
+        let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
+        let db=FMDatabase.init(path: path)
+        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
+        mbp.label.text="加载中..."
+        mbp.removeFromSuperViewOnHide=true
+        DispatchQueue.global().async {
+            var deviceInfo=Dictionary<String, Any>.init()
             if (db?.open())! {
                 var deviceTypeStr = String.init();
-                switch deviceType.row {
+                switch self.deviceType.row {
                 case 0:
                     deviceTypeStr="\"TV\""
                 case 1:
@@ -66,20 +56,94 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
                 default: break
                     
                 }
-                let brandName=deviceBrandList.object(at: (sender as! NSIndexPath).row) as! String
+                let brandName=self.deviceBrandList.object(at: indexPath.row) as! String
                 let sqlStr="select DISTINCT (Model) from RemoteIndex where DeviceType = " + (deviceTypeStr as String) + " AND Brand ="+"\"" + brandName+"\""+" order by brand"
                 print(sqlStr)
                 let result=db?.executeQuery(sqlStr, withArgumentsIn: nil)
+                var index=0
+                mbp.detailsLabel.text=index.description //修改总数
                 let versionList = NSMutableArray.init()
                 while (result?.next())! {
-                    let subVersionStr=result?.string(forColumn: "Model")
-                    versionList .add( subVersionStr!)
+                    index+=1
+                    var subVersionStr:String=(result?.string(forColumn: "Model"))!
+                    subVersionStr = self.operating(subVersionStr, deviceTypeStr, brandName)//字符串后面加是否适配
+                    versionList .add( subVersionStr)
+                    DispatchQueue.main.async {
+                        mbp.detailsLabel.text = index.description + "/" + (result?.columnCount().description)!
+                    }
                 }
-                target.deviceType=deviceType
-                target.versionList=versionList
-                target.brandName=brandName
+                db?.close()
+                db?.clearCachedStatements()
+                deviceInfo=["deviceType" : self.deviceType,"versionList":NSArray.init(array: versionList),"brandName":brandName] as [String : Any]
+                
             }
+            DispatchQueue.main.async {
+                mbp.hide(animated: true)
+                self.performSegue(withIdentifier: "chooseVersion", sender: deviceInfo);
+            }
+        }
+        
+        
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    private func isContain(_ code:String) ->Bool{
+        var isContain:Bool=false
+        if (Bundle.main.path(forResource: code, ofType: "bin") != nil) {
+            isContain=true
+        }
+        
+        return isContain;
+    }
+    
+    private func operating(_ versionString:String , _ deviceTypeStr:String , _ brandName:String) -> String! {
+        let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
+        let db=FMDatabase.init(path: path)
+        var returnString:String=versionString
+        
+        let translateString = returnString.replacingOccurrences(of: "\"", with: "'")// 数据库的转义字符
+        
+        if (db?.open())! {
+            var queryCode="select DISTINCT (DeviceNo) from RemoteIndex where DeviceType = "
+                + (deviceTypeStr as String)
+            queryCode += " AND Brand = "+"\""
+                + brandName + "\""
+            queryCode += " AND Model = " + "\""
+                + translateString + "\"" + " order by DeviceNo"
+            print(queryCode)
+            let codeResult=db?.executeQuery(queryCode, withArgumentsIn: nil)
             
+            while (codeResult?.next())!{
+                let single:String = (codeResult?.string(forColumn: "DeviceNo"))!
+                if self.isContain(single) {
+                    returnString+=" (支持)"
+                }
+                else
+                {
+                    returnString+=" (不支持)"
+                }
+                break
+            }
+        }
+        db?.close()
+        return returnString;
+    }
+    
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "chooseVersion"
+        {
+            let target=segue.destination as! ModelVersionController
+            let deviceInfo=sender as! Dictionary<String,Any>
+            target.deviceType=deviceInfo["deviceType"] as! NSIndexPath!
+            target.versionList=deviceInfo["versionList"] as! NSArray!
+            target.brandName=deviceInfo["brandName"] as! String!
         }
     
     }

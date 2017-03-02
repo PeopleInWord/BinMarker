@@ -45,8 +45,17 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
             deviceTypeStr="SAT"
         default: break
         }
+        var versionName = versionList.object(at: indexPath.row) as! NSString
+        if versionName.contains(" (支持)") {
+            versionName = versionName.substring(with: NSMakeRange(0, versionName.length-5)) as NSString
+        }
+        else if versionName.contains(" (不支持)"){
+            versionName = versionName.substring(with: NSMakeRange(0, versionName.length-6)) as NSString
+        }
         
-        let deviceSubInfoDic:Dictionary<String,String>=["deviceType" : deviceTypeStr,"brandName" : brandName,"versionName" : (versionList.object(at: indexPath.row) as? String)!]
+        let deviceSubInfoDic:Dictionary<String,String>=["deviceType" : deviceTypeStr,
+                                                        "brandName" : brandName,
+                                                        "versionName" : versionName as String]
         self.performSegue(withIdentifier: "debug", sender: deviceSubInfoDic)
     }
     
@@ -67,9 +76,28 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
             let target=segue.destination as! TestController;
             let deviceSubInfoDic:Dictionary<String,String>=sender as! Dictionary
             
-            target.version=deviceSubInfoDic["versionName"]
-            target.brandName=deviceSubInfoDic["brandName"]
-            target.deviceType=deviceSubInfoDic["deviceType"]
+            let versionName :String = deviceSubInfoDic["versionName"]!
+            let brandName:String=deviceSubInfoDic["brandName"]!
+            let deviceType:String=deviceSubInfoDic["deviceType"]!
+            
+            let sqlStr="select DISTINCT (DeviceNo) from RemoteIndex where DeviceType = " + "\"" + deviceType + "\"" + " AND Brand ="+"\"" + brandName+"\"" + " AND Model = " + "\"" + versionName + "\"" + " order by DeviceNo"
+            print(sqlStr)
+            
+            var codeList=Array<String>.init()
+            let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
+            let db=FMDatabase.init(path: path);
+            if (db?.open())! {
+                let result=db?.executeQuery(sqlStr, withArgumentsIn: nil)
+                if (result?.next())! {
+                    let subVersionStr:String=(result?.string(forColumn: "DeviceNo"))!
+                    codeList.append(subVersionStr)
+                }
+            }
+            target.codeList=codeList;
+            target.version=versionName
+            target.brandName=brandName
+            target.deviceType=deviceType
+
         }
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
