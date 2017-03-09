@@ -10,12 +10,14 @@ import UIKit
 
 class TestController: UIViewController {
 
-    public var version : String!
+//    public var version : String!
     public var deviceType : String!
     public var brandName : String!
 //    public let codeList:[String]=["Power","Vol-","Vol+","Up","Down","Left","Right","OK"]//这个暂时写死,应该由上级传到这里
     public var codeList:[String]!
     
+    @IBOutlet weak var previousBtn: UIButton!
+    @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var chooseDeviceBtn: UIButton!
     @IBOutlet weak var currentInfoLab: UILabel!
     @IBOutlet weak var currentCode: UILabel!
@@ -24,14 +26,8 @@ class TestController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentInfoLab.text = brandName + " " + version
-        
-        if self.isContain(codeList[0]) {
-            currentCode.text=codeList[0]
-        }
-        else{
-            currentCode.text=codeList[0] + "(不支持)"
-        }
+        currentInfoLab.text = brandName
+        self.setCurrentcode(0)
         
         if UserDefaults.standard.string(forKey: "CurrentDevice") != nil {
             chooseDeviceBtn.setTitle(UserDefaults.standard.string(forKey: "CurrentDevice"), for: .normal)
@@ -40,12 +36,20 @@ class TestController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    private func setCurrentcode (_ index:Int)-> Void{
+        if self.isContain(codeList[index]) {
+            currentCode.text=codeList[index]
+        }
+        else{
+            currentCode.text=codeList[index] + "(不支持)"
+        }
+    }
+    
     private func isContain(_ code:String) ->Bool{
         var isContain:Bool=false
         if (Bundle.main.path(forResource: code, ofType: "bin") != nil) {
             isContain=true
         }
-        
         return isContain;
     }
     @IBAction func chooseDevice(_ sender: UIButton) {
@@ -106,26 +110,31 @@ class TestController: UIViewController {
             })
         }
     }
+    
     @IBAction func nextCode(_ sender: UIButton) {
         currentIndex += 1
         if currentIndex == codeList.count {
             currentIndex -= 1
         }
-        currentCode.text=codeList[currentIndex]
+        self.setCurrentcode(currentIndex)
         print("next")
     }
+    
     @IBAction func previousCode(_ sender: UIButton) {
         if currentIndex>0 {
             currentIndex -= 1
         }
-        currentCode.text=codeList[currentIndex]
+        if currentIndex == codeList.count {
+            currentIndex -= 1
+        }
+        self.setCurrentcode(currentIndex)
         print("previous")
     }
+    
     @IBAction func confirm(_ sender: UIButton) {
         let deviceSubInfoDic:Dictionary<String,String>=[
             "deviceType" : deviceType,
-            "brandName" : brandName,
-            "versionName" : version,
+            "brandName" : brandName!,
             "codeString" : codeList[currentIndex]]
         
         let user = UserDefaults.init()

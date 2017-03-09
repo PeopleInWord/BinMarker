@@ -16,12 +16,13 @@
 
 static NSString *const targetName=@"IrRemoteControllerA";
 
-@interface MainController ()<UITableViewDelegate,UITableViewDataSource,UIDocumentInteractionControllerDelegate,UIApplicationDelegate>
+@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,id>*>*alldevices;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *testItem;
 @property (nonatomic, strong) UIDocumentInteractionController *documentController;
 @property (weak, nonatomic) IBOutlet UIButton *selectDevice;
+@property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 
 @end
 
@@ -46,7 +47,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadBluetooth];
+//    [self loadBluetooth];
+    self.noneBtn.layer.borderWidth=2;
+    self.noneBtn.layer.cornerRadius=10;
         // Do any additional setup after loading the view.
 }
 
@@ -82,27 +85,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"peripheralsInfo"]) {
-        [[BluetoothManager getInstance].peripheralsInfo enumerateObjectsUsingBlock:
-         ^(__kindof NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
-        {
-            NSString *deviceName=obj[AdvertisementData][@"kCBAdvDataLocalName"];
-            if ([deviceName containsString:targetName]) {
-                if (![self.nearRemote containsObject:deviceName]) {
-                    [self.nearRemote addObject:deviceName];
-                }
-                
-                if (self.nearRemote.count==1) {
-                    [self.selectDevice setTitle:deviceName forState:UIControlStateNormal];
-                    [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[0] forKey:@"CurrentDevice"];
-                    [[NSUserDefaults standardUserDefaults]synchronize];
-                }
-            }
-        }];
-    }
-}
 
 - (IBAction)chooseRemote:(UIButton *)sender {
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=180;
@@ -116,8 +98,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     
     
 }
-
-
 
 - (IBAction)addDevice:(UIButton *)sender {
     if (self.alldevices.count<4) {
@@ -193,13 +173,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.alldevices.count+1;
+    return self.alldevices.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell=nil;
-    if (indexPath.row<self.alldevices.count) {
+    
         NSDictionary *subDic=_alldevices[indexPath.row];
         NSDictionary *imageDic=@{@"TV":@"icon_tv",@"DVD":@"icon_dvd",@"COMBI":@"icon_amp",@"SAT":@"icon_box"};
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
@@ -210,15 +190,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
         iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
         deviceType.text=subDic[@"deviceType"];
         brandName.text=subDic[@"brandName"];
-        brandType.text=subDic[@"versionName"];
-    }
-    else
-    {
-        cell=[tableView dequeueReusableCellWithIdentifier:@"empty" forIndexPath:indexPath];
-        UIButton *btn=[cell viewWithTag:1000];
-        btn.tag=10000+indexPath.row;
-        
-    }
+//        brandType.text=subDic[@"versionName"];
+    
     return cell;
 }
 

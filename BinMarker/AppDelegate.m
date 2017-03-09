@@ -17,9 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Bugly startWithAppId:@"7f4dfcd92a"];   
+    [Bugly startWithAppId:@"7f4dfcd92a"];
+    self.window.rootViewController=[self rootView];
     // Override point for customization after application launch.
     return YES;
+}
+
+-(UIViewController *)rootView
+{
+    BOOL isSelect=[[NSUserDefaults standardUserDefaults]objectForKey:@"Selected"];
+    UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
+    if (isSelect) {
+        return [board instantiateViewControllerWithIdentifier:@"alreadySelected"];
+    }
+    else
+    {
+        return [board instantiateViewControllerWithIdentifier:@"selecting"];
+    }
 }
 
 

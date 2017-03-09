@@ -79,8 +79,15 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
             let versionName :String = deviceSubInfoDic["versionName"]!
             let brandName:String=deviceSubInfoDic["brandName"]!
             let deviceType:String=deviceSubInfoDic["deviceType"]!
-            
-            let sqlStr="select DISTINCT (DeviceNo) from RemoteIndex where DeviceType = " + "\"" + deviceType + "\"" + " AND Brand ="+"\"" + brandName+"\"" + " AND Model = " + "\"" + versionName + "\"" + " order by DeviceNo"
+
+            var sqlStr="select DISTINCT (DeviceNo) from RemoteIndex where DeviceType = " + "\"" + deviceType + "\"" + " AND Brand ="+"\"" + brandName+"\"" + " AND Model = "
+            if versionName.contains("\"") {
+                sqlStr += "'"+versionName+"'"
+            }
+            else{
+                sqlStr += "\""+versionName+"\""
+            }
+            sqlStr += " order by DeviceNo"
             print(sqlStr)
             
             var codeList=Array<String>.init()
@@ -94,7 +101,7 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
                 }
             }
             target.codeList=codeList;
-            target.version=versionName
+//            target.version=versionName
             target.brandName=brandName
             target.deviceType=deviceType
 

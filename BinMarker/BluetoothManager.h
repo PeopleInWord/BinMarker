@@ -77,7 +77,7 @@ typedef void(^detectDevice)(NSDictionary *__nullable infoDic);
 /**
  周围设备
  */
-@property(retain, nonatomic, nullable, readonly) NSMutableArray <__kindof NSDictionary *> *peripheralsInfo;
+@property(retain, nonatomic, nullable) NSMutableArray <__kindof NSDictionary *> *peripheralsInfo;
 
 
 /**
@@ -155,6 +155,6 @@ typedef void(^detectDevice)(NSDictionary *__nullable infoDic);
  @param commandArr <#commandArr description#>
  @param resultList <#resultList description#>
  */
-//- (void)mutiCommandControlWithStringArr:(NSArray <__kindof DeviceForScene *> *__nullable)commandArr resultList:(void (^ _Nullable)(NSArray *_Nullable))resultList;
+- (void)mutiCommandControlWithStringArr:(NSArray <NSDictionary <NSString *,id>*> *__nullable)commandArr resultList:(void (^ _Nullable)(NSArray *_Nullable))resultList;
 
 @end
