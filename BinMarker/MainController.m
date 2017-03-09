@@ -23,6 +23,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 @property (nonatomic, strong) UIDocumentInteractionController *documentController;
 @property (weak, nonatomic) IBOutlet UIButton *selectDevice;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 
 @end
 
@@ -47,10 +48,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self loadBluetooth];
-    self.noneBtn.layer.borderWidth=2;
-    self.noneBtn.layer.cornerRadius=10;
-        // Do any additional setup after loading the view.
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -85,19 +85,36 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];;
 }
 
-
-- (IBAction)chooseRemote:(UIButton *)sender {
-    [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=180;
-    [FTPopOverMenu showForSender:sender withMenuArray:self.nearRemote doneBlock:^(NSInteger selectedIndex) {
-        [sender setTitle:self.nearRemote[selectedIndex] forState:UIControlStateNormal];
-        [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[selectedIndex] forKey:@"CurrentDevice"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
+- (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
+    [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
+    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
+        switch (selectedIndex) {
+            case 0:
+                [self performSegueWithIdentifier:@"addDevice" sender:nil];
+                break;
+                case 1:
+                
+                break;
+            default:
+                break;
+        }
     } dismissBlock:^{
         
     }];
-    
-    
 }
+//
+//- (IBAction)chooseRemote:(id)sender {
+//    [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=180;
+//    [FTPopOverMenu showForSender:sender withMenuArray:@[@"添加设备",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
+//        [sender setTitle:self.nearRemote[selectedIndex] forState:UIControlStateNormal];
+//        [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[selectedIndex] forKey:@"CurrentDevice"];
+//        [[NSUserDefaults standardUserDefaults]synchronize];
+//    } dismissBlock:^{
+//        
+//    }];
+//    
+//    
+//}
 
 - (IBAction)addDevice:(UIButton *)sender {
     if (self.alldevices.count<4) {
@@ -167,7 +184,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (self.view.bounds.size.height-64)/5;
+    return 70;
 }
 
 
@@ -181,7 +198,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     UITableViewCell *cell=nil;
     
         NSDictionary *subDic=_alldevices[indexPath.row];
-        NSDictionary *imageDic=@{@"TV":@"icon_tv",@"DVD":@"icon_dvd",@"COMBI":@"icon_amp",@"SAT":@"icon_box"};
+        NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *deviceType=[cell viewWithTag:1002];

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestController: UIViewController {
+class TestController: UIViewController{
 
 //    public var version : String!
     public var deviceType : String!
@@ -28,11 +28,7 @@ class TestController: UIViewController {
         super.viewDidLoad()
         currentInfoLab.text = brandName
         self.setCurrentcode(0)
-        
-        if UserDefaults.standard.string(forKey: "CurrentDevice") != nil {
-            chooseDeviceBtn.setTitle(UserDefaults.standard.string(forKey: "CurrentDevice"), for: .normal)
-        }
-        
+
         // Do any additional setup after loading the view.
     }
     

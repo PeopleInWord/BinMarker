@@ -7,19 +7,61 @@
 //
 
 import UIKit
-class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchControllerDelegate,UISearchResultsUpdating{
     public var versionList : NSArray!
     public var deviceType : NSIndexPath!
     public var brandName : String!
-    
+    var searchList : Array<Any>!
+    @available(iOS 9.1, *)
+    lazy var searchingManger : UISearchController! = {
+        let tempSearch=UISearchController.init(searchResultsController: nil)
+        tempSearch.delegate=self
+        tempSearch.searchResultsUpdater=self
+        tempSearch.dimsBackgroundDuringPresentation = true
+        tempSearch.obscuresBackgroundDuringPresentation=false
+        tempSearch.hidesNavigationBarDuringPresentation=true
+        return tempSearch
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    func willPresentSearchController(_ searchController: UISearchController)
+    {
+        
+    }
+    func didPresentSearchController(_ searchController: UISearchController)
+    {
+        
+    }
+    func willDismissSearchController(_ searchController: UISearchController)
+    {
+        
+    }
+    func didDismissSearchController(_ searchController: UISearchController)
+    {
+        
+    }
+    func presentSearchController(_ searchController: UISearchController)
+    {
+        
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return versionList.count
+        if self.searchingManger.isActive {
+            return self.searchList.count
+        }
+        else
+        {
+            return versionList.count
+        }
+        
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

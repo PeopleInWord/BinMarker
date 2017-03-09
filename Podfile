@@ -5,4 +5,5 @@ target 'BinMarker' do
     pod 'FTPopOverMenu'
     pod 'MBProgressHUD'
     pod 'Bugly'
+    pod 'FLAnimatedImage'
 end

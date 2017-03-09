@@ -33,6 +33,7 @@
 		3C2746031E6402CF00CC931C /* P14AAA_03.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746021E6402CF00CC931C /* P14AAA_03.bin */; };
 		3C2746051E6402DE00CC931C /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */; };
 		3C2746071E64030200CC931C /* P14AAA_16.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746061E64030200CC931C /* P14AAA_16.bin */; };
+		3C27460E1E712A5500662A9F /* searching.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C27460D1E712A5500662A9F /* searching.gif */; };
 		3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */; };
 		3C589D761E5ED4E3002D3637 /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
@@ -78,6 +79,7 @@
 		3C2746021E6402CF00CC931C /* P14AAA_03.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_03.bin; sourceTree = "<group>"; };
 		3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_08FE.bin; sourceTree = "<group>"; };
 		3C2746061E64030200CC931C /* P14AAA_16.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_16.bin; sourceTree = "<group>"; };
+		3C27460D1E712A5500662A9F /* searching.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = searching.gif; sourceTree = "<group>"; };
 		3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_40EF.bin; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,7 @@
 		3C0D31711DDD9D9500D78924 /* BinMarker */ = {
 			isa = PBXGroup;
 			children = (
+				3C72B6E91E7159F50088925F /* old */,
 				3C589D7A1E5FCDA3002D3637 /* Lib */,
 				3C0D31891DDDA38800D78924 /* List */,
 				3C0D31751DDD9D9500D78924 /* AppDelegate.h */,
@@ -164,7 +167,6 @@
 				3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */,
 				3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */,
 				3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */,
-				3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */,
 				3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */,
 				3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */,
 				3C0BB7011DDFF92B00A6479C /* BrandList.plist */,
@@ -210,11 +212,20 @@
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3C27460D1E712A5500662A9F /* searching.gif */,
 				3CFB383C1E6FE13A0069AEC6 /* BluetoothManager.h */,
 				3CFB38411E6FEDD20069AEC6 /* DeviceTypeList.plist */,
 				3CFB383E1E6FE13A0069AEC6 /* libstaticLib.a */,
 			);
 			name = Lib;
+			sourceTree = "<group>";
+		};
+		3C72B6E91E7159F50088925F /* old */ = {
+			isa = PBXGroup;
+			children = (
+				3C0D31911DDEDA5D00D78924 /* ModelVersionController.swift */,
+			);
+			name = old;
 			sourceTree = "<group>";
 		};
 		C93512C1FF97EC979024132C /* Pods */ = {
@@ -323,6 +334,7 @@
 				3CFB38421E6FEDD20069AEC6 /* DeviceTypeList.plist in Resources */,
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
 				3C25C4C21E655149009B6D34 /* 2132.bin in Resources */,
+				3C27460E1E712A5500662A9F /* searching.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +527,7 @@
 				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BinMarker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,7 +555,7 @@
 				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BinMarker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

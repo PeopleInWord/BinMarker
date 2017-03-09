@@ -27,7 +27,7 @@
 {
     BOOL isSelect=[[NSUserDefaults standardUserDefaults]objectForKey:@"Selected"];
     UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-    if (isSelect) {
+    if (1) {
         return [board instantiateViewControllerWithIdentifier:@"alreadySelected"];
     }
     else

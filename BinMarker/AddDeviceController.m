@@ -33,7 +33,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *cellImage=@[@"icon_tv",@"icon_dvd",@"icon_amp",@"icon_box"];
+    NSArray *cellImage=@[@"btn_add_tv",@"btn_add_dvd",@"btn_add_amp",@"btn_add_box"];
     NSArray *cellTitle=@[@"电视",@"DVD",@"功放机",@"机顶盒"];
     UICollectionViewCell *infraredCell=[collectionView dequeueReusableCellWithReuseIdentifier:@"infraredCell" forIndexPath:indexPath];
     infraredCell.layer.cornerRadius=5.0;
@@ -54,7 +54,7 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger width=(self.view.bounds.size.width-10-10-10)/2;
-    NSUInteger high=width+15;
+    NSUInteger high=width*120/169;
     return CGSizeMake(width, high);
 }
 

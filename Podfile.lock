@@ -1,5 +1,6 @@
 PODS:
   - Bugly (2.4.6)
+  - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -9,6 +10,7 @@ PODS:
 
 DEPENDENCIES:
   - Bugly
+  - FLAnimatedImage
   - FMDB
   - FTPopOverMenu
   - MBProgressHUD
@@ -16,11 +18,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bugly: 7756e72c59387b0d490f46e83ab458ae94ee7fba
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FTPopOverMenu: 4b412a331990fc1169c50104f1aa44b8cd4c5c4a
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
 
-PODFILE CHECKSUM: 8da0da8eca2926957669649df3ee4a91003a4b9d
+PODFILE CHECKSUM: 7ab0272dd19d7c7e2469e1ee8a1bf7d3856ff7fc
 
 COCOAPODS: 1.2.0.rc.1
