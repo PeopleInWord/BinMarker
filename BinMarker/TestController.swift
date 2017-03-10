@@ -42,11 +42,7 @@ class TestController: UIViewController{
     }
     
     private func isContain(_ code:String) ->Bool{
-        var isContain:Bool=false
-        if (Bundle.main.path(forResource: code, ofType: "bin") != nil) {
-            isContain=true
-        }
-        return isContain;
+        return Bundle.main.path(forResource: code, ofType: "bin") != nil
     }
     @IBAction func chooseDevice(_ sender: UIButton) {
         FTPopOverMenuConfiguration.default().menuWidth=180

@@ -24,6 +24,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 @property (weak, nonatomic) IBOutlet UIButton *selectDevice;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *noneView;
 
 @end
 
@@ -58,6 +59,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [super viewWillAppear:animated];
     _alldevices=nil;
     [self.mainTableView reloadData];
+    _noneView.hidden=self.alldevices.count==0?NO:YES;
     AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     if (!app.autoScan.valid) {
         app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
@@ -198,12 +200,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
     UITableViewCell *cell=nil;
     
         NSDictionary *subDic=_alldevices[indexPath.row];
-        NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
+        NSDictionary *imageDic=@{@"\"TV\"":@"icon_TV",@"\"DVD\"":@"icon_DVD",@"\"COMBI\"":@"icon_AMP",@"\"SAT\"":@"icon_BOX"};
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *deviceType=[cell viewWithTag:1002];
         UILabel *brandName=[cell viewWithTag:1003];
-        UILabel *brandType=[cell viewWithTag:1004];
+//        UILabel *brandType=[cell viewWithTag:1004];
         iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
         deviceType.text=subDic[@"deviceType"];
         brandName.text=subDic[@"brandName"];
@@ -214,7 +216,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return indexPath.row==_alldevices.count?NO:YES;
+    return YES;
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -227,6 +229,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
         else
         {
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            if (self.alldevices.count==0) {
+                _noneView.hidden=NO;
+            }
         }
         
         [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
