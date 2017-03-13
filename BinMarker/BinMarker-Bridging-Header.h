@@ -8,3 +8,4 @@
 #import "FTPopOverMenu.h"
 #import "BluetoothManager.h"
 #import "MBProgressHUD.h"
+#import "NSString+StringOperation.h"

@@ -133,10 +133,10 @@ class TestController: UIViewController{
         if (user.array(forKey: "deviceInfo") != nil)
         {
             let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
-            if deviceInfoArr.count<4 {
+//            if deviceInfoArr.count<4 {
                 deviceInfoArr .add(deviceSubInfoDic)
                 user.set(deviceInfoArr, forKey: "deviceInfo")
-            }
+//            }
         }
         else
         {

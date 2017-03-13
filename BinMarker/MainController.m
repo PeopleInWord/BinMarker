@@ -18,14 +18,11 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 @interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-@property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,id>*>*alldevices;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *testItem;
-@property (nonatomic, strong) UIDocumentInteractionController *documentController;
-@property (weak, nonatomic) IBOutlet UIButton *selectDevice;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *noneView;
-
+@property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,id>*>*alldevices;
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
 @end
 
 
@@ -104,31 +101,19 @@ static NSString *const targetName=@"IrRemoteControllerA";
         
     }];
 }
-//
-//- (IBAction)chooseRemote:(id)sender {
-//    [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=180;
-//    [FTPopOverMenu showForSender:sender withMenuArray:@[@"添加设备",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
-//        [sender setTitle:self.nearRemote[selectedIndex] forState:UIControlStateNormal];
-//        [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[selectedIndex] forKey:@"CurrentDevice"];
-//        [[NSUserDefaults standardUserDefaults]synchronize];
-//    } dismissBlock:^{
-//        
-//    }];
-//    
-//    
-//}
+
 
 - (IBAction)addDevice:(UIButton *)sender {
-    if (self.alldevices.count<4) {
+//    if (self.alldevices.count<4) {
         [self performSegueWithIdentifier:@"addDevice" sender:nil];
-    }
-    else
-    {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"最多添加4个设备,请删除多余的设备" preferredStyle: UIAlertControllerStyleAlert];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        [alertController addAction:cancelAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
+//    }
+//    else
+//    {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"最多添加4个设备,请删除多余的设备" preferredStyle: UIAlertControllerStyleAlert];
+//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+//        [alertController addAction:cancelAction];
+//        [self presentViewController:alertController animated:YES completion:nil];
+//    }
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
@@ -199,17 +184,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
 {
     UITableViewCell *cell=nil;
     
-        NSDictionary *subDic=_alldevices[indexPath.row];
-        NSDictionary *imageDic=@{@"\"TV\"":@"icon_TV",@"\"DVD\"":@"icon_DVD",@"\"COMBI\"":@"icon_AMP",@"\"SAT\"":@"icon_BOX"};
-        cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
-        UIImageView *iconImage=[cell viewWithTag:1001];
-        UILabel *deviceType=[cell viewWithTag:1002];
-        UILabel *brandName=[cell viewWithTag:1003];
-//        UILabel *brandType=[cell viewWithTag:1004];
-        iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
-        deviceType.text=subDic[@"deviceType"];
-        brandName.text=subDic[@"brandName"];
-//        brandType.text=subDic[@"versionName"];
+    NSDictionary *subDic=_alldevices[indexPath.row];
+    NSDictionary *imageDic=@{@"\"TV\"":@"icon_TV",@"\"DVD\"":@"icon_DVD",@"\"COMBI\"":@"icon_AMP",@"\"SAT\"":@"icon_BOX"};
+    cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
+    UIImageView *iconImage=[cell viewWithTag:1001];
+    UILabel *deviceType=[cell viewWithTag:1002];
+    UILabel *brandName=[cell viewWithTag:1003];
+    iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
+    deviceType.text=subDic[@"deviceType"];
+    brandName.text=subDic[@"brandName"];
     
     return cell;
 }
@@ -223,15 +206,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
 {
     if (editingStyle ==UITableViewCellEditingStyleDelete) {
         [_alldevices removeObjectAtIndex:indexPath.row];
-        if (_alldevices.count==4) {
-            [tableView reloadData];
-        }
-        else
-        {
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-            if (self.alldevices.count==0) {
-                _noneView.hidden=NO;
-            }
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        if (self.alldevices.count==0) {
+            _noneView.hidden=NO;
         }
         
         [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
@@ -244,9 +221,22 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *deviceInfo= self.alldevices[indexPath.row];
+    NSString *deviceType=deviceInfo[@"deviceType"];
+    if ([deviceType isEqualToString:@"\"TV\""]) {
+        [self performSegueWithIdentifier:@"tv" sender:deviceInfo];
+    }
+    else if ([deviceType isEqualToString:@"\"DVD\""]){
+        [self performSegueWithIdentifier:@"dvd" sender:nil];
+    }
+    else if ([deviceType isEqualToString:@"\"COMBI\""]){
+        [self performSegueWithIdentifier:@"amp" sender:nil];
+    }
+    else if ([deviceType isEqualToString:@"\"SAT\""]){
+        [self performSegueWithIdentifier:@"box" sender:nil];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -258,8 +248,22 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"tv"]) {
+        TVController *target=segue.destinationViewController;
+        target.deviceInfo=sender;
+    }
+    else if ([segue.identifier isEqualToString:@"dvd"]){
+        DVDController *target=segue.destinationViewController;
+        target.deviceInfo=sender;
+    }
+    else if ([segue.identifier isEqualToString:@"amp"]){
+        AMPController *target=segue.destinationViewController;
+        target.deviceInfo=sender;
+    }
+    else if ([segue.identifier isEqualToString:@"box"]){
+        BOXController *target=segue.destinationViewController;
+        target.deviceInfo=sender;
+    }
 }
 
 

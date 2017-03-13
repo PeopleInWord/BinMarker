@@ -17,6 +17,13 @@ enum BinPostion:UInt64 {
     case Four
 }
 
+enum DeviceType:UInt64 {
+    case TV     = 5
+    case DVD    = 6
+    case AMP    = 7
+    case BOX    = 8
+}
+
 class BinMakeManger: NSObject {
     
     static let shareInstance=BinMakeManger()
@@ -95,6 +102,55 @@ class BinMakeManger: NSObject {
         targetHandle?.write(sourceData2Total!)
         targetHandle?.closeFile()
         return totalDataPath;
+    }
+    
+//    频道参数内容： 设备号、码组号、频道值（例如： 12频道，则频道值为 0x00 0x0C）
+//    数据协议：长度10字节
+//    格式：0xFE,0xA1,设备号（1），码组号（2），频道值（2），NOP(2)校验(1)
+//    说明：0xA1 为频道功能标志，设备号1个字节，码组号 2个字节，频道值 2个字节，NOP表示0x00。
+
+    func channelCommand(_ codeTag:String ,_ channel:Int ,_ deviceType:DeviceType) ->String{
+        let deviceTypeStr:String={
+            let temp:String=deviceType.rawValue.description
+            return temp.full(withLengthCount: 3)
+        }()
+        
+        let channelStr:String={
+            let temp:String = channel.description
+            return temp.full(withLengthCount: 6)
+        }()
+        
+        return "254" + deviceTypeStr + codeTag + channelStr + "000000"
+    }
+    
+//    发码通讯协议（与红外伴侣相同）
+//    通讯协议： 10字长度
+//    起始标志 设备号    码组号    按键值    备用字节      校验
+//    FEH,    05H,    00H,01H, 01H,  00H,00H,00H,00H,  05H
+//    注： 各设备为： 电视机(05), DVD(06), 功放(07), 机顶盒(08)
+//    校验为：第二个字节到第九个字节的异或和。
+    
+    func singleCommand(_ code:String,_ btnTag:Int ,_ deviceType:DeviceType) ->String{
+        let deviceTypeStr:String={
+            let temp:String=deviceType.rawValue.description
+            return temp.full(withLengthCount: 3)
+            
+        }()
+        
+        let btnTagStr:String={
+            let temp:String=(btnTag-100).description
+            return temp.full(withLengthCount: 3)
+        }()
+        
+        return "254"+deviceTypeStr+code+btnTagStr+"000000000000"
+    }
+    
+//    查找遥控器
+//    数据协议：长度 10字节
+//    0xFE,0xA2,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xA2
+    func foundCommand(with btnTag:Int ,type deviceType:Int) ->String{
+        
+        return "254162000000000000000000000162"
     }
 
 }
