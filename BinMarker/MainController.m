@@ -12,7 +12,7 @@
 #import "FTPopOverMenu.h"
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
-
+#import "MBProgressHUD.h"
 
 static NSString *const targetName=@"IrRemoteControllerA";
 
@@ -102,18 +102,24 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
 }
 
+- (IBAction)foundRemote:(UIBarButtonItem *)sender {
+    NSString *codeStr=[[BinMakeManger shareInstance] foundCommand];
+    MBProgressHUD *mbp=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    mbp.removeFromSuperViewOnHide=YES;
+    [mbp showAnimated:YES];
+    mbp.label.text=@"寻找遥控器中";
+    [[BluetoothManager getInstance]sendByteCommandWithString:codeStr deviceID:@"IrRemoteControllerA" sendType:SendTypeRemoteTemp success:^(NSData * _Nullable stateData) {
+        mbp.label.text=@"命令发送成功";
+        [mbp hideAnimated:YES afterDelay:1];
+    } fail:^NSUInteger(NSString * _Nullable stateCode) {
+        mbp.label.text=@"命令发送失败";
+        [mbp hideAnimated:YES afterDelay:1];
+        return 0;
+    }];
+}
 
 - (IBAction)addDevice:(UIButton *)sender {
-//    if (self.alldevices.count<4) {
         [self performSegueWithIdentifier:@"addDevice" sender:nil];
-//    }
-//    else
-//    {
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"错误" message:@"最多添加4个设备,请删除多余的设备" preferredStyle: UIAlertControllerStyleAlert];
-//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-//        [alertController addAction:cancelAction];
-//        [self presentViewController:alertController animated:YES completion:nil];
-//    }
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
@@ -171,7 +177,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 70;
+    return 100;
 }
 
 
@@ -227,13 +233,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [self performSegueWithIdentifier:@"tv" sender:deviceInfo];
     }
     else if ([deviceType isEqualToString:@"\"DVD\""]){
-        [self performSegueWithIdentifier:@"dvd" sender:nil];
+        [self performSegueWithIdentifier:@"dvd" sender:deviceInfo];
     }
     else if ([deviceType isEqualToString:@"\"COMBI\""]){
-        [self performSegueWithIdentifier:@"amp" sender:nil];
+        [self performSegueWithIdentifier:@"amp" sender:deviceInfo];
     }
     else if ([deviceType isEqualToString:@"\"SAT\""]){
-        [self performSegueWithIdentifier:@"box" sender:nil];
+        [self performSegueWithIdentifier:@"box" sender:deviceInfo];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

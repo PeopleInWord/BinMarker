@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 #import "FLAnimatedImage.h"
+@class CBPeripheral;
 @interface ScaningController ()<CAAnimationDelegate>
 {
     FLAnimatedImage *animationImage;
@@ -18,7 +19,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *toMainBtn;
-
 @property (weak, nonatomic) IBOutlet UILabel *loadingTitle;
 @property (weak, nonatomic) IBOutlet UILabel *detailLog;
 @property (weak, nonatomic) IBOutlet UIImageView *remoteBg1;
@@ -153,12 +153,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
                  if (![self.nearRemote containsObject:deviceName]) {
                      [self.nearRemote addObject:deviceName];
                  }
-                 
                  if (self.nearRemote.count==1) {
-                     [self moveToMain];
-                     
-                     [[NSUserDefaults standardUserDefaults]setObject:self.nearRemote[0] forKey:@"CurrentDevice"];
+                     CBPeripheral *peripheral=obj[Peripheral];
+                     NSString *uuid= peripheral.identifier.UUIDString;
+                     [[NSUserDefaults standardUserDefaults]setObject:uuid forKey:@"CurrentDevice"];
                      [[NSUserDefaults standardUserDefaults]synchronize];
+                     [self moveToMain];
                  }
              }
          }];
@@ -172,7 +172,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 -(void)moveToMain
 {
-    [UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+    [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         [self endScaning];
     } completion:^(BOOL finished) {
         self.toMainBtn.enabled=YES;

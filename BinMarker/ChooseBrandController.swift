@@ -328,7 +328,8 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         {
             let target=segue.destination as! TestController
             let deviceInfo=sender as! Dictionary<String,Any>
-            target.deviceType=deviceInfo["deviceType"] as! String!
+            target.deviceTypeStr=deviceInfo["deviceType"] as! String!
+            target.deviceType=self.deviceType
             target.codeList=deviceInfo["deviceNoList"] as! [String]!
             target.brandName=deviceInfo["brandName"] as! String!
         }

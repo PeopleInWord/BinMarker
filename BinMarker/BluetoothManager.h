@@ -33,7 +33,8 @@ typedef NS_ENUM(NSUInteger, SendType) {
     SendTypeInfrared = 3,
     SendTypeLock = 4,
     SendTypeQuery = 5,
-    SendTypeRemote = 6
+    SendTypeRemote = 6,
+    SendTypeRemoteTemp = 7
 };
 
 

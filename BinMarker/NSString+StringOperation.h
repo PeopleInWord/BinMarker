@@ -72,4 +72,7 @@
 
 +(NSString *)translateRemoteID:(NSString *)remoteID;
 
++(NSString *)divideCode:(NSString *)code;
+
+
 @end

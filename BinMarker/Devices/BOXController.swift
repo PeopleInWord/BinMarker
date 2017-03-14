@@ -28,7 +28,22 @@ class BOXController: UIViewController ,UITabBarDelegate{
     
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        
+        let code:String = deviceInfo["codeString"] as! String
+        let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 3)
+        let deviceID:String="IrRemoteControllerA"
+        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
+        mbp.removeFromSuperViewOnHide=true
+        mbp.show(animated: true)
+        mbp.label.text="发送中:" + sender.tag.description
+        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
+            mbp.detailsLabel.text=returnData?.description
+            mbp.hide(animated: true, afterDelay: 0.5)
+        }, fail: { (failString) -> UInt in
+            mbp.label.text="操作失败"
+            mbp.detailsLabel.text=failString
+            mbp.hide(animated: true, afterDelay: 1.5)
+            return 0
+        })
         
     }
     

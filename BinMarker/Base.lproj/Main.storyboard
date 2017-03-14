@@ -957,6 +957,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="所有设备" id="O7R-gK-BYH">
                         <barButtonItem key="backBarButtonItem" title="主界面" id="Lww-Pv-J7E"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="ipo-KJ-rkx">
+                            <connections>
+                                <action selector="foundRemote:" destination="HcQ-rv-CFL" id="2Bf-cr-rOV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="btn_setting" id="Qfj-5d-6Dc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -1120,70 +1125,6 @@
             </objects>
             <point key="canvasLocation" x="2038" y="130"/>
         </scene>
-        <!--选择型号-->
-        <scene sceneID="781-iE-MrS">
-            <objects>
-                <viewController title="选择型号" id="m54-Gy-H5V" customClass="ModelVersionController" customModule="BinMarker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0DZ-ci-0lK"/>
-                        <viewControllerLayoutGuide type="bottom" id="zsB-ku-tHc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e3A-ZJ-Xsv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PNo-ub-7JH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="gRj-SE-lc5">
-                                    <rect key="frame" x="0.0" y="78" width="414" height="0.0"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="brandCell" id="0Iz-nL-jLl">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Iz-nL-jLl" id="q2R-yv-qPT">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzh-uE-cvU">
-                                                    <rect key="frame" x="33" y="14" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rzh-uE-cvU" firstAttribute="leading" secondItem="q2R-yv-qPT" secondAttribute="leadingMargin" constant="25" id="9WT-Je-IVX"/>
-                                                <constraint firstItem="rzh-uE-cvU" firstAttribute="centerY" secondItem="q2R-yv-qPT" secondAttribute="centerY" id="e0X-Im-OSW"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="m54-Gy-H5V" id="llt-kR-JEd"/>
-                                    <outlet property="delegate" destination="m54-Gy-H5V" id="Isb-ox-Gql"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zsB-ku-tHc" firstAttribute="top" secondItem="PNo-ub-7JH" secondAttribute="bottom" id="LDj-NY-qZ6"/>
-                            <constraint firstAttribute="trailing" secondItem="PNo-ub-7JH" secondAttribute="trailing" id="S6g-7P-Oqx"/>
-                            <constraint firstItem="PNo-ub-7JH" firstAttribute="top" secondItem="e3A-ZJ-Xsv" secondAttribute="top" id="bbC-Yp-WcD"/>
-                            <constraint firstItem="PNo-ub-7JH" firstAttribute="leading" secondItem="e3A-ZJ-Xsv" secondAttribute="leading" id="kTu-eJ-m6C"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="选择型号" id="SbU-oa-r57">
-                        <barButtonItem key="backBarButtonItem" title="型号" id="w06-Ag-E8P"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YFL-HF-ZGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2904" y="-586"/>
-        </scene>
         <!--测试码组-->
         <scene sceneID="gs6-6N-sea">
             <objects>
@@ -1197,46 +1138,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAs-EF-4Pf">
-                                <rect key="frame" x="289" y="281.33333333333331" width="70" height="70"/>
+                                <rect key="frame" x="329.33333333333331" y="202" width="49.333333333333371" height="73.333333333333314"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="NzQ-wg-lAq"/>
-                                    <constraint firstAttribute="width" secondItem="lAs-EF-4Pf" secondAttribute="height" multiplier="1:1" id="VDa-3C-AkX"/>
+                                    <constraint firstAttribute="width" secondItem="lAs-EF-4Pf" secondAttribute="height" multiplier="126:189" id="VDa-3C-AkX"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="double_right"/>
+                                <state key="normal" backgroundImage="test_btn_youqiehuan"/>
                                 <connections>
                                     <action selector="nextCode:" destination="mMY-p5-kaV" eventType="touchUpInside" id="pwk-9Y-9nw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4K-Vd-y6M">
-                                <rect key="frame" x="55" y="281.33333333333331" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="I4K-Vd-y6M" secondAttribute="height" multiplier="1:1" id="NHk-v1-ql1"/>
-                                    <constraint firstAttribute="width" constant="70" id="sXr-kJ-mcE"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="double_left"/>
+                                <rect key="frame" x="34.666666666666671" y="202" width="48.666666666666671" height="73.333333333333314"/>
+                                <state key="normal" backgroundImage="test_btn_zuoqiehuan"/>
                                 <connections>
                                     <action selector="previousCode:" destination="mMY-p5-kaV" eventType="touchUpInside" id="6PL-W1-YxZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前码组号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JF-ny-fZu">
-                                <rect key="frame" x="161" y="107" width="92" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5R-hQ-Aao">
-                                <rect key="frame" x="56.333333333333343" y="398.66666666666669" width="300" height="64"/>
+                                <rect key="frame" x="64.666666666666657" y="539.66666666666663" width="107.99999999999997" height="53"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="xcg-2a-3qa"/>
+                                    <constraint firstAttribute="width" constant="108" id="me8-X4-fuW"/>
                                 </constraints>
-                                <state key="normal" title="我确定这个码组起作用了" backgroundImage="btn_pressed"/>
+                                <state key="normal" title="是" backgroundImage="test_btn_shi"/>
                                 <connections>
                                     <action selector="confirm:" destination="mMY-p5-kaV" eventType="touchUpInside" id="xeR-Uc-tQz"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="signal" translatesAutoresizingMaskIntoConstraints="NO" id="WLI-NF-xsd">
-                                <rect key="frame" x="176.33333333333334" y="184" width="60" height="40"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本版本为Demo版,硬件均有限支持" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-TC-ZS7">
                                 <rect key="frame" x="130" y="719" width="154" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -1244,67 +1171,140 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV TCL CD001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D2-m0-DW4">
-                                <rect key="frame" x="144" y="74" width="126" height="23"/>
+                                <rect key="frame" x="144" y="76.666666666666671" width="126" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-jA-e0h">
-                                <rect key="frame" x="145" y="254.00000000000003" width="124" height="124.66666666666671"/>
+                            <button opaque="NO" tag="102" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2l-jA-e0h">
+                                <rect key="frame" x="134" y="165" width="146" height="146.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O2l-jA-e0h" secondAttribute="height" id="4On-IN-4a1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="btn_power_test"/>
+                                <state key="normal" backgroundImage="test_btn_dianyuna_pipei"/>
                                 <connections>
                                     <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="U5c-QA-flc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-xd-iTi">
-                                <rect key="frame" x="132" y="467.66666666666669" width="150" height="30"/>
+                                <rect key="frame" x="241.33333333333331" y="539.66666666666663" width="107.99999999999994" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="VdX-7w-mpF"/>
+                                    <constraint firstAttribute="width" secondItem="ZGl-xd-iTi" secondAttribute="height" multiplier="224:106" id="NpY-Xb-Zbj"/>
                                 </constraints>
-                                <state key="normal" title="不加了,我要返回"/>
+                                <state key="normal" title="否" backgroundImage="test_btn_fou">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="cancle:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Xm0-Ot-TXl"/>
+                                    <action selector="noAndNext:" destination="mMY-p5-kaV" eventType="touchUpInside" id="0eG-dw-gDb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXy-If-NB1">
-                                <rect key="frame" x="172.66666666666663" y="139" width="69.333333333333343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXy-If-NB1">
+                                <rect key="frame" x="174" y="114.66666666666666" width="66.666666666666657" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="135" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3y-zP-pOz">
+                                <rect key="frame" x="164" y="336.33333333333331" width="88.333333333333343" height="88.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q3y-zP-pOz" secondAttribute="height" id="IEq-zt-Ghp"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="test_btn_shang_pipei"/>
+                                <connections>
+                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="vDc-we-QbZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fh0-0c-rlA">
+                                <rect key="frame" x="292.66666666666674" y="336.33333333333331" width="88.333333333333314" height="88.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fh0-0c-rlA" secondAttribute="height" id="7gQ-vr-frf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="test_btn_shuzi_pipei"/>
+                                <connections>
+                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="cup-OG-WwN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="136" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1x-Gm-gFv">
+                                <rect key="frame" x="33.999999999999993" y="336.33333333333331" width="88.333333333333314" height="88.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H1x-Gm-gFv" secondAttribute="height" id="luW-p0-Icb"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="test_btn_yinliangjia_pipei"/>
+                                <connections>
+                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Uwz-ks-jZ5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-dS-Tgh">
+                                <rect key="frame" x="182" y="429.66666666666669" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数字键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUN-8w-iVU">
+                                <rect key="frame" x="311" y="429.66666666666669" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d90-sF-JJf">
+                                <rect key="frame" x="52" y="429.66666666666669" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mj-tE-kF7">
+                                <rect key="frame" x="88.666666666666686" y="473.33333333333326" width="237" height="40.666666666666742"/>
+                                <string key="text">1.请将遥控器对准电器发送指令
+2.根据电器响应选择是/否</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lAs-EF-4Pf" firstAttribute="centerY" secondItem="O2l-jA-e0h" secondAttribute="centerY" id="0sc-W7-gRd"/>
-                            <constraint firstItem="y5R-hQ-Aao" firstAttribute="top" secondItem="O2l-jA-e0h" secondAttribute="bottom" constant="20" id="0tW-yJ-NGk"/>
+                            <constraint firstItem="CEM-dS-Tgh" firstAttribute="top" secondItem="q3y-zP-pOz" secondAttribute="bottom" constant="5" id="2h7-fE-FVJ"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="3F2-DS-kcy"/>
-                            <constraint firstItem="WLI-NF-xsd" firstAttribute="top" secondItem="rXy-If-NB1" secondAttribute="bottom" constant="15" id="5ni-8q-UPd"/>
-                            <constraint firstItem="rXy-If-NB1" firstAttribute="centerX" secondItem="1JF-ny-fZu" secondAttribute="centerX" id="6xq-pw-fjo"/>
-                            <constraint firstItem="lAs-EF-4Pf" firstAttribute="width" secondItem="lAs-EF-4Pf" secondAttribute="height" multiplier="1:1" id="BmH-kB-AZu"/>
-                            <constraint firstItem="1JF-ny-fZu" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="Bu1-eG-kfd"/>
-                            <constraint firstItem="WLI-NF-xsd" firstAttribute="centerX" secondItem="O2l-jA-e0h" secondAttribute="centerX" id="CcM-6e-vI6"/>
-                            <constraint firstItem="O2l-jA-e0h" firstAttribute="width" secondItem="LvY-Sb-1JB" secondAttribute="width" multiplier="0.3" id="D3f-JI-WgN"/>
+                            <constraint firstItem="Fh0-0c-rlA" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="1.6266" id="7o3-Lo-REP"/>
+                            <constraint firstItem="FUN-8w-iVU" firstAttribute="centerX" secondItem="Fh0-0c-rlA" secondAttribute="centerX" id="8Fo-jl-zGd"/>
+                            <constraint firstItem="O2l-jA-e0h" firstAttribute="width" secondItem="LvY-Sb-1JB" secondAttribute="width" multiplier="0.353" id="D3f-JI-WgN"/>
+                            <constraint firstItem="d90-sF-JJf" firstAttribute="centerX" secondItem="H1x-Gm-gFv" secondAttribute="centerX" id="DFA-0m-zjh"/>
+                            <constraint firstItem="d90-sF-JJf" firstAttribute="top" secondItem="H1x-Gm-gFv" secondAttribute="bottom" constant="5" id="Du8-LT-1SI"/>
                             <constraint firstItem="I4K-Vd-y6M" firstAttribute="centerY" secondItem="O2l-jA-e0h" secondAttribute="centerY" id="E9Y-xA-8k0"/>
+                            <constraint firstItem="I4K-Vd-y6M" firstAttribute="height" secondItem="lAs-EF-4Pf" secondAttribute="height" id="GLl-ht-Ntz"/>
                             <constraint firstItem="ZGl-xd-iTi" firstAttribute="leading" secondItem="y5R-hQ-Aao" secondAttribute="trailing" constant="10" id="HuC-yd-L6C"/>
+                            <constraint firstItem="rXy-If-NB1" firstAttribute="top" secondItem="3D2-m0-DW4" secondAttribute="bottom" multiplier="1.15" id="KOu-t7-KGp"/>
+                            <constraint firstItem="H1x-Gm-gFv" firstAttribute="top" secondItem="q3y-zP-pOz" secondAttribute="top" id="LhS-eY-hTK"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="top" secondItem="rXy-If-NB1" secondAttribute="bottom" constant="10" id="M9E-k5-Iiy"/>
+                            <constraint firstItem="lAs-EF-4Pf" firstAttribute="height" secondItem="O2l-jA-e0h" secondAttribute="height" multiplier="0.5" id="QKA-Pt-9fh"/>
                             <constraint firstItem="yww-lg-kd4" firstAttribute="top" secondItem="pfV-TC-ZS7" secondAttribute="bottom" constant="5" id="Qqy-ml-sIl"/>
-                            <constraint firstItem="rXy-If-NB1" firstAttribute="top" secondItem="1JF-ny-fZu" secondAttribute="bottom" constant="10" id="bgg-Gg-K79"/>
-                            <constraint firstItem="3D2-m0-DW4" firstAttribute="top" secondItem="gwO-pz-XKH" secondAttribute="bottom" constant="10" id="col-IK-mMf"/>
+                            <constraint firstItem="7Mj-tE-kF7" firstAttribute="top" secondItem="FUN-8w-iVU" secondAttribute="bottom" multiplier="1.05" id="SuL-Dh-aKA"/>
+                            <constraint firstItem="q3y-zP-pOz" firstAttribute="width" secondItem="LvY-Sb-1JB" secondAttribute="width" multiplier="0.21333" id="T34-Np-PWu"/>
+                            <constraint firstItem="q3y-zP-pOz" firstAttribute="top" secondItem="O2l-jA-e0h" secondAttribute="bottom" multiplier="1.08" id="UT5-1Q-fhU"/>
+                            <constraint firstItem="O2l-jA-e0h" firstAttribute="top" secondItem="rXy-If-NB1" secondAttribute="bottom" multiplier="1.15" id="VY6-vf-cok"/>
+                            <constraint firstItem="q3y-zP-pOz" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" constant="1" id="aTJ-uU-1ZH"/>
+                            <constraint firstItem="I4K-Vd-y6M" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="0.285" id="abB-Ms-J08"/>
+                            <constraint firstItem="H1x-Gm-gFv" firstAttribute="width" secondItem="q3y-zP-pOz" secondAttribute="width" id="bS2-mf-SLU"/>
+                            <constraint firstItem="ZGl-xd-iTi" firstAttribute="top" secondItem="y5R-hQ-Aao" secondAttribute="top" id="c0y-5z-KMU"/>
+                            <constraint firstItem="rXy-If-NB1" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="cah-BC-Tan"/>
+                            <constraint firstItem="3D2-m0-DW4" firstAttribute="top" secondItem="gwO-pz-XKH" secondAttribute="bottom" multiplier="1.2" id="col-IK-mMf"/>
+                            <constraint firstItem="Fh0-0c-rlA" firstAttribute="top" secondItem="q3y-zP-pOz" secondAttribute="top" id="dCh-0f-WlT"/>
                             <constraint firstItem="pfV-TC-ZS7" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="ejd-ID-efj"/>
-                            <constraint firstItem="1JF-ny-fZu" firstAttribute="top" secondItem="3D2-m0-DW4" secondAttribute="bottom" constant="10" id="l4g-as-0Te"/>
-                            <constraint firstItem="y5R-hQ-Aao" firstAttribute="centerX" secondItem="O2l-jA-e0h" secondAttribute="centerX" id="lHN-WJ-6nR"/>
-                            <constraint firstItem="ZGl-xd-iTi" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="mAf-Wm-coJ"/>
-                            <constraint firstItem="I4K-Vd-y6M" firstAttribute="width" secondItem="I4K-Vd-y6M" secondAttribute="height" multiplier="1:1" id="mG8-mI-pQZ"/>
-                            <constraint firstItem="lAs-EF-4Pf" firstAttribute="leading" secondItem="O2l-jA-e0h" secondAttribute="trailing" constant="20" id="oDR-C6-FOc"/>
-                            <constraint firstItem="O2l-jA-e0h" firstAttribute="top" secondItem="WLI-NF-xsd" secondAttribute="bottom" constant="30" id="qt0-2k-3th"/>
+                            <constraint firstItem="7Mj-tE-kF7" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="fIs-Bh-Fou"/>
+                            <constraint firstItem="CEM-dS-Tgh" firstAttribute="centerX" secondItem="q3y-zP-pOz" secondAttribute="centerX" id="fi5-qY-s6v"/>
+                            <constraint firstItem="Fh0-0c-rlA" firstAttribute="width" secondItem="q3y-zP-pOz" secondAttribute="width" id="gIq-0t-Uh1"/>
+                            <constraint firstItem="ZGl-xd-iTi" firstAttribute="width" secondItem="y5R-hQ-Aao" secondAttribute="width" id="jKC-Az-fxj"/>
+                            <constraint firstItem="y5R-hQ-Aao" firstAttribute="centerX" secondItem="O2l-jA-e0h" secondAttribute="centerX" multiplier="0.5733" id="lHN-WJ-6nR"/>
+                            <constraint firstItem="I4K-Vd-y6M" firstAttribute="width" secondItem="I4K-Vd-y6M" secondAttribute="height" multiplier="126:189" id="mG8-mI-pQZ"/>
+                            <constraint firstItem="FUN-8w-iVU" firstAttribute="top" secondItem="Fh0-0c-rlA" secondAttribute="bottom" constant="5" id="nAA-E7-tft"/>
+                            <constraint firstItem="lAs-EF-4Pf" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="1.71" id="oNZ-De-2ty"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="width" secondItem="LvY-Sb-1JB" secondAttribute="width" multiplier="0.15" id="rOR-Eo-a1p"/>
                             <constraint firstItem="ZGl-xd-iTi" firstAttribute="centerY" secondItem="y5R-hQ-Aao" secondAttribute="centerY" id="sMe-yh-hVZ"/>
-                            <constraint firstItem="O2l-jA-e0h" firstAttribute="leading" secondItem="I4K-Vd-y6M" secondAttribute="trailing" constant="20" id="u0O-w6-ftT"/>
                             <constraint firstItem="3D2-m0-DW4" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="uzA-48-Ay4"/>
-                            <constraint firstItem="ZGl-xd-iTi" firstAttribute="top" secondItem="y5R-hQ-Aao" secondAttribute="bottom" constant="5" id="xjt-mk-IuJ"/>
+                            <constraint firstItem="y5R-hQ-Aao" firstAttribute="top" secondItem="7Mj-tE-kF7" secondAttribute="bottom" multiplier="1.05" id="vMS-w3-xnx"/>
+                            <constraint firstItem="ZGl-xd-iTi" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="1.42666" id="x6M-B6-nid"/>
+                            <constraint firstItem="H1x-Gm-gFv" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="0.3733" id="yQm-w4-tht"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1315,21 +1315,18 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <exclude reference="WLI-NF-xsd"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="D3f-JI-WgN"/>
                                 <include reference="M9E-k5-Iiy"/>
                                 <include reference="rOR-Eo-a1p"/>
                                 <include reference="HuC-yd-L6C"/>
-                                <exclude reference="mAf-Wm-coJ"/>
                                 <include reference="sMe-yh-hVZ"/>
-                                <exclude reference="xjt-mk-IuJ"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="测试码组" id="u0p-za-S3O"/>
+                    <navigationItem key="navigationItem" title="测试码组" id="u0p-za-S3O">
+                        <barButtonItem key="rightBarButtonItem" title="更多" id="NRr-7r-k7l"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="currentCode" destination="rXy-If-NB1" id="Ahv-mQ-d4z"/>
                         <outlet property="currentInfoLab" destination="3D2-m0-DW4" id="mdJ-jn-Pkn"/>
@@ -1339,7 +1336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZr-jn-xpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="130"/>
+            <point key="canvasLocation" x="2902.898550724638" y="129.61956521739131"/>
         </scene>
         <!--DVD-->
         <scene sceneID="cDH-Dr-zdf">
@@ -2772,7 +2769,13 @@
                             <constraint firstItem="3dj-vw-yrs" firstAttribute="centerX" secondItem="tr8-4N-obd" secondAttribute="centerX" multiplier="1.64" id="ytJ-ic-ZkC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="电视机" id="qeH-26-9kC"/>
+                    <navigationItem key="navigationItem" title="电视机" id="qeH-26-9kC">
+                        <barButtonItem key="rightBarButtonItem" title="收藏" id="fm3-8H-YZe">
+                            <connections>
+                                <action selector="favoriteBtn::" destination="Nia-aO-Vjf" id="k5b-vN-OlV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="controlView" destination="VyP-xl-Req" id="ehz-sK-Ib9"/>
                         <outlet property="funtionView" destination="QIY-Nx-Rys" id="cmQ-S6-qJL"/>
@@ -2812,10 +2815,16 @@
                                     <constraint firstAttribute="width" secondItem="3Q6-ND-I1s" secondAttribute="height" id="IbL-Vc-sPZ"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="sat_btn_dianyuan"/>
+                                <connections>
+                                    <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="4Sh-ra-nR6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91i-O1-6N4">
                                 <rect key="frame" x="173.33333333333334" y="172.66666666666663" width="67.333333333333314" height="67.333333333333343"/>
                                 <state key="normal" backgroundImage="dvd_btn_bofang"/>
+                                <connections>
+                                    <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="zOa-Dh-jrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-3k-kEg">
                                 <rect key="frame" x="305.66666666666674" y="80" width="67.333333333333314" height="67.333333333333343"/>
@@ -2823,6 +2832,9 @@
                                     <constraint firstAttribute="width" secondItem="Dwt-3k-kEg" secondAttribute="height" multiplier="1:1" id="2Xa-My-g7L"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="sat_btn_jingyin"/>
+                                <connections>
+                                    <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="PY0-Ng-ImV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdN-4K-Fpj">
                                 <rect key="frame" x="34.666666666666671" y="80" width="67.333333333333343" height="67.333333333333343"/>
@@ -2833,10 +2845,16 @@
                                 <state key="normal" backgroundImage="dvd_btn_jingchucan">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="csL-GD-pYj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdi-8s-PCq">
                                 <rect key="frame" x="173.33333333333334" y="266.66666666666674" width="67.333333333333314" height="67.333333333333314"/>
                                 <state key="normal" backgroundImage="dvd_btn_qiehuan"/>
+                                <connections>
+                                    <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="F60-Gm-QrW"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-fI-u7T">
                                 <rect key="frame" x="34.666666666666671" y="172.66666666666663" width="67.333333333333343" height="161.33333333333337"/>
@@ -2846,6 +2864,9 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEa-hG-y6w">
                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333343" height="80.666666666666686"/>
+                                        <connections>
+                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="zBj-39-3Tj"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s6-GN-IHx">
                                         <rect key="frame" x="17.999999999999996" y="71.666666666666686" width="31.000000000000004" height="17.999999999999972"/>
@@ -2855,6 +2876,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xk-MS-Eph">
                                         <rect key="frame" x="0.0" y="80.666666666666686" width="67.333333333333343" height="80.666666666666657"/>
+                                        <connections>
+                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="K8o-9K-bxy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2884,9 +2908,15 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-iJ-N2j">
                                         <rect key="frame" x="0.0" y="81.333333333333343" width="67.333333333333314" height="81"/>
+                                        <connections>
+                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Yoh-Ce-E5l"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAp-2g-veo">
                                         <rect key="frame" x="0.0" y="0.0" width="67.333333333333314" height="81.333333333333343"/>
+                                        <connections>
+                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="eS4-qB-Qva"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-vL-VMe">
                                         <rect key="frame" x="18.333333333333314" y="72.666666666666686" width="31" height="17.999999999999972"/>
@@ -2985,10 +3015,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sU3-xx-u9r">
                                                         <rect key="frame" x="34.666666666666671" y="0.0" width="67.333333333333343" height="67.333333333333314"/>
                                                         <state key="normal" backgroundImage="dvd_btn_shengdao"/>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Elq-Ks-UPH"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC5-HF-7im">
                                                         <rect key="frame" x="305.66666666666674" y="0.0" width="67.333333333333314" height="67.333333333333314"/>
                                                         <state key="normal" backgroundImage="sat_btn_fanhui"/>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Txv-WH-5Xh"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08e-HG-KBe">
                                                         <rect key="frame" x="34.666666666666671" y="236" width="67.333333333333343" height="67.333333333333371"/>
@@ -2996,10 +3032,16 @@
                                                             <constraint firstAttribute="width" secondItem="08e-HG-KBe" secondAttribute="height" id="iVd-FS-obd"/>
                                                         </constraints>
                                                         <state key="normal" backgroundImage="dvd_btn_kuaijin"/>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Qaz-kT-iRt"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="193-oX-oIC">
                                                         <rect key="frame" x="305.66666666666674" y="236" width="67.333333333333314" height="67.333333333333371"/>
                                                         <state key="normal" backgroundImage="dvd_btn_kuaitui"/>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Ye3-Xz-5NW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3029,6 +3071,9 @@
                                                         <state key="normal" title="编程" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="FGN-Xr-PJ4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpr-NH-2D2">
                                                         <rect key="frame" x="21.333333333333329" y="30" width="94" height="50"/>
@@ -3036,6 +3081,9 @@
                                                         <state key="normal" title="制式" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="K4Q-Zl-w8W"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np9-MB-eG8">
                                                         <rect key="frame" x="160" y="117.66666666666669" width="94" height="50.333333333333314"/>
@@ -3043,6 +3091,9 @@
                                                         <state key="normal" title="重复" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="EzK-YU-VJf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvz-xU-LVB">
                                                         <rect key="frame" x="160" y="199.33333333333337" width="94" height="50"/>
@@ -3050,6 +3101,9 @@
                                                         <state key="normal" title="清除" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="7hX-sZ-Azb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkB-KJ-diJ">
                                                         <rect key="frame" x="160" y="30" width="94" height="50.666666666666686"/>
@@ -3060,6 +3114,9 @@
                                                         <state key="normal" title="标题" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="12b-Tc-Nod"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXW-ZY-ozA">
                                                         <rect key="frame" x="293" y="117.66666666666669" width="94" height="50.333333333333314"/>
@@ -3067,6 +3124,9 @@
                                                         <state key="normal" title="角度" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="rDJ-0q-OMk"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-wp-UaE">
                                                         <rect key="frame" x="293" y="199.33333333333337" width="94" height="50"/>
@@ -3074,6 +3134,9 @@
                                                         <state key="normal" title="矿放" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="q0k-RE-w0A"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQS-6y-YH5">
                                                         <rect key="frame" x="21.333333333333329" y="117.66666666666669" width="94" height="50.333333333333314"/>
@@ -3081,6 +3144,9 @@
                                                         <state key="normal" title="A-B" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Uc5-Y8-YfD"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-7b-OY5">
                                                         <rect key="frame" x="21.333333333333329" y="199.33333333333337" width="94" height="50"/>
@@ -3088,6 +3154,9 @@
                                                         <state key="normal" title="字幕" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="0Uq-eT-hMk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3138,6 +3207,9 @@
                                                         <state key="normal" title="3" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="hMx-gd-brt"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1X-fB-1fT">
                                                         <rect key="frame" x="21.333333333333329" y="0.0" width="94" height="50"/>
@@ -3145,6 +3217,9 @@
                                                         <state key="normal" title="1" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="WMt-7Q-ZVq"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-ic-xLM">
                                                         <rect key="frame" x="160" y="73.666666666666686" width="94" height="50.333333333333314"/>
@@ -3152,6 +3227,9 @@
                                                         <state key="normal" title="5" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="m0M-jN-WKV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Joq-eL-C0j">
                                                         <rect key="frame" x="160" y="147" width="94" height="50.666666666666629"/>
@@ -3159,6 +3237,9 @@
                                                         <state key="normal" title="8" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="DAM-4O-Bis"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvG-Sb-hUB">
                                                         <rect key="frame" x="160" y="220.66666666666663" width="94" height="50.666666666666742"/>
@@ -3166,6 +3247,9 @@
                                                         <state key="normal" title="0" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="T5U-7p-8Jx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTA-lO-IM7">
                                                         <rect key="frame" x="160" y="0.0" width="94" height="50.666666666666686"/>
@@ -3176,6 +3260,9 @@
                                                         <state key="normal" title="2" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="C4Y-Au-DzF"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86Z-zk-kd9">
                                                         <rect key="frame" x="293" y="73.666666666666686" width="94" height="50.333333333333314"/>
@@ -3183,6 +3270,9 @@
                                                         <state key="normal" title="6" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="hKT-cI-8dV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjf-g9-0hH">
                                                         <rect key="frame" x="293" y="147" width="94" height="50.333333333333371"/>
@@ -3190,6 +3280,9 @@
                                                         <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="vhH-z5-dRZ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWZ-8O-LBL">
                                                         <rect key="frame" x="293" y="220.66666666666663" width="94" height="50"/>
@@ -3197,6 +3290,9 @@
                                                         <state key="normal" title="#" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="YFf-gn-2TK"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOe-Ur-2ct">
                                                         <rect key="frame" x="21.333333333333329" y="73.666666666666686" width="94" height="50.333333333333314"/>
@@ -3204,6 +3300,9 @@
                                                         <state key="normal" title="4" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="SSj-yV-AqL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-Wc-XKV">
                                                         <rect key="frame" x="21.333333333333329" y="147" width="94" height="50.333333333333371"/>
@@ -3211,6 +3310,9 @@
                                                         <state key="normal" title="7" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="Jdc-Ic-fRl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsh-XJ-sg5">
                                                         <rect key="frame" x="21.333333333333329" y="220.66666666666663" width="94" height="50"/>
@@ -3218,6 +3320,9 @@
                                                         <state key="normal" title="*" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="pressBtn:" destination="HHc-1l-ajj" eventType="touchUpInside" id="IHi-8W-tGW"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -3353,12 +3458,8 @@
     </scenes>
     <resources>
         <image name="btn_default" width="147" height="53"/>
-        <image name="btn_power_test" width="58" height="60"/>
-        <image name="btn_pressed" width="353" height="64"/>
         <image name="btn_setting" width="18" height="17"/>
         <image name="btn_tianjia_default" width="127" height="127"/>
-        <image name="double_left" width="50" height="50"/>
-        <image name="double_right" width="50" height="50"/>
         <image name="dvd_btn_bofang" width="61" height="61"/>
         <image name="dvd_btn_jingchucan" width="61" height="61"/>
         <image name="dvd_btn_kuaijin" width="61" height="61"/>
@@ -3381,9 +3482,16 @@
         <image name="sat_btn_xiai" width="61" height="61"/>
         <image name="sat_btn_yinlaing" width="61" height="146"/>
         <image name="sat_btn_yuanquan_bg" width="61" height="61"/>
-        <image name="signal" width="60" height="40"/>
         <image name="startFrame2" width="60" height="60"/>
         <image name="start_remote" width="12" height="30"/>
+        <image name="test_btn_dianyuna_pipei" width="131" height="131"/>
+        <image name="test_btn_fou" width="112" height="53"/>
+        <image name="test_btn_shang_pipei" width="81" height="81"/>
+        <image name="test_btn_shi" width="112" height="53"/>
+        <image name="test_btn_shuzi_pipei" width="81" height="81"/>
+        <image name="test_btn_yinliangjia_pipei" width="81" height="81"/>
+        <image name="test_btn_youqiehuan" width="42" height="63"/>
+        <image name="test_btn_zuoqiehuan" width="42" height="63"/>
         <image name="tv_btn_hong_bg" width="84" height="45"/>
         <image name="tv_btn_huang_bg" width="84" height="45"/>
         <image name="tv_btn_lan_bg" width="84" height="45"/>

@@ -145,7 +145,7 @@ class ModelVersionController: UIViewController,UITableViewDelegate,UITableViewDa
             target.codeList=codeList;
 //            target.version=versionName
             target.brandName=brandName
-            target.deviceType=deviceType
+            target.deviceTypeStr=deviceType
 
         }
      // Get the new view controller using segue.destinationViewController.

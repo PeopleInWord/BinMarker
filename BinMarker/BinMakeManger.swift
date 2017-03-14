@@ -109,18 +109,20 @@ class BinMakeManger: NSObject {
 //    格式：0xFE,0xA1,设备号（1），码组号（2），频道值（2），NOP(2)校验(1)
 //    说明：0xA1 为频道功能标志，设备号1个字节，码组号 2个字节，频道值 2个字节，NOP表示0x00。
 
-    func channelCommand(_ codeTag:String ,_ channel:Int ,_ deviceType:DeviceType) ->String{
+    func channelCommand(_ code:String ,_ channel:Int ,_ deviceType:Int) ->String{
         let deviceTypeStr:String={
-            let temp:String=deviceType.rawValue.description
+            let temp:String=(deviceType+5).description
             return temp.full(withLengthCount: 3)
         }()
-        
         let channelStr:String={
-            let temp:String = channel.description
-            return temp.full(withLengthCount: 6)
+            let HighBit:String=(channel/100).description
+            let LowBit:String=(channel%100).description
+            return HighBit.full(withLengthCount: 3) + LowBit.full(withLengthCount: 3)
         }()
-        
-        return "254" + deviceTypeStr + codeTag + channelStr + "000000"
+        let codeStr:String={
+            return String.divideCode(code)
+        }()
+        return "254" + deviceTypeStr + codeStr + channelStr + "000000"
     }
     
 //    发码通讯协议（与红外伴侣相同）
@@ -130,26 +132,27 @@ class BinMakeManger: NSObject {
 //    注： 各设备为： 电视机(05), DVD(06), 功放(07), 机顶盒(08)
 //    校验为：第二个字节到第九个字节的异或和。
     
-    func singleCommand(_ code:String,_ btnTag:Int ,_ deviceType:DeviceType) ->String{
+    func singleCommand(_ code:String,_ btnTag:Int ,_ deviceType:Int) ->String{
         let deviceTypeStr:String={
-            let temp:String=deviceType.rawValue.description
+            let temp:String=(deviceType+5).description
             return temp.full(withLengthCount: 3)
             
         }()
-        
         let btnTagStr:String={
             let temp:String=(btnTag-100).description
             return temp.full(withLengthCount: 3)
         }()
         
-        return "254"+deviceTypeStr+code+btnTagStr+"000000000000"
+        let codeStr:String={
+            return String.divideCode(code)
+        }()
+        return "254"+deviceTypeStr+codeStr+btnTagStr+"000000000000"
     }
     
 //    查找遥控器
 //    数据协议：长度 10字节
 //    0xFE,0xA2,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0xA2
-    func foundCommand(with btnTag:Int ,type deviceType:Int) ->String{
-        
+    func foundCommand ()->String{
         return "254162000000000000000000000162"
     }
 

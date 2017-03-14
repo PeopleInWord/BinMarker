@@ -11,7 +11,8 @@ import UIKit
 class TestController: UIViewController{
 
 //    public var version : String!
-    public var deviceType : String!
+    public var deviceTypeStr : String!
+    public var deviceType:NSIndexPath!
     public var brandName : String!
 //    public let codeList:[String]=["Power","Vol-","Vol+","Up","Down","Left","Right","OK"]//这个暂时写死,应该由上级传到这里
     public var codeList:[String]!
@@ -44,32 +45,33 @@ class TestController: UIViewController{
     private func isContain(_ code:String) ->Bool{
         return Bundle.main.path(forResource: code, ofType: "bin") != nil
     }
-    @IBAction func chooseDevice(_ sender: UIButton) {
-        FTPopOverMenuConfiguration.default().menuWidth=180
-        let main=self.navigationController?.viewControllers[0] as! MainController
-        print(main.nearRemote)
-        var titleArr:[String]=Array.init()
-        for deviceName in main.nearRemote {
-            titleArr.append(deviceName as! String)
-        }
-        
-        FTPopOverMenu.show(forSender: sender, withMenuArray: titleArr, doneBlock: { (selectIndex) in
-            self.chooseDeviceBtn.setTitle(titleArr[selectIndex], for: .normal)
-            UserDefaults.standard.set(titleArr[selectIndex], forKey: "CurrentDevice")
-        }) { 
-            
-        }
-    }
+//    @IBAction func chooseDevice(_ sender: UIButton) {
+//        FTPopOverMenuConfiguration.default().menuWidth=180
+//        let main=self.navigationController?.viewControllers[0] as! MainController
+//        print(main.nearRemote)
+//        var titleArr:[String]=Array.init()
+//        for deviceName in main.nearRemote {
+//            titleArr.append(deviceName as! String)
+//        }
+//        
+//        FTPopOverMenu.show(forSender: sender, withMenuArray: titleArr, doneBlock: { (selectIndex) in
+//            self.chooseDeviceBtn.setTitle(titleArr[selectIndex], for: .normal)
+//            UserDefaults.standard.set(titleArr[selectIndex], forKey: "CurrentDevice")
+//        }) { 
+//            
+//        }
+//    }
 
     @IBAction func powerTest(_ sender: UIButton) {
         //调试代码
         let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
         mbp.removeFromSuperViewOnHide=true
         mbp.show(animated: true)
-        mbp.label.text="发送中"
+        mbp.label.text="发送中:" + sender.tag.description
         if (UserDefaults.standard.string(forKey: "CurrentDevice") == nil) {
             let alert=UIAlertController.init(title: "警告", message: "先点击标题添加设备", preferredStyle: .alert)
             let ok=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+                mbp.hide(animated: true, afterDelay: 0.5)
                 return
             })
             alert.addAction(ok)
@@ -80,18 +82,9 @@ class TestController: UIViewController{
         }
         else
         {
-            let deviceID:String=UserDefaults.standard.string(forKey: "CurrentDevice")!
-            let code:[String] =
-                ["250132170085021021063008008008008000000000255087168000000",
-                 "250132170085021021063008008008008000000000255088167000000",
-                 "250132170085021021063008008008008000000000255027228000000",
-                 "250132170085021021063008008008008000000000255067188000000",
-                 "250132170085021021063008008008008000000000255010245000000",
-                 "250132170085021021063008008008008000000000255006249000000",
-                 "250132170085021021063008008008008000000000255014241000000",
-                 "250132170085021021063008008008008000000000255002253000000"]
-            
-            BluetoothManager.getInstance()?.sendByteCommand(with: code[currentIndex], deviceID: deviceID, sendType: .remote, success: { (returnData) in
+            let deviceID:String="IrRemoteControllerA"
+            let code:String=BinMakeManger.shareInstance.singleCommand(codeList[currentIndex], sender.tag, self.deviceType.row)
+            BluetoothManager.getInstance()?.sendByteCommand(with: code, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
                 mbp.detailsLabel.text=returnData?.description
                 mbp.hide(animated: true, afterDelay: 0.5)
             }, fail: { (failString) -> UInt in
@@ -125,7 +118,7 @@ class TestController: UIViewController{
     
     @IBAction func confirm(_ sender: UIButton) {
         let deviceSubInfoDic:Dictionary<String,String>=[
-            "deviceType" : deviceType,
+            "deviceType" : deviceTypeStr,
             "brandName" : brandName!,
             "codeString" : codeList[currentIndex]]
         
@@ -133,10 +126,8 @@ class TestController: UIViewController{
         if (user.array(forKey: "deviceInfo") != nil)
         {
             let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
-//            if deviceInfoArr.count<4 {
                 deviceInfoArr .add(deviceSubInfoDic)
                 user.set(deviceInfoArr, forKey: "deviceInfo")
-//            }
         }
         else
         {
@@ -148,8 +139,20 @@ class TestController: UIViewController{
         user.synchronize()
         let _ = self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    @IBAction func noAndNext(_ sender: UIButton) {
+        currentIndex += 1
+        if currentIndex == codeList.count {
+            currentIndex = 0
+        }
+        self.setCurrentcode(currentIndex)
+        
+    }
+    
+    
+    
     @IBAction func cancle(_ sender: UIButton) {
-        let _ = self.navigationController?.popToRootViewController(animated: true)
+            let _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {
