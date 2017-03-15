@@ -43,7 +43,7 @@
 		3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */; };
 		3C2A72891E7916B800137EAB /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72881E7916B800137EAB /* InfraredBrandList.plist */; };
 		3C2A728B1E79176400137EAB /* ChooseInfrareBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */; };
-		3C2A728F1E7934F400137EAB /* Infrared_Datebase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A728E1E7934F400137EAB /* Infrared_Datebase.sqlite */; };
+		3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
@@ -97,7 +97,7 @@
 		3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_40EF.bin; path = "Bin&SQL/T32DBA_40EF.bin"; sourceTree = "<group>"; };
 		3C2A72881E7916B800137EAB /* InfraredBrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfraredBrandList.plist; sourceTree = "<group>"; };
 		3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseInfrareBrand.swift; sourceTree = "<group>"; };
-		3C2A728E1E7934F400137EAB /* Infrared_Datebase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infrared_Datebase.sqlite; sourceTree = "<group>"; };
+		3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infrared_Datebase.sqlite; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 		3C25C4AB1E6550DB009B6D34 /* bin */ = {
 			isa = PBXGroup;
 			children = (
-				3C2A728E1E7934F400137EAB /* Infrared_Datebase.sqlite */,
+				3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */,
 				3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */,
 				3C2A72601E790E2100137EAB /* Ir_Remote_ImageB.bin */,
 				3C2A72611E790E2100137EAB /* 006.bin */,
@@ -340,7 +340,7 @@
 				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
 				3C2A72761E790E2100137EAB /* 492.bin in Resources */,
 				3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */,
-				3C2A728F1E7934F400137EAB /* Infrared_Datebase.sqlite in Resources */,
+				3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C2A727C1E790E2100137EAB /* 2787.bin in Resources */,
 				3C2A727A1E790E2100137EAB /* 2132.bin in Resources */,
