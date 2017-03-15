@@ -19,34 +19,34 @@
 		3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */; };
 		3C16B14E1E77D4B400A60D58 /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C16B14C1E77D4B400A60D58 /* DeviceTypeList.plist */; };
 		3C16B1501E77D4BD00A60D58 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C16B14F1E77D4BD00A60D58 /* libstaticLib.a */; };
-		3C25C4AE1E65513A009B6D34 /* 531.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4AC1E65513A009B6D34 /* 531.bin */; };
-		3C25C4AF1E65513A009B6D34 /* 691.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4AD1E65513A009B6D34 /* 691.bin */; };
-		3C25C4B61E655141009B6D34 /* 006.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B01E655141009B6D34 /* 006.bin */; };
-		3C25C4B71E655141009B6D34 /* 492.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B11E655141009B6D34 /* 492.bin */; };
-		3C25C4B81E655141009B6D34 /* 2009.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B21E655141009B6D34 /* 2009.bin */; };
-		3C25C4B91E655141009B6D34 /* 2314.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B31E655141009B6D34 /* 2314.bin */; };
-		3C25C4BA1E655141009B6D34 /* 6014.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B41E655141009B6D34 /* 6014.bin */; };
-		3C25C4BB1E655141009B6D34 /* 8078.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4B51E655141009B6D34 /* 8078.bin */; };
-		3C25C4BE1E655146009B6D34 /* 3075.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4BC1E655146009B6D34 /* 3075.bin */; };
-		3C25C4BF1E655146009B6D34 /* 6123.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4BD1E655146009B6D34 /* 6123.bin */; };
-		3C25C4C21E655149009B6D34 /* 2132.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4C01E655149009B6D34 /* 2132.bin */; };
-		3C25C4C31E655149009B6D34 /* 2787.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C25C4C11E655149009B6D34 /* 2787.bin */; };
-		3C2746031E6402CF00CC931C /* P14AAA_03.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746021E6402CF00CC931C /* P14AAA_03.bin */; };
-		3C2746051E6402DE00CC931C /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */; };
-		3C2746071E64030200CC931C /* P14AAA_16.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2746061E64030200CC931C /* P14AAA_16.bin */; };
 		3C27460E1E712A5500662A9F /* searching.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C27460D1E712A5500662A9F /* searching.gif */; };
 		3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */; };
+		3C2A72731E790E2100137EAB /* NSE_Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */; };
+		3C2A72741E790E2100137EAB /* Ir_Remote_ImageB.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72601E790E2100137EAB /* Ir_Remote_ImageB.bin */; };
+		3C2A72751E790E2100137EAB /* 006.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72611E790E2100137EAB /* 006.bin */; };
+		3C2A72761E790E2100137EAB /* 492.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72621E790E2100137EAB /* 492.bin */; };
+		3C2A72771E790E2100137EAB /* 531.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72631E790E2100137EAB /* 531.bin */; };
+		3C2A72781E790E2100137EAB /* 691.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72641E790E2100137EAB /* 691.bin */; };
+		3C2A72791E790E2100137EAB /* 2009.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72651E790E2100137EAB /* 2009.bin */; };
+		3C2A727A1E790E2100137EAB /* 2132.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72661E790E2100137EAB /* 2132.bin */; };
+		3C2A727B1E790E2100137EAB /* 2314.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72671E790E2100137EAB /* 2314.bin */; };
+		3C2A727C1E790E2100137EAB /* 2787.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72681E790E2100137EAB /* 2787.bin */; };
+		3C2A727D1E790E2100137EAB /* 3075.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72691E790E2100137EAB /* 3075.bin */; };
+		3C2A727E1E790E2100137EAB /* 6014.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726A1E790E2100137EAB /* 6014.bin */; };
+		3C2A727F1E790E2100137EAB /* 6123.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726B1E790E2100137EAB /* 6123.bin */; };
+		3C2A72801E790E2100137EAB /* 8078.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726C1E790E2100137EAB /* 8078.bin */; };
+		3C2A72811E790E2100137EAB /* P14AAA_0A.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726D1E790E2100137EAB /* P14AAA_0A.bin */; };
+		3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726E1E790E2100137EAB /* P14AAA_03.bin */; };
+		3C2A72831E790E2100137EAB /* P14AAA_16.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A726F1E790E2100137EAB /* P14AAA_16.bin */; };
+		3C2A72841E790E2100137EAB /* T32DBA_01FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72701E790E2100137EAB /* T32DBA_01FE.bin */; };
+		3C2A72851E790E2100137EAB /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */; };
+		3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
-		3C589D761E5ED4E3002D3637 /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
-		3C6607381E2CBDFB00FF548F /* Ir_Remote_ImageB.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C6607371E2CBDFA00FF548F /* Ir_Remote_ImageB.bin */; };
-		3C66073A1E2CBFB500FF548F /* P14AAA_0A.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C6607391E2CBFB500FF548F /* P14AAA_0A.bin */; };
-		3C66073C1E2CC0B900FF548F /* T32DBA_01FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C66073B1E2CC0B900FF548F /* T32DBA_01FE.bin */; };
 		3C72B6EC1E728A3A0088925F /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B6EB1E728A3A0088925F /* TVController.swift */; };
 		3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC755EA1E261FA100013C63 /* BinMakeManger.swift */; };
-		3CDB74351DE2E4A9008CC61D /* NSE_Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -70,34 +70,34 @@
 		3C16B14C1E77D4B400A60D58 /* DeviceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
 		3C16B14D1E77D4B400A60D58 /* NSString+StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
 		3C16B14F1E77D4BD00A60D58 /* libstaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstaticLib.a; sourceTree = "<group>"; };
-		3C25C4AC1E65513A009B6D34 /* 531.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 531.bin; sourceTree = "<group>"; };
-		3C25C4AD1E65513A009B6D34 /* 691.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 691.bin; sourceTree = "<group>"; };
-		3C25C4B01E655141009B6D34 /* 006.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 006.bin; sourceTree = "<group>"; };
-		3C25C4B11E655141009B6D34 /* 492.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 492.bin; sourceTree = "<group>"; };
-		3C25C4B21E655141009B6D34 /* 2009.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 2009.bin; sourceTree = "<group>"; };
-		3C25C4B31E655141009B6D34 /* 2314.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 2314.bin; sourceTree = "<group>"; };
-		3C25C4B41E655141009B6D34 /* 6014.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 6014.bin; sourceTree = "<group>"; };
-		3C25C4B51E655141009B6D34 /* 8078.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 8078.bin; sourceTree = "<group>"; };
-		3C25C4BC1E655146009B6D34 /* 3075.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 3075.bin; sourceTree = "<group>"; };
-		3C25C4BD1E655146009B6D34 /* 6123.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 6123.bin; sourceTree = "<group>"; };
-		3C25C4C01E655149009B6D34 /* 2132.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 2132.bin; sourceTree = "<group>"; };
-		3C25C4C11E655149009B6D34 /* 2787.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 2787.bin; sourceTree = "<group>"; };
-		3C2746021E6402CF00CC931C /* P14AAA_03.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_03.bin; sourceTree = "<group>"; };
-		3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_08FE.bin; sourceTree = "<group>"; };
-		3C2746061E64030200CC931C /* P14AAA_16.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_16.bin; sourceTree = "<group>"; };
 		3C27460D1E712A5500662A9F /* searching.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = searching.gif; sourceTree = "<group>"; };
 		3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = NSE_Database.sqlite; path = "Bin&SQL/NSE_Database.sqlite"; sourceTree = "<group>"; };
+		3C2A72601E790E2100137EAB /* Ir_Remote_ImageB.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = Ir_Remote_ImageB.bin; path = "Bin&SQL/Ir_Remote_ImageB.bin"; sourceTree = "<group>"; };
+		3C2A72611E790E2100137EAB /* 006.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 006.bin; path = "Bin&SQL/006.bin"; sourceTree = "<group>"; };
+		3C2A72621E790E2100137EAB /* 492.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 492.bin; path = "Bin&SQL/492.bin"; sourceTree = "<group>"; };
+		3C2A72631E790E2100137EAB /* 531.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 531.bin; path = "Bin&SQL/531.bin"; sourceTree = "<group>"; };
+		3C2A72641E790E2100137EAB /* 691.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 691.bin; path = "Bin&SQL/691.bin"; sourceTree = "<group>"; };
+		3C2A72651E790E2100137EAB /* 2009.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 2009.bin; path = "Bin&SQL/2009.bin"; sourceTree = "<group>"; };
+		3C2A72661E790E2100137EAB /* 2132.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 2132.bin; path = "Bin&SQL/2132.bin"; sourceTree = "<group>"; };
+		3C2A72671E790E2100137EAB /* 2314.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 2314.bin; path = "Bin&SQL/2314.bin"; sourceTree = "<group>"; };
+		3C2A72681E790E2100137EAB /* 2787.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 2787.bin; path = "Bin&SQL/2787.bin"; sourceTree = "<group>"; };
+		3C2A72691E790E2100137EAB /* 3075.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 3075.bin; path = "Bin&SQL/3075.bin"; sourceTree = "<group>"; };
+		3C2A726A1E790E2100137EAB /* 6014.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 6014.bin; path = "Bin&SQL/6014.bin"; sourceTree = "<group>"; };
+		3C2A726B1E790E2100137EAB /* 6123.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 6123.bin; path = "Bin&SQL/6123.bin"; sourceTree = "<group>"; };
+		3C2A726C1E790E2100137EAB /* 8078.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = 8078.bin; path = "Bin&SQL/8078.bin"; sourceTree = "<group>"; };
+		3C2A726D1E790E2100137EAB /* P14AAA_0A.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = P14AAA_0A.bin; path = "Bin&SQL/P14AAA_0A.bin"; sourceTree = "<group>"; };
+		3C2A726E1E790E2100137EAB /* P14AAA_03.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = P14AAA_03.bin; path = "Bin&SQL/P14AAA_03.bin"; sourceTree = "<group>"; };
+		3C2A726F1E790E2100137EAB /* P14AAA_16.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = P14AAA_16.bin; path = "Bin&SQL/P14AAA_16.bin"; sourceTree = "<group>"; };
+		3C2A72701E790E2100137EAB /* T32DBA_01FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_01FE.bin; path = "Bin&SQL/T32DBA_01FE.bin"; sourceTree = "<group>"; };
+		3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_08FE.bin; path = "Bin&SQL/T32DBA_08FE.bin"; sourceTree = "<group>"; };
+		3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_40EF.bin; path = "Bin&SQL/T32DBA_40EF.bin"; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
-		3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_40EF.bin; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		3C6607371E2CBDFA00FF548F /* Ir_Remote_ImageB.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = Ir_Remote_ImageB.bin; sourceTree = "<group>"; };
-		3C6607391E2CBFB500FF548F /* P14AAA_0A.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = P14AAA_0A.bin; sourceTree = "<group>"; };
-		3C66073B1E2CC0B900FF548F /* T32DBA_01FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = T32DBA_01FE.bin; sourceTree = "<group>"; };
 		3C72B6EB1E728A3A0088925F /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CC755EA1E261FA100013C63 /* BinMakeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinMakeManger.swift; sourceTree = "<group>"; };
-		3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = NSE_Database.sqlite; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,10 +157,7 @@
 		3C0D31721DDD9D9500D78924 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C25C4C41E655153009B6D34 /* testBin */,
 				3C25C4AB1E6550DB009B6D34 /* bin */,
-				3C6607371E2CBDFA00FF548F /* Ir_Remote_ImageB.bin */,
-				3CDB74341DE2E4A9008CC61D /* NSE_Database.sqlite */,
 				3C0D31731DDD9D9500D78924 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -188,33 +185,28 @@
 		3C25C4AB1E6550DB009B6D34 /* bin */ = {
 			isa = PBXGroup;
 			children = (
-				3C25C4C01E655149009B6D34 /* 2132.bin */,
-				3C25C4C11E655149009B6D34 /* 2787.bin */,
-				3C25C4BC1E655146009B6D34 /* 3075.bin */,
-				3C25C4BD1E655146009B6D34 /* 6123.bin */,
-				3C25C4B01E655141009B6D34 /* 006.bin */,
-				3C25C4B11E655141009B6D34 /* 492.bin */,
-				3C25C4B21E655141009B6D34 /* 2009.bin */,
-				3C25C4B31E655141009B6D34 /* 2314.bin */,
-				3C25C4B41E655141009B6D34 /* 6014.bin */,
-				3C25C4B51E655141009B6D34 /* 8078.bin */,
-				3C25C4AC1E65513A009B6D34 /* 531.bin */,
-				3C25C4AD1E65513A009B6D34 /* 691.bin */,
+				3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */,
+				3C2A72601E790E2100137EAB /* Ir_Remote_ImageB.bin */,
+				3C2A72611E790E2100137EAB /* 006.bin */,
+				3C2A72621E790E2100137EAB /* 492.bin */,
+				3C2A72631E790E2100137EAB /* 531.bin */,
+				3C2A72641E790E2100137EAB /* 691.bin */,
+				3C2A72651E790E2100137EAB /* 2009.bin */,
+				3C2A72661E790E2100137EAB /* 2132.bin */,
+				3C2A72671E790E2100137EAB /* 2314.bin */,
+				3C2A72681E790E2100137EAB /* 2787.bin */,
+				3C2A72691E790E2100137EAB /* 3075.bin */,
+				3C2A726A1E790E2100137EAB /* 6014.bin */,
+				3C2A726B1E790E2100137EAB /* 6123.bin */,
+				3C2A726C1E790E2100137EAB /* 8078.bin */,
+				3C2A726D1E790E2100137EAB /* P14AAA_0A.bin */,
+				3C2A726E1E790E2100137EAB /* P14AAA_03.bin */,
+				3C2A726F1E790E2100137EAB /* P14AAA_16.bin */,
+				3C2A72701E790E2100137EAB /* T32DBA_01FE.bin */,
+				3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */,
+				3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */,
 			);
 			name = bin;
-			sourceTree = "<group>";
-		};
-		3C25C4C41E655153009B6D34 /* testBin */ = {
-			isa = PBXGroup;
-			children = (
-				3C2746021E6402CF00CC931C /* P14AAA_03.bin */,
-				3C2746061E64030200CC931C /* P14AAA_16.bin */,
-				3C2746041E6402DE00CC931C /* T32DBA_08FE.bin */,
-				3C589D751E5ED4E3002D3637 /* T32DBA_40EF.bin */,
-				3C66073B1E2CC0B900FF548F /* T32DBA_01FE.bin */,
-				3C6607391E2CBFB500FF548F /* P14AAA_0A.bin */,
-			);
-			name = testBin;
 			sourceTree = "<group>";
 		};
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
@@ -328,32 +320,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CDB74351DE2E4A9008CC61D /* NSE_Database.sqlite in Resources */,
-				3C25C4B91E655141009B6D34 /* 2314.bin in Resources */,
+				3C2A72751E790E2100137EAB /* 006.bin in Resources */,
+				3C2A72841E790E2100137EAB /* T32DBA_01FE.bin in Resources */,
+				3C2A727F1E790E2100137EAB /* 6123.bin in Resources */,
 				3C16B14E1E77D4B400A60D58 /* DeviceTypeList.plist in Resources */,
-				3C2746071E64030200CC931C /* P14AAA_16.bin in Resources */,
-				3C66073C1E2CC0B900FF548F /* T32DBA_01FE.bin in Resources */,
-				3C25C4C31E655149009B6D34 /* 2787.bin in Resources */,
-				3C25C4B61E655141009B6D34 /* 006.bin in Resources */,
-				3C66073A1E2CBFB500FF548F /* P14AAA_0A.bin in Resources */,
-				3C25C4AE1E65513A009B6D34 /* 531.bin in Resources */,
-				3C25C4BB1E655141009B6D34 /* 8078.bin in Resources */,
-				3C25C4AF1E65513A009B6D34 /* 691.bin in Resources */,
-				3C2746051E6402DE00CC931C /* T32DBA_08FE.bin in Resources */,
-				3C589D761E5ED4E3002D3637 /* T32DBA_40EF.bin in Resources */,
-				3C25C4B71E655141009B6D34 /* 492.bin in Resources */,
+				3C2A72791E790E2100137EAB /* 2009.bin in Resources */,
 				3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */,
+				3C2A72831E790E2100137EAB /* P14AAA_16.bin in Resources */,
+				3C2A727D1E790E2100137EAB /* 3075.bin in Resources */,
+				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
+				3C2A72761E790E2100137EAB /* 492.bin in Resources */,
+				3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
-				3C25C4BA1E655141009B6D34 /* 6014.bin in Resources */,
-				3C25C4BE1E655146009B6D34 /* 3075.bin in Resources */,
-				3C6607381E2CBDFB00FF548F /* Ir_Remote_ImageB.bin in Resources */,
-				3C25C4B81E655141009B6D34 /* 2009.bin in Resources */,
-				3C2746031E6402CF00CC931C /* P14AAA_03.bin in Resources */,
+				3C2A727C1E790E2100137EAB /* 2787.bin in Resources */,
+				3C2A727A1E790E2100137EAB /* 2132.bin in Resources */,
+				3C2A72781E790E2100137EAB /* 691.bin in Resources */,
+				3C2A72731E790E2100137EAB /* NSE_Database.sqlite in Resources */,
 				3C0D317F1DDD9D9500D78924 /* Assets.xcassets in Resources */,
-				3C25C4BF1E655146009B6D34 /* 6123.bin in Resources */,
+				3C2A72801E790E2100137EAB /* 8078.bin in Resources */,
+				3C2A72811E790E2100137EAB /* P14AAA_0A.bin in Resources */,
+				3C2A72741E790E2100137EAB /* Ir_Remote_ImageB.bin in Resources */,
+				3C2A72851E790E2100137EAB /* T32DBA_08FE.bin in Resources */,
+				3C2A727E1E790E2100137EAB /* 6014.bin in Resources */,
+				3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */,
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
-				3C25C4C21E655149009B6D34 /* 2132.bin in Resources */,
 				3C27460E1E712A5500662A9F /* searching.gif in Resources */,
+				3C2A727B1E790E2100137EAB /* 2314.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
