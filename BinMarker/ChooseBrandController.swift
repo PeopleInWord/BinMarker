@@ -116,7 +116,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
+        let path=Bundle.main.path(forResource: "Infrared_Datebase", ofType: "sqlite")
         let db=FMDatabase.init(path: path)
         let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
         mbp.label.text="加载中..."
@@ -285,7 +285,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     ///   - brandName: <#brandName description#>
     /// - Returns: <#return value description#>
     private func operating(_ versionString:String , _ deviceTypeStr:String , _ brandName:String) -> String! {
-        let path=Bundle.main.path(forResource: "NSE_Database", ofType: "sqlite")
+        let path=Bundle.main.path(forResource: "Infrared_Datebase", ofType: "sqlite")
         let db=FMDatabase.init(path: path)
         var returnString:String=versionString
         if (db?.open())! {

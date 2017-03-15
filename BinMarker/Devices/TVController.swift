@@ -54,7 +54,7 @@ class TVController: UIViewController ,UITabBarDelegate{
         var channelList:Array<String> = ["添加频道收藏"]
         if favoriteList != nil {
             for channelInfo in favoriteList! {
-                channelList.append(channelInfo.keys.first!)
+                channelList.append(channelInfo.keys.first! + ":" + channelInfo.values.first!)
             }
         }
         

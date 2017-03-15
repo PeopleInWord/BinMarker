@@ -115,14 +115,19 @@ class BinMakeManger: NSObject {
             return temp.full(withLengthCount: 3)
         }()
         let channelStr:String={
-            let HighBit:String=(channel/100).description
-            let LowBit:String=(channel%100).description
-            return HighBit.full(withLengthCount: 3) + LowBit.full(withLengthCount: 3)
+            let HighBit:Int=channel/100
+            let LowBit:Int=channel%100
+            let High16BitValue:String = (HighBit/100*16*16+HighBit%100/10*16+HighBit%10).description
+            let Low16BitValue:String = (LowBit/100*16*16+LowBit%100/10*16+LowBit%10).description
+            //化16进制
+            return High16BitValue.full(withLengthCount: 3) + Low16BitValue.full(withLengthCount: 3)
         }()
         let codeStr:String={
             return String.divideCode(code)
         }()
-        return "254" + deviceTypeStr + codeStr + channelStr + "000000"
+        return "254161" + deviceTypeStr + codeStr + channelStr + "000000"
+//        1.加入国内数据库
+//        2.修复频道命令
     }
     
 //    发码通讯协议（与红外伴侣相同）
