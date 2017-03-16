@@ -867,7 +867,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="lrM-qB-XwQ" id="0sh-jh-XIS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-2j-eco">
@@ -1011,7 +1011,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infraredCell" id="h2a-rE-ft8">
-                                        <rect key="frame" x="96.666666666666671" y="0.0" width="221" height="223"/>
+                                        <rect key="frame" x="97" y="0.0" width="221" height="223"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="221" height="223"/>
@@ -1114,7 +1114,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ig5-8x-5zg" id="iXf-3e-D8W">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGg-NT-eXq">
@@ -2840,6 +2840,9 @@
                                     <tabBarItem title="功能" image="sat_btn_gognnengjian_default" id="UgS-7q-huE"/>
                                     <tabBarItem title="扩展" image="sat_btn_kuozhanjian_default" id="pit-Z7-Vl2"/>
                                 </items>
+                                <connections>
+                                    <outlet property="delegate" destination="HHc-1l-ajj" id="boB-Cy-I88"/>
+                                </connections>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Q6-ND-I1s" userLabel="Power">
                                 <rect key="frame" x="173.33333333333334" y="80" width="67.333333333333314" height="67.333333333333343"/>

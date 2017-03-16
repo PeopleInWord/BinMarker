@@ -121,6 +121,7 @@ class TVController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=true
                 self.funtionView.isHidden=true
                 self.numView.isHidden=false
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
                 
             })
@@ -131,6 +132,7 @@ class TVController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=false
                 self.funtionView.isHidden=true
                 self.numView.isHidden=true
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
                 
             })
@@ -143,6 +145,7 @@ class TVController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=true
                 self.funtionView.isHidden=false
                 self.numView.isHidden=true
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
             })
             
         }

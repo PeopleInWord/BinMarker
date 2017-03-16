@@ -123,7 +123,6 @@
     
     
     NSDictionary <NSString *,NSArray *>*root=[NSDictionary dictionaryWithContentsOfFile:path];
-    __block NSUInteger IDX=0;
     [root enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray <NSDictionary *>* _Nonnull obj1, BOOL * _Nonnull stop)
     {
         NSString *DeviceType=key;
@@ -149,8 +148,6 @@
             }];
         }];
     }];
-    
-    
 }
 
 
