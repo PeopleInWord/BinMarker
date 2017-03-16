@@ -117,27 +117,44 @@ class TestController: UIViewController{
     }
     
     @IBAction func confirm(_ sender: UIButton) {
-        let deviceSubInfoDic:Dictionary<String,String>=[
-            "deviceType" : deviceTypeStr,
-            "brandName" : brandName!,
-            "codeString" : codeList[currentIndex]]
         
-        let user = UserDefaults.init()
-        if (user.array(forKey: "deviceInfo") != nil)
-        {
-            let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
+        let alert=UIAlertController.init(title: "收藏频道号", message: "请输入要收藏的频道", preferredStyle: .alert)
+        alert.addTextField(configurationHandler: { (nameField) in
+            nameField.placeholder=self.brandName! + " " + self.codeList[self.currentIndex]
+        })
+        alert.addAction(UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+            let deviceSubInfoDic:Dictionary<String,String>=[
+                "deviceType" : self.deviceTypeStr,
+                "brandName" : self.brandName!,
+                "codeString" : self.codeList[self.currentIndex],
+                "defineName" : alert.textFields!.first!.text!]
+            
+            let user = UserDefaults.init()
+            if (user.array(forKey: "deviceInfo") != nil)
+            {
+                let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
                 deviceInfoArr .add(deviceSubInfoDic)
                 user.set(deviceInfoArr, forKey: "deviceInfo")
-        }
-        else
-        {
-            let deviceInfoArr = NSMutableArray.init()
-            deviceInfoArr .add(deviceSubInfoDic)
-            user.set(deviceInfoArr, forKey: "deviceInfo")
-        }
+            }
+            else
+            {
+                let deviceInfoArr = NSMutableArray.init()
+                deviceInfoArr .add(deviceSubInfoDic)
+                user.set(deviceInfoArr, forKey: "deviceInfo")
+            }
+            
+            user.synchronize()
+
+            let _ = self.navigationController?.popToRootViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction.init(title: "取消", style: .destructive, handler: { (action) in
+            return
+        }))
+        self.present(alert, animated: true, completion: {
+            print("ddd")
+        })
         
-        user.synchronize()
-        let _ = self.navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func noAndNext(_ sender: UIButton) {

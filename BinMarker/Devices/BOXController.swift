@@ -55,6 +55,7 @@ class BOXController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=true
                 self.functionView.isHidden=true
                 self.numView.isHidden=false
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
                 
             })
@@ -65,6 +66,7 @@ class BOXController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=false
                 self.functionView.isHidden=true
                 self.numView.isHidden=true
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
                 
             })
@@ -77,6 +79,7 @@ class BOXController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=true
                 self.functionView.isHidden=false
                 self.numView.isHidden=true
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
             })
             
         }

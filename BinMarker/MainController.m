@@ -85,7 +85,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
-    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
+    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"设置",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
         switch (selectedIndex) {
             case 0:
                 [self performSegueWithIdentifier:@"addDevice" sender:nil];
@@ -197,7 +197,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
     UILabel *codeName=[cell viewWithTag:1004];
     codeName.text=[NSString stringWithFormat:@"码组号:%@",subDic[@"codeString"]];
     iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
-    brandName.text=subDic[@"brandName"];
+    if ([subDic[@"defineName"] length]>1) {
+        brandName.text=subDic[@"defineName"];
+    }
+    else
+    {
+        brandName.text=subDic[@"brandName"];
+    }
     
     return cell;
 }
@@ -207,9 +213,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
     return YES;
 }
 
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle ==UITableViewCellEditingStyleDelete) {
+//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle ==UITableViewCellEditingStyleDelete) {
+//        
+//    }
+//}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         [_alldevices removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         if (self.alldevices.count==0) {
@@ -217,13 +229,46 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }
         
         [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
-    }
+    }];
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        NSMutableDictionary *deviceInfo=self.alldevices[indexPath.row].mutableCopy;
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"名称" message:@"输入设备名称" preferredStyle: UIAlertControllerStyleAlert];
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+            if ([deviceInfo[@"defineName"] length]>1) {
+                textField.text=deviceInfo[@"defineName"];
+            }
+            else
+            {
+                textField.text=deviceInfo[@"brandName"];
+            }
+        }];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if(alertController.textFields.firstObject.text.length>0){
+                deviceInfo[@"defineName"]=alertController.textFields.firstObject.text;
+            }
+            else
+            {
+                deviceInfo[@"defineName"]=deviceInfo[@"brandName"];
+            }
+            [_alldevices removeObjectAtIndex:indexPath.row];
+            [self.alldevices addObject:deviceInfo];
+            [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
+            
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }]];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }];
+    editAction.backgroundColor = [UIColor blueColor];
+    return @[deleteAction, editAction];
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return @"删除这一条";
-}
+
+//-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return @"删除这一条";
+//}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *deviceInfo= self.alldevices[indexPath.row];

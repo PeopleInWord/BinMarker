@@ -78,7 +78,7 @@ class DVDController: UIViewController ,UITabBarDelegate{
                 self.controlView.isHidden=true
                 self.functionView.isHidden=false
                 self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.34
+                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
             })
             
         }
