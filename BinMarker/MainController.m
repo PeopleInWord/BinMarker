@@ -80,7 +80,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 -(void)loadBluetooth
 {
-    [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];;
+    [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];
+    NSLog(@"11");
 }
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
