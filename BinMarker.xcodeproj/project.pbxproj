@@ -579,7 +579,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d20eec34-560b-44b5-a1aa-0236592a1ba5";
 				PROVISIONING_PROFILE_SPECIFIER = Development_General_Test_2016_07_20;
@@ -598,7 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
+				DEVELOPMENT_TEAM = LD2KPD7UX3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BinMarker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
@@ -607,10 +607,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5b7f8126-2776-4541-85dd-306ca3f3df67";
-				PROVISIONING_PROFILE_SPECIFIER = Distribution_BinMaker_2016_11_23;
+				PROVISIONING_PROFILE = "3ccbaaa9-3320-49ae-a220-3a518b0ede62";
+				PROVISIONING_PROFILE_SPECIFIER = Distribution_PZS_BinMaker_2017_3_16;
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
