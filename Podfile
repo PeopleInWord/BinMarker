@@ -5,6 +5,4 @@ target 'BinMarker' do
     pod 'MBProgressHUD'
     pod 'Bugly'
     pod 'FLAnimatedImage'
-    pod 'Pgyer'
-    pod 'PgyUpdate'
 end

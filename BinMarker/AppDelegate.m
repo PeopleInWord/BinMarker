@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Bugly/Bugly.h>
-#import <PgySDK/PgyManager.h>
-#import <PgyUpdate/PgyUpdateManager.h>
+//#import <PgySDK/PgyManager.h>
+//#import <PgyUpdate/PgyUpdateManager.h>
 @interface AppDelegate ()
 
 @end
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Bugly startWithAppId:@"7f4dfcd92a"];
-    [self pgySetting];
+//    [self pgySetting];
     self.window.rootViewController=[self rootView];
     
     // Override point for customization after application launch.
@@ -40,15 +40,15 @@
     }
 }
 
--(void)pgySetting
-{
-    //启动基本SDK
-    [[PgyManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
-    //启动更新检查SDK
-    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
-    [[PgyManager sharedPgyManager] setEnableFeedback:NO];
-    [[PgyUpdateManager sharedPgyManager] checkUpdate];
-}
+//-(void)pgySetting
+//{
+//    //启动基本SDK
+//    [[PgyManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
+//    //启动更新检查SDK
+//    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
+//    [[PgyManager sharedPgyManager] setEnableFeedback:NO];
+//    [[PgyUpdateManager sharedPgyManager] checkUpdate];
+//}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application
