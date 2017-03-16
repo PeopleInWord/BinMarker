@@ -118,7 +118,8 @@ class TestController: UIViewController{
     
     @IBAction func confirm(_ sender: UIButton) {
         
-        let alert=UIAlertController.init(title: "设备名", message: "请输入设备名", preferredStyle: .alert)
+
+        let alert=UIAlertController.init(title: "设备名", message: "请输入名称", preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (nameField) in
             nameField.placeholder=self.brandName! + " " + self.codeList[self.currentIndex]
         })
