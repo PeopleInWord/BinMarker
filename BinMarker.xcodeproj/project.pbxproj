@@ -44,6 +44,11 @@
 		3C2A72891E7916B800137EAB /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72881E7916B800137EAB /* InfraredBrandList.plist */; };
 		3C2A728B1E79176400137EAB /* ChooseInfrareBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */; };
 		3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */; };
+		3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72921E7A824900137EAB /* CoreTelephony.framework */; };
+		3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72941E7A825300137EAB /* OpenGLES.framework */; };
+		3C2A72971E7A825A00137EAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72961E7A825A00137EAB /* AVFoundation.framework */; };
+		3C2A72991E7A826100137EAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72981E7A826100137EAB /* SystemConfiguration.framework */; };
+		3C2A729B1E7A826700137EAB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729A1E7A826700137EAB /* CoreMotion.framework */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
@@ -98,6 +103,11 @@
 		3C2A72881E7916B800137EAB /* InfraredBrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfraredBrandList.plist; sourceTree = "<group>"; };
 		3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseInfrareBrand.swift; sourceTree = "<group>"; };
 		3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infrared_Datebase.sqlite; sourceTree = "<group>"; };
+		3C2A72921E7A824900137EAB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		3C2A72941E7A825300137EAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3C2A72961E7A825A00137EAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3C2A72981E7A826100137EAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3C2A729A1E7A826700137EAB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
@@ -116,6 +126,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2A729B1E7A826700137EAB /* CoreMotion.framework in Frameworks */,
+				3C2A72991E7A826100137EAB /* SystemConfiguration.framework in Frameworks */,
+				3C2A72971E7A825A00137EAB /* AVFoundation.framework in Frameworks */,
+				3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */,
+				3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */,
 				3C16B1501E77D4BD00A60D58 /* libstaticLib.a in Frameworks */,
 				3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */,
 				0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */,
@@ -260,6 +275,11 @@
 		D87B68AA47A996CB743B73D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C2A729A1E7A826700137EAB /* CoreMotion.framework */,
+				3C2A72981E7A826100137EAB /* SystemConfiguration.framework */,
+				3C2A72961E7A825A00137EAB /* AVFoundation.framework */,
+				3C2A72941E7A825300137EAB /* OpenGLES.framework */,
+				3C2A72921E7A824900137EAB /* CoreTelephony.framework */,
 				3C589D861E5FD107002D3637 /* CoreBluetooth.framework */,
 				98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */,
 			);
