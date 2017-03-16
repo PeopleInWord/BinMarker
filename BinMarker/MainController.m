@@ -193,10 +193,10 @@ static NSString *const targetName=@"IrRemoteControllerA";
     NSDictionary *imageDic=@{@"\"TV\"":@"icon_TV",@"\"DVD\"":@"icon_DVD",@"\"COMBI\"":@"icon_AMP",@"\"SAT\"":@"icon_BOX"};
     cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
     UIImageView *iconImage=[cell viewWithTag:1001];
-    UILabel *deviceType=[cell viewWithTag:1002];
     UILabel *brandName=[cell viewWithTag:1003];
+    UILabel *codeName=[cell viewWithTag:1004];
+    codeName.text=[NSString stringWithFormat:@"码组号:%@",subDic[@"codeString"]];
     iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
-    deviceType.text=subDic[@"deviceType"];
     brandName.text=subDic[@"brandName"];
     
     return cell;

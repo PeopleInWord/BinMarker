@@ -67,7 +67,92 @@
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"chooseBrand" sender:indexPath];
+    
+ 
 }
+
+- (IBAction)temp:(UIBarButtonItem *)sender {
+//    func copyNewData(with sourceName:String) -> String {//转化成文件
+//        let sourcePath=Bundle.main.path(forResource: sourceName, ofType: "bin")
+//        let sourceData=NSData.init(contentsOfFile: sourcePath!)
+//        
+//        let paths=NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+//        let path=paths[0]
+//        let targetPath = path + "/" + sourceName + ".bin"
+//        
+//        let manger=FileManager.default
+//        if manger.createFile(atPath: targetPath, contents: nil, attributes: nil) {
+//            let handle=FileHandle.init(forWritingAtPath: targetPath)
+//            handle?.write(Data.init(referencing: sourceData!))
+//            handle?.closeFile()
+//            return targetPath
+//        }
+//        else
+//        {
+//            return ""
+//        }
+//    }
+//    NSString *path=[[NSBundle mainBundle]pathForResource:@"Infrared_Datebase" ofType:@"bin"];
+//    NSData *sourdata=[NSData dataWithContentsOfFile:path];
+//    NSString *sourcePath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+//    sourcePath=[NSString stringWithFormat:@"%@/target_Datebase.sqlite",sourcePath];
+//    NSFileManager *manger=[NSFileManager defaultManager];
+//    if (manger) {
+//        <#statements#>
+//    }
+    
+//    NSFileHandle *filemanger=[NSFileHandle fileHandleForWritingAtPath:sourcePath];
+    
+//    if ([manger createFileAtPath:targetPath contents:nil attributes:nil]) {
+//        NSFileHandle *filemanger=[NSFileHandle fileHandleForWritingAtPath:targetPath];
+//        [filemanger writeData:sourdata];
+//        [filemanger closeFile];
+//        NSLog(@"%@",targetPath);
+//    }
+    
+    NSString *path=[[NSBundle mainBundle]pathForResource:@"InfraredBrandList" ofType:@"plist"];
+
+    NSString *sourcePath=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    sourcePath=[NSString stringWithFormat:@"%@/Infrared_Datebase.sqlite",sourcePath];
+    FMDatabase *db=[FMDatabase databaseWithPath:sourcePath];
+    if (![db open]) {
+        return;
+    }
+    
+    
+    
+    
+    NSDictionary <NSString *,NSArray *>*root=[NSDictionary dictionaryWithContentsOfFile:path];
+    __block NSUInteger IDX=0;
+    [root enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray <NSDictionary *>* _Nonnull obj1, BOOL * _Nonnull stop)
+    {
+        NSString *DeviceType=key;
+        [obj1 enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj2, NSUInteger idx, BOOL * _Nonnull stop)//TV AIR下
+        {
+            NSString *Brand=obj2[@"brand"];
+            NSArray <NSString *>*code=obj2[@"code"];
+            [code enumerateObjectsUsingBlock:^(NSString * _Nonnull obj3, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *DeviceNo=obj3;
+//                IDX+=1;
+                //写入
+                NSString *sql1 = [NSString stringWithFormat:
+                                  @"INSERT INTO '%@' ( '%@', '%@', '%@', '%@', '%@') VALUES ( '%@', '%@', '%@', '%@', '%@')",
+                                  @"RemoteIndex", @"Brand", @"DeviceType", @"Model", @"DeviceNo", @"Group1",
+                                                        Brand,  DeviceType,     @"",    DeviceNo,   @"0"];
+                
+                NSLog(@"%@",sql1);
+                if([db executeUpdate:sql1])
+                {
+                    NSLog(@"成功");
+                }
+                
+            }];
+        }];
+    }];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -80,7 +165,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
     ChooseBrandController *target=segue.destinationViewController;
-    NSString *path=[[NSBundle mainBundle]pathForResource:@"NSE_Database" ofType:@"sqlite"];
+    NSString *path=[[NSBundle mainBundle]pathForResource:@"Infrared_Datebase" ofType:@"sqlite"];
     FMDatabase *db=[FMDatabase databaseWithPath:path];
     if ([db open]) {
         NSDictionary *selectWord=@{@(0):@"TV",@(1):@"DVD",@(2):@"COMBI",@(3):@"SAT"};
