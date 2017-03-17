@@ -52,6 +52,7 @@
 		3C2A729D1E7A916A00137EAB /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729C1E7A916A00137EAB /* iflyMSC.framework */; };
 		3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729E1E7A920B00137EAB /* libz.tbd */; };
 		3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72A01E7A922300137EAB /* libc++.tbd */; };
+		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
@@ -114,6 +115,7 @@
 		3C2A729C1E7A916A00137EAB /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3C2A729E1E7A920B00137EAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3C2A72A01E7A922300137EAB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				3CC755EA1E261FA100013C63 /* BinMakeManger.swift */,
 				3CFB38391E6FD6D00069AEC6 /* ScaningController.h */,
 				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
+				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
+				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
 				3C2A728B1E79176400137EAB /* ChooseInfrareBrand.swift in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,

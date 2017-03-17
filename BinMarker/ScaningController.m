@@ -157,7 +157,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
                      CBPeripheral *peripheral=obj[Peripheral];
                      NSString *uuid= peripheral.identifier.UUIDString;
                      [[NSUserDefaults standardUserDefaults]setObject:uuid forKey:@"CurrentDevice"];
-                     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"Selected"];
+                     
                      [[NSUserDefaults standardUserDefaults]synchronize];
                      [self moveToMain];
                  }
@@ -167,6 +167,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 - (IBAction)toMain:(UIButton *)sender {
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"Selected"];
     [self performSegueWithIdentifier:@"showMain" sender:nil];
 }
 

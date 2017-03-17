@@ -91,8 +91,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
             case 0:
                 [self performSegueWithIdentifier:@"addDevice" sender:nil];
                 break;
-                case 1:
-                
+            case 1:
+                [self performSegueWithIdentifier:@"setting" sender:nil];
                 break;
             default:
                 break;

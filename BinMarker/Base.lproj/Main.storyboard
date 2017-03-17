@@ -94,6 +94,50 @@
             </objects>
             <point key="canvasLocation" x="-367.5" y="-627.46478873239437"/>
         </scene>
+        <!--Setting Controller-->
+        <scene sceneID="a3B-RE-dpK">
+            <objects>
+                <tableViewController id="3wR-vv-M9p" customClass="SettingController" customModule="BinMarker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Q6A-DL-hDB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="设备" id="ufI-KW-hC0">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VOL-hc-jeg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VOL-hc-jeg" id="8kS-ym-dPB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解除设备绑定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eE-Cx-D6G">
+                                                    <rect key="frame" x="38" y="11" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5eE-Cx-D6G" firstAttribute="leading" secondItem="8kS-ym-dPB" secondAttribute="leadingMargin" constant="30" id="SR6-gb-4UF"/>
+                                                <constraint firstItem="5eE-Cx-D6G" firstAttribute="centerY" secondItem="8kS-ym-dPB" secondAttribute="centerY" id="yQ4-0a-Xcv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3wR-vv-M9p" id="a3D-Az-30T"/>
+                            <outlet property="delegate" destination="3wR-vv-M9p" id="6kp-99-kAx"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7C0-LO-9Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="-628"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xcf-TX-lpD">
             <objects>
@@ -982,6 +1026,7 @@
                         <segue destination="HXp-De-2Dl" kind="show" identifier="box" id="Ojt-rS-6av"/>
                         <segue destination="Nia-aO-Vjf" kind="show" identifier="tv" id="tcd-oC-Hpq"/>
                         <segue destination="HHc-1l-ajj" kind="show" identifier="amp" id="fwY-yz-W6u"/>
+                        <segue destination="3wR-vv-M9p" kind="show" identifier="setting" id="PjP-hK-8gn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk4-G3-cft" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1051,40 +1096,11 @@
                     <connections>
                         <outlet property="mainView" destination="kob-Zl-HdA" id="9SY-vE-hJX"/>
                         <segue destination="Ihv-rE-HoU" kind="show" identifier="chooseBrand" id="iSu-kA-qRh"/>
-                        <segue destination="bZa-JN-xAk" kind="show" identifier="infraredBrand" id="cWV-BF-bYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2L-EG-ra5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1247" y="130"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="v5v-ni-mxe">
-            <objects>
-                <viewController id="bZa-JN-xAk" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gx3-Nt-IXj"/>
-                        <viewControllerLayoutGuide type="bottom" id="LgY-o4-7Sf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yS0-Xl-s9l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IJN-1j-89h">
-                                <rect key="frame" x="11" y="349" width="392" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="mMY-p5-kaV" kind="show" id="ckO-qN-0Jl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QKL-9a-z5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2037.68115942029" y="-671.73913043478262"/>
         </scene>
         <!--选择品牌-->
         <scene sceneID="54v-9V-Tpv">
@@ -3532,7 +3548,4 @@
         <image name="tv_btn_lan_bg" width="84" height="45"/>
         <image name="tv_btn_lv_bg" width="84" height="45"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ckO-qN-0Jl"/>
-    </inferredMetricsTieBreakers>
 </document>

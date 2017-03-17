@@ -43,8 +43,10 @@ class TestController: UIViewController{
     }
     
     private func isContain(_ code:String) ->Bool{
-        return Bundle.main.path(forResource: code, ofType: "bin") != nil
+//        return Bundle.main.path(forResource: code, ofType: "bin") != nil
+        return true
     }
+    
 //    @IBAction func chooseDevice(_ sender: UIButton) {
 //        FTPopOverMenuConfiguration.default().menuWidth=180
 //        let main=self.navigationController?.viewControllers[0] as! MainController
