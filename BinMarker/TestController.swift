@@ -70,20 +70,20 @@ class TestController: UIViewController{
         mbp.removeFromSuperViewOnHide=true
         mbp.show(animated: true)
         mbp.label.text="发送中:" + sender.tag.description
-        if (UserDefaults.standard.string(forKey: "CurrentDevice") == nil) {
-            let alert=UIAlertController.init(title: "警告", message: "先点击标题添加设备", preferredStyle: .alert)
-            let ok=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
-                mbp.hide(animated: true, afterDelay: 0.5)
-                return
-            })
-            alert.addAction(ok)
-            self.present(alert, animated: true, completion: { 
-                
-            })
-            return
-        }
-        else
-        {
+//        if (UserDefaults.standard.string(forKey: "CurrentDevice") == nil) {
+//            let alert=UIAlertController.init(title: "警告", message: "先点击标题添加设备", preferredStyle: .alert)
+//            let ok=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+//                mbp.hide(animated: true, afterDelay: 0.5)
+//                return
+//            })
+//            alert.addAction(ok)
+//            self.present(alert, animated: true, completion: { 
+//                
+//            })
+//            return
+//        }
+//        else
+//        {
             let deviceID:String="IrRemoteControllerA"
             let code:String=BinMakeManger.shareInstance.singleCommand(codeList[currentIndex], sender.tag, self.deviceType.row)
             BluetoothManager.getInstance()?.sendByteCommand(with: code, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
@@ -95,7 +95,7 @@ class TestController: UIViewController{
                 mbp.hide(animated: true, afterDelay: 1.5)
                 return 0
             })
-        }
+//        }
     }
     
     @IBAction func nextCode(_ sender: UIButton) {
