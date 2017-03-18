@@ -69,9 +69,10 @@ class TVController: UIViewController ,UITabBarDelegate{
                 })
                 alert.addTextField(configurationHandler: { (number) in
                     number.keyboardType = .numberPad
-                    number.placeholder="输入频道号"
+                    number.placeholder="输入频道号(不超过3位)"
                 })
                 alert.addAction(UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+                    //加限制
                     var channelList=UserDefaults.standard.object(forKey: "favorite") as? Array<Dictionary<String, String>>
                     let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
                     channelList?.append(channelInfo)
