@@ -55,6 +55,7 @@
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3C72B6EC1E728A3A0088925F /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B6EB1E728A3A0088925F /* TVController.swift */; };
 		3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC755EA1E261FA100013C63 /* BinMakeManger.swift */; };
+		3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +115,7 @@
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3C72B6EB1E728A3A0088925F /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CC755EA1E261FA100013C63 /* BinMakeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinMakeManger.swift; sourceTree = "<group>"; };
+		3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteScrollView.swift; path = Extension/FavoriteScrollView.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		3C0D31711DDD9D9500D78924 /* BinMarker */ = {
 			isa = PBXGroup;
 			children = (
+				3CCB1AF71E810BCC000C3A80 /* Extension */,
 				3C72B6E91E7159F50088925F /* old */,
 				3C589D7A1E5FCDA3002D3637 /* Lib */,
 				3C0D31891DDDA38800D78924 /* List */,
@@ -261,6 +264,14 @@
 				3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */,
 			);
 			name = Devices;
+			sourceTree = "<group>";
+		};
+		3CCB1AF71E810BCC000C3A80 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		C93512C1FF97EC979024132C /* Pods */ = {
@@ -444,6 +455,7 @@
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
+				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
