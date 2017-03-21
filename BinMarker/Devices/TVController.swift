@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate{
+class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate{
     @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var funtionView: UIView!
     @IBOutlet weak var numView: UIView!
@@ -20,7 +20,11 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var costom: UIButton!
     var isCommon = true
     var lastTabberItemIndex = 1
-    var resourseList=UserDefaults.standard.object(forKey: "favorite") as! Array<Dictionary<String, Any>>
+    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
+    
+    var actionTemp=UIAlertAction.init()
+    var nameField=UITextField.init()
+    var numberField=UITextField.init()
     public var deviceInfo:Dictionary<String, Any> = [:]
 
     override func viewDidLoad() {
@@ -30,7 +34,18 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
         
+        NotificationCenter.default.addObserver(self, selector:#selector(isLegal(_:)) , name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
             // Do any additional setup after loading the view.
+    }
+    
+    func isLegal(_ sender:Notification) -> Void {
+        if (self.nameField.text?.characters.count)! > 0 && self.numberField.text?.characters.count != 0 && (self.numberField.text?.characters.count)! <= 3{
+            self.actionTemp.isEnabled=true
+        }
+        else
+        {
+            self.actionTemp.isEnabled=false
+        }
     }
     
     @IBAction func selectCommon(_ sender: UIButton) {
@@ -79,31 +94,38 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func favoriteBtn(_ sender: UIBarButtonItem,_ event:UIEvent) {
         FTPopOverMenuConfiguration.default().menuWidth=100
-        if UserDefaults.standard.object(forKey: "favorite") == nil{
-            UserDefaults.standard.set([], forKey: "favorite")
+        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
+            UserDefaults.standard.set([], forKey: "TVfavorite")
         }
         FTPopOverMenu.show(from: event, withMenuArray: ["添加频道收藏"], doneBlock: { (index) in
             if index==0
             {
                 let alert=UIAlertController.init(title: "收藏频道号", message: "请输入要收藏的频道", preferredStyle: .alert)
-                alert.addTextField(configurationHandler: { (nameField) in
-                    nameField.placeholder="输入频道名称"
+                alert.addTextField(configurationHandler: { (nameF) in
+                    self.nameField=nameF
+                    nameF.delegate=self
+                    nameF.placeholder="输入频道名称"
                 })
                 alert.addTextField(configurationHandler: { (number) in
+                    self.numberField=number
+                    number.delegate=self
                     number.keyboardType = .numberPad
                     number.placeholder="输入频道号(不超过3位)"
                 })
-                alert.addAction(UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+                let actionOK=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
                     //加限制
-                    var channelList=UserDefaults.standard.object(forKey: "favorite") as? Array<Dictionary<String, String>>
+                    var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
                     let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
                     channelList?.append(channelInfo)
                     self.resourseList=channelList!
-                    UserDefaults.standard.set(channelList, forKey: "favorite")
+                    UserDefaults.standard.set(channelList, forKey: "TVfavorite")
                     UserDefaults.standard.synchronize()
                     self.favoriteList.reloadData()
                     
-                }))
+                })
+            actionOK.isEnabled=false
+            self.actionTemp=actionOK
+            alert.addAction(actionOK)
                 alert.addAction(UIAlertAction.init(title: "取消", style: .destructive, handler: { (action) in
                     return
                 }))
@@ -250,12 +272,20 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if isCommon {
+            return false
+        }
         return true
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction.init(style: .destructive, title: "删除") { (deleteAction, deleteIndex) in
-            
+            var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
+            channelList?.remove(at: indexPath.row)
+            self.resourseList=channelList!
+            UserDefaults.standard.set(channelList, forKey: "TVfavorite")
+            UserDefaults.standard.synchronize()
+            tableView.reloadData()
         }
         return [delete]
     }
@@ -268,6 +298,10 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         {
             return self.resourseList.count
         }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
