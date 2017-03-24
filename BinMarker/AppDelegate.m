@@ -21,6 +21,7 @@
 {
     [Bugly startWithAppId:@"7f4dfcd92a"];
     [self pgySetting];
+    
     self.window.rootViewController=[self rootView];
     
     // Override point for customization after application launch.

@@ -48,6 +48,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
+    [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -213,12 +215,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     return YES;
 }
 
-//-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle ==UITableViewCellEditingStyleDelete) {
-//        
-//    }
-//}
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {

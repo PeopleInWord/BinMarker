@@ -12,7 +12,20 @@ class SettingController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let y=averageOfFunction(a: 2, b: 2) { (x)  in  {
+            var temp = x+2
+            temp = temp+3
+            return temp
+            }()
+        }
+        
+        
+        let z = applyTwice(
+            f:
+            { (a) -> Float in
+            return a+1
+        }, x: 2)
+        print(z)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +33,18 @@ class SettingController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    func applyTwice(f:((Float) -> Float),x:Float) -> Float
+    {
+        return f(f(x))
+    }
+    
+    func averageOfFunction(a:Float,b:Float,f:((Float) -> Float)) -> Float {
+        return (f(a) + f(b)) / 2
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

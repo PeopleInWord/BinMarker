@@ -126,6 +126,8 @@ class BinMakeManger: NSObject {
             return String.divideCode(code)
         }()
         return "254161" + deviceTypeStr + codeStr + channelStr + "000000"
+//        fe a1 05 01 19 00 70 0000cc
+//        fe a1 05 01 19 01 12 0000cc
 //        1.加入国内数据库
 //        2.修复频道命令
     }

@@ -42,7 +42,6 @@
 		3C2A72851E790E2100137EAB /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */; };
 		3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */; };
 		3C2A72891E7916B800137EAB /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72881E7916B800137EAB /* InfraredBrandList.plist */; };
-		3C2A728B1E79176400137EAB /* ChooseInfrareBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */; };
 		3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */; };
 		3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72921E7A824900137EAB /* CoreTelephony.framework */; };
 		3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72941E7A825300137EAB /* OpenGLES.framework */; };
@@ -59,6 +58,7 @@
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3C72B6EC1E728A3A0088925F /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B6EB1E728A3A0088925F /* TVController.swift */; };
 		3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC755EA1E261FA100013C63 /* BinMakeManger.swift */; };
+		3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +105,6 @@
 		3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_08FE.bin; path = "Bin&SQL/T32DBA_08FE.bin"; sourceTree = "<group>"; };
 		3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_40EF.bin; path = "Bin&SQL/T32DBA_40EF.bin"; sourceTree = "<group>"; };
 		3C2A72881E7916B800137EAB /* InfraredBrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfraredBrandList.plist; sourceTree = "<group>"; };
-		3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseInfrareBrand.swift; sourceTree = "<group>"; };
 		3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infrared_Datebase.sqlite; sourceTree = "<group>"; };
 		3C2A72921E7A824900137EAB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3C2A72941E7A825300137EAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -122,6 +121,7 @@
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3C72B6EB1E728A3A0088925F /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CC755EA1E261FA100013C63 /* BinMakeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinMakeManger.swift; sourceTree = "<group>"; };
+		3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteScrollView.swift; path = Extension/FavoriteScrollView.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +172,7 @@
 		3C0D31711DDD9D9500D78924 /* BinMarker */ = {
 			isa = PBXGroup;
 			children = (
+				3CCB1AF71E810BCC000C3A80 /* Extension */,
 				3C72B6E91E7159F50088925F /* old */,
 				3C589D7A1E5FCDA3002D3637 /* Lib */,
 				3C0D31891DDDA38800D78924 /* List */,
@@ -203,7 +204,6 @@
 				3C0D318B1DDDA3A600D78924 /* MainController.m */,
 				3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */,
 				3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */,
-				3C2A728A1E79176400137EAB /* ChooseInfrareBrand.swift */,
 				3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */,
 				3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */,
 				3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */,
@@ -274,6 +274,14 @@
 				3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */,
 			);
 			name = Devices;
+			sourceTree = "<group>";
+		};
+		3CCB1AF71E810BCC000C3A80 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		C93512C1FF97EC979024132C /* Pods */ = {
@@ -458,8 +466,8 @@
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
-				3C2A728B1E79176400137EAB /* ChooseInfrareBrand.swift in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
+				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
