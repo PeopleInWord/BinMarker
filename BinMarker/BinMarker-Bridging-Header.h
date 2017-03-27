@@ -9,3 +9,4 @@
 #import "BluetoothManager.h"
 #import "MBProgressHUD.h"
 #import "NSString+StringOperation.h"
+#import "FLAnimatedImage.h"

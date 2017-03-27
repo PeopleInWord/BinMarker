@@ -18,6 +18,11 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var favoriteList: UITableView!
     @IBOutlet weak var common: UIButton!
     @IBOutlet weak var costom: UIButton!
+    
+    @IBOutlet weak var OK_Voice: UIButton!
+    @IBOutlet weak var effectView: UIVisualEffectView!
+    
+    @IBOutlet weak var voiceFrame: UIImageView!
     var isCommon = true
     var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
@@ -25,6 +30,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
+    
+
     public var deviceInfo:Dictionary<String, Any> = [:]
 
     override func viewDidLoad() {
@@ -33,7 +40,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
-        
+
         NotificationCenter.default.addObserver(self, selector:#selector(isLegal(_:)) , name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
             // Do any additional setup after loading the view.
     }
@@ -46,6 +53,69 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         {
             self.actionTemp.isEnabled=false
         }
+    }
+    @IBAction func longPressOk_Voice(_ sender: UILongPressGestureRecognizer) {
+        print(sender.state.rawValue)
+        if sender.state.rawValue == 1 {
+            
+            let basic1=CABasicAnimation.init(keyPath: "opacity")
+            basic1.fromValue=1.0
+            basic1.toValue=0.0
+            basic1.duration=1.0
+            
+            let basic2=CABasicAnimation.init(keyPath: "transform.scale")
+            basic2.fromValue=1.0
+            basic2.toValue=4.0
+            basic2.duration=1.0
+            
+            let group=CAAnimationGroup.init()
+            group.animations=[basic1,basic2]
+            group.duration=1.0
+            group.isRemovedOnCompletion=true
+            group.fillMode=kCAFillModeForwards
+            sender.view?.layer.add(group, forKey: "button")
+            
+            let basic3=CABasicAnimation.init(keyPath: "opacity")
+            basic3.fromValue=0.0
+            basic3.toValue=0.9
+            basic3.duration=1
+            basic3.isRemovedOnCompletion=false
+            effectView.layer.add(basic3, forKey: "effectView")
+            effectView.frame=(self.view.frame)
+            self.view.window?.addSubview(effectView)
+            effectView.isHidden=true
+            effectView.isHidden=false
+            
+            let basic4=CABasicAnimation.init(keyPath: "transform.scale")
+            basic4.fromValue=1.0
+            basic4.toValue=6
+            basic4.duration=1
+            
+            let basic5=CABasicAnimation.init(keyPath: "opacity")
+            basic5.fromValue=1.0
+            basic5.toValue=0.0
+            basic5.duration=1.0
+
+            let group2=CAAnimationGroup.init()
+            group2.animations=[basic4,basic5]
+            
+            group2.duration=1.5
+            group2.repeatCount=1000
+            group2.timingFunction=CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+            voiceFrame.layer.add(group2, forKey: "voiceFrame")
+            
+        }
+        
+    }
+    @IBAction func removeEffect(_ sender: UIButton) {
+        let basic1=CABasicAnimation.init(keyPath: "opacity")
+        basic1.fromValue=1.0
+        basic1.toValue=0.0
+        basic1.duration=0.5
+        basic1.isRemovedOnCompletion=true
+        effectView.isHidden=true
+        effectView.layer.add(basic1, forKey: "effectView")
+        effectView.removeFromSuperview()
     }
     
     @IBAction func selectCommon(_ sender: UIButton) {
