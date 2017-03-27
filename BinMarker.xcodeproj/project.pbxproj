@@ -54,9 +54,9 @@
 		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
+		3C43FADD1E84FDA300F01330 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43FADC1E84FDA300F01330 /* TVController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
-		3C72B6EC1E728A3A0088925F /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B6EB1E728A3A0088925F /* TVController.swift */; };
 		3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC755EA1E261FA100013C63 /* BinMakeManger.swift */; };
 		3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
@@ -117,9 +117,9 @@
 		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
+		3C43FADC1E84FDA300F01330 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		3C72B6EB1E728A3A0088925F /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CC755EA1E261FA100013C63 /* BinMakeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinMakeManger.swift; sourceTree = "<group>"; };
 		3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteScrollView.swift; path = Extension/FavoriteScrollView.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
@@ -268,7 +268,7 @@
 		3C72B6EA1E728A000088925F /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				3C72B6EB1E728A3A0088925F /* TVController.swift */,
+				3C43FADC1E84FDA300F01330 /* TVController.swift */,
 				3C4F514F1E7394CF007E32F2 /* DVDController.swift */,
 				3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */,
 				3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */,
@@ -459,9 +459,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */,
-				3C72B6EC1E728A3A0088925F /* TVController.swift in Sources */,
 				3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */,
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
+				3C43FADD1E84FDA300F01330 /* TVController.swift in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,

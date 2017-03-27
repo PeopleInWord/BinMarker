@@ -1037,43 +1037,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UDt-X8-fxP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <visualEffectView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" id="f9Y-yI-j1r">
-                                    <rect key="frame" x="0.0" y="98" width="414" height="736"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="acC-tk-z8X">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1w-MX-zYX">
-                                                <rect key="frame" x="145.66666666666663" y="306.66666666666674" width="124.33333333333337" height="124.33333333333331"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="t1w-MX-zYX" secondAttribute="height" id="k08-d2-MR5"/>
-                                                </constraints>
-                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
-                                                <state key="normal" title="+" image="btn_tianjia_default">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="addDevice:" destination="HcQ-rv-CFL" eventType="touchUpInside" id="x07-a6-5Se"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无任何遥控器" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4I-j4-7K6">
-                                                <rect key="frame" x="158" y="451" width="98" height="19"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="t1w-MX-zYX" firstAttribute="centerY" secondItem="acC-tk-z8X" secondAttribute="centerY" id="G8z-tR-g2r"/>
-                                            <constraint firstItem="X4I-j4-7K6" firstAttribute="centerX" secondItem="acC-tk-z8X" secondAttribute="centerX" id="cC8-jI-WVq"/>
-                                            <constraint firstItem="t1w-MX-zYX" firstAttribute="centerX" secondItem="acC-tk-z8X" secondAttribute="centerX" id="dSS-qN-zcZ"/>
-                                            <constraint firstItem="X4I-j4-7K6" firstAttribute="top" secondItem="t1w-MX-zYX" secondAttribute="bottom" constant="20" id="gjc-lw-JUL"/>
-                                            <constraint firstItem="t1w-MX-zYX" firstAttribute="width" secondItem="acC-tk-z8X" secondAttribute="width" multiplier="0.3" id="sJl-vV-laq"/>
-                                        </constraints>
-                                    </view>
-                                    <blurEffect style="light"/>
-                                </visualEffectView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="brandcell" rowHeight="70" id="lrM-qB-XwQ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
@@ -1121,11 +1084,51 @@
                                     <outlet property="delegate" destination="HcQ-rv-CFL" id="SiE-Ya-t8z"/>
                                 </connections>
                             </tableView>
+                            <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9Y-yI-j1r">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="acC-tk-z8X">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1w-MX-zYX">
+                                            <rect key="frame" x="145.66666666666663" y="306.66666666666674" width="124.33333333333337" height="124.33333333333331"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="t1w-MX-zYX" secondAttribute="height" id="k08-d2-MR5"/>
+                                            </constraints>
+                                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                            <state key="normal" title="+" image="btn_tianjia_default">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addDevice:" destination="HcQ-rv-CFL" eventType="touchUpInside" id="x07-a6-5Se"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无任何遥控器" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4I-j4-7K6">
+                                            <rect key="frame" x="158" y="451" width="98" height="19"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="t1w-MX-zYX" firstAttribute="centerY" secondItem="acC-tk-z8X" secondAttribute="centerY" id="G8z-tR-g2r"/>
+                                        <constraint firstItem="X4I-j4-7K6" firstAttribute="centerX" secondItem="acC-tk-z8X" secondAttribute="centerX" id="cC8-jI-WVq"/>
+                                        <constraint firstItem="t1w-MX-zYX" firstAttribute="centerX" secondItem="acC-tk-z8X" secondAttribute="centerX" id="dSS-qN-zcZ"/>
+                                        <constraint firstItem="X4I-j4-7K6" firstAttribute="top" secondItem="t1w-MX-zYX" secondAttribute="bottom" constant="20" id="gjc-lw-JUL"/>
+                                        <constraint firstItem="t1w-MX-zYX" firstAttribute="width" secondItem="acC-tk-z8X" secondAttribute="width" multiplier="0.3" id="sJl-vV-laq"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.95686274510000002" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UDt-X8-fxP" firstAttribute="leading" secondItem="3VA-sh-HXv" secondAttribute="leading" id="3e0-Rp-cWg"/>
+                            <constraint firstItem="f9Y-yI-j1r" firstAttribute="top" secondItem="3VA-sh-HXv" secondAttribute="top" id="5T0-wu-jmn"/>
+                            <constraint firstItem="CfK-0Z-qHP" firstAttribute="top" secondItem="f9Y-yI-j1r" secondAttribute="bottom" id="aKe-Vq-jSB"/>
+                            <constraint firstItem="f9Y-yI-j1r" firstAttribute="leading" secondItem="3VA-sh-HXv" secondAttribute="leading" id="b8b-r7-hVy"/>
                             <constraint firstAttribute="trailing" secondItem="UDt-X8-fxP" secondAttribute="trailing" id="c7G-LG-6jR"/>
+                            <constraint firstAttribute="trailing" secondItem="f9Y-yI-j1r" secondAttribute="trailing" id="mBy-Jx-M4P"/>
                             <constraint firstItem="CfK-0Z-qHP" firstAttribute="top" secondItem="UDt-X8-fxP" secondAttribute="bottom" id="mnc-BA-V7M"/>
                             <constraint firstItem="UDt-X8-fxP" firstAttribute="top" secondItem="3VA-sh-HXv" secondAttribute="top" id="oAw-jO-Gf8"/>
                         </constraints>
@@ -2255,14 +2258,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-sI-mi7" customClass="FavoriteScrollView" customModule="BinMarker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-7i-sy4">
-                                        <rect key="frame" x="-414" y="0.0" width="828" height="623"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-7i-sy4">
+                                        <rect key="frame" x="0.0" y="0.0" width="828" height="623"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35v-he-aww" userLabel="TopView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="297.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmL-M7-jKe" userLabel="Power">
-                                                        <rect key="frame" x="173.33333333333334" y="14" width="67.333333333333314" height="67"/>
+                                                        <rect key="frame" x="173" y="14" width="67" height="67"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="kmL-M7-jKe" secondAttribute="height" id="8DW-Jp-jEf"/>
                                                         </constraints>
@@ -2272,14 +2275,14 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGS-rl-0Dp">
-                                                        <rect key="frame" x="173.33333333333334" y="107.66666666666666" width="67.333333333333314" height="67"/>
+                                                        <rect key="frame" x="173" y="108" width="67" height="67"/>
                                                         <state key="normal" backgroundImage="sat_btn_caidan"/>
                                                         <connections>
                                                             <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="rHV-kJ-hMm"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-vw-yrs">
-                                                        <rect key="frame" x="305.66666666666674" y="14" width="67.333333333333314" height="67"/>
+                                                        <rect key="frame" x="306" y="14" width="67" height="67"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="3dj-vw-yrs" secondAttribute="height" multiplier="1:1" id="aQG-v7-t4C"/>
                                                         </constraints>
@@ -2289,7 +2292,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="138" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppa-kG-ti8">
-                                                        <rect key="frame" x="34.666666666666671" y="14" width="67.333333333333343" height="67.666666666666657"/>
+                                                        <rect key="frame" x="35" y="14" width="67" height="67"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Ppa-kG-ti8" secondAttribute="height" multiplier="1:1" id="9SQ-Dh-zFE"/>
                                                         </constraints>
@@ -2302,32 +2305,32 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="137" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adn-Yx-B6D">
-                                                        <rect key="frame" x="173.33333333333334" y="200.33333333333331" width="67.333333333333314" height="67.333333333333371"/>
+                                                        <rect key="frame" x="173" y="201" width="67" height="67"/>
                                                         <state key="normal" backgroundImage="sat_btn_xiai"/>
                                                         <connections>
                                                             <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="7bB-DI-WOC"/>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRY-Mg-dfA">
-                                                        <rect key="frame" x="35.000000000000007" y="107.66666666666667" width="66.666666666666686" height="160"/>
+                                                        <rect key="frame" x="35" y="108" width="67" height="160"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sat_btn_yinlaing" translatesAutoresizingMaskIntoConstraints="NO" id="leO-LB-aoW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="160.00000000000003"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="160"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="136" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lo-f9-UQH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="80"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="80"/>
                                                                 <connections>
                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="lQI-YK-hdK"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOb-N5-tJa">
-                                                                <rect key="frame" x="18.666666666666668" y="70.666666666666686" width="31.000000000000004" height="17.999999999999972"/>
+                                                                <rect key="frame" x="18" y="71" width="31" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-at-z4L">
-                                                                <rect key="frame" x="0.0" y="80" width="66.666666666666671" height="80.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="80" width="67" height="80"/>
                                                                 <connections>
                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="iQj-RM-kYo"/>
                                                                 </connections>
@@ -2353,25 +2356,25 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBU-Yl-gSs">
-                                                        <rect key="frame" x="305.66666666666669" y="107.66666666666667" width="67" height="161"/>
+                                                        <rect key="frame" x="306" y="108" width="67" height="161"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sat_btn_pindao" translatesAutoresizingMaskIntoConstraints="NO" id="kU3-FI-wYb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="161.00000000000003"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="161"/>
                                                             </imageView>
                                                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4H-1P-W5C">
-                                                                <rect key="frame" x="0.0" y="80.666666666666686" width="67" height="80.666666666666657"/>
+                                                                <rect key="frame" x="0.0" y="80.666666666666657" width="67" height="80.333333333333343"/>
                                                                 <connections>
                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="NbO-TX-QRS"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="135" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-B4-vxR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="80.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="67" height="80.666666666666657"/>
                                                                 <connections>
                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="dST-Su-aLs"/>
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poa-Ml-oXN">
-                                                                <rect key="frame" x="18.666666666666629" y="71.666666666666686" width="31" height="17.999999999999972"/>
+                                                                <rect key="frame" x="18" y="72" width="31" height="18"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
@@ -2426,28 +2429,28 @@
                                                 </constraints>
                                             </view>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ceb-sQ-XMc">
-                                                <rect key="frame" x="0.0" y="297.66666666666674" width="414" height="325.33333333333326"/>
+                                                <rect key="frame" x="0.0" y="298" width="414" height="325"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vez-Bp-kJT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="299.99999999999994"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-xl-Req">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="413.99999999999994"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OD-al-e1z">
-                                                                        <rect key="frame" x="84.666666666666686" y="25" width="245.66666666666663" height="244.99999999999994"/>
+                                                                        <rect key="frame" x="84" y="25" width="246" height="246"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sat_btn_qiehuan" translatesAutoresizingMaskIntoConstraints="NO" id="DYX-DS-gRf">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="245.66666666666663" height="244.99999999999994"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="246" height="246"/>
                                                                             </imageView>
                                                                             <button opaque="NO" tag="132" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mos-e8-N5D">
-                                                                                <rect key="frame" x="159.66666666666669" y="80" width="85.999999999999972" height="85.999999999999943"/>
+                                                                                <rect key="frame" x="159" y="80" width="87" height="87"/>
                                                                                 <connections>
                                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="h9c-Y4-aou"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0g-64-H9c">
-                                                                                <rect key="frame" x="79.999999999999986" y="158.99999999999994" width="86.000000000000014" height="86"/>
+                                                                                <rect key="frame" x="80.666666666666657" y="160" width="86" height="86"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="n0g-64-H9c" secondAttribute="height" id="VBv-79-Kvl"/>
                                                                                 </constraints>
@@ -2456,7 +2459,7 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhP-4A-uE3">
-                                                                                <rect key="frame" x="79.999999999999986" y="0.0" width="86.000000000000014" height="86"/>
+                                                                                <rect key="frame" x="80" y="0.0" width="87" height="87"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="YhP-4A-uE3" secondAttribute="height" id="A3i-kD-2ei"/>
                                                                                 </constraints>
@@ -2465,17 +2468,19 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" tag="124" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXN-rd-ooP" userLabel="OK">
-                                                                                <rect key="frame" x="86.333333333333329" y="86" width="73.333333333333357" height="72.999999999999943"/>
+                                                                                <rect key="frame" x="86" y="87" width="73" height="73"/>
+                                                                                <gestureRecognizers/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="FXN-rd-ooP" secondAttribute="height" id="V1U-r5-PXx"/>
                                                                                 </constraints>
                                                                                 <state key="normal" backgroundImage="sat_btn_ok"/>
                                                                                 <connections>
                                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="cCV-an-HbR"/>
+                                                                                    <outletCollection property="gestureRecognizers" destination="atY-3M-6bV" appends="YES" id="cmA-To-3Sf"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe1-LC-yT2">
-                                                                                <rect key="frame" x="0.0" y="80" width="86.333333333333329" height="85.999999999999943"/>
+                                                                                <rect key="frame" x="0.0" y="80" width="86" height="86"/>
                                                                                 <connections>
                                                                                     <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="paw-4I-Dsi"/>
                                                                                 </connections>
@@ -2508,19 +2513,25 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hiu-NL-VLb">
-                                                                        <rect key="frame" x="34.666666666666671" y="0.0" width="67.666666666666657" height="67.333333333333314"/>
+                                                                        <rect key="frame" x="35" y="0.0" width="68" height="68"/>
                                                                         <state key="normal" backgroundImage="sat_btn_jiemudan"/>
                                                                         <connections>
                                                                             <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="7r7-nG-TMJ"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfM-Uq-mZz">
-                                                                        <rect key="frame" x="305.66666666666669" y="0.0" width="67.666666666666629" height="67.333333333333314"/>
+                                                                        <rect key="frame" x="306" y="0.0" width="68" height="68"/>
                                                                         <state key="normal" backgroundImage="sat_btn_fanhui"/>
                                                                         <connections>
                                                                             <action selector="pressBtn:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="RCA-pZ-9kF"/>
                                                                         </connections>
                                                                     </button>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长按OK键进入语音识别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcx-gH-XMU">
+                                                                        <rect key="frame" x="128" y="286" width="159" height="18"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -2528,7 +2539,9 @@
                                                                     <constraint firstItem="Hiu-NL-VLb" firstAttribute="centerX" secondItem="VyP-xl-Req" secondAttribute="centerX" multiplier="0.33" id="E6i-B2-fQk"/>
                                                                     <constraint firstItem="UfM-Uq-mZz" firstAttribute="width" secondItem="Hiu-NL-VLb" secondAttribute="width" id="SUO-oW-zFp"/>
                                                                     <constraint firstItem="1OD-al-e1z" firstAttribute="centerX" secondItem="VyP-xl-Req" secondAttribute="centerX" id="VGd-Kf-CXv"/>
+                                                                    <constraint firstItem="wcx-gH-XMU" firstAttribute="top" secondItem="1OD-al-e1z" secondAttribute="bottom" constant="15" id="Zez-1K-vOt"/>
                                                                     <constraint firstItem="UfM-Uq-mZz" firstAttribute="width" secondItem="UfM-Uq-mZz" secondAttribute="height" id="bP6-Rw-ACY"/>
+                                                                    <constraint firstItem="wcx-gH-XMU" firstAttribute="centerX" secondItem="1OD-al-e1z" secondAttribute="centerX" id="dPb-N7-gOa"/>
                                                                     <constraint firstItem="Hiu-NL-VLb" firstAttribute="top" secondItem="VyP-xl-Req" secondAttribute="top" id="f5J-1Z-nyJ"/>
                                                                     <constraint firstItem="1OD-al-e1z" firstAttribute="top" secondItem="VyP-xl-Req" secondAttribute="top" constant="25" id="faf-0f-ren"/>
                                                                     <constraint firstItem="Hiu-NL-VLb" firstAttribute="width" secondItem="Hiu-NL-VLb" secondAttribute="height" id="ib1-t7-Rho"/>
@@ -2537,10 +2550,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-Nx-Rys">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="299.99999999999994"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="151" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-Gi-GQg">
-                                                                        <rect key="frame" x="292.66666666666669" y="0.0" width="93.666666666666629" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="293" y="0.0" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="图像" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2550,7 +2563,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="130" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7O-et-rPP">
-                                                                        <rect key="frame" x="21.666666666666664" y="0.0" width="93.333333333333343" height="49.666666666666629"/>
+                                                                        <rect key="frame" x="22" y="0.0" width="94" height="50.333333333333314"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="AV/TV" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2560,7 +2573,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXS-FD-B6D">
-                                                                        <rect key="frame" x="160.66666666666666" y="73.333333333333314" width="93.666666666666686" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="160" y="73" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="时间" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2570,7 +2583,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="149" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-pp-KYS">
-                                                                        <rect key="frame" x="160.66666666666666" y="146.33333333333331" width="93.666666666666686" height="50.666666666666629"/>
+                                                                        <rect key="frame" x="160" y="146" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="日历" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2580,7 +2593,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="129" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lv7-K5-a6n">
-                                                                        <rect key="frame" x="160.66666666666666" y="220.33333333333331" width="93.666666666666686" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="160" y="219" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="蓝" backgroundImage="tv_btn_lan_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2590,7 +2603,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7x-ZQ-wqP">
-                                                                        <rect key="frame" x="160.66666666666666" y="0.0" width="93.666666666666686" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="160" y="0.0" width="94" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="L7x-ZQ-wqP" secondAttribute="height" multiplier="168:90" id="VAY-Co-PXU"/>
                                                                         </constraints>
@@ -2603,7 +2616,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="139" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34U-SL-DXk">
-                                                                        <rect key="frame" x="292.66666666666669" y="73.333333333333314" width="93.666666666666629" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="293" y="73" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="屏显" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2613,7 +2626,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="141" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmT-KI-gi2">
-                                                                        <rect key="frame" x="292.66666666666669" y="146.33333333333331" width="93.666666666666629" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="293" y="146" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="绿" backgroundImage="tv_btn_lv_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2623,7 +2636,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqZ-uT-BK7">
-                                                                        <rect key="frame" x="292.66666666666669" y="220.33333333333331" width="93.666666666666629" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="293" y="219" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="黄" backgroundImage="tv_btn_huang_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2633,7 +2646,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="150" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEy-3y-lwe">
-                                                                        <rect key="frame" x="21.666666666666664" y="73.333333333333314" width="93.333333333333343" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="22" y="73" width="94" height="50.333333333333314"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="功能" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2643,7 +2656,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="140" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7i-DX-Cyw">
-                                                                        <rect key="frame" x="21.666666666666664" y="146.33333333333331" width="93.333333333333343" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="22" y="146" width="94" height="50.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="SYS" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2653,7 +2666,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjQ-7j-jzP">
-                                                                        <rect key="frame" x="21.666666666666664" y="220.33333333333331" width="93.333333333333343" height="49.666666666666629"/>
+                                                                        <rect key="frame" x="22" y="219" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <state key="normal" title="红" backgroundImage="tv_btn_hong_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2715,10 +2728,10 @@
                                                                 </constraints>
                                                             </view>
                                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-XU-YzK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="299.99999999999994"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEh-5z-BfM">
-                                                                        <rect key="frame" x="292.66666666666669" y="0.0" width="93.666666666666629" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="293" y="0.0" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="3" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2728,7 +2741,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-6g-1m4">
-                                                                        <rect key="frame" x="21.666666666666664" y="0.0" width="93.333333333333343" height="49.666666666666629"/>
+                                                                        <rect key="frame" x="22" y="0.0" width="94" height="50.333333333333314"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="1" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2738,7 +2751,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwr-6F-YB1">
-                                                                        <rect key="frame" x="160.66666666666666" y="73.333333333333314" width="93.666666666666686" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="160" y="73" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="5" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2748,7 +2761,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bna-tF-QNV">
-                                                                        <rect key="frame" x="160.66666666666666" y="146.33333333333331" width="93.666666666666686" height="50.666666666666629"/>
+                                                                        <rect key="frame" x="160" y="146" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="8" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2758,7 +2771,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLw-s6-Zwq">
-                                                                        <rect key="frame" x="160.66666666666666" y="219.66666666666669" width="93.666666666666686" height="50.333333333333258"/>
+                                                                        <rect key="frame" x="160" y="219" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="0" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2768,7 +2781,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-p5-tTk">
-                                                                        <rect key="frame" x="160.66666666666666" y="0.0" width="93.666666666666686" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="160" y="0.0" width="94" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="KgK-p5-tTk" secondAttribute="height" multiplier="168:90" id="tlm-Vp-UlD"/>
                                                                         </constraints>
@@ -2781,7 +2794,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-ac-5Rm">
-                                                                        <rect key="frame" x="292.66666666666669" y="73.333333333333314" width="93.666666666666629" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="293" y="73" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="6" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2791,7 +2804,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9he-nt-58h">
-                                                                        <rect key="frame" x="292.66666666666669" y="146.33333333333331" width="93.666666666666629" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="293" y="146" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2801,7 +2814,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="154" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bK3-rB-2Bl">
-                                                                        <rect key="frame" x="292.66666666666669" y="219.66666666666669" width="93.666666666666629" height="50.333333333333258"/>
+                                                                        <rect key="frame" x="293" y="219" width="94" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="-/--" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2811,7 +2824,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBO-EL-6vb">
-                                                                        <rect key="frame" x="21.666666666666664" y="73.333333333333314" width="93.333333333333343" height="50.333333333333314"/>
+                                                                        <rect key="frame" x="22" y="73" width="94" height="50.333333333333314"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="4" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2821,7 +2834,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-kL-ho5">
-                                                                        <rect key="frame" x="21.666666666666664" y="146.33333333333331" width="93.333333333333343" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="22" y="146" width="94" height="50.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                                                         <state key="normal" title="7" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2887,7 +2900,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="Udq-XU-YzK" secondAttribute="trailing" id="G3N-Tk-geS"/>
                                                             <constraint firstItem="QIY-Nx-Rys" firstAttribute="top" secondItem="vez-Bp-kJT" secondAttribute="top" id="GLg-oP-GLW"/>
                                                             <constraint firstItem="QIY-Nx-Rys" firstAttribute="leading" secondItem="vez-Bp-kJT" secondAttribute="leading" id="JSD-qP-SBP"/>
-                                                            <constraint firstAttribute="height" constant="300" id="LWr-Zh-F86"/>
+                                                            <constraint firstAttribute="height" constant="400" id="LWr-Zh-F86"/>
                                                             <constraint firstItem="Hiu-NL-VLb" firstAttribute="width" secondItem="vez-Bp-kJT" secondAttribute="width" multiplier="0.162667" id="Qti-IH-tYP"/>
                                                             <constraint firstAttribute="bottom" secondItem="Udq-XU-YzK" secondAttribute="bottom" id="aeM-S2-Zuj"/>
                                                             <constraint firstItem="Udq-XU-YzK" firstAttribute="leading" secondItem="vez-Bp-kJT" secondAttribute="leading" id="azA-M3-AKV"/>
@@ -2895,6 +2908,12 @@
                                                             <constraint firstAttribute="trailing" secondItem="QIY-Nx-Rys" secondAttribute="trailing" id="dK8-FE-7i3"/>
                                                             <constraint firstItem="VyP-xl-Req" firstAttribute="top" secondItem="vez-Bp-kJT" secondAttribute="top" id="o9s-hq-vM8"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="subviews">
+                                                                <exclude reference="QIY-Nx-Rys"/>
+                                                                <exclude reference="Udq-XU-YzK"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -2909,13 +2928,13 @@
                                                 <rect key="frame" x="414" y="0.0" width="414" height="620"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1o4-ad-ehB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="55.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopView" translatesAutoresizingMaskIntoConstraints="NO" id="MNd-u6-uXJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="55.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5t-xf-dTR">
-                                                                <rect key="frame" x="62.666666666666686" y="13.333333333333329" width="81.999999999999943" height="28"/>
+                                                                <rect key="frame" x="63" y="13" width="82" height="28"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                                 <state key="normal" title="常用频道">
@@ -2926,7 +2945,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLR-Xi-jaK">
-                                                                <rect key="frame" x="262.33333333333337" y="14" width="97" height="28"/>
+                                                                <rect key="frame" x="262" y="14" width="97" height="28"/>
                                                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                                                 <state key="normal" title="自定义频道">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2948,7 +2967,7 @@
                                                         </constraints>
                                                     </view>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-gp-7Jb">
-                                                        <rect key="frame" x="0.0" y="57.333333333333314" width="414" height="562.66666666666674"/>
+                                                        <rect key="frame" x="0.0" y="57" width="414" height="563"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <view key="tableFooterView" contentMode="scaleToFill" id="sYL-4H-m01">
                                                             <rect key="frame" x="0.0" y="110" width="414" height="1"/>
@@ -2960,17 +2979,17 @@
                                                                 <rect key="frame" x="0.0" y="28" width="414" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SL0-Kg-ljq" id="fzC-9S-USd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channel-15" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-TF-ISc">
-                                                                            <rect key="frame" x="15" y="10" width="61.666666666666671" height="61.666666666666671"/>
+                                                                            <rect key="frame" x="15" y="10" width="62" height="62"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="LGX-TF-ISc" secondAttribute="height" id="F0Q-VC-BYw"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳频道" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDT-Cc-vLf">
-                                                                            <rect key="frame" x="106.66666666666669" y="30" width="69.333333333333314" height="21"/>
+                                                                            <rect key="frame" x="107" y="30" width="69" height="21"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -3054,20 +3073,89 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="OK_Voice" destination="FXN-rd-ooP" id="tGN-oK-LBY"/>
                         <outlet property="common" destination="y5t-xf-dTR" id="h6A-zh-65i"/>
                         <outlet property="controlView" destination="VyP-xl-Req" id="ehz-sK-Ib9"/>
                         <outlet property="costom" destination="kLR-Xi-jaK" id="7dd-rh-cVv"/>
+                        <outlet property="effectView" destination="rpk-DR-pQg" id="EgO-4u-Z4a"/>
                         <outlet property="favoriteList" destination="t9n-gp-7Jb" id="ftf-h2-lYv"/>
                         <outlet property="funtionView" destination="QIY-Nx-Rys" id="cmQ-S6-qJL"/>
                         <outlet property="mainScroll" destination="EqD-sI-mi7" id="rcu-XF-63H"/>
                         <outlet property="numView" destination="Udq-XU-YzK" id="xlk-Kv-LhJ"/>
                         <outlet property="scrollViewHeight" destination="LWr-Zh-F86" id="QZr-FB-9cf"/>
                         <outlet property="tabBar" destination="dWk-wh-PRm" id="E9E-2f-Z5Q"/>
+                        <outlet property="voiceFrame" destination="DHV-tt-sQJ" id="uAy-tH-ED1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XoT-ch-K6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView contentMode="scaleToFill" id="rpk-DR-pQg">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K6p-BM-GhR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8M-iE-pfh">
+                                <rect key="frame" x="124.66666666666666" y="471" width="165.33333333333334" height="88"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv_btn_frame" translatesAutoresizingMaskIntoConstraints="NO" id="DHV-tt-sQJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="165.33333333333331" height="88"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DHV-tt-sQJ" firstAttribute="leading" secondItem="Q8M-iE-pfh" secondAttribute="leading" id="QhK-dT-TBB"/>
+                                    <constraint firstAttribute="trailing" secondItem="DHV-tt-sQJ" secondAttribute="trailing" id="WW9-Gh-AH0"/>
+                                    <constraint firstItem="DHV-tt-sQJ" firstAttribute="top" secondItem="Q8M-iE-pfh" secondAttribute="top" id="Yav-LN-aHF"/>
+                                    <constraint firstAttribute="bottom" secondItem="DHV-tt-sQJ" secondAttribute="bottom" id="c4R-qH-o2q"/>
+                                    <constraint firstAttribute="width" secondItem="Q8M-iE-pfh" secondAttribute="height" multiplier="15:8" id="cq0-vj-fa4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-mg-rgf">
+                                <rect key="frame" x="145.33333333333331" y="453.33333333333337" width="123.99999999999994" height="124.00000000000011"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WL0-mg-rgf" secondAttribute="height" id="EAi-7c-Oyp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tv_btn_yuyin"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-ej-NVB">
+                                <rect key="frame" x="151" y="635" width="112" height="53"/>
+                                <state key="normal" title="完成" backgroundImage="test_btn_shi"/>
+                                <connections>
+                                    <action selector="removeEffect:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="PCh-55-lbR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请大声说出控制指令" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zg-uf-x7d">
+                                <rect key="frame" x="102" y="100" width="210" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="WL0-mg-rgf" firstAttribute="centerY" secondItem="K6p-BM-GhR" secondAttribute="centerY" multiplier="1.4" id="3S7-36-xke"/>
+                            <constraint firstItem="hKd-ej-NVB" firstAttribute="centerX" secondItem="WL0-mg-rgf" secondAttribute="centerX" id="Crx-hu-k6B"/>
+                            <constraint firstItem="0zg-uf-x7d" firstAttribute="centerX" secondItem="K6p-BM-GhR" secondAttribute="centerX" id="G7X-3w-hzl"/>
+                            <constraint firstItem="WL0-mg-rgf" firstAttribute="centerX" secondItem="K6p-BM-GhR" secondAttribute="centerX" id="czQ-vZ-x0C"/>
+                            <constraint firstItem="0zg-uf-x7d" firstAttribute="top" secondItem="K6p-BM-GhR" secondAttribute="top" constant="100" id="fJ7-YM-HqC"/>
+                            <constraint firstItem="Q8M-iE-pfh" firstAttribute="centerY" secondItem="WL0-mg-rgf" secondAttribute="centerY" id="h6h-tL-4x6"/>
+                            <constraint firstItem="hKd-ej-NVB" firstAttribute="top" secondItem="WL0-mg-rgf" secondAttribute="bottom" multiplier="1.1" id="ic8-09-24O"/>
+                            <constraint firstItem="Q8M-iE-pfh" firstAttribute="centerX" secondItem="WL0-mg-rgf" secondAttribute="centerX" id="r5J-Zq-rD7"/>
+                        </constraints>
+                    </view>
+                    <constraints>
+                        <constraint firstItem="Q8M-iE-pfh" firstAttribute="width" secondItem="rpk-DR-pQg" secondAttribute="width" multiplier="0.4" id="TO7-E3-OWH"/>
+                        <constraint firstItem="WL0-mg-rgf" firstAttribute="width" secondItem="rpk-DR-pQg" secondAttribute="width" multiplier="0.3" id="lT3-rc-0Fv"/>
+                    </constraints>
+                    <blurEffect style="prominent"/>
+                </visualEffectView>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="atY-3M-6bV">
+                    <connections>
+                        <action selector="longPressOk_Voice:" destination="Nia-aO-Vjf" id="flJ-yG-4Zy"/>
+                        <outlet property="delegate" destination="FXN-rd-ooP" id="0zO-WI-HKg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1268" y="1008"/>
+            <point key="canvasLocation" x="-1268.1159420289855" y="1007.608695652174"/>
         </scene>
         <!--AMP-->
         <scene sceneID="sFr-3a-4dl">
@@ -3765,9 +3853,11 @@
         <image name="test_btn_yinliangjia_pipei" width="81" height="81"/>
         <image name="test_btn_youqiehuan" width="42" height="63"/>
         <image name="test_btn_zuoqiehuan" width="42" height="63"/>
+        <image name="tv_btn_frame" width="106" height="106"/>
         <image name="tv_btn_hong_bg" width="84" height="45"/>
         <image name="tv_btn_huang_bg" width="84" height="45"/>
         <image name="tv_btn_lan_bg" width="84" height="45"/>
         <image name="tv_btn_lv_bg" width="84" height="45"/>
+        <image name="tv_btn_yuyin" width="69" height="69"/>
     </resources>
 </document>
