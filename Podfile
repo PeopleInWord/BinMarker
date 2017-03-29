@@ -7,4 +7,5 @@ target 'BinMarker' do
     pod 'FLAnimatedImage'
     pod 'Pgyer'
     pod 'PgyUpdate'
+    pod 'BlurryModalSegue'
 end

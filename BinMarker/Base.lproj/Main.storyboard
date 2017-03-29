@@ -94,6 +94,24 @@
             </objects>
             <point key="canvasLocation" x="-367.5" y="-627.46478873239437"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yCg-QH-2qf">
+            <objects>
+                <viewController id="mZx-GT-WMO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AsJ-09-VaO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ngD-UP-Zwd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0y-bu-77f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tg1-t9-H61" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="-628"/>
+        </scene>
         <!--Setting Controller-->
         <scene sceneID="a3B-RE-dpK">
             <objects>
@@ -136,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7C0-LO-9Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="-628"/>
+            <point key="canvasLocation" x="1468" y="-633"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xcf-TX-lpD">
@@ -1163,6 +1181,7 @@
                         <segue destination="Nia-aO-Vjf" kind="show" identifier="tv" id="tcd-oC-Hpq"/>
                         <segue destination="HHc-1l-ajj" kind="show" identifier="amp" id="fwY-yz-W6u"/>
                         <segue destination="3wR-vv-M9p" kind="show" identifier="setting" id="PjP-hK-8gn"/>
+                        <segue destination="mZx-GT-WMO" kind="presentation" identifier="loginIn" customClass="BlurryModalSegue" id="w9e-UJ-yzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk4-G3-cft" userLabel="First Responder" sceneMemberID="firstResponder"/>

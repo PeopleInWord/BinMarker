@@ -7,7 +7,7 @@
 //
 
 #import "MainController.h"
-#import "BinMarker-swift.h"
+#import "BinMarker-Swift.h"
 #import "FTPopOverMenu.h"
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
@@ -67,6 +67,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [app.autoScan fire];
     }
 }
+    
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -75,7 +76,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [app.autoScan invalidate];
     }
 }
-
 
 
 - (void)autoScan:(id)sender {

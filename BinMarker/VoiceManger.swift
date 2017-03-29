@@ -75,7 +75,9 @@ class VoiceManger: NSObject,IFlySpeechRecognizerDelegate,IFlyPcmRecorderDelegate
 
     
     func onResults(_ results: [Any]!, isLast: Bool) {
-        
+        if results == nil {
+            return
+        }
         let resultDic=results[0] as! Dictionary<String,Any>
         let jsonString = resultDic.keys.first!
         let jsonData = jsonString.data(using: .utf8)
