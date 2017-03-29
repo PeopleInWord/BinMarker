@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate{
+class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate{
     @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var funtionView: UIView!
     @IBOutlet weak var numView: UIView!
@@ -22,7 +22,10 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var OK_Voice: UIButton!
     @IBOutlet weak var effectView: UIVisualEffectView!
     
+    @IBOutlet weak var voiceBtn: UIButton!
     @IBOutlet weak var voiceFrame: UIImageView!
+    @IBOutlet weak var activeLab: UILabel!
+    @IBOutlet weak var resultWord: UILabel!
     var isCommon = true
     var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
@@ -88,7 +91,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             
             let basic4=CABasicAnimation.init(keyPath: "transform.scale")
             basic4.fromValue=1.0
-            basic4.toValue=6
+            basic4.toValue=10
             basic4.duration=1
             
             let basic5=CABasicAnimation.init(keyPath: "opacity")
@@ -104,9 +107,56 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             group2.timingFunction=CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
             voiceFrame.layer.add(group2, forKey: "voiceFrame")
             
+            self.beginVoiceManger()
+            
         }
         
     }
+    @IBAction func startVoice(_ sender: UIButton) {
+        let basic4=CABasicAnimation.init(keyPath: "transform.scale")
+        basic4.fromValue=1.0
+        basic4.toValue=10
+        basic4.duration=1
+        
+        let basic5=CABasicAnimation.init(keyPath: "opacity")
+        basic5.fromValue=1.0
+        basic5.toValue=0.0
+        basic5.duration=1.0
+        
+        let group2=CAAnimationGroup.init()
+        group2.animations=[basic4,basic5]
+        
+        group2.duration=1.5
+        group2.repeatCount=1000
+        group2.timingFunction=CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
+        voiceFrame.layer.add(group2, forKey: "voiceFrame")
+        
+        activeLab.text="正在识别..."
+        self.beginVoiceManger()
+    }
+    
+    func beginVoiceManger(){
+        voiceBtn.isEnabled=false
+        let voiceManger=VoiceManger.shareInstance
+        voiceManger.delegate=self
+        voiceManger.startHanler()
+
+    }
+    
+    func endOfSpeech() {
+        voiceFrame.layer.removeAllAnimations()
+        activeLab.text="点击按钮开始识别..."
+        voiceBtn.isEnabled=true
+    }
+    
+    func voiceChange(_ volumeValue: Int32) {
+        
+    }
+    
+    func onResults(_ results: String) {
+        resultWord.text=results
+    }
+    
     @IBAction func removeEffect(_ sender: UIButton) {
         let basic1=CABasicAnimation.init(keyPath: "opacity")
         basic1.fromValue=1.0
@@ -116,6 +166,13 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.isHidden=true
         effectView.layer.add(basic1, forKey: "effectView")
         effectView.removeFromSuperview()
+        let voiceManger=VoiceManger.shareInstance
+        let returnWord=voiceManger.stopAndConfirm()
+        if (returnWord?.characters.count)! > 0 {
+            //进行语言操作
+            print(returnWord!)
+        }
+        
     }
     
     @IBAction func selectCommon(_ sender: UIButton) {

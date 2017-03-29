@@ -10,6 +10,8 @@
 #import <Bugly/Bugly.h>
 #import <PgySDK/PgyManager.h>
 #import <PgyUpdate/PgyUpdateManager.h>
+#import "iflyMSC/iflyMSC.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,6 +25,8 @@
     [self pgySetting];
     
     self.window.rootViewController=[self rootView];
+    
+    
     
     // Override point for customization after application launch.
     return YES;
