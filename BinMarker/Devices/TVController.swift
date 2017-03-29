@@ -170,6 +170,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         let returnWord=voiceManger.stopAndConfirm()
         if (returnWord?.characters.count)! > 0 {
             //进行语言操作
+            print(returnWord!)
         }
         
     }
