@@ -10,6 +10,9 @@
 #import <Foundation/Foundation.h>
 #import "IFlySpeechEvaluatorDelegate.h"
 
+#define IFLY_AUDIO_SOURCE_MIC    @"1"
+#define IFLY_AUDIO_SOURCE_STREAM @"-1"
+
 /*!
  *  语音评测类
  */
@@ -60,8 +63,9 @@
  *
  *  @param data   评测的试题
  *  @param params 评测的参数
+ *  @return 成功返回YES，失败返回NO
  */
-- (void)startListening:(NSData *)data params:(NSString *)params;
+- (BOOL)startListening:(NSData *)data params:(NSString *)params;
 
 /*!
  *  停止录音<br>
@@ -75,4 +79,23 @@
 - (void)cancel;
 
 @end
+
+/*!
+ *  音频流评测<br>
+ *  音频流评测可以将文件分段写入
+ */
+@interface IFlySpeechEvaluator(IFlyStreamISERecognizer)
+
+/*!
+ *  写入音频流
+ *
+ *  @param audioData 音频数据
+ *
+ *  @return 写入成功返回YES，写入失败返回NO
+ */
+- (BOOL) writeAudio:(NSData *) audioData;
+
+@end
+
+
 

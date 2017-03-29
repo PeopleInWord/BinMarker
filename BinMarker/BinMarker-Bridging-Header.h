@@ -10,3 +10,4 @@
 #import "MBProgressHUD.h"
 #import "NSString+StringOperation.h"
 #import "FLAnimatedImage.h"
+#import "iflyMSC/iflyMSC.h"

@@ -48,15 +48,25 @@
 		3C2A72971E7A825A00137EAB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72961E7A825A00137EAB /* AVFoundation.framework */; };
 		3C2A72991E7A826100137EAB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72981E7A826100137EAB /* SystemConfiguration.framework */; };
 		3C2A729B1E7A826700137EAB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729A1E7A826700137EAB /* CoreMotion.framework */; };
-		3C2A729D1E7A916A00137EAB /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729C1E7A916A00137EAB /* iflyMSC.framework */; };
 		3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729E1E7A920B00137EAB /* libz.tbd */; };
 		3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72A01E7A922300137EAB /* libc++.tbd */; };
 		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C43FADD1E84FDA300F01330 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43FADC1E84FDA300F01330 /* TVController.swift */; };
+		3C43FADF1E88EB9500F01330 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FADE1E88EB9500F01330 /* AddressBook.framework */; };
+		3C43FAE11E88EBC400F01330 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAE01E88EBC400F01330 /* AudioToolbox.framework */; };
+		3C43FAE31E88EBD900F01330 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAE21E88EBD900F01330 /* CoreGraphics.framework */; };
+		3C43FAE51E88EBFB00F01330 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAE41E88EBFB00F01330 /* CoreLocation.framework */; };
+		3C43FAE71E88EC0D00F01330 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAE61E88EC0D00F01330 /* QuartzCore.framework */; };
+		3C43FAE91E88EC1C00F01330 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAE81E88EC1C00F01330 /* UIKit.framework */; };
+		3C43FAEB1E88EC2D00F01330 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEA1E88EC2D00F01330 /* Foundation.framework */; };
+		3C43FAED1E88ED2300F01330 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEC1E88ED2300F01330 /* libz.1.dylib */; };
+		3C43FAEF1E88EEAD00F01330 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEE1E88EEAD00F01330 /* Contacts.framework */; };
+		3C43FAF11E88F8A700F01330 /* VoiceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43FAF01E88F8A700F01330 /* VoiceManger.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
+		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
 		3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC755EA1E261FA100013C63 /* BinMakeManger.swift */; };
 		3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
@@ -111,15 +121,25 @@
 		3C2A72961E7A825A00137EAB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3C2A72981E7A826100137EAB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3C2A729A1E7A826700137EAB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		3C2A729C1E7A916A00137EAB /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3C2A729E1E7A920B00137EAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3C2A72A01E7A922300137EAB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C43FADC1E84FDA300F01330 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
+		3C43FADE1E88EB9500F01330 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		3C43FAE01E88EBC400F01330 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3C43FAE21E88EBD900F01330 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3C43FAE41E88EBFB00F01330 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3C43FAE61E88EC0D00F01330 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3C43FAE81E88EC1C00F01330 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3C43FAEA1E88EC2D00F01330 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3C43FAEC1E88ED2300F01330 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		3C43FAEE1E88EEAD00F01330 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		3C43FAF01E88F8A700F01330 /* VoiceManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManger.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3CC755EA1E261FA100013C63 /* BinMakeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinMakeManger.swift; sourceTree = "<group>"; };
 		3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteScrollView.swift; path = Extension/FavoriteScrollView.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
@@ -134,6 +154,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C43FAEF1E88EEAD00F01330 /* Contacts.framework in Frameworks */,
+				3C43FAED1E88ED2300F01330 /* libz.1.dylib in Frameworks */,
+				3C43FAEB1E88EC2D00F01330 /* Foundation.framework in Frameworks */,
+				3C43FAE91E88EC1C00F01330 /* UIKit.framework in Frameworks */,
+				3C43FAE71E88EC0D00F01330 /* QuartzCore.framework in Frameworks */,
+				3C43FAE51E88EBFB00F01330 /* CoreLocation.framework in Frameworks */,
+				3C43FAE31E88EBD900F01330 /* CoreGraphics.framework in Frameworks */,
+				3C43FAE11E88EBC400F01330 /* AudioToolbox.framework in Frameworks */,
+				3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */,
+				3C43FADF1E88EB9500F01330 /* AddressBook.framework in Frameworks */,
 				3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */,
 				3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */,
 				3C2A729B1E7A826700137EAB /* CoreMotion.framework in Frameworks */,
@@ -142,7 +172,6 @@
 				3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */,
 				3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */,
 				3C16B1501E77D4BD00A60D58 /* libstaticLib.a in Frameworks */,
-				3C2A729D1E7A916A00137EAB /* iflyMSC.framework in Frameworks */,
 				3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */,
 				0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */,
 			);
@@ -212,6 +241,7 @@
 				3CFB38391E6FD6D00069AEC6 /* ScaningController.h */,
 				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
 				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
+				3C43FAF01E88F8A700F01330 /* VoiceManger.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -247,7 +277,7 @@
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				3C2A729C1E7A916A00137EAB /* iflyMSC.framework */,
+				3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */,
 				3C2A72881E7916B800137EAB /* InfraredBrandList.plist */,
 				3C27460D1E712A5500662A9F /* searching.gif */,
 				3C16B14B1E77D4B400A60D58 /* BluetoothManager.h */,
@@ -296,6 +326,15 @@
 		D87B68AA47A996CB743B73D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C43FAEE1E88EEAD00F01330 /* Contacts.framework */,
+				3C43FAEC1E88ED2300F01330 /* libz.1.dylib */,
+				3C43FAEA1E88EC2D00F01330 /* Foundation.framework */,
+				3C43FAE81E88EC1C00F01330 /* UIKit.framework */,
+				3C43FAE61E88EC0D00F01330 /* QuartzCore.framework */,
+				3C43FAE41E88EBFB00F01330 /* CoreLocation.framework */,
+				3C43FAE21E88EBD900F01330 /* CoreGraphics.framework */,
+				3C43FAE01E88EBC400F01330 /* AudioToolbox.framework */,
+				3C43FADE1E88EB9500F01330 /* AddressBook.framework */,
 				3C2A72A01E7A922300137EAB /* libc++.tbd */,
 				3C2A729E1E7A920B00137EAB /* libz.tbd */,
 				3C2A729A1E7A826700137EAB /* CoreMotion.framework */,
@@ -343,7 +382,7 @@
 				TargetAttributes = {
 					3C0D316E1DDD9D9400D78924 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 7BLZ9JWB5U;
+						DevelopmentTeam = LD2KPD7UX3;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -466,6 +505,7 @@
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
+				3C43FAF11E88F8A700F01330 /* VoiceManger.swift in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
 				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
@@ -594,7 +634,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
+				DEVELOPMENT_TEAM = LD2KPD7UX3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -607,10 +647,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.store.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d20eec34-560b-44b5-a1aa-0236592a1ba5";
-				PROVISIONING_PROFILE_SPECIFIER = Development_General_Test_2016_07_20;
+				PROVISIONING_PROFILE = "1496dfec-d11b-4982-83ee-a99c84c4c6b0";
+				PROVISIONING_PROFILE_SPECIFIER = Test;
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -625,8 +665,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 7BLZ9JWB5U;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LD2KPD7UX3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,10 +679,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amj.store.SmartHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5b7f8126-2776-4541-85dd-306ca3f3df67";
-				PROVISIONING_PROFILE_SPECIFIER = Distribution_BinMaker_2016_11_23;
+				PROVISIONING_PROFILE = "1496dfec-d11b-4982-83ee-a99c84c4c6b0";
+				PROVISIONING_PROFILE_SPECIFIER = Test;
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

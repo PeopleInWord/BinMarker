@@ -19,8 +19,8 @@
 /**
  控制类型方式
 
- - SendTypeSingle: 单个控制锁
- - SendTypeMuti: 控制多个锁
+ - SendTypeSingle: 单个控制
+ - SendTypeMuti: 控制多个
  - SendTypeSyncdevice: 同步设备状态
  - SendTypeInfrared: 控制红外设备
  - SendTypeLock: 控制锁

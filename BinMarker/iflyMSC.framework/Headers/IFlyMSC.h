@@ -15,7 +15,6 @@
 #import "IFlyDebugLog.h"
 #import "IFlyISVDelegate.h"
 #import "IFlyISVRecognizer.h"
-#import "IFlyPcmRecorder.h"
 #import "IFlyRecognizerView.h"
 #import "IFlyRecognizerViewDelegate.h"
 #import "IFlyResourceUtil.h"
@@ -33,6 +32,7 @@
 #import "IFlySpeechUtility.h"
 #import "IFlyTextUnderstander.h"
 #import "IFlyUserWords.h"
+#import "IFlyPcmRecorder.h"
 #import "IFlyVoiceWakeuper.h"
 #import "IFlyVoiceWakeuperDelegate.h"
 

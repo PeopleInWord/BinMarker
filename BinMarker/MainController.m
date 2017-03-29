@@ -12,6 +12,8 @@
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
+#import "iflyMSC/IFlyMSC.h"
+
 
 static NSString *const targetName=@"IrRemoteControllerA";
 
@@ -45,6 +47,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
@@ -83,7 +86,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 -(void)loadBluetooth
 {
     [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];
-    NSLog(@"11");
+    
 }
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{

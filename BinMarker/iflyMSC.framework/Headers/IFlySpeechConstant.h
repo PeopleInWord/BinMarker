@@ -50,6 +50,13 @@
 /*!
  *  语言区域。
  *
+ *  @return 四川话value。
+ */
++(NSString*)ACCENT_SICHUANESE;
+
+/*!
+ *  语言区域。
+ *
  *  @return 粤语value。
  */
 +(NSString*)ACCENT_CANTONESE;

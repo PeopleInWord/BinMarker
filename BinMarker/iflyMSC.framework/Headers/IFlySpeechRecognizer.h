@@ -157,7 +157,7 @@
 *  写入音频流
 *
 *  此方法的使用示例如下:
-* <pre><code>[_iFlySpeechRecognizer setParameter:@"audio_source" value:@"-1"];
+* <pre><code>[_iFlySpeechRecognizer setParameter:@"-1" value:@"audio_source"];
 * [_iFlySpeechRecognizer startListening];
 * [_iFlySpeechRecognizer writeAudio:audioData1];
 * [_iFlySpeechRecognizer writeAudio:audioData2];
