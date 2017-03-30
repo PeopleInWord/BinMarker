@@ -64,6 +64,7 @@
 		3C43FAED1E88ED2300F01330 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEC1E88ED2300F01330 /* libz.1.dylib */; };
 		3C43FAEF1E88EEAD00F01330 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEE1E88EEAD00F01330 /* Contacts.framework */; };
 		3C43FAF11E88F8A700F01330 /* VoiceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43FAF01E88F8A700F01330 /* VoiceManger.swift */; };
+		3C482FE01E8C985600012E7D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FDF1E8C985600012E7D /* LoginController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
@@ -137,6 +138,7 @@
 		3C43FAEC1E88ED2300F01330 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		3C43FAEE1E88EEAD00F01330 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		3C43FAF01E88F8A700F01330 /* VoiceManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManger.swift; sourceTree = "<group>"; };
+		3C482FDF1E8C985600012E7D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
 				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
 				3C43FAF01E88F8A700F01330 /* VoiceManger.swift */,
+				3C482FDF1E8C985600012E7D /* LoginController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
+				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
 			);
