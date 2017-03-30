@@ -117,7 +117,11 @@ static UIImageOrientation ImageOrientationFromInterfaceOrientation(UIInterfaceOr
     [destination.view addSubview:backgroundImageView];
     [destination.view sendSubviewToBack:backgroundImageView];
     
-    [self.sourceViewController presentModalViewController:self.destinationViewController animated:YES];
+    
+    [self.sourceViewController presentViewController:self.destinationViewController animated:YES completion:^{
+        
+    }];
+//    [self.sourceViewController presentModalViewController:self.destinationViewController animated:YES];
     
     [destination.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         backgroundImageView.frame = CGRectMake(0, 0, nomalizedWindowBounds.size.width, nomalizedWindowBounds.size.height);
