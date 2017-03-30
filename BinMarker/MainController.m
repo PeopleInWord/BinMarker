@@ -63,6 +63,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     });
 }
 
+#pragma mark 视图
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -91,6 +93,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
 }
 
+
+#pragma mark 托线
 
 - (void)autoScan:(id)sender {
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
@@ -160,6 +164,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [_documentController presentOptionsMenuFromRect: CGRectMake(self.view.frame.size.width/2,self.view.frame.size.height/2, 0.0, 0.0) inView:self.view animated:YES];
 }
 
+#pragma mark 刷机跳转
 
 -(void)documentInteractionControllerWillPresentOpenInMenu:(UIDocumentInteractionController *)controller
 {
@@ -193,6 +198,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     return array;
 }
 
+#pragma mark 表格
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -278,11 +284,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     return @[deleteAction, editAction];
 }
 
-
-//-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return @"删除这一条";
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

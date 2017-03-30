@@ -18,10 +18,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var favoriteList: UITableView!
     @IBOutlet weak var common: UIButton!
     @IBOutlet weak var costom: UIButton!
-    
     @IBOutlet weak var OK_Voice: UIButton!
     @IBOutlet weak var effectView: UIVisualEffectView!
-    
     @IBOutlet weak var voiceBtn: UIButton!
     @IBOutlet weak var voiceFrame: UIImageView!
     @IBOutlet weak var activeLab: UILabel!
@@ -29,14 +27,11 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var isCommon = true
     var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
-    
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
-    
-
     public var deviceInfo:Dictionary<String, Any> = [:]
-
+    //MARK:方法
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.selectedItem=self.tabBar.items?[lastTabberItemIndex]
@@ -57,6 +52,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             self.actionTemp.isEnabled=false
         }
     }
+    
+    
     @IBAction func longPressOk_Voice(_ sender: UILongPressGestureRecognizer) {
         print(sender.state.rawValue)
         if sender.state.rawValue == 1 {
@@ -135,6 +132,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         self.beginVoiceManger()
     }
     
+    
+    //MARK:语音回调
     func beginVoiceManger(){
         voiceBtn.isEnabled=false
         let voiceManger=VoiceManger.shareInstance
@@ -153,7 +152,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
     }
     
-    func onResults(_ results: String) {
+    func onResults(_ results: String, _ resultArr: Array<String>){
+        print(resultArr)
         resultWord.text=results
     }
     
@@ -166,14 +166,59 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.isHidden=true
         effectView.layer.add(basic1, forKey: "effectView")
         effectView.removeFromSuperview()
+        
         let voiceManger=VoiceManger.shareInstance
-        let returnWord=voiceManger.stopAndConfirm()
-        if (returnWord?.characters.count)! > 0 {
+        let returnWords=voiceManger.stopAndConfirm()
+        if (returnWords?.count)!>0 {
+            CommonFunction.startAnimation("匹配中...", nil)
             //进行语言操作
-            print(returnWord!)
+            print(returnWords!)
+            let channelTitle=["广东":11,"湖南":12,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+//            let channelTitle=["广东":11]
+            for channel in channelTitle.keys {
+                for word in returnWords! {
+                    if channel == word {
+                        let channelNum:Int = channelTitle[channel]!
+                        let code:String = self.deviceInfo["codeString"] as! String
+                        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
+                        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+                            CommonFunction.stopAnimation("控制成功..", returnData?.description)
+                        }, fail: { (failString) -> UInt in
+                            CommonFunction.stopAnimation("操作失败..", failString)
+                            return 0
+                        })
+                        break
+
+                    }
+                }
+                
+                
+                
+//                returnWords?.contains(where: { (channel) -> Bool in
+//                    let channelNum:Int = channelTitle[channel!]!
+//                    let code:String = self.deviceInfo["codeString"] as! String
+//                    let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
+//                    BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+//                        CommonFunction.stopAnimation("控制成功..", returnData?.description)
+//                    }, fail: { (failString) -> UInt in
+//                        CommonFunction.stopAnimation("操作失败..", failString)
+//                        return 0
+//                    })
+//                })
+//                if (returnWords?.contains(where: channel))! {
+////                    let channelNum=[11,12,13,14,15,16,17,18]
+//                    
+//                    break
+//                }
+            }
+            
         }
         
     }
+    
+    
+    
+    //MARK:Tabber
     
     @IBAction func selectCommon(_ sender: UIButton) {
         self.common.backgroundColor=UIColor.black
@@ -197,24 +242,17 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     
-    
-    
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
         let code:String = deviceInfo["codeString"] as! String
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 0)
         let deviceID:String="IrRemoteControllerA"
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中:" + sender.tag.description
+        
+        CommonFunction.startAnimation("发送中:" + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            mbp.detailsLabel.text=returnData?.description
-            mbp.hide(animated: true, afterDelay: 0.5)
+            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!)
         }, fail: { (failString) -> UInt in
-            mbp.label.text="操作失败"
-            mbp.detailsLabel.text=failString
-            mbp.hide(animated: true, afterDelay: 1.5)
+            CommonFunction.stopAnimation("操作失败", failString)
             return 0
         })
     }
@@ -240,7 +278,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     number.placeholder="输入频道号(不超过3位)"
                 })
                 let actionOK=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
-                    //加限制
                     var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
                     let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
                     channelList?.append(channelInfo)
@@ -316,7 +353,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         }
     }
     
-    
+    //MARK:列表的代理
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>=self.view.frame.width {
             self.tabBar.selectedItem=self.tabBar.items?[3]
@@ -354,21 +391,15 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中"
+        CommonFunction.startAnimation("操作中...", nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                mbp.detailsLabel.text=returnData?.description
-                mbp.hide(animated: true, afterDelay: 0.5)
+                CommonFunction.stopAnimation("控制成功..", returnData?.description)
             }, fail: { (failString) -> UInt in
-                mbp.label.text="操作失败"
-                mbp.detailsLabel.text=failString
-                mbp.hide(animated: true, afterDelay: 1.5)
+                CommonFunction.stopAnimation("操作失败..", failString)
                 return 0
             })
 
@@ -386,12 +417,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                mbp.detailsLabel.text=returnData?.description
-                mbp.hide(animated: true, afterDelay: 0.5)
+                CommonFunction.stopAnimation("控制成功..", returnData?.description)
             }, fail: { (failString) -> UInt in
-                mbp.label.text="操作失败"
-                mbp.detailsLabel.text=failString
-                mbp.hide(animated: true, afterDelay: 1.5)
+                CommonFunction.stopAnimation("操作失败..", failString)
                 return 0
             })
         }

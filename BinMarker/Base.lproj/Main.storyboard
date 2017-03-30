@@ -1205,7 +1205,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="lrM-qB-XwQ" id="0sh-jh-XIS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-2j-eco">
@@ -2691,8 +2691,8 @@
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="长按OK键进入语音识别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcx-gH-XMU">
-                                                                        <rect key="frame" x="128" y="286" width="159" height="18"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <rect key="frame" x="148.66666666666663" y="276" width="117.33333333333337" height="13.333333333333371"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                         <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -2703,7 +2703,7 @@
                                                                     <constraint firstItem="Hiu-NL-VLb" firstAttribute="centerX" secondItem="VyP-xl-Req" secondAttribute="centerX" multiplier="0.33" id="E6i-B2-fQk"/>
                                                                     <constraint firstItem="UfM-Uq-mZz" firstAttribute="width" secondItem="Hiu-NL-VLb" secondAttribute="width" id="SUO-oW-zFp"/>
                                                                     <constraint firstItem="1OD-al-e1z" firstAttribute="centerX" secondItem="VyP-xl-Req" secondAttribute="centerX" id="VGd-Kf-CXv"/>
-                                                                    <constraint firstItem="wcx-gH-XMU" firstAttribute="top" secondItem="1OD-al-e1z" secondAttribute="bottom" constant="15" id="Zez-1K-vOt"/>
+                                                                    <constraint firstItem="wcx-gH-XMU" firstAttribute="top" secondItem="1OD-al-e1z" secondAttribute="bottom" constant="5" id="Zez-1K-vOt"/>
                                                                     <constraint firstItem="UfM-Uq-mZz" firstAttribute="width" secondItem="UfM-Uq-mZz" secondAttribute="height" id="bP6-Rw-ACY"/>
                                                                     <constraint firstItem="wcx-gH-XMU" firstAttribute="centerX" secondItem="1OD-al-e1z" secondAttribute="centerX" id="dPb-N7-gOa"/>
                                                                     <constraint firstItem="Hiu-NL-VLb" firstAttribute="top" secondItem="VyP-xl-Req" secondAttribute="top" id="f5J-1Z-nyJ"/>
