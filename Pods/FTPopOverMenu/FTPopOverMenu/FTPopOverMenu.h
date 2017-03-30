@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 /**
-
- @param selectedIndex <#selectedIndex description#>
+ *  FTPopOverMenuDoneBlock
+ *
+ *  @param index SlectedIndex
  */
 typedef void (^FTPopOverMenuDoneBlock)(NSInteger selectedIndex);
 /**
@@ -65,39 +64,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
  */
 @interface FTPopOverMenu : NSObject
 
-/**
- *  setTintColor "Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead."
- *
- *  @param tintColor tintColor
- */
-+(void)setTintColor:(UIColor *)tintColor __deprecated_msg("Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead.");
-
-/**
- *  setTextColor "Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead."
- *
- *  @param textColor textColor
- */
-+(void)setTextColor:(UIColor *)textColor __deprecated_msg("Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead.");
-
-/**
- *  setPreferedWidth "Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead."
- *
- *  @param preferedWidth preferedWidth
- */
-+(void)setPreferedWidth:(CGFloat )preferedWidth __deprecated_msg("Function deprecated. User '[FTPopOverMenuConfiguration defaultConfiguration]' instead.");
-
-/**
- *  show method with sender without images
- *
- *  @param sender       sender
- *  @param menuArray    menuArray
- *  @param doneBlock    FTPopOverMenuDoneBlock
- *  @param dismissBlock FTPopOverMenuDismissBlock
- */
-+ (void) showForSender:(UIView *)sender
-              withMenu:(NSArray<NSString*> *)menuArray
-             doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-          dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
 
 /**
  show method with sender without images
@@ -111,20 +77,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
          withMenuArray:(NSArray<NSString*> *)menuArray
              doneBlock:(FTPopOverMenuDoneBlock)doneBlock
           dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
-/**
- *  show method with sender with imageNameArray
- *
- *  @param sender         sender
- *  @param menuArray      menuArray
- *  @param imageNameArray imageNameArray
- *  @param doneBlock      FTPopOverMenuDoneBlock
- *  @param dismissBlock   FTPopOverMenuDismissBlock
- */
-+ (void) showForSender:(UIView *)sender
-              withMenu:(NSArray<NSString*> *)menuArray
-        imageNameArray:(NSArray<NSString*> *)imageNameArray
-             doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-          dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
 
 /**
  show method with sender and image resouce Array
@@ -142,20 +94,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
           dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
 
 /**
- *  show method for barbuttonitems with event without images
- *
- *  @param event          UIEvent
- *  @param menuArray      menuArray
- *  @param doneBlock      FTPopOverMenuDoneBlock
- *  @param dismissBlock   FTPopOverMenuDismissBlock
- */
-+ (void) showFromEvent:(UIEvent *)event
-              withMenu:(NSArray<NSString*> *)menuArray
-             doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-          dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
-
-
-/**
  show method for barbuttonitems with event without images
 
  @param event event
@@ -167,21 +105,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
          withMenuArray:(NSArray<NSString*> *)menuArray
              doneBlock:(FTPopOverMenuDoneBlock)doneBlock
           dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
-/**
- *  show method for barbuttonitems with event and image resouce Array
- *
- *  @param event          UIEvent
- *  @param menuArray      menuArray
- *  @param imageNameArray imageNameArray
- *  @param doneBlock      FTPopOverMenuDoneBlock
- *  @param dismissBlock   FTPopOverMenuDismissBlock
- */
-+ (void) showFromEvent:(UIEvent *)event
-              withMenu:(NSArray<NSString*> *)menuArray
-        imageNameArray:(NSArray<NSString*> *)imageNameArray
-             doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-          dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
-
 
 /**
  show method for barbuttonitems with event and imageArray
@@ -199,20 +122,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
           dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
 
 /**
- *  show method with SenderFrame without images
- *
- *  @param senderFrame  senderFrame
- *  @param menuArray    menuArray
- *  @param doneBlock    doneBlock
- *  @param dismissBlock dismissBlock
- */
-+ (void) showFromSenderFrame:(CGRect )senderFrame
-                    withMenu:(NSArray<NSString*> *)menuArray
-                   doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-                dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
-
-
-/**
  show method with SenderFrame without images
 
  @param senderFrame senderFrame
@@ -224,22 +133,6 @@ typedef void (^FTPopOverMenuDismissBlock)();
                withMenuArray:(NSArray<NSString*> *)menuArray
                    doneBlock:(FTPopOverMenuDoneBlock)doneBlock
                 dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock;
-/**
- *  show method with SenderFrame with imageNameArray
- *
- *  @param senderFrame    senderFrame
- *  @param menuArray      menuArray
- *  @param imageNameArray imageNameArray
- *  @param doneBlock      doneBlock
- *  @param dismissBlock   dismissBlock
- 
- */
-+ (void) showFromSenderFrame:(CGRect )senderFrame
-                    withMenu:(NSArray<NSString*> *)menuArray
-              imageNameArray:(NSArray<NSString*> *)imageNameArray
-                   doneBlock:(FTPopOverMenuDoneBlock)doneBlock
-                dismissBlock:(FTPopOverMenuDismissBlock)dismissBlock __deprecated_msg("Function deprecated. Still working. Use replacemet please.");
-
 
 /**
  show method with SenderFrame and image resouce Array

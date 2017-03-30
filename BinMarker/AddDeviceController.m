@@ -8,7 +8,7 @@
 
 
 #import "AddDeviceController.h"
-#import "BinMarker-swift.h"
+#import "BinMarker-Swift.h"
 #import "FMDB.h"
 
 @interface AddDeviceController ()

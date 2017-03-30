@@ -7,7 +7,7 @@
 //
 
 #import "MainController.h"
-#import "BinMarker-swift.h"
+#import "BinMarker-Swift.h"
 #import "FTPopOverMenu.h"
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
@@ -53,6 +53,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
     [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
+    
+    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:1.0];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:@"loginIn" sender:nil];
+        });
+    });
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -68,6 +76,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+}
+
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
@@ -75,7 +90,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [app.autoScan invalidate];
     }
 }
-
 
 
 - (void)autoScan:(id)sender {
