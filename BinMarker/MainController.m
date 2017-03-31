@@ -100,6 +100,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
 }
 
+- (IBAction)userInfo:(UIBarButtonItem *)sender {
+    if (0) {
+        [self performSegueWithIdentifier:@"loginIn" sender:nil];
+    } else {
+        [self performSegueWithIdentifier:@"userInfo" sender:nil];
+    }
+    
+}
 
 -(void)loadBluetooth
 {
@@ -109,12 +117,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
-    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"设置",@"关于我们"] doneBlock:^(NSInteger selectedIndex) {
+    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"寻找设备",@"设置",@"当前版本"] doneBlock:^(NSInteger selectedIndex) {
         switch (selectedIndex) {
             case 0:
                 [self performSegueWithIdentifier:@"addDevice" sender:nil];
                 break;
             case 1:
+                [self foundRemote];
+                break;
+            case 2:
                 [self performSegueWithIdentifier:@"setting" sender:nil];
                 break;
             default:
@@ -125,7 +136,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
 }
 
-- (IBAction)foundRemote:(UIBarButtonItem *)sender {
+- (void)foundRemote {
     NSString *codeStr=[[BinMakeManger shareInstance] foundCommand];
     MBProgressHUD *mbp=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     mbp.removeFromSuperViewOnHide=YES;

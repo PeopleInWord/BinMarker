@@ -66,6 +66,8 @@
 		3C43FAF11E88F8A700F01330 /* VoiceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C43FAF01E88F8A700F01330 /* VoiceManger.swift */; };
 		3C482FE01E8C985600012E7D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FDF1E8C985600012E7D /* LoginController.swift */; };
 		3C482FE31E8C9DA900012E7D /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE21E8C9DA900012E7D /* CommonFunction.swift */; };
+		3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */; };
+		3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
@@ -141,6 +143,8 @@
 		3C43FAF01E88F8A700F01330 /* VoiceManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManger.swift; sourceTree = "<group>"; };
 		3C482FDF1E8C985600012E7D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3C482FE21E8C9DA900012E7D /* CommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
+		3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegeditController.swift; sourceTree = "<group>"; };
+		3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
 				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
 				3C482FDF1E8C985600012E7D /* LoginController.swift */,
+				3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */,
+				3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -509,11 +515,13 @@
 				3C482FE31E8C9DA900012E7D /* CommonFunction.swift in Sources */,
 				3C43FADD1E84FDA300F01330 /* TVController.swift in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
+				3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */,
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
 				3C43FAF11E88F8A700F01330 /* VoiceManger.swift in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
+				3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */,
 				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,

@@ -169,20 +169,20 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
         let voiceManger=VoiceManger.shareInstance
         let returnWords=voiceManger.stopAndConfirm()
-        if (returnWords?.count)!>0 {
+        if (returnWords.count)>0 {
             CommonFunction.startAnimation("匹配中...", nil)
             //进行语言操作
-            print(returnWords!)
+            print(returnWords)
+
             let channelTitle=["广东":11,"湖南":12,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
-//            let channelTitle=["广东":11]
             for channel in channelTitle.keys {
-                for word in returnWords! {
+                for word in returnWords {
                     if channel == word {
                         let channelNum:Int = channelTitle[channel]!
                         let code:String = self.deviceInfo["codeString"] as! String
                         let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
                         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                            CommonFunction.stopAnimation("控制成功..", returnData?.description)
+                            CommonFunction.stopAnimation("控制成功..", channel)
                         }, fail: { (failString) -> UInt in
                             CommonFunction.stopAnimation("操作失败..", failString)
                             return 0

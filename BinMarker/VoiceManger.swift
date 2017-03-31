@@ -71,7 +71,7 @@ class VoiceManger: NSObject,IFlySpeechRecognizerDelegate,IFlyPcmRecorderDelegate
     
     func onBeginOfSpeech() {
         
-        resultWord=""
+        
     }
     
     func onEndOfSpeech() {
@@ -108,13 +108,14 @@ class VoiceManger: NSObject,IFlySpeechRecognizerDelegate,IFlyPcmRecorderDelegate
         iFlySpeechRecognizer?.setParameter("json", forKey: IFlySpeechConstant.result_TYPE())
         iFlySpeechRecognizer?.setParameter("asr.pcm", forKey: IFlySpeechConstant.asr_AUDIO_PATH())
         let ret=iFlySpeechRecognizer?.startListening()
+        resultWord=""
         if ret == false {
             print("启动识别服务失败，请稍后重试")
         }
         
     }
     
-    func stopAndConfirm() -> [String?]? {
+    func stopAndConfirm() -> [String?] {
         iFlySpeechRecognizer?.stopListening()
         return resultArr
     }
