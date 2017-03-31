@@ -54,13 +54,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
     [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
     
-    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        [NSThread sleepForTimeInterval:1.0];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self performSegueWithIdentifier:@"loginIn" sender:nil];
-        });
-    });
+//    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:1.0];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self performSegueWithIdentifier:@"loginIn" sender:nil];
+//        });
+//    });
 }
 
 #pragma mark 视图

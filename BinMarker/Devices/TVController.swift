@@ -351,12 +351,24 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 
             })
         }
+        else if item.title=="切换模式"{
+            
+            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
+                self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width*2, y: 0)
+            }, completion: { (_) in
+                
+            })
+        }
     }
     
     //MARK:列表的代理
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x>=self.view.frame.width {
+        if scrollView.contentOffset.x>=self.view.frame.width && scrollView.contentOffset.x<self.view.frame.width*2{
             self.tabBar.selectedItem=self.tabBar.items?[3]
+        }
+        else if scrollView.contentOffset.x>=self.view.frame.width*2
+        {
+            self.tabBar.selectedItem=self.tabBar.items?[4]
         }
         else
         {
