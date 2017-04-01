@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */; };
-		3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C0BB7011DDFF92B00A6479C /* BrandList.plist */; };
 		3C0D31741DDD9D9500D78924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31731DDD9D9500D78924 /* main.m */; };
 		3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31761DDD9D9500D78924 /* AppDelegate.m */; };
 		3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D317B1DDD9D9500D78924 /* Main.storyboard */; };
@@ -19,6 +18,8 @@
 		3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */; };
 		3C16B14E1E77D4B400A60D58 /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C16B14C1E77D4B400A60D58 /* DeviceTypeList.plist */; };
 		3C16B1501E77D4BD00A60D58 /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C16B14F1E77D4BD00A60D58 /* libstaticLib.a */; };
+		3C1CDFB41E8F4C050026F856 /* UIButton+touchLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1CDFB31E8F4C050026F856 /* UIButton+touchLimit.m */; };
+		3C1CDFBA1E8F54D50026F856 /* UIView+AutoFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1CDFB91E8F54D50026F856 /* UIView+AutoFont.m */; };
 		3C27460E1E712A5500662A9F /* searching.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C27460D1E712A5500662A9F /* searching.gif */; };
 		3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */; };
 		3C2A72731E790E2100137EAB /* NSE_Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */; };
@@ -68,6 +69,8 @@
 		3C482FE31E8C9DA900012E7D /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE21E8C9DA900012E7D /* CommonFunction.swift */; };
 		3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */; };
 		3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */; };
+		3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */; };
+		3C482FEE1E8F3F4B00012E7D /* UIViewController+NamePrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FED1E8F3F4B00012E7D /* UIViewController+NamePrint.m */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
@@ -77,7 +80,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C0BB7011DDFF92B00A6479C /* BrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BrandList.plist; sourceTree = "<group>"; };
 		3C0D316F1DDD9D9500D78924 /* BinMarker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinMarker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0D31731DDD9D9500D78924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C0D31751DDD9D9500D78924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +98,10 @@
 		3C16B14C1E77D4B400A60D58 /* DeviceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
 		3C16B14D1E77D4B400A60D58 /* NSString+StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
 		3C16B14F1E77D4BD00A60D58 /* libstaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstaticLib.a; sourceTree = "<group>"; };
+		3C1CDFB21E8F4C050026F856 /* UIButton+touchLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touchLimit.h"; sourceTree = "<group>"; };
+		3C1CDFB31E8F4C050026F856 /* UIButton+touchLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touchLimit.m"; sourceTree = "<group>"; };
+		3C1CDFB81E8F54D50026F856 /* UIView+AutoFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoFont.h"; sourceTree = "<group>"; };
+		3C1CDFB91E8F54D50026F856 /* UIView+AutoFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoFont.m"; sourceTree = "<group>"; };
 		3C27460D1E712A5500662A9F /* searching.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = searching.gif; sourceTree = "<group>"; };
 		3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		3C2A725F1E790E2100137EAB /* NSE_Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = NSE_Database.sqlite; path = "Bin&SQL/NSE_Database.sqlite"; sourceTree = "<group>"; };
@@ -145,6 +151,9 @@
 		3C482FE21E8C9DA900012E7D /* CommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
 		3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegeditController.swift; sourceTree = "<group>"; };
 		3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
+		3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVBOXTimeSetting.swift; sourceTree = "<group>"; };
+		3C482FEC1E8F3F4B00012E7D /* UIViewController+NamePrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NamePrint.h"; sourceTree = "<group>"; };
+		3C482FED1E8F3F4B00012E7D /* UIViewController+NamePrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NamePrint.m"; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
@@ -236,23 +245,39 @@
 		3C0D31891DDDA38800D78924 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				3C1CDFDC1E8F81910026F856 /* User */,
+				3C1CDFDB1E8F817E0026F856 /* Add */,
 				3C72B6EA1E728A000088925F /* Devices */,
 				3C0D318A1DDDA3A600D78924 /* MainController.h */,
 				3C0D318B1DDDA3A600D78924 /* MainController.m */,
+				3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */,
+				3CFB38391E6FD6D00069AEC6 /* ScaningController.h */,
+				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
+				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
+				3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		3C1CDFDB1E8F817E0026F856 /* Add */ = {
+			isa = PBXGroup;
+			children = (
 				3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */,
 				3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */,
 				3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */,
 				3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */,
-				3C0D31901DDEDA5C00D78924 /* BinMarker-Bridging-Header.h */,
-				3C0BB7011DDFF92B00A6479C /* BrandList.plist */,
-				3CFB38391E6FD6D00069AEC6 /* ScaningController.h */,
-				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
-				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		3C1CDFDC1E8F81910026F856 /* User */ = {
+			isa = PBXGroup;
+			children = (
 				3C482FDF1E8C985600012E7D /* LoginController.swift */,
 				3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */,
 				3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */,
 			);
-			name = List;
+			name = User;
 			sourceTree = "<group>";
 		};
 		3C25C4AB1E6550DB009B6D34 /* bin */ = {
@@ -322,6 +347,12 @@
 				3C43FAF01E88F8A700F01330 /* VoiceManger.swift */,
 				3CCB1AF81E810C16000C3A80 /* FavoriteScrollView.swift */,
 				3C482FE21E8C9DA900012E7D /* CommonFunction.swift */,
+				3C482FEC1E8F3F4B00012E7D /* UIViewController+NamePrint.h */,
+				3C482FED1E8F3F4B00012E7D /* UIViewController+NamePrint.m */,
+				3C1CDFB21E8F4C050026F856 /* UIButton+touchLimit.h */,
+				3C1CDFB31E8F4C050026F856 /* UIButton+touchLimit.m */,
+				3C1CDFB81E8F54D50026F856 /* UIView+AutoFont.h */,
+				3C1CDFB91E8F54D50026F856 /* UIView+AutoFont.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -428,7 +459,6 @@
 				3C2A727F1E790E2100137EAB /* 6123.bin in Resources */,
 				3C16B14E1E77D4B400A60D58 /* DeviceTypeList.plist in Resources */,
 				3C2A72791E790E2100137EAB /* 2009.bin in Resources */,
-				3C0BB7021DDFF92B00A6479C /* BrandList.plist in Resources */,
 				3C2A72831E790E2100137EAB /* P14AAA_16.bin in Resources */,
 				3C2A727D1E790E2100137EAB /* 3075.bin in Resources */,
 				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
@@ -514,8 +544,10 @@
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
 				3C482FE31E8C9DA900012E7D /* CommonFunction.swift in Sources */,
 				3C43FADD1E84FDA300F01330 /* TVController.swift in Sources */,
+				3C1CDFBA1E8F54D50026F856 /* UIView+AutoFont.m in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
 				3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */,
+				3C1CDFB41E8F4C050026F856 /* UIButton+touchLimit.m in Sources */,
 				3CC755EB1E261FA100013C63 /* BinMakeManger.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
@@ -523,9 +555,11 @@
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
 				3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */,
 				3CCB1AF91E810C16000C3A80 /* FavoriteScrollView.swift in Sources */,
+				3C482FEE1E8F3F4B00012E7D /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
+				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
 			);

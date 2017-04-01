@@ -175,6 +175,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             print(returnWords)
 
             let channelTitle=["广东":11,"湖南":12,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+            var isContain=false
             for channel in channelTitle.keys {
                 for word in returnWords {
                     if channel == word {
@@ -182,11 +183,12 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                         let code:String = self.deviceInfo["codeString"] as! String
                         let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
                         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                            CommonFunction.stopAnimation("控制成功..", channel)
+                            CommonFunction.stopAnimation("控制成功..", channel,1)
                         }, fail: { (failString) -> UInt in
-                            CommonFunction.stopAnimation("操作失败..", failString)
+                            CommonFunction.stopAnimation("操作失败..", failString,1)
                             return 0
                         })
+                        isContain=true
                         break
 
                     }
@@ -210,6 +212,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
 //                    
 //                    break
 //                }
+            }
+            if isContain == false {
+                CommonFunction.stopAnimation("操作失败..", "没找到对应控制指令",1.5)
             }
             
         }
@@ -250,9 +255,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
         CommonFunction.startAnimation("发送中:" + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!)
+            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!,1)
         }, fail: { (failString) -> UInt in
-            CommonFunction.stopAnimation("操作失败", failString)
+            CommonFunction.stopAnimation("操作失败", failString,1)
             return 0
         })
     }
@@ -262,7 +267,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
             UserDefaults.standard.set([], forKey: "TVfavorite")
         }
-        FTPopOverMenu.show(from: event, withMenuArray: ["添加频道收藏"], doneBlock: { (index) in
+        FTPopOverMenu.show(from: event, withMenuArray: ["添加频道收藏","定时关机"], doneBlock: { (index) in
             if index==0
             {
                 let alert=UIAlertController.init(title: "收藏频道号", message: "请输入要收藏的频道", preferredStyle: .alert)
@@ -296,6 +301,10 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 self.present(alert, animated: true, completion: {
                     
                 })
+            }
+            else if index==1
+            {
+                self.performSegue(withIdentifier: "tv2time", sender: nil)
             }
         })
         {
@@ -409,9 +418,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                CommonFunction.stopAnimation("控制成功..", returnData?.description)
+                CommonFunction.stopAnimation("控制成功..", returnData?.description,1)
             }, fail: { (failString) -> UInt in
-                CommonFunction.stopAnimation("操作失败..", failString)
+                CommonFunction.stopAnimation("操作失败..", failString,1)
                 return 0
             })
 
@@ -429,9 +438,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                CommonFunction.stopAnimation("控制成功..", returnData?.description)
+                CommonFunction.stopAnimation("控制成功..", returnData?.description,1)
             }, fail: { (failString) -> UInt in
-                CommonFunction.stopAnimation("操作失败..", failString)
+                CommonFunction.stopAnimation("操作失败..", failString,1)
                 return 0
             })
         }

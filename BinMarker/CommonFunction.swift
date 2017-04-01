@@ -23,12 +23,12 @@ class CommonFunction: NSObject {
     }
     
     
-    class func stopAnimation(_ mainTitle:String? ,_ subTitle:String?) {
+    class func stopAnimation(_ mainTitle:String? ,_ subTitle:String?,_ hideTime:TimeInterval) {
         let frontView=self.getCurrentView()
         let hub = frontView?.viewWithTag(10001) as? MBProgressHUD
         hub?.label.text = mainTitle;
         hub?.detailsLabel.text = subTitle;
-        hub?.hide(animated: true, afterDelay: 0.5)
+        hub?.hide(animated: true, afterDelay: hideTime)
     }
     
     
