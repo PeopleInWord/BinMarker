@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVBOXTimeSetting: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource{
+class TVBOXTimeSetting: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource,UITableViewDataSource,UITableViewDelegate{
 
     @IBOutlet weak var timePicker: UIPickerView!
     override func viewDidLoad() {
@@ -52,6 +52,32 @@ class TVBOXTimeSetting: UIViewController ,UIPickerViewDelegate,UIPickerViewDataS
         }
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseID=["time1","time2"][indexPath.row]
+        let cell = tableView .dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as UITableViewCell;
+        if indexPath.row == 0 {
+            let timeLab=cell.viewWithTag(1001) as! UILabel
+            timeLab.text="1小时"
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

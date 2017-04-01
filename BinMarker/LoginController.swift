@@ -17,10 +17,8 @@ class LoginController: UIViewController {
     }
 
     @IBAction func back2Main(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true) { 
-            
+        self.dismiss(animated: true) {
         }
-        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
