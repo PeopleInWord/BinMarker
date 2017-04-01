@@ -101,7 +101,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 - (IBAction)userInfo:(UIBarButtonItem *)sender {
-    if (0) {
+    if (1) {
         [self performSegueWithIdentifier:@"loginIn" sender:nil];
     } else {
         [self performSegueWithIdentifier:@"userInfo" sender:nil];

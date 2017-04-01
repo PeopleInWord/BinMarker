@@ -174,7 +174,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             //进行语言操作
             print(returnWords)
 
-            let channelTitle=["广东":11,"湖南":12,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+            let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
             var isContain=false
             for channel in channelTitle.keys {
                 for word in returnWords {
@@ -193,25 +193,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
 
                     }
                 }
-                
-                
-                
-//                returnWords?.contains(where: { (channel) -> Bool in
-//                    let channelNum:Int = channelTitle[channel!]!
-//                    let code:String = self.deviceInfo["codeString"] as! String
-//                    let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
-//                    BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-//                        CommonFunction.stopAnimation("控制成功..", returnData?.description)
-//                    }, fail: { (failString) -> UInt in
-//                        CommonFunction.stopAnimation("操作失败..", failString)
-//                        return 0
-//                    })
-//                })
-//                if (returnWords?.contains(where: channel))! {
-////                    let channelNum=[11,12,13,14,15,16,17,18]
-//                    
-//                    break
-//                }
             }
             if isContain == false {
                 CommonFunction.stopAnimation("操作失败..", "没找到对应控制指令",1.5)
@@ -255,9 +236,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
         CommonFunction.startAnimation("发送中:" + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!,1)
+            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
-            CommonFunction.stopAnimation("操作失败", failString,1)
+            CommonFunction.stopAnimation("操作失败", failString,0.3)
             return 0
         })
     }
