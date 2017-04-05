@@ -238,7 +238,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
             CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
-            CommonFunction.stopAnimation("操作失败", failString,0.3)
+            let failDic=["102" : "连接设备失败,请重试","103" : "设备服务发现失败,尝试重启蓝牙","104" : "写入操作失败,请重试"]
+            CommonFunction.stopAnimation("操作失败", failDic[failString!],0.3)
             return 0
         })
     }

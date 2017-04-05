@@ -117,7 +117,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
-    [FTPopOverMenu showFromEvent:event withMenuArray:@[@"添加设备",@"寻找设备",@"设置",@"当前版本"] doneBlock:^(NSInteger selectedIndex) {
+    [FTPopOverMenu showFromEvent:event withMenuArray:@[NSLocalizedString(@"添加设备", @"添加设备顶部"),@"寻找设备",@"设置",@"当前版本"] doneBlock:^(NSInteger selectedIndex) {
         switch (selectedIndex) {
             case 0:
                 [self performSegueWithIdentifier:@"addDevice" sender:nil];
@@ -131,7 +131,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
             default:
                 break;
         }
-    } dismissBlock:^{
+    }               dismissBlock:^{
         
     }];
 }

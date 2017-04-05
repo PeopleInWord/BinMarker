@@ -8,58 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		0024F89673D793582C1B016ED8430AC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E845228FB970C5F42CDE9434FD6BB2 /* QuartzCore.framework */; };
-		05F06B12AAC5CD0C807ECE5B3B3D2BAC /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD13EA55341CB8A46869521B48FB2E12 /* FLAnimatedImage-dummy.m */; };
+		05F06B12AAC5CD0C807ECE5B3B3D2BAC /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9703257C3C3EC6F1686DE7E07DC957 /* FLAnimatedImage-dummy.m */; };
 		0E9E2B040680E0B5F2A41D247875C60F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		13AB020467A795B751725FE11503A89A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		1B024C972CC64A6D0732B357C9E386BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		1EFD9583025366C1EB5F456A6CD3E3BD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47FE23996994E1EAF8A5264C8322105 /* MobileCoreServices.framework */; };
-		2012864C735C3DD88ECE425F6C981F6B /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 038826EB139035359B86D65AAA141E5E /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D94423540194E95B7AF46F7A009D142 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC273D675DD7A99F4F7380373D0A60B /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		398A5C11EFB816892FD5E18AD24F03D4 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = A0687D1D1F784D9ADFACEEF8702F2B51 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		435C849B0108051E037302C84B49CBAF /* FTPopOverMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 471B1A240420402BB02D41B86C7E4358 /* FTPopOverMenu-dummy.m */; };
-		4726386A3D50F96764226922C6DA72CF /* BlurryModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B409C98F64D53E1B90509F851D7E4 /* BlurryModalSegue.m */; };
-		4B3B2EABA01FE0065CA6693CEE33CA92 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F6CB522CFE9F52C729663397AC8469 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		4C4AB36C0AEDB4E18E881FB7A5160F7B /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2897634912E60363E7FE8335FC6CF3 /* FLAnimatedImageView.m */; };
-		4DB541C1C41B1C597EC36CDAB5243D1A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B44A979D1C2DA3F0B20D307CB75CA7A /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2012864C735C3DD88ECE425F6C981F6B /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AC1B07941863C6F5826513B03C177A /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D94423540194E95B7AF46F7A009D142 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 594C1DC2CFF55924193254AB459C04BD /* NSInvocation+Copy.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		398A5C11EFB816892FD5E18AD24F03D4 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 51061DCD088D6305462C77335843E5C0 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		435C849B0108051E037302C84B49CBAF /* FTPopOverMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F011A6E83E692438495A457FD0E2F966 /* FTPopOverMenu-dummy.m */; };
+		4726386A3D50F96764226922C6DA72CF /* BlurryModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = A80FBF3519F9FBD1E159F42000966A17 /* BlurryModalSegue.m */; };
+		4B3B2EABA01FE0065CA6693CEE33CA92 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6000E081E2CAFE734738AABA7AC729D /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4C4AB36C0AEDB4E18E881FB7A5160F7B /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E7D0A1CD0B2AA0686BAC40040DC723 /* FLAnimatedImageView.m */; };
+		4DB541C1C41B1C597EC36CDAB5243D1A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E149F33B8A1B3B046B40FF5BAF9A1E23 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		51157F7A2664E6CD320A08566897FB28 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C547661E7C9FF7498ACAC16B354BAFE /* ImageIO.framework */; };
-		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 23206569EFE2D1E722DE96B1DC268E24 /* MBProgressHUD.m */; };
-		60B04EC63EE3A896E2595380BF44AEB8 /* MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462C885DC8FEB080AF43B7DECEAF97D /* MZAppearance-dummy.m */; };
-		6199817CB29DADBC9AB1D4C44E52F5BA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D11DCDFE88EC302DE8C6AF0550A8D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		63EAEA3C15F493173AE81FF5F366EE5C /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = ECEBF31C13C5DC404DFC3E379AABAD26 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CFA0561CAFEB49F58D14BC50FC9B179 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2A9B9ECBE88441C887D1105A65BEF /* UIImage+ImageEffects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		536F7D0550F5FD9F5869CEC995CFEE9B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 980E7EC77755C4A0CE38D74C2EEE6E65 /* MBProgressHUD.m */; };
+		60B04EC63EE3A896E2595380BF44AEB8 /* MZAppearance-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD51FD310E9781BF7CC774C31ED59A1 /* MZAppearance-dummy.m */; };
+		6199817CB29DADBC9AB1D4C44E52F5BA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9766D5C6563E48CF7432FB9C5F8AF9EB /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		63EAEA3C15F493173AE81FF5F366EE5C /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = B42AD7BCC672F6001A2A417CE2D97713 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CFA0561CAFEB49F58D14BC50FC9B179 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 079752DA81F148A9F7BACBBE7BBA0B3A /* UIImage+ImageEffects.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		73224CB39DEDC688ADE0D6D51FCAA3F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B16525CE151B2263EA6133F40B7C555 /* CoreGraphics.framework */; };
 		741E7C0DC8CD4A4F4B07D1128DB4F696 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		757623500C6CDFE683BF83DE841F8D1E /* Pods-BinMarker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76078B90FF46D8735F7ECE7B449ECFE5 /* Pods-BinMarker-dummy.m */; };
-		8021697A1557D425AC130472DA1317CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C24082D61EF4785F6085A18370D0C89A /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		87860A09F26BAC6C3FE081FDB1DF5A00 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 93503185B76C8E91BC79CFCBCA224454 /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87AE5B1901122ABEBE89E27E0C2C2075 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 8065932A1D91FEE6D69D974DC766C5D0 /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		87D49B5DDFDFFAD09A8F4A5F5685433D /* BlurryModalSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A02F8DA25E7329763DA3A7381B50292 /* BlurryModalSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		889D48A9B81ADF617C1D4E4E9473E3A9 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 3740E9A424763CF3A6BD5B6AF14008B2 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88D2087CEDCB395D162499D936F4C167 /* BlurryModalSegue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5126C0C804772C9607F0AD77117890DD /* BlurryModalSegue-dummy.m */; };
+		8021697A1557D425AC130472DA1317CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE0BBF9F3CA913B77C654DB2C36E782 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		87860A09F26BAC6C3FE081FDB1DF5A00 /* NSInvocation+Copy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0025FB41FD50523F4ED7859469A03D3B /* NSInvocation+Copy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87AE5B1901122ABEBE89E27E0C2C2075 /* FTPopOverMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = C8CA8CC259FB538EE63ECBB1FA0A704B /* FTPopOverMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87D49B5DDFDFFAD09A8F4A5F5685433D /* BlurryModalSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = D1562AB2ED0CA0B5EED3D5F4173C4FBC /* BlurryModalSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		889D48A9B81ADF617C1D4E4E9473E3A9 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 4420F44DF20250CA5A5A4B0D1F5C102C /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88D2087CEDCB395D162499D936F4C167 /* BlurryModalSegue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B475B2712E3C7C8D9C2458B0B7ED5217 /* BlurryModalSegue-dummy.m */; };
 		8C8FE823FB0DA31FA72637BBBA637026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		8C9B1DC3568E2881FF159096A119F748 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B16525CE151B2263EA6133F40B7C555 /* CoreGraphics.framework */; };
-		98ABF277A45F1AB72A8D02D53FFE67BF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4623428A18538F72F7C4E284E784E15E /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		99714143FA44A34F87D1F2AA6D254177 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A3F281EBA54986F0D92E74DCA6C3322 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F2487A92F12D7E3FA6F5B1BE54E141F /* UIImage+BlurredFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BF26F1968C94E5EB6ABB2BB3399EBC34 /* UIImage+BlurredFrame.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AD0E1790919F4E9E263D82EE98C11473 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E282BA4DF3A71CAB6383B7D3036CF3E /* FLAnimatedImage.m */; };
-		B3550A4DAD326329DFA27C0F362C603E /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E9A5D86C16F83164CF48C78934AB7FE2 /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98ABF277A45F1AB72A8D02D53FFE67BF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C935F40D7C25C586646E5F42D0E8848 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		99714143FA44A34F87D1F2AA6D254177 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 19D3A4AEB0E6FB63CD740B6070B5290E /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F2487A92F12D7E3FA6F5B1BE54E141F /* UIImage+BlurredFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CB41B7E9509ACDA11A492D0713697F /* UIImage+BlurredFrame.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AD0E1790919F4E9E263D82EE98C11473 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DFAA6D89222D069DD76D538D5EF79 /* FLAnimatedImage.m */; };
+		B3550A4DAD326329DFA27C0F362C603E /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AA85D209FB8EBD5E87265FEF49D6B2C /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8F6C6BC0C84A29BAA4A2CE9EE7E6E2D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E845228FB970C5F42CDE9434FD6BB2 /* QuartzCore.framework */; };
-		BBD94CEF5B7886ECB2E06245AB478D8E /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 03FDBD4A8CF681890350174898EF1EA8 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCAB2D24F7628E7782F2F383B21BF091 /* UIImage+BlurredFrame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E607D076FB44439116765C002249A2A0 /* UIImage+BlurredFrame-dummy.m */; };
-		C40CFE1274D588CA1A9DF9394BF76EAE /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE51E955ABD315C266F722E38D0AC45B /* FMDB-dummy.m */; };
+		BBD94CEF5B7886ECB2E06245AB478D8E /* MZAppearance.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C79731FF86857B3E7F4DB188B341136 /* MZAppearance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCAB2D24F7628E7782F2F383B21BF091 /* UIImage+BlurredFrame-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC553259B895668B69C777EAA80724F /* UIImage+BlurredFrame-dummy.m */; };
+		C40CFE1274D588CA1A9DF9394BF76EAE /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D5829660CDAB3D048DCDA872D42457 /* FMDB-dummy.m */; };
 		C6D3113575DC8FF02A830757B2FE70F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		CA5E682B018BF5756152E04FE2F23909 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
 		D415D0767A8AF457434FFFB5957D4616 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E845228FB970C5F42CDE9434FD6BB2 /* QuartzCore.framework */; };
-		D852415DFD46E85C293E0DDE01868EA2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 21EBBC7127F9A58067989E724BF90B2B /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8A1733835E538EAA4651487EAC8C67 /* MBProgressHUD-dummy.m */; };
-		E583F5134C0584EDA3AE0EB4C7C17864 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF753DF9490B5869299E5884C5E85A9 /* FTPopOverMenu.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 112E37FA79CF185BEBCA230FC0C6D658 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA53488D670338BD551548C38A9C1FE5 /* UIImage+BlurredFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C9706CE2FE39F98EA96E0E5CA38B5C0 /* UIImage+BlurredFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D852415DFD46E85C293E0DDE01868EA2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = BE399B02BC0DE6A15922A796ECA88BA1 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5229F5125ACD420659E7B2D19BB30A8 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1155F711246D57480C3B721AAEB062 /* MBProgressHUD-dummy.m */; };
+		E583F5134C0584EDA3AE0EB4C7C17864 /* FTPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B686F7609C4E12FFB9C268C71860F91 /* FTPopOverMenu.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EA321C98029015AA4895C0B26891D8F8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = F6AE231E2E29855BBEE1BAE0A71F1A88 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA53488D670338BD551548C38A9C1FE5 /* UIImage+BlurredFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D7460D93E2DE6B9FE415B024CF50B4 /* UIImage+BlurredFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB9FA117F239315B18E49BA1642FD4AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E845228FB970C5F42CDE9434FD6BB2 /* QuartzCore.framework */; };
-		EFC3D97BD544F87E593E16891E8514B2 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6C4569E99CDA9BAAAE9EF3761C5D34 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F00CCFAB93A4F18419CD91217B1D5F66 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AA940CBBF53DDA38B6AEE5BE8E4A024 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFC3D97BD544F87E593E16891E8514B2 /* UIImage+ImageEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = 5628BDCB79A1FE3F342994FAC4A2C226 /* UIImage+ImageEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F00CCFAB93A4F18419CD91217B1D5F66 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6226F5CEBB81F77CD5DF4AEB94C870DF /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC72FB929BACF8E40779EBBA2CB2F226 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */; };
-		FF8B189278B4464F2622D077C4F7ECAA /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1875EB90E66D2B611E6EB7CCE045CB6C /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FF8B189278B4464F2622D077C4F7ECAA /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC696CD89EF16C7BDC3AD6C4EDEFDA /* MZAppearance.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,80 +129,78 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038826EB139035359B86D65AAA141E5E /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
-		03FDBD4A8CF681890350174898EF1EA8 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
-		0462C885DC8FEB080AF43B7DECEAF97D /* MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZAppearance-dummy.m"; sourceTree = "<group>"; };
-		0AA940CBBF53DDA38B6AEE5BE8E4A024 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0025FB41FD50523F4ED7859469A03D3B /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
+		079752DA81F148A9F7BACBBE7BBA0B3A /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		0B16525CE151B2263EA6133F40B7C555 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0BB2A9B9ECBE88441C887D1105A65BEF /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		0C79731FF86857B3E7F4DB188B341136 /* MZAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZAppearance.h; path = MZAppearance/MZAppearance.h; sourceTree = "<group>"; };
+		0CAC696CD89EF16C7BDC3AD6C4EDEFDA /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
 		10CBF885EC8458778DAB5D81E038A1CD /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFMDB.a; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		112E37FA79CF185BEBCA230FC0C6D658 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		14BDE055788EC0A08AFC9F60D03A228B /* MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZAppearance.xcconfig; sourceTree = "<group>"; };
+		10D5829660CDAB3D048DCDA872D42457 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		12C0947656CB8C68BFE6FC17A38A8F16 /* FTPopOverMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FTPopOverMenu.xcconfig; sourceTree = "<group>"; };
 		1740A169D5365D8FC56EC4A81319EBBB /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1875EB90E66D2B611E6EB7CCE045CB6C /* MZAppearance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZAppearance.m; path = MZAppearance/MZAppearance.m; sourceTree = "<group>"; };
-		2044060D9DB7FCD10B40E19F37FD115B /* PgySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PgySDK.framework; path = PgySDK/sdk/PgySDK.framework; sourceTree = "<group>"; };
+		19D3A4AEB0E6FB63CD740B6070B5290E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		1AA85D209FB8EBD5E87265FEF49D6B2C /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
+		1AD51FD310E9781BF7CC774C31ED59A1 /* MZAppearance-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZAppearance-dummy.m"; sourceTree = "<group>"; };
+		1DE0BBF9F3CA913B77C654DB2C36E782 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		1EC553259B895668B69C777EAA80724F /* UIImage+BlurredFrame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurredFrame-dummy.m"; sourceTree = "<group>"; };
 		2186F96C3E8A66D3230EF54C21C1F55E /* libPods-BinMarker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-BinMarker.a"; path = "libPods-BinMarker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		21EBBC7127F9A58067989E724BF90B2B /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
-		21F855DDB272F9F71F4CE04A6121C433 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
-		23206569EFE2D1E722DE96B1DC268E24 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		240C5A4842747A0679BE7C914181804A /* BlurryModalSegue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlurryModalSegue.xcconfig; sourceTree = "<group>"; };
+		29CB41B7E9509ACDA11A492D0713697F /* UIImage+BlurredFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurredFrame.m"; sourceTree = "<group>"; };
 		2A4074C17DC5D9FF66CE5E6B10DA57FA /* libBlurryModalSegue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBlurryModalSegue.a; path = libBlurryModalSegue.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B44A979D1C2DA3F0B20D307CB75CA7A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		316FA4700D4520F02406DC0FB381230E /* Pods-BinMarker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BinMarker-acknowledgements.plist"; sourceTree = "<group>"; };
-		3740E9A424763CF3A6BD5B6AF14008B2 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
-		398C7476E29CFFE6661CDC742A4810E2 /* UIImage+BlurredFrame-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurredFrame-prefix.pch"; sourceTree = "<group>"; };
-		3C9706CE2FE39F98EA96E0E5CA38B5C0 /* UIImage+BlurredFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurredFrame.h"; sourceTree = "<group>"; };
-		4310826CB7BF9585381DE9653031B0F3 /* UIImage+BlurredFrame.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIImage+BlurredFrame.xcconfig"; sourceTree = "<group>"; };
+		3E4779D2159165C6D0B9C1CCE6EF180D /* BlurryModalSegue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlurryModalSegue.xcconfig; sourceTree = "<group>"; };
+		4420F44DF20250CA5A5A4B0D1F5C102C /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
 		4531F366697A801D58E0E9BBE9AF9286 /* Pods-BinMarker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BinMarker-resources.sh"; sourceTree = "<group>"; };
-		4623428A18538F72F7C4E284E784E15E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
-		471B1A240420402BB02D41B86C7E4358 /* FTPopOverMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FTPopOverMenu-dummy.m"; sourceTree = "<group>"; };
-		478AF84359EEDEB4931E3CF51E3243D6 /* FLAnimatedImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.xcconfig; sourceTree = "<group>"; };
-		4A6C4569E99CDA9BAAAE9EF3761C5D34 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		4F74465D1212D0A7119BE1FD74CF48BC /* FTPopOverMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FTPopOverMenu-prefix.pch"; sourceTree = "<group>"; };
-		5126C0C804772C9607F0AD77117890DD /* BlurryModalSegue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlurryModalSegue-dummy.m"; sourceTree = "<group>"; };
-		556F913D6B647B90B03C3081A853FB4D /* PgyUpdate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PgyUpdate.framework; path = PgySDK/sdk/PgyUpdate.framework; sourceTree = "<group>"; };
-		5B65A35B9D43222697965FCE60446A12 /* MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-prefix.pch"; sourceTree = "<group>"; };
+		485CC6769A1519910E266E9530B35850 /* FTPopOverMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FTPopOverMenu-prefix.pch"; sourceTree = "<group>"; };
+		49D7460D93E2DE6B9FE415B024CF50B4 /* UIImage+BlurredFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurredFrame.h"; sourceTree = "<group>"; };
+		51061DCD088D6305462C77335843E5C0 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		5628BDCB79A1FE3F342994FAC4A2C226 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		594C1DC2CFF55924193254AB459C04BD /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
+		5CDE6E393B329DD3F33684E5A179CF33 /* MZAppearance.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZAppearance.xcconfig; sourceTree = "<group>"; };
 		5D416F011C6BA756BECBA4C12C7B3BBA /* Pods-BinMarker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BinMarker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5E6B409C98F64D53E1B90509F851D7E4 /* BlurryModalSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BlurryModalSegue.m; path = BlurryModalSegue/BlurryModalSegue.m; sourceTree = "<group>"; };
 		61E0F5E892510EAED584D41483A300C6 /* Pods-BinMarker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BinMarker-frameworks.sh"; sourceTree = "<group>"; };
+		6226F5CEBB81F77CD5DF4AEB94C870DF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		68B55E4955C7B14841050A22C146F4AE /* libMZAppearance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMZAppearance.a; path = libMZAppearance.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C547661E7C9FF7498ACAC16B354BAFE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		6CF753DF9490B5869299E5884C5E85A9 /* FTPopOverMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTPopOverMenu.m; path = FTPopOverMenu/FTPopOverMenu.m; sourceTree = "<group>"; };
-		6DF6B807A1A46132CB044AB3D1E4CB8A /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
-		7236BE863EC7FBEA2A9E13DA752D8D50 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		6C935F40D7C25C586646E5F42D0E8848 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6C9703257C3C3EC6F1686DE7E07DC957 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
+		7495E0C0BEBF00FD4C092D1B78D97151 /* BlurryModalSegue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlurryModalSegue-prefix.pch"; sourceTree = "<group>"; };
 		76078B90FF46D8735F7ECE7B449ECFE5 /* Pods-BinMarker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BinMarker-dummy.m"; sourceTree = "<group>"; };
-		8065932A1D91FEE6D69D974DC766C5D0 /* FTPopOverMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTPopOverMenu.h; path = FTPopOverMenu/FTPopOverMenu.h; sourceTree = "<group>"; };
+		7EABF8DA25798D730E4A8F7F51359B36 /* FLAnimatedImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.xcconfig; sourceTree = "<group>"; };
 		83E845228FB970C5F42CDE9434FD6BB2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		8A3F281EBA54986F0D92E74DCA6C3322 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
-		8BDF8A31114D074EB4063988271B6C00 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		8E282BA4DF3A71CAB6383B7D3036CF3E /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
-		8F2897634912E60363E7FE8335FC6CF3 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
-		93503185B76C8E91BC79CFCBCA224454 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "MZAppearance/NSInvocation+Copy.h"; sourceTree = "<group>"; };
+		8BD0D595592407965299E2BDBD784422 /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9A02F8DA25E7329763DA3A7381B50292 /* BlurryModalSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurryModalSegue.h; path = BlurryModalSegue/BlurryModalSegue.h; sourceTree = "<group>"; };
-		A0687D1D1F784D9ADFACEEF8702F2B51 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		9766D5C6563E48CF7432FB9C5F8AF9EB /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		980E7EC77755C4A0CE38D74C2EEE6E65 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		9B686F7609C4E12FFB9C268C71860F91 /* FTPopOverMenu.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTPopOverMenu.m; path = FTPopOverMenu/FTPopOverMenu.m; sourceTree = "<group>"; };
+		9E03F082797DE413744607A3877C198B /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		9FCC7B27FBAEB3A19B0DD141EF2C5B7B /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		A48877BE551A813971082A2E3BC29124 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
-		BC50B615D938B3CD823237BCA90078FF /* BlurryModalSegue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlurryModalSegue-prefix.pch"; sourceTree = "<group>"; };
-		BD13EA55341CB8A46869521B48FB2E12 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
+		A80FBF3519F9FBD1E159F42000966A17 /* BlurryModalSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BlurryModalSegue.m; path = BlurryModalSegue/BlurryModalSegue.m; sourceTree = "<group>"; };
+		B42AD7BCC672F6001A2A417CE2D97713 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		B475B2712E3C7C8D9C2458B0B7ED5217 /* BlurryModalSegue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlurryModalSegue-dummy.m"; sourceTree = "<group>"; };
+		B5AC1B07941863C6F5826513B03C177A /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		B6000E081E2CAFE734738AABA7AC729D /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		B813A7EBBD48E66145B09315918F32ED /* UIImage+BlurredFrame-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurredFrame-prefix.pch"; sourceTree = "<group>"; };
+		BE399B02BC0DE6A15922A796ECA88BA1 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
 		BEB3D5C837B60528628370E3683C16A0 /* libUIImage+BlurredFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libUIImage+BlurredFrame.a"; path = "libUIImage+BlurredFrame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF26F1968C94E5EB6ABB2BB3399EBC34 /* UIImage+BlurredFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurredFrame.m"; sourceTree = "<group>"; };
-		C24082D61EF4785F6085A18370D0C89A /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
 		C47FE23996994E1EAF8A5264C8322105 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		C4E7D0A1CD0B2AA0686BAC40040DC723 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
 		C644FC4654DF4DDB1C83808001838CBE /* libFTPopOverMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFTPopOverMenu.a; path = libFTPopOverMenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBF013BD8D09C9396967F7F7D6300630 /* FTPopOverMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FTPopOverMenu.xcconfig; sourceTree = "<group>"; };
-		CEB3B1069F96A6471557B0BDB0BC3313 /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
-		CFA9991FE07D560BD99B5701B0B61176 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		D1F6CB522CFE9F52C729663397AC8469 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
-		DC0D11DCDFE88EC302DE8C6AF0550A8D /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		C8CA8CC259FB538EE63ECBB1FA0A704B /* FTPopOverMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTPopOverMenu.h; path = FTPopOverMenu/FTPopOverMenu.h; sourceTree = "<group>"; };
+		CA3DFAA6D89222D069DD76D538D5EF79 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
+		CD74D21622BC7F6095CEE597C143E8DE /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		D1562AB2ED0CA0B5EED3D5F4173C4FBC /* BlurryModalSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlurryModalSegue.h; path = BlurryModalSegue/BlurryModalSegue.h; sourceTree = "<group>"; };
 		DE75307A235EA42B0FED47E601547918 /* Pods-BinMarker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BinMarker.debug.xcconfig"; sourceTree = "<group>"; };
+		E149F33B8A1B3B046B40FF5BAF9A1E23 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		E29BBD8436C23DAE27AD70D4D2044B4B /* MZAppearance-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZAppearance-prefix.pch"; sourceTree = "<group>"; };
+		E2C613902EEB3E5CDCDBC3136B4E1E85 /* UIImage+BlurredFrame.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIImage+BlurredFrame.xcconfig"; sourceTree = "<group>"; };
 		E3B7526E88C61A022CC05338CC8B1DAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E607D076FB44439116765C002249A2A0 /* UIImage+BlurredFrame-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurredFrame-dummy.m"; sourceTree = "<group>"; };
 		E848F789613B8FA72D01370ECD80CA22 /* libFLAnimatedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFLAnimatedImage.a; path = libFLAnimatedImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9A5D86C16F83164CF48C78934AB7FE2 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
-		ECC273D675DD7A99F4F7380373D0A60B /* NSInvocation+Copy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "MZAppearance/NSInvocation+Copy.m"; sourceTree = "<group>"; };
-		ECEBF31C13C5DC404DFC3E379AABAD26 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
-		ED8A1733835E538EAA4651487EAC8C67 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		FE51E955ABD315C266F722E38D0AC45B /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		EA236264F4F67ADEEF94297606E3B9E2 /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		EBC76A0624DCC5812204B7FDB1A60335 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		EC1155F711246D57480C3B721AAEB062 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		F011A6E83E692438495A457FD0E2F966 /* FTPopOverMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FTPopOverMenu-dummy.m"; sourceTree = "<group>"; };
+		F6AE231E2E29855BBEE1BAE0A71F1A88 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,21 +279,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1484D96CB21F92F493ED4595C06EC9B5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12C0947656CB8C68BFE6FC17A38A8F16 /* FTPopOverMenu.xcconfig */,
+				F011A6E83E692438495A457FD0E2F966 /* FTPopOverMenu-dummy.m */,
+				485CC6769A1519910E266E9530B35850 /* FTPopOverMenu-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FTPopOverMenu";
+			sourceTree = "<group>";
+		};
+		179B8DE7051FE69A19B3BF0806F8FA13 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				BE399B02BC0DE6A15922A796ECA88BA1 /* FMDatabase.h */,
+				9766D5C6563E48CF7432FB9C5F8AF9EB /* FMDatabase.m */,
+				6226F5CEBB81F77CD5DF4AEB94C870DF /* FMDatabaseAdditions.h */,
+				E149F33B8A1B3B046B40FF5BAF9A1E23 /* FMDatabaseAdditions.m */,
+				B5AC1B07941863C6F5826513B03C177A /* FMDatabasePool.h */,
+				1DE0BBF9F3CA913B77C654DB2C36E782 /* FMDatabasePool.m */,
+				19D3A4AEB0E6FB63CD740B6070B5290E /* FMDatabaseQueue.h */,
+				6C935F40D7C25C586646E5F42D0E8848 /* FMDatabaseQueue.m */,
+				4420F44DF20250CA5A5A4B0D1F5C102C /* FMDB.h */,
+				51061DCD088D6305462C77335843E5C0 /* FMResultSet.h */,
+				B6000E081E2CAFE734738AABA7AC729D /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
 		1C563034A5E28D67882F15E7C297A69B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				A7F0371AE86BFDB87BB7BE01230061EA /* Pods-BinMarker */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		1E235366192B16BAB64AEBBE69947ADF /* Pgyer */ = {
-			isa = PBXGroup;
-			children = (
-				9F03674F2CE2F46B1F508EBB479635B7 /* Frameworks */,
-			);
-			name = Pgyer;
-			path = Pgyer;
 			sourceTree = "<group>";
 		};
 		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
@@ -306,27 +324,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		29AE7CAD3C7F1729759132A5861E7442 /* UIImage+BlurredFrame */ = {
+		2BF9921AB522D32DF085BAF8A21486AB /* UIImage+BlurredFrame */ = {
 			isa = PBXGroup;
 			children = (
-				3C9706CE2FE39F98EA96E0E5CA38B5C0 /* UIImage+BlurredFrame.h */,
-				BF26F1968C94E5EB6ABB2BB3399EBC34 /* UIImage+BlurredFrame.m */,
-				4A6C4569E99CDA9BAAAE9EF3761C5D34 /* UIImage+ImageEffects.h */,
-				0BB2A9B9ECBE88441C887D1105A65BEF /* UIImage+ImageEffects.m */,
-				8AC972F86AEABC875FA0E49331D964DA /* Support Files */,
+				49D7460D93E2DE6B9FE415B024CF50B4 /* UIImage+BlurredFrame.h */,
+				29CB41B7E9509ACDA11A492D0713697F /* UIImage+BlurredFrame.m */,
+				5628BDCB79A1FE3F342994FAC4A2C226 /* UIImage+ImageEffects.h */,
+				079752DA81F148A9F7BACBBE7BBA0B3A /* UIImage+ImageEffects.m */,
+				4254FAC941223ADCAFA32E0EB4B57AB4 /* Support Files */,
 			);
 			name = "UIImage+BlurredFrame";
 			path = "UIImage+BlurredFrame";
 			sourceTree = "<group>";
 		};
-		38207A6F07917DD5C553875CB419B3BD /* FMDB */ = {
+		33DE7EE525336FAACEF73587DCF7A849 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FAF3A0B83736D978ADD9C999FBA6F97F /* standard */,
-				89AC756B8CD3395CE9247EE4480DFB1D /* Support Files */,
+				C430E5A4573A801D63F1EDC4101B376B /* BlurryModalSegue */,
+				7C6BC5501D302D4FA89B341AE410D72B /* Bugly */,
+				B439AC4C346322D29154331E1B86B8CE /* FLAnimatedImage */,
+				BA02E5850CD06E9B17154876D7C84930 /* FMDB */,
+				94664CB645A33445371F79EB7E782216 /* FTPopOverMenu */,
+				F152CD8A0E5257162B4DDB9E822BF780 /* MBProgressHUD */,
+				5841F72114A24A1BF61FB7DF0B020B8E /* MZAppearance */,
+				2BF9921AB522D32DF085BAF8A21486AB /* UIImage+BlurredFrame */,
 			);
-			name = FMDB;
-			path = FMDB;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4254FAC941223ADCAFA32E0EB4B57AB4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2C613902EEB3E5CDCDBC3136B4E1E85 /* UIImage+BlurredFrame.xcconfig */,
+				1EC553259B895668B69C777EAA80724F /* UIImage+BlurredFrame-dummy.m */,
+				B813A7EBBD48E66145B09315918F32ED /* UIImage+BlurredFrame-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIImage+BlurredFrame";
 			sourceTree = "<group>";
 		};
 		44D0A7A95A11ECF01BF98437022AA5AE /* iOS */ = {
@@ -341,29 +375,47 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		607EF7241856F0BF7DF20377F73DF0BD /* Pods */ = {
+		544882A469399102793EFD7CB1A675A6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A341908087C3FB7CA26AE2174D1FF66A /* BlurryModalSegue */,
-				7070DA3EB289142E7BFEE71D98F630C3 /* Bugly */,
-				9D6447BC5A75B85FB2F198B34B98BD2B /* FLAnimatedImage */,
-				38207A6F07917DD5C553875CB419B3BD /* FMDB */,
-				DFBA2A8E979C1DA095B09EDA7CCCD717 /* FTPopOverMenu */,
-				892F0BF743F92C9B65EBF620B094393A /* MBProgressHUD */,
-				ACA686FEA3BBF0543761A93E1412D9C8 /* MZAppearance */,
-				1E235366192B16BAB64AEBBE69947ADF /* Pgyer */,
-				8EA9C29A7CDA96A2E3ACF997924A3EF7 /* PgyUpdate */,
-				29AE7CAD3C7F1729759132A5861E7442 /* UIImage+BlurredFrame */,
+				7EABF8DA25798D730E4A8F7F51359B36 /* FLAnimatedImage.xcconfig */,
+				6C9703257C3C3EC6F1686DE7E07DC957 /* FLAnimatedImage-dummy.m */,
+				8BD0D595592407965299E2BDBD784422 /* FLAnimatedImage-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/FLAnimatedImage";
 			sourceTree = "<group>";
 		};
-		69AF58FB1AAF291E1A0B26292F2A90CC /* Frameworks */ = {
+		5841F72114A24A1BF61FB7DF0B020B8E /* MZAppearance */ = {
 			isa = PBXGroup;
 			children = (
-				6DF6B807A1A46132CB044AB3D1E4CB8A /* Bugly.framework */,
+				0C79731FF86857B3E7F4DB188B341136 /* MZAppearance.h */,
+				0CAC696CD89EF16C7BDC3AD6C4EDEFDA /* MZAppearance.m */,
+				0025FB41FD50523F4ED7859469A03D3B /* NSInvocation+Copy.h */,
+				594C1DC2CFF55924193254AB459C04BD /* NSInvocation+Copy.m */,
+				E167FBBB410BD4F97B367DF0202B17B9 /* Support Files */,
+			);
+			name = MZAppearance;
+			path = MZAppearance;
+			sourceTree = "<group>";
+		};
+		64BB0EFEF0746EDE76765C2FDF3ED134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E03F082797DE413744607A3877C198B /* Bugly.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65DAAC37A56E9575D6DDBF8169FA5436 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBC76A0624DCC5812204B7FDB1A60335 /* FMDB.xcconfig */,
+				10D5829660CDAB3D048DCDA872D42457 /* FMDB-dummy.m */,
+				EA236264F4F67ADEEF94297606E3B9E2 /* FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
 			sourceTree = "<group>";
 		};
 		6EA0C64D71192AE262EF36C443C89004 /* Products */ = {
@@ -381,10 +433,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7070DA3EB289142E7BFEE71D98F630C3 /* Bugly */ = {
+		7C6BC5501D302D4FA89B341AE410D72B /* Bugly */ = {
 			isa = PBXGroup;
 			children = (
-				69AF58FB1AAF291E1A0B26292F2A90CC /* Frameworks */,
+				64BB0EFEF0746EDE76765C2FDF3ED134 /* Frameworks */,
 			);
 			name = Bugly;
 			path = Bugly;
@@ -395,103 +447,32 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				607EF7241856F0BF7DF20377F73DF0BD /* Pods */,
+				33DE7EE525336FAACEF73587DCF7A849 /* Pods */,
 				6EA0C64D71192AE262EF36C443C89004 /* Products */,
 				1C563034A5E28D67882F15E7C297A69B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8919BCCC4A1EA3773A3422FE46098956 /* Frameworks */ = {
+		83E345B9C13D8AA1BBE359CF82120BBA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				556F913D6B647B90B03C3081A853FB4D /* PgyUpdate.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		892F0BF743F92C9B65EBF620B094393A /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				112E37FA79CF185BEBCA230FC0C6D658 /* MBProgressHUD.h */,
-				23206569EFE2D1E722DE96B1DC268E24 /* MBProgressHUD.m */,
-				A65F8E0AE8D87E2821DE9CD93C8B7296 /* Support Files */,
-			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		89AC756B8CD3395CE9247EE4480DFB1D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				21F855DDB272F9F71F4CE04A6121C433 /* FMDB.xcconfig */,
-				FE51E955ABD315C266F722E38D0AC45B /* FMDB-dummy.m */,
-				7236BE863EC7FBEA2A9E13DA752D8D50 /* FMDB-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FMDB";
-			sourceTree = "<group>";
-		};
-		8AC972F86AEABC875FA0E49331D964DA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4310826CB7BF9585381DE9653031B0F3 /* UIImage+BlurredFrame.xcconfig */,
-				E607D076FB44439116765C002249A2A0 /* UIImage+BlurredFrame-dummy.m */,
-				398C7476E29CFFE6661CDC742A4810E2 /* UIImage+BlurredFrame-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UIImage+BlurredFrame";
-			sourceTree = "<group>";
-		};
-		8EA9C29A7CDA96A2E3ACF997924A3EF7 /* PgyUpdate */ = {
-			isa = PBXGroup;
-			children = (
-				8919BCCC4A1EA3773A3422FE46098956 /* Frameworks */,
-			);
-			name = PgyUpdate;
-			path = PgyUpdate;
-			sourceTree = "<group>";
-		};
-		9D6447BC5A75B85FB2F198B34B98BD2B /* FLAnimatedImage */ = {
-			isa = PBXGroup;
-			children = (
-				E9A5D86C16F83164CF48C78934AB7FE2 /* FLAnimatedImage.h */,
-				8E282BA4DF3A71CAB6383B7D3036CF3E /* FLAnimatedImage.m */,
-				ECEBF31C13C5DC404DFC3E379AABAD26 /* FLAnimatedImageView.h */,
-				8F2897634912E60363E7FE8335FC6CF3 /* FLAnimatedImageView.m */,
-				ECC61FA9A4541543952D2D56DF678CFE /* Support Files */,
-			);
-			name = FLAnimatedImage;
-			path = FLAnimatedImage;
-			sourceTree = "<group>";
-		};
-		9F03674F2CE2F46B1F508EBB479635B7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2044060D9DB7FCD10B40E19F37FD115B /* PgySDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A341908087C3FB7CA26AE2174D1FF66A /* BlurryModalSegue */ = {
-			isa = PBXGroup;
-			children = (
-				9A02F8DA25E7329763DA3A7381B50292 /* BlurryModalSegue.h */,
-				5E6B409C98F64D53E1B90509F851D7E4 /* BlurryModalSegue.m */,
-				F11CF6C266987BB7DB205F2D20728EEB /* Support Files */,
-			);
-			name = BlurryModalSegue;
-			path = BlurryModalSegue;
-			sourceTree = "<group>";
-		};
-		A65F8E0AE8D87E2821DE9CD93C8B7296 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CFA9991FE07D560BD99B5701B0B61176 /* MBProgressHUD.xcconfig */,
-				ED8A1733835E538EAA4651487EAC8C67 /* MBProgressHUD-dummy.m */,
-				8BDF8A31114D074EB4063988271B6C00 /* MBProgressHUD-prefix.pch */,
+				9FCC7B27FBAEB3A19B0DD141EF2C5B7B /* MBProgressHUD.xcconfig */,
+				EC1155F711246D57480C3B721AAEB062 /* MBProgressHUD-dummy.m */,
+				CD74D21622BC7F6095CEE597C143E8DE /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		94664CB645A33445371F79EB7E782216 /* FTPopOverMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C8CA8CC259FB538EE63ECBB1FA0A704B /* FTPopOverMenu.h */,
+				9B686F7609C4E12FFB9C268C71860F91 /* FTPopOverMenu.m */,
+				1484D96CB21F92F493ED4595C06EC9B5 /* Support Files */,
+			);
+			name = FTPopOverMenu;
+			path = FTPopOverMenu;
 			sourceTree = "<group>";
 		};
 		A7F0371AE86BFDB87BB7BE01230061EA /* Pods-BinMarker */ = {
@@ -509,90 +490,71 @@
 			path = "Target Support Files/Pods-BinMarker";
 			sourceTree = "<group>";
 		};
-		ACA686FEA3BBF0543761A93E1412D9C8 /* MZAppearance */ = {
+		B439AC4C346322D29154331E1B86B8CE /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
-				03FDBD4A8CF681890350174898EF1EA8 /* MZAppearance.h */,
-				1875EB90E66D2B611E6EB7CCE045CB6C /* MZAppearance.m */,
-				93503185B76C8E91BC79CFCBCA224454 /* NSInvocation+Copy.h */,
-				ECC273D675DD7A99F4F7380373D0A60B /* NSInvocation+Copy.m */,
-				C4B4D64DDF86B0F53CC0B4316BE53B16 /* Support Files */,
+				1AA85D209FB8EBD5E87265FEF49D6B2C /* FLAnimatedImage.h */,
+				CA3DFAA6D89222D069DD76D538D5EF79 /* FLAnimatedImage.m */,
+				B42AD7BCC672F6001A2A417CE2D97713 /* FLAnimatedImageView.h */,
+				C4E7D0A1CD0B2AA0686BAC40040DC723 /* FLAnimatedImageView.m */,
+				544882A469399102793EFD7CB1A675A6 /* Support Files */,
 			);
-			name = MZAppearance;
-			path = MZAppearance;
+			name = FLAnimatedImage;
+			path = FLAnimatedImage;
 			sourceTree = "<group>";
 		};
-		C4B4D64DDF86B0F53CC0B4316BE53B16 /* Support Files */ = {
+		BA02E5850CD06E9B17154876D7C84930 /* FMDB */ = {
 			isa = PBXGroup;
 			children = (
-				14BDE055788EC0A08AFC9F60D03A228B /* MZAppearance.xcconfig */,
-				0462C885DC8FEB080AF43B7DECEAF97D /* MZAppearance-dummy.m */,
-				5B65A35B9D43222697965FCE60446A12 /* MZAppearance-prefix.pch */,
+				179B8DE7051FE69A19B3BF0806F8FA13 /* standard */,
+				65DAAC37A56E9575D6DDBF8169FA5436 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MZAppearance";
+			name = FMDB;
+			path = FMDB;
 			sourceTree = "<group>";
 		};
-		C7D658599732577E20A08D2414044D4F /* Support Files */ = {
+		C430E5A4573A801D63F1EDC4101B376B /* BlurryModalSegue */ = {
 			isa = PBXGroup;
 			children = (
-				CBF013BD8D09C9396967F7F7D6300630 /* FTPopOverMenu.xcconfig */,
-				471B1A240420402BB02D41B86C7E4358 /* FTPopOverMenu-dummy.m */,
-				4F74465D1212D0A7119BE1FD74CF48BC /* FTPopOverMenu-prefix.pch */,
+				D1562AB2ED0CA0B5EED3D5F4173C4FBC /* BlurryModalSegue.h */,
+				A80FBF3519F9FBD1E159F42000966A17 /* BlurryModalSegue.m */,
+				DF63F4BD008E59F4535BAA0C309818B9 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FTPopOverMenu";
+			name = BlurryModalSegue;
+			path = BlurryModalSegue;
 			sourceTree = "<group>";
 		};
-		DFBA2A8E979C1DA095B09EDA7CCCD717 /* FTPopOverMenu */ = {
+		DF63F4BD008E59F4535BAA0C309818B9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8065932A1D91FEE6D69D974DC766C5D0 /* FTPopOverMenu.h */,
-				6CF753DF9490B5869299E5884C5E85A9 /* FTPopOverMenu.m */,
-				C7D658599732577E20A08D2414044D4F /* Support Files */,
-			);
-			name = FTPopOverMenu;
-			path = FTPopOverMenu;
-			sourceTree = "<group>";
-		};
-		ECC61FA9A4541543952D2D56DF678CFE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				478AF84359EEDEB4931E3CF51E3243D6 /* FLAnimatedImage.xcconfig */,
-				BD13EA55341CB8A46869521B48FB2E12 /* FLAnimatedImage-dummy.m */,
-				CEB3B1069F96A6471557B0BDB0BC3313 /* FLAnimatedImage-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FLAnimatedImage";
-			sourceTree = "<group>";
-		};
-		F11CF6C266987BB7DB205F2D20728EEB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				240C5A4842747A0679BE7C914181804A /* BlurryModalSegue.xcconfig */,
-				5126C0C804772C9607F0AD77117890DD /* BlurryModalSegue-dummy.m */,
-				BC50B615D938B3CD823237BCA90078FF /* BlurryModalSegue-prefix.pch */,
+				3E4779D2159165C6D0B9C1CCE6EF180D /* BlurryModalSegue.xcconfig */,
+				B475B2712E3C7C8D9C2458B0B7ED5217 /* BlurryModalSegue-dummy.m */,
+				7495E0C0BEBF00FD4C092D1B78D97151 /* BlurryModalSegue-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BlurryModalSegue";
 			sourceTree = "<group>";
 		};
-		FAF3A0B83736D978ADD9C999FBA6F97F /* standard */ = {
+		E167FBBB410BD4F97B367DF0202B17B9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				21EBBC7127F9A58067989E724BF90B2B /* FMDatabase.h */,
-				DC0D11DCDFE88EC302DE8C6AF0550A8D /* FMDatabase.m */,
-				0AA940CBBF53DDA38B6AEE5BE8E4A024 /* FMDatabaseAdditions.h */,
-				2B44A979D1C2DA3F0B20D307CB75CA7A /* FMDatabaseAdditions.m */,
-				038826EB139035359B86D65AAA141E5E /* FMDatabasePool.h */,
-				C24082D61EF4785F6085A18370D0C89A /* FMDatabasePool.m */,
-				8A3F281EBA54986F0D92E74DCA6C3322 /* FMDatabaseQueue.h */,
-				4623428A18538F72F7C4E284E784E15E /* FMDatabaseQueue.m */,
-				3740E9A424763CF3A6BD5B6AF14008B2 /* FMDB.h */,
-				A0687D1D1F784D9ADFACEEF8702F2B51 /* FMResultSet.h */,
-				D1F6CB522CFE9F52C729663397AC8469 /* FMResultSet.m */,
+				5CDE6E393B329DD3F33684E5A179CF33 /* MZAppearance.xcconfig */,
+				1AD51FD310E9781BF7CC774C31ED59A1 /* MZAppearance-dummy.m */,
+				E29BBD8436C23DAE27AD70D4D2044B4B /* MZAppearance-prefix.pch */,
 			);
-			name = standard;
+			name = "Support Files";
+			path = "../Target Support Files/MZAppearance";
+			sourceTree = "<group>";
+		};
+		F152CD8A0E5257162B4DDB9E822BF780 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F6AE231E2E29855BBEE1BAE0A71F1A88 /* MBProgressHUD.h */,
+				980E7EC77755C4A0CE38D74C2EEE6E65 /* MBProgressHUD.m */,
+				83E345B9C13D8AA1BBE359CF82120BBA /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -983,7 +945,7 @@
 /* Begin XCBuildConfiguration section */
 		01A817C37C74CB76A6A0F9C8014F081E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21F855DDB272F9F71F4CE04A6121C433 /* FMDB.xcconfig */;
+			baseConfigurationReference = EBC76A0624DCC5812204B7FDB1A60335 /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1005,150 +967,7 @@
 			};
 			name = Release;
 		};
-		154AF5A742EC8DB8C56D47E2BD27046D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 478AF84359EEDEB4931E3CF51E3243D6 /* FLAnimatedImage.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		31C4DA068C3FE34E77D1A8B937EDC9E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240C5A4842747A0679BE7C914181804A /* BlurryModalSegue.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BlurryModalSegue/BlurryModalSegue-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		35F365AC1B68D20972EF8062B92FE611 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14BDE055788EC0A08AFC9F60D03A228B /* MZAppearance.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MZAppearance/MZAppearance-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		3C48B3AFABFF93E6D0F4FE7F02C02966 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF013BD8D09C9396967F7F7D6300630 /* FTPopOverMenu.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FTPopOverMenu/FTPopOverMenu-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		4E24F8AB9C55DCD40B7F760BBD66DD08 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 478AF84359EEDEB4931E3CF51E3243D6 /* FLAnimatedImage.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		5685FF7922224BC9A251A799BED88F87 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A48877BE551A813971082A2E3BC29124 /* Pods-BinMarker.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1184,7 +1003,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -1192,9 +1011,175 @@
 			};
 			name = Debug;
 		};
+		154AF5A742EC8DB8C56D47E2BD27046D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EABF8DA25798D730E4A8F7F51359B36 /* FLAnimatedImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		31C4DA068C3FE34E77D1A8B937EDC9E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E4779D2159165C6D0B9C1CCE6EF180D /* BlurryModalSegue.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BlurryModalSegue/BlurryModalSegue-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		35F365AC1B68D20972EF8062B92FE611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CDE6E393B329DD3F33684E5A179CF33 /* MZAppearance.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MZAppearance/MZAppearance-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3BF4BEC5869AE0A4380B4BF0EAEBDC7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48877BE551A813971082A2E3BC29124 /* Pods-BinMarker.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3C48B3AFABFF93E6D0F4FE7F02C02966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C0947656CB8C68BFE6FC17A38A8F16 /* FTPopOverMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FTPopOverMenu/FTPopOverMenu-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4E24F8AB9C55DCD40B7F760BBD66DD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EABF8DA25798D730E4A8F7F51359B36 /* FLAnimatedImage.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		57033F84A431ED06EC56AD96BDA2664F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE75307A235EA42B0FED47E601547918 /* Pods-BinMarker.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		6C7AC75637591FE8BFFAE1E20A8920F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 240C5A4842747A0679BE7C914181804A /* BlurryModalSegue.xcconfig */;
+			baseConfigurationReference = 3E4779D2159165C6D0B9C1CCE6EF180D /* BlurryModalSegue.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1218,7 +1203,7 @@
 		};
 		77C293EA2828F5438F73CB42C8739636 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFA9991FE07D560BD99B5701B0B61176 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 9FCC7B27FBAEB3A19B0DD141EF2C5B7B /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1242,7 +1227,7 @@
 		};
 		831A0300021CBE5D221B002BCB6D4C7F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBF013BD8D09C9396967F7F7D6300630 /* FTPopOverMenu.xcconfig */;
+			baseConfigurationReference = 12C0947656CB8C68BFE6FC17A38A8F16 /* FTPopOverMenu.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1264,78 +1249,7 @@
 			};
 			name = Debug;
 		};
-		892032D8696AFA5E9656ECBB6BF8200F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE75307A235EA42B0FED47E601547918 /* Pods-BinMarker.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		B0C1EF7D90B99F27BB7F51FC5C37E2B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4310826CB7BF9585381DE9653031B0F3 /* UIImage+BlurredFrame.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B33F6D6124437D82FF0EAB84A49BA8B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14BDE055788EC0A08AFC9F60D03A228B /* MZAppearance.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MZAppearance/MZAppearance-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1367,7 +1281,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -1375,9 +1289,57 @@
 			};
 			name = Release;
 		};
+		B0C1EF7D90B99F27BB7F51FC5C37E2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2C613902EEB3E5CDCDBC3136B4E1E85 /* UIImage+BlurredFrame.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B33F6D6124437D82FF0EAB84A49BA8B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CDE6E393B329DD3F33684E5A179CF33 /* MZAppearance.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MZAppearance/MZAppearance-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		CD4FE7DED3EF7960E3386BA951E80EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4310826CB7BF9585381DE9653031B0F3 /* UIImage+BlurredFrame.xcconfig */;
+			baseConfigurationReference = E2C613902EEB3E5CDCDBC3136B4E1E85 /* UIImage+BlurredFrame.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1401,7 +1363,7 @@
 		};
 		F40DFCDCB7D6B84A5B56D29EEBB8D2AE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFA9991FE07D560BD99B5701B0B61176 /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 9FCC7B27FBAEB3A19B0DD141EF2C5B7B /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1425,7 +1387,7 @@
 		};
 		FB2D46D818D33247E52496B572644579 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21F855DDB272F9F71F4CE04A6121C433 /* FMDB.xcconfig */;
+			baseConfigurationReference = EBC76A0624DCC5812204B7FDB1A60335 /* FMDB.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1489,8 +1451,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
-				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1516,8 +1478,8 @@
 		A9DC6DEA591DE08F19926A67616D2520 /* Build configuration list for PBXNativeTarget "Pods-BinMarker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				892032D8696AFA5E9656ECBB6BF8200F /* Debug */,
-				5685FF7922224BC9A251A799BED88F87 /* Release */,
+				57033F84A431ED06EC56AD96BDA2664F /* Debug */,
+				3BF4BEC5869AE0A4380B4BF0EAEBDC7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

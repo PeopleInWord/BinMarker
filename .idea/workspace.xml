@@ -1,7 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01766cb2-07bb-4fca-891e-f437910d613c" name="Default" comment="" />
+    <list default="true" id="01766cb2-07bb-4fca-891e-f437910d613c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Base.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/BinMakeManger.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/CommonFunction.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIButton+touchLimit.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIButton+touchLimit.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIView+AutoFont.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIView+AutoFont.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIViewController+NamePrint.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIViewController+NamePrint.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/VoiceManger.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/en.lproj/LaunchScreen.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/en.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/en.lproj/Main.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hans.lproj/LaunchScreen.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hans.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hans.lproj/Main.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hant.lproj/LaunchScreen.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hant.lproj/Localizable.strings" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/zh-Hant.lproj/Main.strings" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/BinMakeManger.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/CommonFunction.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIButton+touchLimit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIButton+touchLimit.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIView+AutoFont.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIView+AutoFont.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIViewController+NamePrint.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/UIViewController+NamePrint.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/VoiceManger.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/PgyUpdate/PgyUpdate/PgyUpdateManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Pgyer/PgySDK/PgyManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/PgyUpdate/PgySDK/sdk/PgyUpdate.framework/Headers/PgyUpdateManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/PgyUpdate/PgySDK/sdk/PgyUpdate.framework/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/PgyUpdate/PgySDK/sdk/PgyUpdate.framework/PgyUpdate" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pgyer/PgySDK/sdk/PgySDK.framework/Headers/PgyManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pgyer/PgySDK/sdk/PgySDK.framework/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pgyer/PgySDK/sdk/PgySDK.framework/PgySDK" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/AppDelegate.m" afterPath="$PROJECT_DIR$/BinMarker/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/BinMarker/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" afterPath="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Devices/TVController.swift" afterPath="$PROJECT_DIR$/BinMarker/Devices/TVController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Info.plist" afterPath="$PROJECT_DIR$/BinMarker/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/MainController.m" afterPath="$PROJECT_DIR$/BinMarker/MainController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/ScaningController.m" afterPath="$PROJECT_DIR$/BinMarker/ScaningController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/BlurryModalSegue/BlurryModalSegue.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/BlurryModalSegue/BlurryModalSegue.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FMDB/FMDB.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/FMDB/FMDB.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FTPopOverMenu/FTPopOverMenu.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/FTPopOverMenu/FTPopOverMenu.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MZAppearance/MZAppearance.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/MZAppearance/MZAppearance.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame.xcconfig" />
+    </list>
     <ignored path="BinMarker.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,7 +77,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_8bd9b230d69075b65e0e523c93b168f6760615f9" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
   <component name="FavoritesManager">
     <favorites_list name="BinMarker" />
   </component>
@@ -30,11 +93,93 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChooseBrandController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ChooseBrandController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="94" column="16" lean-forward="false" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+            <state relative-caret-position="238">
+              <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1666">
+              <caret line="119" column="97" lean-forward="false" selection-start-line="119" selection-start-column="97" selection-end-line="119" selection-end-column="97" />
+              <folding>
+                <element signature="e#3714#3751#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinMakeManger.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Extension/BinMakeManger.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonFunction.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Extension/CommonFunction.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavoriteScrollView.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Extension/FavoriteScrollView.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VoiceManger.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Extension/VoiceManger.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="108" column="58" lean-forward="false" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Localizable.strings" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/en.lproj/Localizable.strings">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Localizable.strings" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Base.lproj/Localizable.strings">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Localizable.strings" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/zh-Hans.lproj/Localizable.strings">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -42,18 +187,22 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BinMarker/ModelVersionController.swift" />
         <option value="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" />
+        <option value="$PROJECT_DIR$/BinMarker/MainController.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="1436" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -70,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -97,19 +245,127 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supporting Files" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Supporting Files" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Localizable.strings" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="List" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extension" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="CocoaPods" />
+    <property name="settings.editor.selected.configurable" value="diff.base" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.BinMarker">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BinMarker" TARGET_NAME="BinMarker" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BinMarker" RUN_TARGET_NAME="BinMarker" MAKE_ACTIVE="TRUE">
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="BinMarker" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BinMarker" TARGET_NAME="BinMarker" CONFIG_NAME="Debug" SCHEME_NAME="BinMarker" RUN_TARGET_PROJECT_NAME="BinMarker" RUN_TARGET_NAME="BinMarker" MAKE_ACTIVE="TRUE">
+    <configuration default="false" name="BinMarker" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BinMarker" TARGET_NAME="BinMarker" CONFIG_NAME="Debug" SCHEME_NAME="BinMarker" RUN_TARGET_PROJECT_NAME="BinMarker" RUN_TARGET_NAME="BinMarker" MAKE_ACTIVE="TRUE">
       <envs />
       <method />
     </configuration>
@@ -129,26 +385,28 @@
       <updated>1480296409979</updated>
       <workItem from="1480296415590" duration="710000" />
       <workItem from="1489038124864" duration="1540000" />
+      <workItem from="1491359133787" duration="608000" />
+      <workItem from="1491360486978" duration="3092000" />
+      <workItem from="1491372055852" duration="1238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2250000" />
+    <option name="totallyTimeSpent" value="7188000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1436" height="877" extended-state="6" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -176,6 +434,120 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BinMarker/ModelVersionController.swift">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="119" column="97" lean-forward="true" selection-start-line="119" selection-start-column="97" selection-end-line="119" selection-end-column="97" />
+          <folding>
+            <element signature="e#3714#3751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/BinMakeManger.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/CommonFunction.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/FavoriteScrollView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/VoiceManger.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="108" column="58" lean-forward="false" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/en.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Base.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/zh-Hans.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ModelVersionController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1316">
+          <caret line="94" column="4" lean-forward="false" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ModelVersionController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ModelVersionController.swift">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="868">
           <caret line="62" column="4" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
           <folding />
@@ -198,10 +570,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/zh-Hans.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Base.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/en.lproj/Localizable.strings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="94" column="16" lean-forward="false" selection-start-line="94" selection-start-column="16" selection-end-line="94" selection-end-column="16" />
+        <state relative-caret-position="238">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="119" column="97" lean-forward="false" selection-start-line="119" selection-start-column="97" selection-end-line="119" selection-end-column="97" />
+          <folding>
+            <element signature="e#3714#3751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/BinMakeManger.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/CommonFunction.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/FavoriteScrollView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/VoiceManger.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="108" column="58" lean-forward="false" selection-start-line="108" selection-start-column="58" selection-end-line="108" selection-end-column="58" />
           <folding />
         </state>
       </provider>

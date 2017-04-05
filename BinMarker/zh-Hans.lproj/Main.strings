@@ -1,0 +1,564 @@
+
+/* Class = "UILabel"; text = "正在识别..."; ObjectID = "0zg-uf-x7d"; */
+"0zg-uf-x7d.text" = "正在识别...";
+
+/* Class = "UIButton"; normalTitle = "输入法"; ObjectID = "1HX-hZ-NcP"; */
+"1HX-hZ-NcP.normalTitle" = "输入法";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1K0-H3-v2z"; */
+"1K0-H3-v2z.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "功能"; ObjectID = "1MJ-7b-UGO"; */
+"1MJ-7b-UGO.title" = "功能";
+
+/* Class = "UIButton"; normalTitle = "自定义频道"; ObjectID = "2t3-Nn-Zpe"; */
+"2t3-Nn-Zpe.normalTitle" = "自定义频道";
+
+/* Class = "UIButton"; normalTitle = "屏显"; ObjectID = "34U-SL-DXk"; */
+"34U-SL-DXk.normalTitle" = "屏显";
+
+/* Class = "UILabel"; text = "TV TCL CD001"; ObjectID = "3D2-m0-DW4"; */
+"3D2-m0-DW4.text" = "TV TCL CD001";
+
+/* Class = "UIButton"; normalTitle = "SLEEP"; ObjectID = "3DZ-7b-OY5"; */
+"3DZ-7b-OY5.normalTitle" = "SLEEP";
+
+/* Class = "UILabel"; text = "深圳频道"; ObjectID = "3Ji-Hc-lIe"; */
+"3Ji-Hc-lIe.text" = "深圳频道";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "3KC-6t-Qci"; */
+"3KC-6t-Qci.normalTitle" = "3";
+
+/* Class = "UITabBarItem"; title = "数字"; ObjectID = "3N8-XH-kq6"; */
+"3N8-XH-kq6.title" = "数字";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "4c6-kL-ho5"; */
+"4c6-kL-ho5.normalTitle" = "7";
+
+/* Class = "UITabBarItem"; title = "扩展"; ObjectID = "5I4-bR-Hsd"; */
+"5I4-bR-Hsd.title" = "扩展";
+
+/* Class = "UIButton"; normalTitle = "电视/视讯"; ObjectID = "5JF-lB-nkX"; */
+"5JF-lB-nkX.normalTitle" = "电视/视讯";
+
+/* Class = "UINavigationItem"; title = "个人中心"; ObjectID = "5bZ-lT-JBN"; */
+"5bZ-lT-JBN.title" = "个人中心";
+
+/* Class = "UILabel"; text = "解除设备绑定"; ObjectID = "5eE-Cx-D6G"; */
+"5eE-Cx-D6G.text" = "解除设备绑定";
+
+/* Class = "UIButton"; normalTitle = "菜单"; ObjectID = "7Lg-Nr-v9V"; */
+"7Lg-Nr-v9V.normalTitle" = "菜单";
+
+/* Class = "UILabel"; text = "1.请将遥控器对准电器发送指令\n2.根据电器响应选择是/否"; ObjectID = "7Mj-tE-kF7"; */
+"7Mj-tE-kF7.text" = "1.请将遥控器对准电器发送指令\n2.根据电器响应选择是/否";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "7s6-GN-IHx"; */
+"7s6-GN-IHx.text" = "音量";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "86Z-zk-kd9"; */
+"86Z-zk-kd9.normalTitle" = "6";
+
+/* Class = "UILabel"; text = "预设"; ObjectID = "8kq-un-wRP"; */
+"8kq-un-wRP.text" = "预设";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "9he-nt-58h"; */
+"9he-nt-58h.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "9jm-Ye-NHl"; */
+"9jm-Ye-NHl.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "AjA-cR-Fwe"; */
+"AjA-cR-Fwe.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "AV/TV"; ObjectID = "B7O-et-rPP"; */
+"B7O-et-rPP.normalTitle" = "AV/TV";
+
+/* Class = "UIButton"; normalTitle = "回看"; ObjectID = "B8Z-cO-jLZ"; */
+"B8Z-cO-jLZ.normalTitle" = "回看";
+
+/* Class = "UIButton"; normalTitle = "STOP"; ObjectID = "BXW-ZY-ozA"; */
+"BXW-ZY-ozA.normalTitle" = "STOP";
+
+/* Class = "UIButton"; normalTitle = "点播"; ObjectID = "BaR-Ua-quX"; */
+"BaR-Ua-quX.normalTitle" = "点播";
+
+/* Class = "UIButton"; normalTitle = "字幕"; ObjectID = "Bij-7I-aaF"; */
+"Bij-7I-aaF.normalTitle" = "字幕";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "Bna-tF-QNV"; */
+"Bna-tF-QNV.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "Bwb-4j-YTH"; */
+"Bwb-4j-YTH.normalTitle" = "9";
+
+/* Class = "UILabel"; text = "频道键"; ObjectID = "CEM-dS-Tgh"; */
+"CEM-dS-Tgh.text" = "频道键";
+
+/* Class = "UITabBarItem"; title = "数字"; ObjectID = "CWB-Wl-Ewz"; */
+"CWB-Wl-Ewz.title" = "数字";
+
+/* Class = "UIButton"; normalTitle = "设置"; ObjectID = "DTp-rD-x4F"; */
+"DTp-rD-x4F.normalTitle" = "设置";
+
+/* Class = "UIButton"; normalTitle = "设置/预定"; ObjectID = "DjA-vG-9Mt"; */
+"DjA-vG-9Mt.normalTitle" = "设置/预定";
+
+/* Class = "UIButton"; normalTitle = "制式"; ObjectID = "EKh-Ut-PYv"; */
+"EKh-Ut-PYv.normalTitle" = "制式";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "EMB-UZ-pbr"; */
+"EMB-UZ-pbr.normalTitle" = "0";
+
+/* Class = "UILabel"; text = "数字键"; ObjectID = "FUN-8w-iVU"; */
+"FUN-8w-iVU.text" = "数字键";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Fh0-0c-rlA"; */
+"Fh0-0c-rlA.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "Fpp-AQ-RIu"; */
+"Fpp-AQ-RIu.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "FvG-Sb-hUB"; */
+"FvG-Sb-hUB.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "H1x-Gm-gFv"; */
+"H1x-Gm-gFv.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "AMP"; ObjectID = "HHc-1l-ajj"; */
+"HHc-1l-ajj.title" = "AMP";
+
+/* Class = "UIViewController"; title = "机顶盒"; ObjectID = "HXp-De-2Dl"; */
+"HXp-De-2Dl.title" = "机顶盒";
+
+/* Class = "UIViewController"; title = "当前设备"; ObjectID = "HcQ-rv-CFL"; */
+"HcQ-rv-CFL.title" = "当前设备";
+
+/* Class = "UIButton"; normalTitle = "INPUT"; ObjectID = "Hpr-NH-2D2"; */
+"Hpr-NH-2D2.normalTitle" = "INPUT";
+
+/* Class = "UIButton"; normalTitle = "黄"; ObjectID = "HqZ-uT-BK7"; */
+"HqZ-uT-BK7.normalTitle" = "黄";
+
+/* Class = "UIButton"; normalTitle = "指南/预告"; ObjectID = "I9x-dF-Fff"; */
+"I9x-dF-Fff.normalTitle" = "指南/预告";
+
+/* Class = "UIButton"; normalTitle = "PLAY"; ObjectID = "J06-3g-vQn"; */
+"J06-3g-vQn.normalTitle" = "PLAY";
+
+/* Class = "UIButton"; normalTitle = "+10s"; ObjectID = "Jka-gi-UNM"; */
+"Jka-gi-UNM.normalTitle" = "+10s";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "Joq-eL-C0j"; */
+"Joq-eL-C0j.normalTitle" = "8";
+
+/* Class = "UILabel"; text = "此应用需要绑定爱美家遥控器使用,请打开遥控器的搜索开关"; ObjectID = "KHy-RX-lip"; */
+"KHy-RX-lip.text" = "此应用需要绑定爱美家遥控器使用,请打开遥控器的搜索开关";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "KgK-p5-tTk"; */
+"KgK-p5-tTk.normalTitle" = "2";
+
+/* Class = "UITabBarItem"; title = "切换模式"; ObjectID = "L62-hE-Ogc"; */
+"L62-hE-Ogc.title" = "切换模式";
+
+/* Class = "UIButton"; normalTitle = "双画面"; ObjectID = "L7x-ZQ-wqP"; */
+"L7x-ZQ-wqP.normalTitle" = "双画面";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "LOb-N5-tJa"; */
+"LOb-N5-tJa.text" = "音量";
+
+/* Class = "UITabBarItem"; title = "频道"; ObjectID = "Ldj-o0-jiE"; */
+"Ldj-o0-jiE.title" = "频道";
+
+/* Class = "UIBarButtonItem"; title = "主界面"; ObjectID = "Lww-Pv-J7E"; */
+"Lww-Pv-J7E.title" = "主界面";
+
+/* Class = "UINavigationItem"; title = "选择类型"; ObjectID = "MJT-MJ-Gpe"; */
+"MJT-MJ-Gpe.title" = "选择类型";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NGg-NT-eXq"; */
+"NGg-NT-eXq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "A-B"; ObjectID = "NMz-5n-iVk"; */
+"NMz-5n-iVk.normalTitle" = "A-B";
+
+/* Class = "UIBarButtonItem"; title = "更多"; ObjectID = "NRr-7r-k7l"; */
+"NRr-7r-k7l.title" = "更多";
+
+/* Class = "UIButton"; normalTitle = "稍后绑定设备"; ObjectID = "NYs-ZJ-cF8"; */
+"NYs-ZJ-cF8.normalTitle" = "稍后绑定设备";
+
+/* Class = "UIViewController"; title = "电视机"; ObjectID = "Nia-aO-Vjf"; */
+"Nia-aO-Vjf.title" = "电视机";
+
+/* Class = "UINavigationItem"; title = "AMP"; ObjectID = "O0V-sT-6Li"; */
+"O0V-sT-6Li.title" = "AMP";
+
+/* Class = "UINavigationItem"; title = "所有设备"; ObjectID = "O7R-gK-BYH"; */
+"O7R-gK-BYH.title" = "所有设备";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "OA7-ic-xLM"; */
+"OA7-ic-xLM.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "P5t-GS-K6Y"; */
+"P5t-GS-K6Y.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "P7F-Ll-OBD"; */
+"P7F-Ll-OBD.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "Pb9-GP-9gh"; */
+"Pb9-GP-9gh.normalTitle" = "6";
+
+/* Class = "UILabel"; text = "搜索设备中...."; ObjectID = "Plh-b3-79P"; */
+"Plh-b3-79P.text" = "搜索设备中....";
+
+/* Class = "UIButton"; normalTitle = "编程"; ObjectID = "Pok-M1-hAF"; */
+"Pok-M1-hAF.normalTitle" = "编程";
+
+/* Class = "UIButton"; normalTitle = "信号源"; ObjectID = "Ppa-kG-ti8"; */
+"Ppa-kG-ti8.normalTitle" = "信号源";
+
+/* Class = "UIButton"; normalTitle = "语言"; ObjectID = "Q6I-WF-oZi"; */
+"Q6I-WF-oZi.normalTitle" = "语言";
+
+/* Class = "UILabel"; text = "长虹"; ObjectID = "QHN-Tr-OjM"; */
+"QHN-Tr-OjM.text" = "长虹";
+
+/* Class = "UILabel"; text = "小明的账号"; ObjectID = "QpO-Uk-fy1"; */
+"QpO-Uk-fy1.text" = "小明的账号";
+
+/* Class = "UIViewController"; title = "定时关机"; ObjectID = "QrD-SY-0tD"; */
+"QrD-SY-0tD.title" = "定时关机";
+
+/* Class = "UIBarButtonItem"; title = "品牌"; ObjectID = "RJE-IT-aNT"; */
+"RJE-IT-aNT.title" = "品牌";
+
+/* Class = "UIButton"; normalTitle = "-/--"; ObjectID = "RdN-4K-Fpj"; */
+"RdN-4K-Fpj.normalTitle" = "-/--";
+
+/* Class = "UIButton"; normalTitle = "SYS"; ObjectID = "S7i-DX-Cyw"; */
+"S7i-DX-Cyw.normalTitle" = "SYS";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "T26-mk-2de"; */
+"T26-mk-2de.text" = "频道";
+
+/* Class = "UIButton"; normalTitle = "PAUSE"; ObjectID = "TkB-KJ-diJ"; */
+"TkB-KJ-diJ.normalTitle" = "PAUSE";
+
+/* Class = "UIButton"; normalTitle = "RESET"; ObjectID = "UQS-6y-YH5"; */
+"UQS-6y-YH5.normalTitle" = "RESET";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "UW1-D5-6yn"; */
+"UW1-D5-6yn.normalTitle" = "注册";
+
+/* Class = "UITabBarItem"; title = "功能"; ObjectID = "UgS-7q-huE"; */
+"UgS-7q-huE.title" = "功能";
+
+/* Class = "UIButton"; normalTitle = "声场-"; ObjectID = "V6h-wp-UaE"; */
+"V6h-wp-UaE.normalTitle" = "声场-";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "Vbg-hs-VTF"; */
+"Vbg-hs-VTF.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "注册"; ObjectID = "VnW-da-Yne"; */
+"VnW-da-Yne.normalTitle" = "注册";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "W3M-vv-I7m"; */
+"W3M-vv-I7m.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "已有账号登录"; ObjectID = "WNc-7c-BF5"; */
+"WNc-7c-BF5.normalTitle" = "已有账号登录";
+
+/* Class = "UIButton"; normalTitle = "节目单/导视"; ObjectID = "WNu-yY-R9s"; */
+"WNu-yY-R9s.normalTitle" = "节目单/导视";
+
+/* Class = "UIButton"; normalTitle = "日历"; ObjectID = "Wx6-pp-KYS"; */
+"Wx6-pp-KYS.normalTitle" = "日历";
+
+/* Class = "UILabel"; text = "无任何遥控器"; ObjectID = "X4I-j4-7K6"; */
+"X4I-j4-7K6.text" = "无任何遥控器";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "XHq-ZZ-vR3"; */
+"XHq-ZZ-vR3.normalTitle" = "退出";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "XQg-ac-5Rm"; */
+"XQg-ac-5Rm.normalTitle" = "6";
+
+/* Class = "UITextField"; placeholder = "昵称/邮箱"; ObjectID = "Xfr-fC-whK"; */
+"Xfr-fC-whK.placeholder" = "昵称/邮箱";
+
+/* Class = "UIBarButtonItem"; title = "类型"; ObjectID = "Y7S-tA-h9F"; */
+"Y7S-tA-h9F.title" = "类型";
+
+/* Class = "UIButton"; normalTitle = "帮助"; ObjectID = "YWK-HI-Nzr"; */
+"YWK-HI-Nzr.normalTitle" = "帮助";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "Z4f-7d-peu"; */
+"Z4f-7d-peu.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "ZEh-5z-BfM"; */
+"ZEh-5z-BfM.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "否"; ObjectID = "ZGl-xd-iTi"; */
+"ZGl-xd-iTi.normalTitle" = "否";
+
+/* Class = "UITabBarItem"; title = "数字"; ObjectID = "ZrQ-Qk-H0l"; */
+"ZrQ-Qk-H0l.title" = "数字";
+
+/* Class = "UIButton"; normalTitle = "标题"; ObjectID = "aJY-7B-ArP"; */
+"aJY-7B-ArP.normalTitle" = "标题";
+
+/* Class = "UIButton"; normalTitle = "邮件/邮箱"; ObjectID = "aP7-ox-pIi"; */
+"aP7-ox-pIi.normalTitle" = "邮件/邮箱";
+
+/* Class = "UITextField"; placeholder = "确认密码"; ObjectID = "aql-Uq-cNY"; */
+"aql-Uq-cNY.placeholder" = "确认密码";
+
+/* Class = "UILabel"; text = "365"; ObjectID = "atN-Ne-Jlj"; */
+"atN-Ne-Jlj.text" = "365";
+
+/* Class = "UIButton"; normalTitle = "-/--"; ObjectID = "bK3-rB-2Bl"; */
+"bK3-rB-2Bl.normalTitle" = "-/--";
+
+/* Class = "UIButton"; normalTitle = "时间"; ObjectID = "bXS-FD-B6D"; */
+"bXS-FD-B6D.normalTitle" = "时间";
+
+/* Class = "UIButton"; normalTitle = "红"; ObjectID = "bjQ-7j-jzP"; */
+"bjQ-7j-jzP.normalTitle" = "红";
+
+/* Class = "UILabel"; text = "状态"; ObjectID = "bvG-MV-wx8"; */
+"bvG-MV-wx8.text" = "状态";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "c7x-JM-RyF"; */
+"c7x-JM-RyF.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "PAUSE/时移"; ObjectID = "cP3-oK-faQ"; */
+"cP3-oK-faQ.normalTitle" = "PAUSE/时移";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "cTA-lO-IM7"; */
+"cTA-lO-IM7.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "ccD-6g-1m4"; */
+"ccD-6g-1m4.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "ccg-Jv-PvH"; */
+"ccg-Jv-PvH.normalTitle" = "0";
+
+/* Class = "UITabBarItem"; title = "数字"; ObjectID = "cdF-5B-ACN"; */
+"cdF-5B-ACN.title" = "数字";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "ch4-pW-SsL"; */
+"ch4-pW-SsL.normalTitle" = "登录";
+
+/* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "cmp-Ui-hMS"; */
+"cmp-Ui-hMS.normalTitle" = "常用频道";
+
+/* Class = "UILabel"; text = "音量键"; ObjectID = "d90-sF-JJf"; */
+"d90-sF-JJf.text" = "音量键";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "dLL-6H-bBN"; */
+"dLL-6H-bBN.placeholder" = "密码";
+
+/* Class = "UIButton"; normalTitle = "清除"; ObjectID = "dSA-ZA-p2z"; */
+"dSA-ZA-p2z.normalTitle" = "清除";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "dYX-vL-VMe"; */
+"dYX-vL-VMe.text" = "频道";
+
+/* Class = "UILabel"; text = " "; ObjectID = "ewn-kr-vNe"; */
+"ewn-kr-vNe.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "功能"; ObjectID = "fEy-3y-lwe"; */
+"fEy-3y-lwe.normalTitle" = "功能";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "fLw-s6-Zwq"; */
+"fLw-s6-Zwq.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "资讯/SUB"; ObjectID = "fhi-Px-y0k"; */
+"fhi-Px-y0k.normalTitle" = "资讯/SUB";
+
+/* Class = "UIButton"; normalTitle = "声场+"; ObjectID = "fvz-xU-LVB"; */
+"fvz-xU-LVB.normalTitle" = "声场+";
+
+/* Class = "UIViewController"; title = "添加设备"; ObjectID = "gxA-jw-NDc"; */
+"gxA-jw-NDc.title" = "添加设备";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "hFe-Eh-dCF"; */
+"hFe-Eh-dCF.normalTitle" = "4";
+
+/* Class = "UITabBarItem"; title = "频道"; ObjectID = "hKC-Vi-Suv"; */
+"hKC-Vi-Suv.title" = "频道";
+
+/* Class = "UIButton"; normalTitle = "完成"; ObjectID = "hKd-ej-NVB"; */
+"hKd-ej-NVB.normalTitle" = "完成";
+
+/* Class = "UIButton"; normalTitle = "下一步"; ObjectID = "hhB-1N-gEo"; */
+"hhB-1N-gEo.normalTitle" = "下一步";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "hwr-6F-YB1"; */
+"hwr-6F-YB1.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "im7-W8-cDd"; */
+"im7-W8-cDd.normalTitle" = "1";
+
+/* Class = "UITabBarItem"; title = "扩展"; ObjectID = "kId-s0-a3P"; */
+"kId-s0-a3P.title" = "扩展";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "kJK-xD-Mqu"; */
+"kJK-xD-Mqu.normalTitle" = "4";
+
+/* Class = "UIButton"; normalTitle = "自定义频道"; ObjectID = "kLR-Xi-jaK"; */
+"kLR-Xi-jaK.normalTitle" = "自定义频道";
+
+/* Class = "UIButton"; normalTitle = "缩放"; ObjectID = "km1-xl-8GV"; */
+"km1-xl-8GV.normalTitle" = "缩放";
+
+/* Class = "UITextField"; placeholder = "密码"; ObjectID = "lGU-Hd-fts"; */
+"lGU-Hd-fts.placeholder" = "密码";
+
+/* Class = "UITabBarItem"; title = "功能"; ObjectID = "lKv-qv-p3q"; */
+"lKv-qv-p3q.title" = "功能";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "ls9-Rz-UBA"; */
+"ls9-Rz-UBA.normalTitle" = "6";
+
+/* Class = "UIButton"; normalTitle = "蓝"; ObjectID = "lv7-K5-a6n"; */
+"lv7-K5-a6n.normalTitle" = "蓝";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "ly9-Wc-XKV"; */
+"ly9-Wc-XKV.normalTitle" = "7";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "mgg-Id-ft2"; */
+"mgg-Id-ft2.text" = "音量";
+
+/* Class = "UINavigationItem"; title = "登录"; ObjectID = "mu0-r4-jdu"; */
+"mu0-r4-jdu.title" = "登录";
+
+/* Class = "UITextField"; placeholder = "昵称/邮箱"; ObjectID = "nB4-KS-U2C"; */
+"nB4-KS-U2C.placeholder" = "昵称/邮箱";
+
+/* Class = "UINavigationItem"; title = "定时关机"; ObjectID = "nPM-jo-tQJ"; */
+"nPM-jo-tQJ.title" = "定时关机";
+
+/* Class = "UIButton"; normalTitle = "REW"; ObjectID = "np9-MB-eG8"; */
+"np9-MB-eG8.normalTitle" = "REW";
+
+/* Class = "UINavigationItem"; title = "机顶盒"; ObjectID = "oYa-0j-9Ss"; */
+"oYa-0j-9Ss.title" = "机顶盒";
+
+/* Class = "UILabel"; text = "本版本为Demo版,硬件均有限支持"; ObjectID = "pfV-TC-ZS7"; */
+"pfV-TC-ZS7.text" = "本版本为Demo版,硬件均有限支持";
+
+/* Class = "UITabBarItem"; title = "扩展"; ObjectID = "pit-Z7-Vl2"; */
+"pit-Z7-Vl2.title" = "扩展";
+
+/* Class = "UIButton"; normalTitle = "重复"; ObjectID = "pja-xV-7WS"; */
+"pja-xV-7WS.normalTitle" = "重复";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "poa-Ml-oXN"; */
+"poa-Ml-oXN.text" = "频道";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "q3y-zP-pOz"; */
+"q3y-zP-pOz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "qJw-VK-CHx"; */
+"qJw-VK-CHx.text" = "频道";
+
+/* Class = "UINavigationItem"; title = "电视机"; ObjectID = "qeH-26-9kC"; */
+"qeH-26-9kC.title" = "电视机";
+
+/* Class = "UINavigationItem"; title = "注册"; ObjectID = "qg5-aO-1i1"; */
+"qg5-aO-1i1.title" = "注册";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "r1X-fB-1fT"; */
+"r1X-fB-1fT.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "rOg-hI-ieC"; */
+"rOg-hI-ieC.normalTitle" = "5";
+
+/* Class = "UILabel"; text = "Power"; ObjectID = "rXy-If-NB1"; */
+"rXy-If-NB1.text" = "Power";
+
+/* Class = "UIButton"; normalTitle = "FF"; ObjectID = "s99-zc-ypj"; */
+"s99-zc-ypj.normalTitle" = "FF";
+
+/* Class = "UINavigationItem"; title = "DVD"; ObjectID = "s9y-OO-CEu"; */
+"s9y-OO-CEu.title" = "DVD";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "sZ5-El-n6k"; */
+"sZ5-El-n6k.text" = "音量";
+
+/* Class = "UIButton"; normalTitle = "+"; ObjectID = "t1w-MX-zYX"; */
+"t1w-MX-zYX.normalTitle" = "+";
+
+/* Class = "UITabBarItem"; title = "功能"; ObjectID = "t40-8T-Cak"; */
+"t40-8T-Cak.title" = "功能";
+
+/* Class = "UIButton"; normalTitle = "STOP"; ObjectID = "tL2-E0-yfX"; */
+"tL2-E0-yfX.normalTitle" = "STOP";
+
+/* Class = "UIButton"; normalTitle = "绿"; ObjectID = "tmT-KI-gi2"; */
+"tmT-KI-gi2.normalTitle" = "绿";
+
+/* Class = "UIButton"; normalTitle = "角度"; ObjectID = "tyD-gF-gZ1"; */
+"tyD-gF-gZ1.normalTitle" = "角度";
+
+/* Class = "UINavigationItem"; title = "测试码组"; ObjectID = "u0p-za-S3O"; */
+"u0p-za-S3O.title" = "测试码组";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "uOe-Ur-2ct"; */
+"uOe-Ur-2ct.normalTitle" = "4";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "udU-eS-ACK"; */
+"udU-eS-ACK.normalTitle" = "退出";
+
+/* Class = "UITableViewSection"; headerTitle = "设备"; ObjectID = "ufI-KW-hC0"; */
+"ufI-KW-hC0.headerTitle" = "设备";
+
+/* Class = "UINavigationItem"; title = "选择品牌"; ObjectID = "vOu-qP-SFb"; */
+"vOu-qP-SFb.title" = "选择品牌";
+
+/* Class = "UIButton"; normalTitle = "图像"; ObjectID = "vW8-Gi-GQg"; */
+"vW8-Gi-GQg.normalTitle" = "图像";
+
+/* Class = "UIBarButtonItem"; title = "确定"; ObjectID = "wMn-QG-3M8"; */
+"wMn-QG-3M8.title" = "确定";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "wNa-bi-lmA"; */
+"wNa-bi-lmA.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "长按OK键进入语音识别"; ObjectID = "wcx-gH-XMU"; */
+"wcx-gH-XMU.text" = "长按OK键进入语音识别";
+
+/* Class = "UILabel"; text = "深圳频道"; ObjectID = "xDT-Cc-vLf"; */
+"xDT-Cc-vLf.text" = "深圳频道";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "xjf-g9-0hH"; */
+"xjf-g9-0hH.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "切换"; ObjectID = "xqq-Ff-LsO"; */
+"xqq-Ff-LsO.normalTitle" = "切换";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "xuO-IL-qDq"; */
+"xuO-IL-qDq.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "是"; ObjectID = "y5R-hQ-Aao"; */
+"y5R-hQ-Aao.normalTitle" = "是";
+
+/* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "y5t-xf-dTR"; */
+"y5t-xf-dTR.normalTitle" = "常用频道";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "yBO-EL-6vb"; */
+"yBO-EL-6vb.normalTitle" = "4";
+
+/* Class = "UITabBarItem"; title = "扩展"; ObjectID = "yHu-i3-PvT"; */
+"yHu-i3-PvT.title" = "扩展";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "zBA-zn-DfE"; */
+"zBA-zn-DfE.normalTitle" = "3";
+
+/* Class = "UIViewController"; title = "DVD"; ObjectID = "zBM-0z-Yup"; */
+"zBM-0z-Yup.title" = "DVD";
+
+/* Class = "UIButton"; normalTitle = "REW"; ObjectID = "zsh-OF-2gU"; */
+"zsh-OF-2gU.normalTitle" = "REW";

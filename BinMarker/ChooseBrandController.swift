@@ -94,8 +94,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView .dequeueReusableCell(withIdentifier: "brandCell", for: indexPath) as UITableViewCell;
-        
+        let cell = tableView .dequeueReusableCell(withIdentifier: "brandCell", for: indexPath) as UITableViewCell
         var charIndex:Int = 0
         if indexPath.section == 0 {//第一个元素
             charIndex = 0

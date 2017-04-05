@@ -142,6 +142,11 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
 }
 
+
+- (IBAction)bindingLater:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"showMain" sender:nil];
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"peripheralsInfo"]) {
