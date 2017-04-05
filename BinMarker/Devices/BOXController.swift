@@ -77,17 +77,12 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         let code:String = deviceInfo["codeString"] as! String
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 3)
         let deviceID:String="IrRemoteControllerA"
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中:" + sender.tag.description
+        CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            mbp.detailsLabel.text=returnData?.description
-            mbp.hide(animated: true, afterDelay: 0.5)
+            CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
-            mbp.label.text="操作失败"
-            mbp.detailsLabel.text=failString
-            mbp.hide(animated: true, afterDelay: 1.5)
+            let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+            CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
             return 0
         })
         
@@ -98,23 +93,23 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         if UserDefaults.standard.object(forKey: "BOXfavorite") == nil{
             UserDefaults.standard.set([], forKey: "BOXfavorite")
         }
-        FTPopOverMenu.show(from: event, withMenuArray: ["添加频道收藏"], doneBlock: { (index) in
+        FTPopOverMenu.show(from: event, withMenuArray: [NSLocalizedString("添加频道收藏", comment: "添加频道收藏")], doneBlock: { (index) in
             if index==0
             {
-                let alert=UIAlertController.init(title: "收藏频道号", message: "请输入要收藏的频道", preferredStyle: .alert)
+                let alert=UIAlertController.init(title: NSLocalizedString("收藏频道号", comment: "收藏频道号"), message: NSLocalizedString("请输入要收藏的频道", comment: "请输入要收藏的频道"), preferredStyle: .alert)
                 alert.addTextField(configurationHandler: { (nameF) in
                     self.nameField=nameF
                     nameF.delegate=self
-                    nameF.placeholder="输入频道名称"
+                    nameF.placeholder=NSLocalizedString(NSLocalizedString("输入频道名称", comment: "输入频道名称"), comment: "输入频道名称")
                 })
                 alert.addTextField(configurationHandler: { (number) in
                     self.numberField=number
                     number.tag=201
                     number.delegate=self
                     number.keyboardType = .numberPad
-                    number.placeholder="输入频道号(不超过3位)"
+                    number.placeholder=NSLocalizedString("输入频道号(不超过3位)", comment: "输入频道号(不超过3位)")
                 })
-                let actionOK=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+                let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
                     //加限制
                     var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
                     let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
@@ -129,7 +124,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                 actionOK.isEnabled=false
                 self.actionTemp=actionOK
                 alert.addAction(actionOK)
-                alert.addAction(UIAlertAction.init(title: "取消", style: .destructive, handler: { (action) in
+                alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .destructive, handler: { (action) in
                     return
                 }))
                 self.present(alert, animated: true, completion: {
@@ -146,7 +141,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
     {
-        if item.title=="数字" {
+        if item==tabBar.items?[0] {
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
                 self.controlView.isHidden=true
@@ -158,7 +153,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="功能"{
+        else if item==tabBar.items?[1]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
                 self.controlView.isHidden=false
@@ -170,7 +165,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="扩展"{
+        else if item==tabBar.items?[2]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
                 self.controlView.isHidden=true
@@ -182,7 +177,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="频道"{
+        else if item==tabBar.items?[3]{
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width, y: 0)
@@ -230,21 +225,16 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中"
+        CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + indexPath.row.description, nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                mbp.detailsLabel.text=returnData?.description
-                mbp.hide(animated: true, afterDelay: 0.5)
+                CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
             }, fail: { (failString) -> UInt in
-                mbp.label.text="操作失败"
-                mbp.detailsLabel.text=failString
-                mbp.hide(animated: true, afterDelay: 1.5)
+                let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
                 return 0
             })
             
@@ -262,12 +252,10 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                mbp.detailsLabel.text=returnData?.description
-                mbp.hide(animated: true, afterDelay: 0.5)
+                CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
             }, fail: { (failString) -> UInt in
-                mbp.label.text="操作失败"
-                mbp.detailsLabel.text=failString
-                mbp.hide(animated: true, afterDelay: 1.5)
+                let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
                 return 0
             })
         }
@@ -283,7 +271,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction.init(style: .destructive, title: "删除") { (deleteAction, deleteIndex) in
+        let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
             var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
             channelList?.remove(at: indexPath.row)
             self.resourseList=channelList!

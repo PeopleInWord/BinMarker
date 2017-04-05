@@ -22,10 +22,10 @@ class TVBOXTimeSetting: UIViewController ,UIPickerViewDelegate,UIPickerViewDataS
             return ["上午","下午"][row]
         }
         else if component == 1 {
-            return (row+1).description+"小时"
+            return (row+1).description+NSLocalizedString("小时", comment: "小时")
         }
         else if component == 2 {
-            return (row*5).description+"分钟"
+            return (row*5).description+NSLocalizedString("分钟", comment: "分钟")
         }
         return nil
     }
@@ -58,7 +58,7 @@ class TVBOXTimeSetting: UIViewController ,UIPickerViewDelegate,UIPickerViewDataS
         let cell = tableView .dequeueReusableCell(withIdentifier: reuseID, for: indexPath) as UITableViewCell;
         if indexPath.row == 0 {
             let timeLab=cell.viewWithTag(1001) as! UILabel
-            timeLab.text="1小时"
+            timeLab.text=NSLocalizedString("1小时", comment: "1小时")
         }
         
         return cell

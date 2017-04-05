@@ -8,11 +8,7 @@
 
 #import "MainController.h"
 #import "BinMarker-Swift.h"
-#import "FTPopOverMenu.h"
-#import "BluetoothManager.h"
 #import "AppDelegate.h"
-#import "MBProgressHUD.h"
-#import "iflyMSC/IFlyMSC.h"
 
 
 static NSString *const targetName=@"IrRemoteControllerA";
@@ -70,7 +66,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [super viewWillAppear:animated];
     _alldevices=nil;
     [self.mainTableView reloadData];
-    _noneView.hidden=self.alldevices.count==0?NO:YES;
+    _noneView.hidden= self.alldevices.count != 0;
     AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
     if (!app.autoScan.valid) {
         app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
@@ -117,7 +113,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
-    [FTPopOverMenu showFromEvent:event withMenuArray:@[NSLocalizedString(@"添加设备", @"添加设备顶部"),@"寻找设备",@"设置",@"当前版本"] doneBlock:^(NSInteger selectedIndex) {
+    [FTPopOverMenu showFromEvent:event withMenuArray:@[NSLocalizedString(@"添加设备", @"添加设备顶部"), NSLocalizedString(@"寻找设备", @"寻找设备"), NSLocalizedString(@"设置", @"设置"), NSLocalizedString(@"当前版本", @"当前版本")] doneBlock:^(NSInteger selectedIndex) {
         switch (selectedIndex) {
             case 0:
                 [self performSegueWithIdentifier:@"addDevice" sender:nil];
@@ -141,12 +137,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
     MBProgressHUD *mbp=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     mbp.removeFromSuperViewOnHide=YES;
     [mbp showAnimated:YES];
-    mbp.label.text=@"寻找遥控器中";
+    mbp.label.text= NSLocalizedString(@"寻找遥控器中", @"寻找遥控器中");
     [[BluetoothManager getInstance]sendByteCommandWithString:codeStr deviceID:@"IrRemoteControllerA" sendType:SendTypeRemoteTemp success:^(NSData * _Nullable stateData) {
-        mbp.label.text=@"命令发送成功";
+        mbp.label.text= NSLocalizedString(@"命令发送成功", @"命令发送成功");
         [mbp hideAnimated:YES afterDelay:1];
     } fail:^NSUInteger(NSString * _Nullable stateCode) {
-        mbp.label.text=@"命令发送失败";
+        mbp.label.text= NSLocalizedString(@"命令发送失败", @"命令发送失败");
         [mbp hideAnimated:YES afterDelay:1];
         return 0;
     }];
@@ -232,7 +228,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     UIImageView *iconImage=[cell viewWithTag:1001];
     UILabel *brandName=[cell viewWithTag:1003];
     UILabel *codeName=[cell viewWithTag:1004];
-    codeName.text=[NSString stringWithFormat:@"码组号:%@",subDic[@"codeString"]];
+    codeName.text= [NSString stringWithFormat:NSLocalizedString(@"码组号:%@", @"码组号:%@"), subDic[@"codeString"]];
     iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
     if ([subDic[@"defineName"] length]>1) {
         brandName.text=subDic[@"defineName"];
@@ -260,33 +256,29 @@ static NSString *const targetName=@"IrRemoteControllerA";
         
         [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
     }];
-    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"编辑" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSMutableDictionary *deviceInfo=self.alldevices[indexPath.row].mutableCopy;
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"名称" message:@"输入设备名称" preferredStyle: UIAlertControllerStyleAlert];
-        [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
-            if ([deviceInfo[@"defineName"] length]>1) {
-                textField.text=deviceInfo[@"defineName"];
-            }
-            else
-            {
-                textField.text=deviceInfo[@"brandName"];
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"编辑", @"编辑") handler:^(UITableViewRowAction *_Nonnull action, NSIndexPath *_Nonnull indexPath) {
+        NSMutableDictionary *deviceInfo = self.alldevices[indexPath.row].mutableCopy;
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"名称", @"名称") message:NSLocalizedString(@"输入设备名称", @"输入设备名称") preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *_Nonnull textField) {
+            if ([deviceInfo[@"defineName"] length] > 1) {
+                textField.text = deviceInfo[@"defineName"];
+            } else {
+                textField.text = deviceInfo[@"brandName"];
             }
         }];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            if(alertController.textFields.firstObject.text.length>0){
-                deviceInfo[@"defineName"]=alertController.textFields.firstObject.text;
-            }
-            else
-            {
-                deviceInfo[@"defineName"]=deviceInfo[@"brandName"];
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", @"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
+            if (alertController.textFields.firstObject.text.length > 0) {
+                deviceInfo[@"defineName"] = alertController.textFields.firstObject.text;
+            } else {
+                deviceInfo[@"defineName"] = deviceInfo[@"brandName"];
             }
             [_alldevices removeObjectAtIndex:indexPath.row];
             [self.alldevices addObject:deviceInfo];
-            [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
-            
+            [[NSUserDefaults standardUserDefaults] setObject:_alldevices forKey:@"deviceInfo"];
+
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", @"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
         [self presentViewController:alertController animated:YES completion:nil];

@@ -128,7 +128,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         group2.timingFunction=CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut)
         voiceFrame.layer.add(group2, forKey: "voiceFrame")
         
-        activeLab.text="正在识别..."
+        activeLab.text=NSLocalizedString("正在识别...", comment: "正在识别...")
         self.beginVoiceManger()
     }
     
@@ -144,7 +144,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     func endOfSpeech() {
         voiceFrame.layer.removeAllAnimations()
-        activeLab.text="点击按钮开始识别..."
+        activeLab.text=NSLocalizedString("点击按钮开始识别...", comment: "点击按钮开始识别...")
         voiceBtn.isEnabled=true
     }
     
@@ -170,7 +170,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         let voiceManger=VoiceManger.shareInstance
         let returnWords=voiceManger.stopAndConfirm()
         if (returnWords.count)>0 {
-            CommonFunction.startAnimation("匹配中...", nil)
+            CommonFunction.startAnimation(NSLocalizedString("匹配中...", comment: "匹配中..."), nil)
             //进行语言操作
             print(returnWords)
 
@@ -183,9 +183,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                         let code:String = self.deviceInfo["codeString"] as! String
                         let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
                         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                            CommonFunction.stopAnimation("控制成功..", channel,1)
+                            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
                         }, fail: { (failString) -> UInt in
-                            CommonFunction.stopAnimation("操作失败..", failString,1)
+                            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
                             return 0
                         })
                         isContain=true
@@ -195,7 +195,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 }
             }
             if isContain == false {
-                CommonFunction.stopAnimation("操作失败..", "没找到对应控制指令",1.5)
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
             }
             
         }
@@ -234,12 +234,12 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 0)
         let deviceID:String="IrRemoteControllerA"
         
-        CommonFunction.startAnimation("发送中:" + sender.tag.description, nil)
+        CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            CommonFunction.stopAnimation("发送成功", "长度:" + (returnData?.description)!,0.3)
+            CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
-            let failDic=["102" : "连接设备失败,请重试","103" : "设备服务发现失败,尝试重启蓝牙","104" : "写入操作失败,请重试"]
-            CommonFunction.stopAnimation("操作失败", failDic[failString!],0.3)
+            let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+            CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
             return 0
         })
     }
@@ -249,22 +249,22 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
             UserDefaults.standard.set([], forKey: "TVfavorite")
         }
-        FTPopOverMenu.show(from: event, withMenuArray: ["添加频道收藏","定时关机"], doneBlock: { (index) in
+        FTPopOverMenu.show(from: event, withMenuArray: [NSLocalizedString("添加频道收藏", comment: "添加频道收藏"),NSLocalizedString("定时关机", comment: "定时关机")], doneBlock: { (index) in
             if index==0
             {
-                let alert=UIAlertController.init(title: "收藏频道号", message: "请输入要收藏的频道", preferredStyle: .alert)
+                let alert=UIAlertController.init(title: NSLocalizedString("收藏频道号", comment: "收藏频道号"), message: NSLocalizedString("请输入要收藏的频道", comment: "请输入要收藏的频道"), preferredStyle: .alert)
                 alert.addTextField(configurationHandler: { (nameF) in
                     self.nameField=nameF
                     nameF.delegate=self
-                    nameF.placeholder="输入频道名称"
+                    nameF.placeholder=NSLocalizedString("输入频道名称", comment: "输入频道名称")
                 })
                 alert.addTextField(configurationHandler: { (number) in
                     self.numberField=number
                     number.delegate=self
                     number.keyboardType = .numberPad
-                    number.placeholder="输入频道号(不超过3位)"
+                    number.placeholder=NSLocalizedString("输入频道号(不超过3位)", comment: "输入频道号(不超过3位)")
                 })
-                let actionOK=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+                let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
                     var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
                     let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
                     channelList?.append(channelInfo)
@@ -277,7 +277,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             actionOK.isEnabled=false
             self.actionTemp=actionOK
             alert.addAction(actionOK)
-                alert.addAction(UIAlertAction.init(title: "取消", style: .destructive, handler: { (action) in
+                alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .destructive, handler: { (action) in
                     return
                 }))
                 self.present(alert, animated: true, completion: {
@@ -297,7 +297,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
     {
-        if item.title=="数字" {
+        
+        if item==tabBar.items?[0] {
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: 0, y: 0)
                 self.controlView.isHidden=true
@@ -309,7 +310,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="功能"{
+        else if item==tabBar.items?[1]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
                 self.controlView.isHidden=false
@@ -322,7 +323,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="扩展"{
+        else if item==tabBar.items?[2]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
                 self.controlView.isHidden=true
@@ -334,7 +335,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             })
             
         }
-        else if item.title=="频道"{
+        else if item==tabBar.items?[3]{
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width, y: 0)
@@ -342,7 +343,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 
             })
         }
-        else if item.title=="切换模式"{
+        else if item==tabBar.items?[4]{
             
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width*2, y: 0)
@@ -394,15 +395,15 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        CommonFunction.startAnimation("操作中...", nil)
+        CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                CommonFunction.stopAnimation("控制成功..", returnData?.description,1)
+                CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
             }, fail: { (failString) -> UInt in
-                CommonFunction.stopAnimation("操作失败..", failString,1)
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
                 return 0
             })
 
@@ -420,9 +421,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             let code:String = self.deviceInfo["codeString"] as! String
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                CommonFunction.stopAnimation("控制成功..", returnData?.description,1)
+                CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
             }, fail: { (failString) -> UInt in
-                CommonFunction.stopAnimation("操作失败..", failString,1)
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
                 return 0
             })
         }
@@ -437,7 +438,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction.init(style: .destructive, title: "删除") { (deleteAction, deleteIndex) in
+        let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
             var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
             channelList?.remove(at: indexPath.row)
             self.resourseList=channelList!

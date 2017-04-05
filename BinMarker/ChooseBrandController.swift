@@ -43,7 +43,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         tempSearch.dimsBackgroundDuringPresentation = true
         tempSearch.obscuresBackgroundDuringPresentation=false
         tempSearch.hidesNavigationBarDuringPresentation=true
-        tempSearch.searchBar.placeholder="输入品牌名"
+        tempSearch.searchBar.placeholder=NSLocalizedString("输入品牌名", comment: "输入品牌名")
         tempSearch.searchBar.sizeToFit()
         tempSearch.searchBar.searchBarStyle=UISearchBarStyle.prominent
         tempSearch.searchBar.isTranslucent=true
@@ -118,7 +118,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         let path=Bundle.main.path(forResource: "Infrared_Datebase", ofType: "sqlite")
         let db=FMDatabase.init(path: path)
         let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.label.text="加载中..."
+        mbp.label.text=NSLocalizedString("加载中...", comment: "加载中...")
         mbp.removeFromSuperViewOnHide=true
         DispatchQueue.global().async {
             var deviceInfo=Dictionary<String, Any>.init()
@@ -238,7 +238,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if self.searchingManger.isActive
         {
-            return "搜索结果"
+            return NSLocalizedString("搜索结果", comment: "搜索结果")
         }
         else
         {

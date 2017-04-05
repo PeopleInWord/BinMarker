@@ -30,17 +30,12 @@ class AMPController: UIViewController,UITabBarDelegate {
         let code:String = deviceInfo["codeString"] as! String
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 2)
         let deviceID:String="IrRemoteControllerA"
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中:" + sender.tag.description
+        CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)
         BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-            mbp.detailsLabel.text=returnData?.description
-            mbp.hide(animated: true, afterDelay: 0.5)
+            CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
-            mbp.label.text="操作失败"
-            mbp.detailsLabel.text=failString
-            mbp.hide(animated: true, afterDelay: 1.5)
+            let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+            CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
             return 0
         })
         
@@ -48,7 +43,7 @@ class AMPController: UIViewController,UITabBarDelegate {
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
     {
-        if item.title=="数字" {
+        if item==tabBar.items?[0] {
             UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
                 self.controlView.isHidden=true
                 self.functionView.isHidden=true
@@ -59,7 +54,7 @@ class AMPController: UIViewController,UITabBarDelegate {
             })
             
         }
-        else if item.title=="功能"{
+        else if item==tabBar.items?[1]{
             UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
                 self.controlView.isHidden=false
                 self.functionView.isHidden=true
@@ -70,7 +65,7 @@ class AMPController: UIViewController,UITabBarDelegate {
             })
             
         }
-        else if item.title=="扩展"{
+        else if item==tabBar.items?[2]{
             UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
                 
             }, completion: { (_) in

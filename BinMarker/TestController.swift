@@ -46,56 +46,18 @@ class TestController: UIViewController{
 //        return Bundle.main.path(forResource: code, ofType: "bin") != nil
         return true
     }
-    
-//    @IBAction func chooseDevice(_ sender: UIButton) {
-//        FTPopOverMenuConfiguration.default().menuWidth=180
-//        let main=self.navigationController?.viewControllers[0] as! MainController
-//        print(main.nearRemote)
-//        var titleArr:[String]=Array.init()
-//        for deviceName in main.nearRemote {
-//            titleArr.append(deviceName as! String)
-//        }
-//        
-//        FTPopOverMenu.show(forSender: sender, withMenuArray: titleArr, doneBlock: { (selectIndex) in
-//            self.chooseDeviceBtn.setTitle(titleArr[selectIndex], for: .normal)
-//            UserDefaults.standard.set(titleArr[selectIndex], forKey: "CurrentDevice")
-//        }) { 
-//            
-//        }
-//    }
 
     @IBAction func powerTest(_ sender: UIButton) {
         //调试代码
-        let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
-        mbp.removeFromSuperViewOnHide=true
-        mbp.show(animated: true)
-        mbp.label.text="发送中:" + sender.tag.description
-//        if (UserDefaults.standard.string(forKey: "CurrentDevice") == nil) {
-//            let alert=UIAlertController.init(title: "警告", message: "先点击标题添加设备", preferredStyle: .alert)
-//            let ok=UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
-//                mbp.hide(animated: true, afterDelay: 0.5)
-//                return
-//            })
-//            alert.addAction(ok)
-//            self.present(alert, animated: true, completion: { 
-//                
-//            })
-//            return
-//        }
-//        else
-//        {
+        CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:"), sender.tag.description)
             let deviceID:String="IrRemoteControllerA"
             let code:String=BinMakeManger.shareInstance.singleCommand(codeList[currentIndex], sender.tag, self.deviceType.row)
             BluetoothManager.getInstance()?.sendByteCommand(with: code, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
-                mbp.detailsLabel.text=returnData?.description
-                mbp.hide(animated: true, afterDelay: 0.5)
+                CommonFunction.stopAnimation(NSLocalizedString("操作成功", comment: "操作成功"), returnData?.description, 0.5)
             }, fail: { (failString) -> UInt in
-                mbp.label.text="操作失败"
-                mbp.detailsLabel.text=failString
-                mbp.hide(animated: true, afterDelay: 1.5)
+                CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failString, 0.5)
                 return 0
             })
-//        }
     }
     
     @IBAction func nextCode(_ sender: UIButton) {
@@ -120,11 +82,11 @@ class TestController: UIViewController{
     
     @IBAction func confirm(_ sender: UIButton) {
         
-        let alert=UIAlertController.init(title: "设备名", message: "请输入名称", preferredStyle: .alert)
+        let alert=UIAlertController.init(title: NSLocalizedString("设备名", comment: "设备名"), message: NSLocalizedString("请输入名称", comment: "请输入名称"), preferredStyle: .alert)
         alert.addTextField(configurationHandler: { (nameField) in
             nameField.placeholder=self.brandName! + " " + self.codeList[self.currentIndex]
         })
-        alert.addAction(UIAlertAction.init(title: "好的", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
             let deviceSubInfoDic:Dictionary<String,String>=[
                 "deviceType" : self.deviceTypeStr,
                 "brandName" : self.brandName!,
@@ -149,7 +111,7 @@ class TestController: UIViewController{
 
             let _ = self.navigationController?.popToRootViewController(animated: true)
         }))
-        alert.addAction(UIAlertAction.init(title: "取消", style: .destructive, handler: { (action) in
+        alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .destructive, handler: { (action) in
             return
         }))
         self.present(alert, animated: true, completion: {

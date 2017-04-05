@@ -30,7 +30,7 @@ class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataS
         if indexPath.section==0 {
             let cell = tableView .dequeueReusableCell(withIdentifier: "option", for: indexPath) as UITableViewCell;
             let imageArr=[#imageLiteral(resourceName: "login_option5"),#imageLiteral(resourceName: "login_option4")]
-            let optionTitle=["修改密码","设置安全码"]
+            let optionTitle=[NSLocalizedString("修改密码", comment: "修改密码"),NSLocalizedString("设置安全码", comment: "设置安全码")]
             let imageView=cell.viewWithTag(1001) as! UIImageView
             let optionBtn=cell.viewWithTag(1002) as! UIButton
             imageView.image=imageArr[indexPath.row]

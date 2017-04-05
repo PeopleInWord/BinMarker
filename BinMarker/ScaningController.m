@@ -9,7 +9,6 @@
 #import "ScaningController.h"
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
-#import <QuartzCore/QuartzCore.h>
 #import "FLAnimatedImage.h"
 @class CBPeripheral;
 @interface ScaningController ()<CAAnimationDelegate>
@@ -110,8 +109,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 -(void)endScaning
 {
-    self.loadingTitle.text=@"设备搜索成功";
-    self.detailLog.text=@"请点击下一步";
+    self.loadingTitle.text= NSLocalizedString(@"设备搜索成功", @"设备搜索成功");
+    self.detailLog.text= NSLocalizedString(@"请点击下一步", @"请点击下一步");
     self.remoteBg1.alpha=1.0;
     self.remoteBg2.alpha=1.0;
     animationImageView.alpha=0;
