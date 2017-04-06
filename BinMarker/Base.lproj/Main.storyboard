@@ -513,7 +513,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="J06-3g-vQn" secondAttribute="height" multiplier="1:1" id="bma-qn-4cS"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <state key="normal" title="PLAY" backgroundImage="sat_btn_yuanquan_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
@@ -534,8 +534,8 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgg-Id-ft2">
-                                                                <rect key="frame" x="18.000000000000004" y="71.666666666666657" width="30.999999999999996" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <rect key="frame" x="20.333333333333332" y="73" width="26.666666666666668" height="15.666666666666657"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -591,8 +591,8 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJw-VK-CHx">
-                                                                <rect key="frame" x="18.333333333333314" y="71.666666666666657" width="31" height="18"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <rect key="frame" x="20.666666666666629" y="73" width="26.666666666666686" height="15.666666666666657"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -802,7 +802,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsh-OF-2gU">
-                                                                        <rect key="frame" x="160" y="147.66666666666669" width="94" height="51"/>
+                                                                        <rect key="frame" x="160" y="147.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="REW" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -812,7 +812,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="131" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tL2-E0-yfX">
-                                                                        <rect key="frame" x="160" y="221.66666666666669" width="94" height="50.666666666666629"/>
+                                                                        <rect key="frame" x="160" y="220.99999999999994" width="94" height="50.666666666666742"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="STOP" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -822,7 +822,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-cO-jLZ">
-                                                                        <rect key="frame" x="160" y="294.33333333333331" width="94" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="160" y="293.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="回看" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -855,7 +855,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="129" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s99-zc-ypj">
-                                                                        <rect key="frame" x="292.66666666666669" y="147.66666666666669" width="93.666666666666629" height="51"/>
+                                                                        <rect key="frame" x="292.66666666666669" y="147.66666666666669" width="93.666666666666629" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="FF" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -865,7 +865,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="138" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-Ua-quX">
-                                                                        <rect key="frame" x="292.66666666666669" y="221.66666666666669" width="93.666666666666629" height="50.666666666666629"/>
+                                                                        <rect key="frame" x="292.66666666666669" y="220.99999999999994" width="93.666666666666629" height="50.666666666666742"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="点播" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -885,7 +885,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="114" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNu-yY-R9s">
-                                                                        <rect key="frame" x="22" y="147.66666666666669" width="94" height="51"/>
+                                                                        <rect key="frame" x="22" y="147.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="节目单/导视" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -895,7 +895,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="130" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JF-lB-nkX">
-                                                                        <rect key="frame" x="22" y="221.66666666666669" width="94" height="50.333333333333258"/>
+                                                                        <rect key="frame" x="22" y="220.99999999999994" width="94" height="50.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="电视/视讯" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -905,7 +905,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="139" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhi-Px-y0k">
-                                                                        <rect key="frame" x="22" y="294.33333333333331" width="94" height="50.333333333333371"/>
+                                                                        <rect key="frame" x="22" y="293.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <state key="normal" title="资讯/SUB" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1008,7 +1008,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7x-JM-RyF">
-                                                                        <rect key="frame" x="160" y="147.66666666666669" width="94" height="51"/>
+                                                                        <rect key="frame" x="160" y="147.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                                         <state key="normal" title="8" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1018,7 +1018,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMB-UZ-pbr">
-                                                                        <rect key="frame" x="160" y="222.66666666666669" width="94" height="50.333333333333258"/>
+                                                                        <rect key="frame" x="160" y="221.99999999999994" width="94" height="50.333333333333371"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                                         <state key="normal" title="0" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1051,7 +1051,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-hs-VTF">
-                                                                        <rect key="frame" x="292.66666666666669" y="147.66666666666669" width="93.666666666666629" height="51"/>
+                                                                        <rect key="frame" x="292.66666666666669" y="147.66666666666669" width="93.666666666666629" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                                         <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1061,7 +1061,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HX-hZ-NcP">
-                                                                        <rect key="frame" x="292.66666666666669" y="222.66666666666669" width="93.666666666666629" height="50.666666666666629"/>
+                                                                        <rect key="frame" x="292.66666666666669" y="221.99999999999994" width="93.666666666666629" height="50.666666666666742"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                                         <state key="normal" title="输入法" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1081,7 +1081,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuO-IL-qDq">
-                                                                        <rect key="frame" x="22" y="147.66666666666669" width="94" height="51"/>
+                                                                        <rect key="frame" x="22" y="147.66666666666669" width="94" height="50.333333333333258"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                                         <state key="normal" title="7" backgroundImage="sat_btn_shuzjian_bg">
                                                                             <color key="titleColor" red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1690,8 +1690,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGg-NT-eXq">
-                                                    <rect key="frame" x="33" y="16" width="38" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="33" y="17.333333333333329" width="33" height="15.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1759,10 +1759,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5R-hQ-Aao">
-                                <rect key="frame" x="65" y="526" width="108" height="53"/>
+                                <rect key="frame" x="65" y="519" width="108" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="me8-X4-fuW"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="是" backgroundImage="test_btn_shi"/>
                                 <connections>
                                     <action selector="confirm:" destination="mMY-p5-kaV" eventType="touchUpInside" id="xeR-Uc-tQz"/>
@@ -1791,10 +1792,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-xd-iTi">
-                                <rect key="frame" x="241.33333333333331" y="526" width="107.99999999999994" height="51"/>
+                                <rect key="frame" x="241.33333333333331" y="519" width="107.99999999999994" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZGl-xd-iTi" secondAttribute="height" multiplier="224:106" id="NpY-Xb-Zbj"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="否" backgroundImage="test_btn_fou">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1839,28 +1841,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEM-dS-Tgh">
-                                <rect key="frame" x="185" y="424.66666666666669" width="46" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="188.33333333333334" y="424.66666666666669" width="40" height="15.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数字键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUN-8w-iVU">
-                                <rect key="frame" x="313.66666666666669" y="424.66666666666669" width="46" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="317" y="424.66666666666669" width="40" height="15.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量键" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d90-sF-JJf">
-                                <rect key="frame" x="54.333333333333329" y="424.66666666666669" width="45.999999999999986" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="57.666666666666671" y="424.66666666666669" width="40.000000000000014" height="15.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mj-tE-kF7">
-                                <rect key="frame" x="102" y="464.66666666666669" width="210" height="36"/>
+                                <rect key="frame" x="116" y="462.33333333333331" width="182" height="31.333333333333371"/>
                                 <string key="text">1.请将遥控器对准电器发送指令
 2.根据电器响应选择是/否</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2026,8 +2028,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ5-El-n6k">
-                                        <rect key="frame" x="17.999999999999996" y="70.666666666666657" width="31.000000000000004" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="20.333333333333336" y="72" width="26.666666666666671" height="15.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2076,8 +2078,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T26-mk-2de">
-                                        <rect key="frame" x="18.333333333333314" y="71.666666666666657" width="31" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="20.666666666666629" y="73" width="26.666666666666686" height="15.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2268,7 +2270,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSA-ZA-p2z">
-                                                        <rect key="frame" x="160" y="146.66666666666669" width="94" height="51"/>
+                                                        <rect key="frame" x="160" y="146.66666666666669" width="94" height="50.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="清除" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2301,7 +2303,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="138" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km1-xl-8GV">
-                                                        <rect key="frame" x="292.66666666666669" y="146.66666666666669" width="93.666666666666629" height="51"/>
+                                                        <rect key="frame" x="292.66666666666669" y="146.66666666666669" width="93.666666666666629" height="50.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="缩放" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2331,7 +2333,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="137" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Ff-LsO">
-                                                        <rect key="frame" x="160" y="220.66666666666669" width="94" height="50.333333333333371"/>
+                                                        <rect key="frame" x="160" y="220.00000000000006" width="94" height="50.333333333333258"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="切换" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2341,7 +2343,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="154" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jka-gi-UNM">
-                                                        <rect key="frame" x="292.66666666666669" y="220.66666666666669" width="93.666666666666629" height="50.333333333333371"/>
+                                                        <rect key="frame" x="292.66666666666669" y="220.00000000000006" width="93.666666666666629" height="50.333333333333258"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="+10s" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2351,7 +2353,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="150" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DTp-rD-x4F">
-                                                        <rect key="frame" x="21" y="220.66666666666669" width="94" height="50.333333333333371"/>
+                                                        <rect key="frame" x="21" y="220.00000000000006" width="94" height="50.333333333333258"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="设置" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2361,7 +2363,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6I-WF-oZi">
-                                                        <rect key="frame" x="160" y="295.66666666666669" width="94" height="50.666666666666629"/>
+                                                        <rect key="frame" x="160" y="295.00000000000006" width="94" height="50.666666666666629"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <state key="normal" title="语言" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2503,7 +2505,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-4j-YTH">
-                                                        <rect key="frame" x="292.66666666666669" y="146.66666666666669" width="93.666666666666629" height="51"/>
+                                                        <rect key="frame" x="292.66666666666669" y="146.66666666666669" width="93.666666666666629" height="50.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                                                         <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
                                                             <color key="titleColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3723,7 +3725,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RdN-4K-Fpj" secondAttribute="height" multiplier="1:1" id="piB-iy-kb2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="-/--" backgroundImage="sat_btn_yuanquan_bg">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3751,8 +3753,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s6-GN-IHx">
-                                        <rect key="frame" x="17.999999999999996" y="71.666666666666657" width="31.000000000000004" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="20.333333333333336" y="73" width="26.666666666666671" height="15.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3801,8 +3803,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="频道" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYX-vL-VMe">
-                                        <rect key="frame" x="18.333333333333314" y="72.666666666666657" width="31" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <rect key="frame" x="20.333333333333314" y="74" width="26.666666666666686" height="15.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>

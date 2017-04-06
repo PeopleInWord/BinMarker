@@ -51,10 +51,10 @@
 "7Lg-Nr-v9V.normalTitle" = "Menu";
 
 /* Class = "UILabel"; text = "1.请将遥控器对准电器发送指令\n2.根据电器响应选择是/否"; ObjectID = "7Mj-tE-kF7"; */
-"7Mj-tE-kF7.text" = "1.Please send instruction aim the remote control device\n2.According to the electrical response to choose Y/N";
+"7Mj-tE-kF7.text" = "1.Make AMj remote control aiming to device\n2.According to the response to choose Y/N";
 
 /* Class = "UILabel"; text = "音量"; ObjectID = "7s6-GN-IHx"; */
-"7s6-GN-IHx.text" = "Volume";
+"7s6-GN-IHx.text" = "Vol";
 
 /* Class = "UIButton"; normalTitle = "6"; ObjectID = "86Z-zk-kd9"; */
 "86Z-zk-kd9.normalTitle" = "6";
@@ -93,7 +93,7 @@
 "Bwb-4j-YTH.normalTitle" = "9";
 
 /* Class = "UILabel"; text = "频道键"; ObjectID = "CEM-dS-Tgh"; */
-"CEM-dS-Tgh.text" = "Channel";
+"CEM-dS-Tgh.text" = "CHNL";
 
 /* Class = "UITabBarItem"; title = "数字"; ObjectID = "CWB-Wl-Ewz"; */
 "CWB-Wl-Ewz.title" = "Num";
@@ -153,7 +153,7 @@
 "Joq-eL-C0j.normalTitle" = "8";
 
 /* Class = "UILabel"; text = "此应用需要绑定爱美家遥控器使用,请打开遥控器的搜索开关"; ObjectID = "KHy-RX-lip"; */
-"KHy-RX-lip.text" = "The application need to bind AMJ remote control, please open the search of the remote control switch";
+"KHy-RX-lip.text" = "Need to bind AMJ remote control, turn on the device switch";
 
 /* Class = "UIButton"; normalTitle = "2"; ObjectID = "KgK-p5-tTk"; */
 "KgK-p5-tTk.normalTitle" = "2";
@@ -165,10 +165,10 @@
 "L7x-ZQ-wqP.normalTitle" = "PBP";
 
 /* Class = "UILabel"; text = "音量"; ObjectID = "LOb-N5-tJa"; */
-"LOb-N5-tJa.text" = "Volume";
+"LOb-N5-tJa.text" = "Vol";
 
 /* Class = "UITabBarItem"; title = "频道"; ObjectID = "Ldj-o0-jiE"; */
-"Ldj-o0-jiE.title" = "Channel";
+"Ldj-o0-jiE.title" = "CHNL";
 
 /* Class = "UIBarButtonItem"; title = "主界面"; ObjectID = "Lww-Pv-J7E"; */
 "Lww-Pv-J7E.title" = "Main";
@@ -240,7 +240,7 @@
 "S7i-DX-Cyw.normalTitle" = "SYS";
 
 /* Class = "UILabel"; text = "频道"; ObjectID = "T26-mk-2de"; */
-"T26-mk-2de.text" = "Channel";
+"T26-mk-2de.text" = "CHNL";
 
 /* Class = "UIButton"; normalTitle = "PAUSE"; ObjectID = "TkB-KJ-diJ"; */
 "TkB-KJ-diJ.normalTitle" = "PAUSE";
@@ -351,10 +351,10 @@
 "ch4-pW-SsL.normalTitle" = "Login";
 
 /* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "cmp-Ui-hMS"; */
-"cmp-Ui-hMS.normalTitle" = "CommonChannel";
+"cmp-Ui-hMS.normalTitle" = "CommonCHNL";
 
 /* Class = "UILabel"; text = "音量键"; ObjectID = "d90-sF-JJf"; */
-"d90-sF-JJf.text" = "Volume";
+"d90-sF-JJf.text" = "Vol";
 
 /* Class = "UITextField"; placeholder = "密码"; ObjectID = "dLL-6H-bBN"; */
 "dLL-6H-bBN.placeholder" = "Password";
@@ -363,7 +363,7 @@
 "dSA-ZA-p2z.normalTitle" = "Clear";
 
 /* Class = "UILabel"; text = "频道"; ObjectID = "dYX-vL-VMe"; */
-"dYX-vL-VMe.text" = "Channel";
+"dYX-vL-VMe.text" = "CHNL";
 
 /* Class = "UILabel"; text = " "; ObjectID = "ewn-kr-vNe"; */
 "ewn-kr-vNe.text" = " ";
@@ -387,7 +387,7 @@
 "hFe-Eh-dCF.normalTitle" = "4";
 
 /* Class = "UITabBarItem"; title = "频道"; ObjectID = "hKC-Vi-Suv"; */
-"hKC-Vi-Suv.title" = "Channel";
+"hKC-Vi-Suv.title" = "CHNL";
 
 /* Class = "UIButton"; normalTitle = "完成"; ObjectID = "hKd-ej-NVB"; */
 "hKd-ej-NVB.normalTitle" = "Finish";
@@ -429,7 +429,7 @@
 "ly9-Wc-XKV.normalTitle" = "7";
 
 /* Class = "UILabel"; text = "音量"; ObjectID = "mgg-Id-ft2"; */
-"mgg-Id-ft2.text" = "Volume";
+"mgg-Id-ft2.text" = "Vol";
 
 /* Class = "UINavigationItem"; title = "登录"; ObjectID = "mu0-r4-jdu"; */
 "mu0-r4-jdu.title" = "Login";
@@ -456,13 +456,13 @@
 "pja-xV-7WS.normalTitle" = "Repeat";
 
 /* Class = "UILabel"; text = "频道"; ObjectID = "poa-Ml-oXN"; */
-"poa-Ml-oXN.text" = "Channel";
+"poa-Ml-oXN.text" = "CHNL";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "q3y-zP-pOz"; */
 "q3y-zP-pOz.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "频道"; ObjectID = "qJw-VK-CHx"; */
-"qJw-VK-CHx.text" = "Channel";
+"qJw-VK-CHx.text" = "CHNL";
 
 /* Class = "UINavigationItem"; title = "电视机"; ObjectID = "qeH-26-9kC"; */
 "qeH-26-9kC.title" = "TV";
@@ -486,7 +486,7 @@
 "s9y-OO-CEu.title" = "DVD";
 
 /* Class = "UILabel"; text = "音量"; ObjectID = "sZ5-El-n6k"; */
-"sZ5-El-n6k.text" = "Volume";
+"sZ5-El-n6k.text" = "Vol";
 
 /* Class = "UIButton"; normalTitle = "+"; ObjectID = "t1w-MX-zYX"; */
 "t1w-MX-zYX.normalTitle" = "+";
@@ -498,7 +498,7 @@
 "tL2-E0-yfX.normalTitle" = "STOP";
 
 /* Class = "UIButton"; normalTitle = "绿"; ObjectID = "tmT-KI-gi2"; */
-"tmT-KI-gi2.normalTitle" = "绿";
+"tmT-KI-gi2.normalTitle" = "Green";
 
 /* Class = "UIButton"; normalTitle = "角度"; ObjectID = "tyD-gF-gZ1"; */
 "tyD-gF-gZ1.normalTitle" = "Angle";
@@ -528,7 +528,7 @@
 "wNa-bi-lmA.normalTitle" = "3";
 
 /* Class = "UILabel"; text = "长按OK键进入语音识别"; ObjectID = "wcx-gH-XMU"; */
-"wcx-gH-XMU.text" = "Long press OK key to enter the speech recognition";
+"wcx-gH-XMU.text" = "Longpress OK entering the speech recognition";
 
 /* Class = "UILabel"; text = "深圳频道"; ObjectID = "xDT-Cc-vLf"; */
 "xDT-Cc-vLf.text" = "深圳频道";
@@ -543,10 +543,10 @@
 "xuO-IL-qDq.normalTitle" = "7";
 
 /* Class = "UIButton"; normalTitle = "是"; ObjectID = "y5R-hQ-Aao"; */
-"y5R-hQ-Aao.normalTitle" = "是";
+"y5R-hQ-Aao.normalTitle" = "Yes";
 
 /* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "y5t-xf-dTR"; */
-"y5t-xf-dTR.normalTitle" = "Common Channel";
+"y5t-xf-dTR.normalTitle" = "Common CHNL";
 
 /* Class = "UIButton"; normalTitle = "4"; ObjectID = "yBO-EL-6vb"; */
 "yBO-EL-6vb.normalTitle" = "4";
