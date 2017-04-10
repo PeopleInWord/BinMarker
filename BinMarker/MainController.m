@@ -47,8 +47,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
-    [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
+    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"TVfavorite"]) {
+        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
+    }
+    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"BOXfavorite"]) {
+        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
+    }
+    
     
 //    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
 //    dispatch_async(queue, ^{

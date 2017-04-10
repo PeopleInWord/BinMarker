@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate{
+class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var funtionView: UIView!
     @IBOutlet weak var numView: UIView!
@@ -30,6 +30,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
+    var selectedImageBtn=UIButton.init()
+    var selectedChannelTitle=String.init()
     public var deviceInfo:Dictionary<String, Any> = [:]
     //MARK:方法
     override func viewDidLoad() {
@@ -223,6 +225,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         self.costom.setTitleColor(UIColor.white, for: .normal)
         self.common.setTitleColor(UIColor.black, for: .normal)
         isCommon=false
+        
         self.favoriteList.reloadData()
         
     }
@@ -265,8 +268,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     number.placeholder=NSLocalizedString("输入频道号(不超过3位)", comment: "输入频道号(不超过3位)")
                 })
                 let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
-                    var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
-                    let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
+                    var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
+                    let channelInfo:Dictionary<String,Any>=["name":(alert.textFields?[0].text)!,"channel":(alert.textFields?[1].text)!,"image":Data.init()]
                     channelList?.append(channelInfo)
                     self.resourseList=channelList!
                     UserDefaults.standard.set(channelList, forKey: "TVfavorite")
@@ -277,7 +280,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             actionOK.isEnabled=false
             self.actionTemp=actionOK
             alert.addAction(actionOK)
-                alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .destructive, handler: { (action) in
+                alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .default, handler: { (action) in
                     return
                 }))
                 self.present(alert, animated: true, completion: {
@@ -373,7 +376,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         let cell = tableView .dequeueReusableCell(withIdentifier: "channel", for: indexPath) as UITableViewCell;
         let channelTitleLab:UILabel=cell.viewWithTag(1001) as! UILabel
         let channelImage:UIImageView=cell.viewWithTag(1000) as! UIImageView
+        let editBtn:UIButton=cell.viewWithTag(1002) as! UIButton
         if isCommon {
+            editBtn.isHidden=true
             let iconList=[#imageLiteral(resourceName: "channel-8"),#imageLiteral(resourceName: "channel-6"),#imageLiteral(resourceName: "channel-12"),#imageLiteral(resourceName: "channel-15"),#imageLiteral(resourceName: "channel-13"),#imageLiteral(resourceName: "channel-10"),#imageLiteral(resourceName: "channel-11")]
             let channelTitle=["广东卫视","湖南卫视","浙江卫视","深圳卫视","CCTV-1","BTV-北京卫视","江苏卫视"]
             channelTitleLab.text=channelTitle[indexPath.row]
@@ -381,18 +386,54 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         }
         else
         {
+            editBtn.isHidden=false
+            editBtn.addTarget(self, action: #selector(editIcon(_:)), for: .touchUpInside)
             let channelTitle={ () -> Array<String> in
                 var temp=Array<String>.init()
                 for deviceDicInfo in self.resourseList
                 {
-                    temp.append(deviceDicInfo.keys.first!)
+                    temp.append(deviceDicInfo["name"] as! String)
+                }
+                return temp
+            }()
+            let channelImageArr={ () -> Array<Data> in
+                var temp=Array<Data>.init()
+                for deviceDicInfo in self.resourseList
+                {
+                    temp.append(deviceDicInfo["image"] as! Data)
                 }
                 return temp
             }()
             channelTitleLab.text=channelTitle[indexPath.row]
+            editBtn.setBackgroundImage(UIImage.init(data: channelImageArr[indexPath.row]), for: .normal)
+            
         }
+        
         return cell
     }
+    
+    func editIcon(_ sender:UIButton) -> Void {
+        selectedImageBtn=sender
+        selectedChannelTitle=(sender.superview?.superview?.viewWithTag(1001)! as! UILabel).text!
+        let chooseAlert=UIAlertController.init(title: "选择图片", message: "选择图片来源", preferredStyle: .actionSheet)
+        chooseAlert.addAction(UIAlertAction.init(title: "本机图片", style: .default, handler: { (action) in
+            let picker=UIImagePickerController.init()
+            picker.allowsEditing=false
+            picker.sourceType = .photoLibrary
+            picker.delegate = self
+            self.present(picker, animated: true, completion: { 
+                
+            })
+        }))
+        chooseAlert.addAction(UIAlertAction.init(title: "预设图片", style: .default, handler: { (action) in
+            print("22")
+        }))
+        chooseAlert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: nil))
+        self.present(chooseAlert, animated: true) { 
+            
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
@@ -439,7 +480,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
-            var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, String>>
+            var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
             channelList?.remove(at: indexPath.row)
             self.resourseList=channelList!
             UserDefaults.standard.set(channelList, forKey: "TVfavorite")
@@ -450,12 +491,40 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.isCommon {
+        if self.isCommon==true {
             return 7
         }
         else
         {
+            
             return self.resourseList.count
+        }
+    }
+    
+    //MARK:图片选取
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        self.dismiss(animated: true) {
+            let tempImage=info["UIImagePickerControllerOriginalImage"] as? UIImage
+            self.selectedImageBtn.setBackgroundImage(tempImage, for: .normal)
+            let imageData=UIImagePNGRepresentation(tempImage!)
+            var selectDic=Dictionary<String, Any>.init()
+            for dic in self.resourseList
+            {
+                let name=dic["name"] as! String
+                if name==self.selectedChannelTitle
+                {
+                    selectDic=dic
+                    break
+                }
+            }
+            selectDic["image"]=imageData
+            UserDefaults.standard.set(self.resourseList, forKey: "TVfavorite")
+            UserDefaults.standard.synchronize()
         }
     }
     
