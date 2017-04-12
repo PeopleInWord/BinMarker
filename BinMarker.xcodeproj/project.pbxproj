@@ -69,6 +69,8 @@
 		3C43FAEB1E88EC2D00F01330 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEA1E88EC2D00F01330 /* Foundation.framework */; };
 		3C43FAED1E88ED2300F01330 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEC1E88ED2300F01330 /* libz.1.dylib */; };
 		3C43FAEF1E88EEAD00F01330 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FAEE1E88EEAD00F01330 /* Contacts.framework */; };
+		3C46C36C1E9CC47F00257C85 /* testView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C46C36B1E9CC47F00257C85 /* testView.xib */; };
+		3C46C36E1E9CC4FD00257C85 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46C36D1E9CC4FD00257C85 /* testView.swift */; };
 		3C482FE01E8C985600012E7D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FDF1E8C985600012E7D /* LoginController.swift */; };
 		3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */; };
 		3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */; };
@@ -162,6 +164,8 @@
 		3C43FAEA1E88EC2D00F01330 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C43FAEC1E88ED2300F01330 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		3C43FAEE1E88EEAD00F01330 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		3C46C36B1E9CC47F00257C85 /* testView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testView.xib; sourceTree = "<group>"; };
+		3C46C36D1E9CC4FD00257C85 /* testView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		3C482FDF1E8C985600012E7D /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegeditController.swift; sourceTree = "<group>"; };
 		3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				3C0D318E1DDEA29F00D78924 /* AddDeviceController.m */,
 				3C0D31931DDF054F00D78924 /* ChooseBrandController.swift */,
 				3C28BD3C1E5D3D9B0028B7BF /* TestController.swift */,
+				3C46C36B1E9CC47F00257C85 /* testView.xib */,
+				3C46C36D1E9CC4FD00257C85 /* testView.swift */,
 			);
 			name = Add;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
 				3C2A72761E790E2100137EAB /* 492.bin in Resources */,
 				3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */,
+				3C46C36C1E9CC47F00257C85 /* testView.xib in Resources */,
 				3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C2A727C1E790E2100137EAB /* 2787.bin in Resources */,
@@ -574,6 +581,7 @@
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
+				3C46C36E1E9CC4FD00257C85 /* testView.swift in Sources */,
 				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
@@ -739,7 +747,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(PODS_ROOT)";
 			};
 			name = Debug;
 		};
@@ -770,7 +778,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/** $(PODS_ROOT)";
 			};
 			name = Release;
 		};

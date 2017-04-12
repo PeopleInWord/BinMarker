@@ -6,4 +6,5 @@ target 'BinMarker' do
     pod 'Bugly'
     pod 'FLAnimatedImage'
     pod 'BlurryModalSegue'
+    pod 'pop'
 end

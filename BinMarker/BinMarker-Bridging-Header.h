@@ -11,3 +11,4 @@
 #import "NSString+StringOperation.h"
 #import "FLAnimatedImage.h"
 #import "iflyMSC/iflyMSC.h"
+#import "POP.h"

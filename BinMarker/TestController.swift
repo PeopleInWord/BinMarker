@@ -23,6 +23,12 @@ class TestController: UIViewController{
     @IBOutlet weak var currentInfoLab: UILabel!
     @IBOutlet weak var currentCode: UILabel!
     
+    
+    @IBOutlet weak var moreView: UIView!
+    
+    @IBOutlet weak var testPad: UIView!
+    
+    
     var currentIndex : Int = 0
     
     override func viewDidLoad() {
@@ -45,6 +51,33 @@ class TestController: UIViewController{
     private func isContain(_ code:String) ->Bool{
 //        return Bundle.main.path(forResource: code, ofType: "bin") != nil
         return true
+    }
+    @IBAction func moreBtn(_ sender: UIBarButtonItem) {
+        self.moreView.isHidden=false
+//        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+//        fade?.fromValue=0.6
+//        fade?.toValue=1
+//        self.moreView.pop_add(fade, forKey: "fade")
+        
+        let scale=POPSpringAnimation.init(propertyNamed: kPOPLayerScaleXY)
+        scale?.fromValue=NSValue.init(cgSize: CGSize.init(width: 0.4, height: 0.4))
+        scale?.toValue=NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
+        scale?.dynamicsFriction=10
+        self.testPad.layer.pop_add(scale, forKey: "scale")
+        
+        let point=POPBasicAnimation.init(propertyNamed: kPOPLayerPosition)
+        point?.toValue=NSValue.init(cgPoint: (self.view.window?.center)!)
+        self.testPad.layer.pop_add(point, forKey: "point")
+        
+        
+    }
+    @IBAction func closeMore(_ sender: UIButton) {
+        
+//        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+//        fade?.fromValue=1
+//        fade?.toValue=0.6
+//        self.moreView.pop_add(fade, forKey: "fade")
+        self.moreView.isHidden=true
     }
 
     @IBAction func powerTest(_ sender: UIButton) {
