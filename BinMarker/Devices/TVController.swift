@@ -24,6 +24,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var voiceFrame: UIImageView!
     @IBOutlet weak var activeLab: UILabel!
     @IBOutlet weak var resultWord: UILabel!
+    @IBOutlet weak var loadingVoice: UIActivityIndicatorView!
+    
+//    @IBOutlet weak var voiceCompleteBtn: UIButton!
     var isCommon = true
     var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
@@ -32,6 +35,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var numberField=UITextField.init()
     var selectedImageBtn=UIButton.init()
     var selectedChannelTitle=String.init()
+    
+    
     public var deviceInfo:Dictionary<String, Any> = [:]
     //MARK:方法
     override func viewDidLoad() {
@@ -154,12 +159,51 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
     }
     
-    func onResults(_ results: String, _ resultArr: Array<String>){
+    
+    
+    func onResults(_ results: String, _ resultArr: [String?]){
         print(resultArr)
         resultWord.text=results
+        loadingVoice.startAnimating()
+        if (resultArr.count)==0 {
+            return
+        }
+        DispatchQueue.global().async {
+            Thread.sleep(forTimeInterval: 1.5)
+            DispatchQueue.main.async {
+                self.loadingVoice.stopAnimating()
+                self.removeEffect()
+                CommonFunction.startAnimation(NSLocalizedString("匹配中...", comment: "匹配中..."), nil)
+                //进行语言操作
+                print(results)
+                
+                let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+                var isContain=false
+                for channel in channelTitle.keys {
+                    for word in resultArr {
+                        if channel == word {
+                            let channelNum:Int = channelTitle[channel]!
+                            let code:String = self.deviceInfo["codeString"] as! String
+                            let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
+                            BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+                                CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
+                            }, fail: { (failString) -> UInt in
+                                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+                                return 0
+                            })
+                            isContain=true
+                            break
+                        }
+                    }
+                    if isContain == false {
+                        CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
+                    }
+                }
+            }
+        }
     }
     
-    @IBAction func removeEffect(_ sender: UIButton) {
+    func removeEffect() -> Void {
         let basic1=CABasicAnimation.init(keyPath: "opacity")
         basic1.fromValue=1.0
         basic1.toValue=0.0
@@ -168,41 +212,44 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.isHidden=true
         effectView.layer.add(basic1, forKey: "effectView")
         effectView.removeFromSuperview()
-        
-        let voiceManger=VoiceManger.shareInstance
-        let returnWords=voiceManger.stopAndConfirm()
-        if (returnWords.count)>0 {
-            CommonFunction.startAnimation(NSLocalizedString("匹配中...", comment: "匹配中..."), nil)
-            //进行语言操作
-            print(returnWords)
-
-            let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
-            var isContain=false
-            for channel in channelTitle.keys {
-                for word in returnWords {
-                    if channel == word {
-                        let channelNum:Int = channelTitle[channel]!
-                        let code:String = self.deviceInfo["codeString"] as! String
-                        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
-                        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
-                        }, fail: { (failString) -> UInt in
-                            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
-                            return 0
-                        })
-                        isContain=true
-                        break
-
-                    }
-                }
-            }
-            if isContain == false {
-                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
-            }
-            
-        }
-        
     }
+    
+//    @IBAction func completeBtn(_ sender: UIButton) {
+//        self.removeEffect()
+//        let voiceManger=VoiceManger.shareInstance
+//        let returnWords=voiceManger.stopAndConfirm()
+//        if (returnWords.count)>0 {
+//            CommonFunction.startAnimation(NSLocalizedString("匹配中...", comment: "匹配中..."), nil)
+//            //进行语言操作
+//            print(returnWords)
+//
+//            let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+//            var isContain=false
+//            for channel in channelTitle.keys {
+//                for word in returnWords {
+//                    if channel == word {
+//                        let channelNum:Int = channelTitle[channel]!
+//                        let code:String = self.deviceInfo["codeString"] as! String
+//                        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
+//                        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+//                            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
+//                        }, fail: { (failString) -> UInt in
+//                            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+//                            return 0
+//                        })
+//                        isContain=true
+//                        break
+//
+//                    }
+//                }
+//            }
+//            if isContain == false {
+//                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
+//            }
+//            
+//        }
+//        
+//    }
     
     
     

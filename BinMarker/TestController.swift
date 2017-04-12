@@ -28,6 +28,7 @@ class TestController: UIViewController{
     
     @IBOutlet weak var testPad: UIView!
     
+    @IBOutlet weak var testBg: UIView!
     
     var currentIndex : Int = 0
     
@@ -53,16 +54,16 @@ class TestController: UIViewController{
         return true
     }
     @IBAction func moreBtn(_ sender: UIBarButtonItem) {
-        self.moreView.isHidden=false
-//        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
-//        fade?.fromValue=0.6
-//        fade?.toValue=1
-//        self.moreView.pop_add(fade, forKey: "fade")
+        self.testBg.isHidden=false
+        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+        fade?.fromValue=0
+        fade?.toValue=0.6
+        self.moreView.pop_add(fade, forKey: "fade")
         
         let scale=POPSpringAnimation.init(propertyNamed: kPOPLayerScaleXY)
         scale?.fromValue=NSValue.init(cgSize: CGSize.init(width: 0.4, height: 0.4))
         scale?.toValue=NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
-        scale?.dynamicsFriction=10
+        scale?.dynamicsFriction=15
         self.testPad.layer.pop_add(scale, forKey: "scale")
         
         let point=POPBasicAnimation.init(propertyNamed: kPOPLayerPosition)
@@ -72,12 +73,11 @@ class TestController: UIViewController{
         
     }
     @IBAction func closeMore(_ sender: UIButton) {
-        
-//        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
-//        fade?.fromValue=1
-//        fade?.toValue=0.6
-//        self.moreView.pop_add(fade, forKey: "fade")
-        self.moreView.isHidden=true
+        self.testBg.isHidden = true
+        let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+        fade?.fromValue=0.6
+        fade?.toValue=0
+        self.moreView.pop_add(fade, forKey: "fade")
     }
 
     @IBAction func powerTest(_ sender: UIButton) {

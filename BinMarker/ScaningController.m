@@ -144,6 +144,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (IBAction)bindingLater:(UIButton *)sender {
     [self performSegueWithIdentifier:@"showMain" sender:nil];
+//    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"Selected"];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context

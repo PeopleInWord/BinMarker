@@ -11,7 +11,7 @@ import UIKit
 protocol VoiceDelegate : NSObjectProtocol {
     func voiceChange(_ volumeValue:Int32)
     func endOfSpeech()
-    func onResults(_ results: String,_ resultArr:Array<String>)
+    func onResults(_ results: String,_ resultArr:[String?])
 }
 
 class VoiceManger: NSObject,IFlySpeechRecognizerDelegate,IFlyPcmRecorderDelegate {
@@ -96,7 +96,9 @@ class VoiceManger: NSObject,IFlySpeechRecognizerDelegate,IFlyPcmRecorderDelegate
             resultWord += singleWord
         }
 //        if isLast {
+        let _ = self.stopAndConfirm()
             delegate?.onResults(resultWord,resultArr)
+//        iFlySpeechRecognizer?.stopListening()
 //            resultWord=""
 //        }
         

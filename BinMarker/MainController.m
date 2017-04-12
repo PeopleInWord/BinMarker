@@ -44,6 +44,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+    
+    
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
@@ -72,11 +75,11 @@ static NSString *const targetName=@"IrRemoteControllerA";
     _alldevices=nil;
     [self.mainTableView reloadData];
     _noneView.hidden= self.alldevices.count != 0;
-    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    if (!app.autoScan.valid) {
-        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
-        [app.autoScan fire];
-    }
+//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+//    if (!app.autoScan.valid) {
+//        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
+//        [app.autoScan fire];
+//    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -86,19 +89,19 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    if (app.autoScan.valid) {
-        [app.autoScan invalidate];
-    }
-}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+//    if (app.autoScan.valid) {
+//        [app.autoScan invalidate];
+//    }
+//}
 
 
 #pragma mark 托线
 
 - (void)autoScan:(id)sender {
-    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+//    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
 }
 
 - (IBAction)userInfo:(UIBarButtonItem *)sender {
@@ -139,16 +142,11 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)foundRemote {
     NSString *codeStr=[[BinMakeManger shareInstance] foundCommand];
-    MBProgressHUD *mbp=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    mbp.removeFromSuperViewOnHide=YES;
-    [mbp showAnimated:YES];
-    mbp.label.text= NSLocalizedString(@"寻找遥控器中", @"寻找遥控器中");
+    [CommonFunction startAnimation:NSLocalizedString(@"寻找遥控器中", @"寻找遥控器中") :nil];
     [[BluetoothManager getInstance]sendByteCommandWithString:codeStr deviceID:@"IrRemoteControllerA" sendType:SendTypeRemoteTemp success:^(NSData * _Nullable stateData) {
-        mbp.label.text= NSLocalizedString(@"命令发送成功", @"命令发送成功");
-        [mbp hideAnimated:YES afterDelay:1];
+        [CommonFunction stopAnimation:NSLocalizedString(@"命令发送成功", @"命令发送成功") :nil :1];
     } fail:^NSUInteger(NSString * _Nullable stateCode) {
-        mbp.label.text= NSLocalizedString(@"命令发送失败", @"命令发送失败");
-        [mbp hideAnimated:YES afterDelay:1];
+        [CommonFunction stopAnimation:NSLocalizedString(@"命令发送失败", @"命令发送失败") :nil :1];
         return 0;
     }];
 }

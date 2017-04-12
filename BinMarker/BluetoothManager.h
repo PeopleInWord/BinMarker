@@ -19,12 +19,14 @@
 /**
  控制类型方式
 
- - SendTypeSingle: 单个控制
- - SendTypeMuti: 控制多个
+ - SendTypeSingle: 单个控制指令
+ - SendTypeMuti: 多个控制指令
  - SendTypeSyncdevice: 同步设备状态
  - SendTypeInfrared: 控制红外设备
  - SendTypeLock: 控制锁
  - SendTypeQuery: 查询锁
+ SendTypeRemote = 遥控器指令
+ SendTypeRemoteTemp = 7
  */
 typedef NS_ENUM(NSUInteger, SendType) {
     SendTypeSingle = 0,

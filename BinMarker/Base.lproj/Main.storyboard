@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Om4-0j-xzp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F54b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Om4-0j-xzp">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -154,10 +154,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="option" id="oVP-0G-sGe">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oVP-0G-sGe" id="TAA-pb-gwc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksP-Jc-aem">
@@ -185,10 +185,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quit" id="uYH-yj-aqd">
-                                        <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uYH-yj-aqd" id="c6L-7h-DV2">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHq-ZZ-vR3">
@@ -1219,7 +1219,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="320" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yp7-mv-eaE" id="dEs-m4-x8X">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channel-15" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-2f-s5e">
@@ -1464,7 +1464,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="lrM-qB-XwQ" id="0sh-jh-XIS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-2j-eco">
@@ -1686,7 +1686,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ig5-8x-5zg" id="iXf-3e-D8W">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGg-NT-eXq">
@@ -1866,476 +1866,468 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyj-ON-Kfs">
+                            <view opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyj-ON-Kfs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-ac-EQp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-ac-EQp">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFo-yv-H7N">
+                                        <rect key="frame" x="32.5" y="-341" width="256" height="341"/>
                                         <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFo-yv-H7N">
-                                                <rect key="frame" x="32.5" y="-341" width="256" height="341"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N19-6g-nH1">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="341"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N19-6g-nH1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="341"/>
+                                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-Ob-bjK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="256" height="600"/>
                                                         <subviews>
-                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-Ob-bjK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="256" height="700"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEn-sm-lkg">
+                                                                <rect key="frame" x="0.0" y="30" width="256" height="41.5"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEn-sm-lkg">
-                                                                        <rect key="frame" x="0.0" y="30" width="256" height="41.5"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tO-0u-6UN">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="1" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="xdX-Fr-P4t"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-3j-ytM">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="height" multiplier="23:15" id="2zc-vL-BXI"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="2" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="kSA-3Y-unP"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-af-uVF">
-                                                                                <rect key="frame" x="173" y="0.0" width="63.5" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="3" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="iak-IU-nyG"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                    <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tO-0u-6UN">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="1" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="xdX-Fr-P4t"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="118" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-3j-ytM">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
                                                                         <constraints>
-                                                                            <constraint firstItem="uoj-3j-ytM" firstAttribute="width" secondItem="PEn-sm-lkg" secondAttribute="width" multiplier="0.25" id="3YQ-NY-CFJ"/>
-                                                                            <constraint firstAttribute="height" secondItem="uoj-3j-ytM" secondAttribute="height" id="4vo-Qa-yvn"/>
-                                                                            <constraint firstItem="4tO-0u-6UN" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" multiplier="0.4" id="KoC-bD-FA2"/>
-                                                                            <constraint firstItem="uoj-3j-ytM" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" id="NxV-XJ-hF3"/>
-                                                                            <constraint firstItem="4tO-0u-6UN" firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="width" id="OfE-ii-H5z"/>
-                                                                            <constraint firstItem="4tO-0u-6UN" firstAttribute="centerY" secondItem="uoj-3j-ytM" secondAttribute="centerY" id="XM4-Ee-1BG"/>
-                                                                            <constraint firstItem="BJA-af-uVF" firstAttribute="width" secondItem="BJA-af-uVF" secondAttribute="height" multiplier="23:15" id="bx8-tZ-Xy9"/>
-                                                                            <constraint firstItem="uoj-3j-ytM" firstAttribute="top" secondItem="PEn-sm-lkg" secondAttribute="top" id="deK-ov-4wk"/>
-                                                                            <constraint firstItem="4tO-0u-6UN" firstAttribute="width" secondItem="4tO-0u-6UN" secondAttribute="height" multiplier="23:15" id="faP-V6-skJ"/>
-                                                                            <constraint firstItem="BJA-af-uVF" firstAttribute="centerY" secondItem="uoj-3j-ytM" secondAttribute="centerY" id="hHN-o4-rUs"/>
-                                                                            <constraint firstItem="BJA-af-uVF" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" multiplier="1.6" id="hh9-ka-hFL"/>
-                                                                            <constraint firstItem="BJA-af-uVF" firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="width" id="sl6-YG-Qkt"/>
+                                                                            <constraint firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="height" multiplier="23:15" id="2zc-vL-BXI"/>
                                                                         </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8z-Ab-2hV">
-                                                                        <rect key="frame" x="0.0" y="101.5" width="256" height="42"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A0-2C-qJV">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="42"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="4" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="m6J-2P-T8x"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgP-rJ-Wol">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="height" multiplier="23:15" id="AKr-M4-fws"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="5" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="pwA-ho-zTz"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCv-zz-MG0">
-                                                                                <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="6" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="B3I-Jp-xby"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" secondItem="mgP-rJ-Wol" secondAttribute="height" id="0Rq-ze-A5L"/>
-                                                                            <constraint firstItem="7A0-2C-qJV" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" multiplier="0.4" id="Aoy-57-PA9"/>
-                                                                            <constraint firstItem="7A0-2C-qJV" firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="width" id="C95-DZ-Y8E"/>
-                                                                            <constraint firstItem="fCv-zz-MG0" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" multiplier="1.6" id="GOW-bL-xnR"/>
-                                                                            <constraint firstItem="7A0-2C-qJV" firstAttribute="width" secondItem="7A0-2C-qJV" secondAttribute="height" multiplier="23:15" id="GnS-xj-C9M"/>
-                                                                            <constraint firstItem="7A0-2C-qJV" firstAttribute="centerY" secondItem="mgP-rJ-Wol" secondAttribute="centerY" id="Ix2-OA-O18"/>
-                                                                            <constraint firstItem="fCv-zz-MG0" firstAttribute="width" secondItem="fCv-zz-MG0" secondAttribute="height" multiplier="23:15" id="UcN-y8-wQw"/>
-                                                                            <constraint firstItem="fCv-zz-MG0" firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="width" id="bnd-bj-iaG"/>
-                                                                            <constraint firstItem="mgP-rJ-Wol" firstAttribute="width" secondItem="M8z-Ab-2hV" secondAttribute="width" multiplier="0.25" id="f3t-Mo-uCa"/>
-                                                                            <constraint firstItem="fCv-zz-MG0" firstAttribute="centerY" secondItem="mgP-rJ-Wol" secondAttribute="centerY" id="m1q-ju-gKG"/>
-                                                                            <constraint firstItem="mgP-rJ-Wol" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" id="pTV-Zn-gyL"/>
-                                                                            <constraint firstItem="mgP-rJ-Wol" firstAttribute="top" secondItem="M8z-Ab-2hV" secondAttribute="top" id="pVA-Sh-bfv"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icj-br-cZm">
-                                                                        <rect key="frame" x="0.0" y="173.5" width="256" height="42"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP4-5N-Mfx">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="42"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="7" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="KOG-vj-PvY"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mU-hp-dqU">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="height" multiplier="23:15" id="oMB-wH-Asv"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="8" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="7Oh-ef-JAi"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxR-dD-nTk">
-                                                                                <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="GjT-Bc-0Wj"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstItem="rxR-dD-nTk" firstAttribute="width" secondItem="rxR-dD-nTk" secondAttribute="height" multiplier="23:15" id="1Bz-7J-0To"/>
-                                                                            <constraint firstItem="0mU-hp-dqU" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" id="22N-Ac-Nh6"/>
-                                                                            <constraint firstItem="rxR-dD-nTk" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" multiplier="1.6" id="6P7-w9-t2F"/>
-                                                                            <constraint firstAttribute="height" secondItem="0mU-hp-dqU" secondAttribute="height" id="8Qo-nt-pHa"/>
-                                                                            <constraint firstItem="0mU-hp-dqU" firstAttribute="width" secondItem="icj-br-cZm" secondAttribute="width" multiplier="0.25" id="CSu-IP-0ks"/>
-                                                                            <constraint firstItem="0mU-hp-dqU" firstAttribute="top" secondItem="icj-br-cZm" secondAttribute="top" id="Mi1-aC-08w"/>
-                                                                            <constraint firstItem="aP4-5N-Mfx" firstAttribute="width" secondItem="aP4-5N-Mfx" secondAttribute="height" multiplier="23:15" id="UCN-la-cm4"/>
-                                                                            <constraint firstItem="aP4-5N-Mfx" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" multiplier="0.4" id="YqG-Eb-xSH"/>
-                                                                            <constraint firstItem="aP4-5N-Mfx" firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="width" id="Zt6-Is-JjM"/>
-                                                                            <constraint firstItem="rxR-dD-nTk" firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="width" id="aG9-rk-UXR"/>
-                                                                            <constraint firstItem="rxR-dD-nTk" firstAttribute="centerY" secondItem="0mU-hp-dqU" secondAttribute="centerY" id="ue8-vt-8Ba"/>
-                                                                            <constraint firstItem="aP4-5N-Mfx" firstAttribute="centerY" secondItem="0mU-hp-dqU" secondAttribute="centerY" id="x1J-pF-Hf4"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBg-19-mvV">
-                                                                        <rect key="frame" x="0.0" y="245" width="256" height="41.5"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-aF-pU5">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="频道-" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="KRD-Mf-moc"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67o-kn-jZF">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="height" multiplier="23:15" id="jal-aH-Aq3"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="0" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="dMr-YO-EY9"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raD-pS-MbZ">
-                                                                                <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="音量-" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Ffj-c0-YdQ"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstItem="t3v-aF-pU5" firstAttribute="width" secondItem="t3v-aF-pU5" secondAttribute="height" multiplier="23:15" id="7BM-PA-y1r"/>
-                                                                            <constraint firstItem="raD-pS-MbZ" firstAttribute="width" secondItem="raD-pS-MbZ" secondAttribute="height" multiplier="23:15" id="8Pq-xR-p2q"/>
-                                                                            <constraint firstItem="t3v-aF-pU5" firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="width" id="Cd2-c4-HNZ"/>
-                                                                            <constraint firstItem="t3v-aF-pU5" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" multiplier="0.4" id="Wcc-HZ-VCw"/>
-                                                                            <constraint firstItem="67o-kn-jZF" firstAttribute="width" secondItem="QBg-19-mvV" secondAttribute="width" multiplier="0.25" id="YnV-UK-uur"/>
-                                                                            <constraint firstItem="raD-pS-MbZ" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" multiplier="1.6" id="Z7D-YW-Z73"/>
-                                                                            <constraint firstItem="raD-pS-MbZ" firstAttribute="centerY" secondItem="67o-kn-jZF" secondAttribute="centerY" id="akG-Ql-wnU"/>
-                                                                            <constraint firstItem="67o-kn-jZF" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" id="hyR-zL-tei"/>
-                                                                            <constraint firstItem="t3v-aF-pU5" firstAttribute="centerY" secondItem="67o-kn-jZF" secondAttribute="centerY" id="kuJ-xs-9zy"/>
-                                                                            <constraint firstAttribute="height" secondItem="67o-kn-jZF" secondAttribute="height" id="oeX-75-tfE"/>
-                                                                            <constraint firstItem="raD-pS-MbZ" firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="width" id="p9f-x1-qxb"/>
-                                                                            <constraint firstItem="67o-kn-jZF" firstAttribute="top" secondItem="QBg-19-mvV" secondAttribute="top" id="tys-1g-k5j"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWm-9S-U7A">
-                                                                        <rect key="frame" x="0.0" y="316.5" width="256" height="41.5"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lt-f1-B3f">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="返回" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Svi-MU-wBV"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-Om-170">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="height" multiplier="23:15" id="6hX-Mu-Jlr"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="退出" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="2j0-Ji-wsN"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsj-Tz-X3b">
-                                                                                <rect key="frame" x="173" y="0.5" width="63.5" height="41"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="确认" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="XeC-C1-OSM"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstItem="Wsj-Tz-X3b" firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="width" id="2fb-fy-eRQ"/>
-                                                                            <constraint firstItem="Wsj-Tz-X3b" firstAttribute="width" secondItem="Wsj-Tz-X3b" secondAttribute="height" multiplier="23:15" id="4an-LP-bjH"/>
-                                                                            <constraint firstItem="XiW-Om-170" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" id="Ruh-xo-frt"/>
-                                                                            <constraint firstItem="Wsj-Tz-X3b" firstAttribute="centerY" secondItem="XiW-Om-170" secondAttribute="centerY" id="Zpj-N6-6Ko"/>
-                                                                            <constraint firstItem="4lt-f1-B3f" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" multiplier="0.4" id="ZxN-s0-BQO"/>
-                                                                            <constraint firstItem="XiW-Om-170" firstAttribute="width" secondItem="dWm-9S-U7A" secondAttribute="width" multiplier="0.25" id="bhg-ja-Sku"/>
-                                                                            <constraint firstItem="4lt-f1-B3f" firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="width" id="gTd-ZZ-CEd"/>
-                                                                            <constraint firstItem="XiW-Om-170" firstAttribute="top" secondItem="dWm-9S-U7A" secondAttribute="top" id="jS5-ae-jYZ"/>
-                                                                            <constraint firstItem="4lt-f1-B3f" firstAttribute="width" secondItem="4lt-f1-B3f" secondAttribute="height" multiplier="23:15" id="o5u-41-tx7"/>
-                                                                            <constraint firstItem="Wsj-Tz-X3b" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" multiplier="1.6" id="p2Z-zc-4CN"/>
-                                                                            <constraint firstAttribute="height" secondItem="XiW-Om-170" secondAttribute="height" id="vkh-Ki-SPQ"/>
-                                                                            <constraint firstItem="4lt-f1-B3f" firstAttribute="centerY" secondItem="XiW-Om-170" secondAttribute="centerY" id="xeq-n3-omj"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-SX-QgG">
-                                                                        <rect key="frame" x="0.0" y="388" width="256" height="42"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPi-1F-mnk">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="42"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="上" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="tXa-KH-9VZ"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxN-Sr-pMs">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="height" multiplier="23:15" id="FaL-Wt-HeC"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="下" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="TA7-r4-vxJ"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udd-HO-jgL">
-                                                                                <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="左" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="rRJ-Tt-zez"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" secondItem="PxN-Sr-pMs" secondAttribute="height" id="1cY-15-YNL"/>
-                                                                            <constraint firstItem="udd-HO-jgL" firstAttribute="centerY" secondItem="PxN-Sr-pMs" secondAttribute="centerY" id="37p-jf-JCN"/>
-                                                                            <constraint firstItem="rPi-1F-mnk" firstAttribute="width" secondItem="rPi-1F-mnk" secondAttribute="height" multiplier="23:15" id="7Bm-aX-49E"/>
-                                                                            <constraint firstItem="rPi-1F-mnk" firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="width" id="9BU-eP-wZr"/>
-                                                                            <constraint firstItem="udd-HO-jgL" firstAttribute="width" secondItem="udd-HO-jgL" secondAttribute="height" multiplier="23:15" id="I1D-en-sQp"/>
-                                                                            <constraint firstItem="PxN-Sr-pMs" firstAttribute="top" secondItem="Tte-SX-QgG" secondAttribute="top" id="RCW-1u-vEi"/>
-                                                                            <constraint firstItem="PxN-Sr-pMs" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" id="b0r-b6-YZb"/>
-                                                                            <constraint firstItem="rPi-1F-mnk" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" multiplier="0.4" id="dTw-Zp-Vba"/>
-                                                                            <constraint firstItem="rPi-1F-mnk" firstAttribute="centerY" secondItem="PxN-Sr-pMs" secondAttribute="centerY" id="hAU-wO-g4C"/>
-                                                                            <constraint firstItem="PxN-Sr-pMs" firstAttribute="width" secondItem="Tte-SX-QgG" secondAttribute="width" multiplier="0.25" id="qPm-h6-8CI"/>
-                                                                            <constraint firstItem="udd-HO-jgL" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" multiplier="1.6" id="wIS-2e-ToF"/>
-                                                                            <constraint firstItem="udd-HO-jgL" firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="width" id="xiP-pa-MUQ"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-AG-boC">
-                                                                        <rect key="frame" x="0.0" y="460" width="256" height="42"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" tag="132" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-Gk-Lo6">
-                                                                                <rect key="frame" x="19" y="0.0" width="64" height="42"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="右" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Gst-Gf-dvb"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-xh-2GZ">
-                                                                                <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="height" multiplier="23:15" id="5dR-eC-4NB"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="菜单" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="zDC-0y-QTf"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                            <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXY-2L-jx1">
-                                                                                <rect key="frame" x="173" y="0.0" width="63.5" height="42"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                                <state key="normal" title="静音" backgroundImage="sat_btn_shuzjian_bg">
-                                                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                </state>
-                                                                                <connections>
-                                                                                    <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="1MS-qQ-T2j"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstItem="MDI-xh-2GZ" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" id="4c3-XF-se5"/>
-                                                                            <constraint firstItem="EXY-2L-jx1" firstAttribute="width" secondItem="EXY-2L-jx1" secondAttribute="height" multiplier="23:15" id="IUH-PO-lzD"/>
-                                                                            <constraint firstItem="MDI-xh-2GZ" firstAttribute="top" secondItem="Z2f-AG-boC" secondAttribute="top" id="JaY-QZ-S9J"/>
-                                                                            <constraint firstItem="EXY-2L-jx1" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" multiplier="1.6" id="Trq-Vz-ByK"/>
-                                                                            <constraint firstItem="EXY-2L-jx1" firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="width" id="Uvi-iy-Bb0"/>
-                                                                            <constraint firstItem="MDI-xh-2GZ" firstAttribute="width" secondItem="Z2f-AG-boC" secondAttribute="width" multiplier="0.25" id="X23-sw-UCD"/>
-                                                                            <constraint firstItem="CVX-Gk-Lo6" firstAttribute="centerY" secondItem="MDI-xh-2GZ" secondAttribute="centerY" id="XSN-W4-bpD"/>
-                                                                            <constraint firstItem="CVX-Gk-Lo6" firstAttribute="width" secondItem="CVX-Gk-Lo6" secondAttribute="height" multiplier="23:15" id="cR1-k6-zOX"/>
-                                                                            <constraint firstItem="EXY-2L-jx1" firstAttribute="centerY" secondItem="MDI-xh-2GZ" secondAttribute="centerY" id="gTY-nC-hAf"/>
-                                                                            <constraint firstItem="CVX-Gk-Lo6" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" multiplier="0.4" id="kqm-6p-lYn"/>
-                                                                            <constraint firstItem="CVX-Gk-Lo6" firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="width" id="y00-Mw-5kl"/>
-                                                                            <constraint firstAttribute="height" secondItem="MDI-xh-2GZ" secondAttribute="height" id="yxe-ie-BWV"/>
-                                                                        </constraints>
-                                                                    </view>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="2" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="kSA-3Y-unP"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="126" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJA-af-uVF">
+                                                                        <rect key="frame" x="173" y="0.0" width="63.5" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="3" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="iak-IU-nyG"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="icj-br-cZm" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="4ln-o2-TZE"/>
-                                                                    <constraint firstItem="Tte-SX-QgG" firstAttribute="top" secondItem="dWm-9S-U7A" secondAttribute="bottom" constant="30" id="5Ms-n7-xus"/>
-                                                                    <constraint firstItem="Z2f-AG-boC" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="5oH-yE-lgJ"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="Z2f-AG-boC" secondAttribute="trailing" id="78N-33-irR"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="PEn-sm-lkg" secondAttribute="trailing" id="ARC-xl-2l0"/>
-                                                                    <constraint firstItem="Tte-SX-QgG" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="CTv-Tq-yov"/>
-                                                                    <constraint firstItem="PEn-sm-lkg" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="E68-28-nNL"/>
-                                                                    <constraint firstItem="dWm-9S-U7A" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="Egc-Tw-Z8Q"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="icj-br-cZm" secondAttribute="trailing" id="EmS-Oo-EIu"/>
-                                                                    <constraint firstItem="PEn-sm-lkg" firstAttribute="top" secondItem="sKi-Ob-bjK" secondAttribute="top" constant="30" id="HI6-sI-in6"/>
-                                                                    <constraint firstItem="M8z-Ab-2hV" firstAttribute="top" secondItem="PEn-sm-lkg" secondAttribute="bottom" constant="30" id="IgU-b7-EJu"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="M8z-Ab-2hV" secondAttribute="trailing" id="JCd-bz-hnn"/>
-                                                                    <constraint firstItem="QBg-19-mvV" firstAttribute="top" secondItem="icj-br-cZm" secondAttribute="bottom" constant="30" id="OHs-5i-qcm"/>
-                                                                    <constraint firstItem="PEn-sm-lkg" firstAttribute="centerX" secondItem="sKi-Ob-bjK" secondAttribute="centerX" id="RKv-L1-NOy"/>
-                                                                    <constraint firstAttribute="height" constant="700" id="S0t-x4-jNR"/>
-                                                                    <constraint firstItem="dWm-9S-U7A" firstAttribute="top" secondItem="QBg-19-mvV" secondAttribute="bottom" constant="30" id="fLM-qf-cNn"/>
-                                                                    <constraint firstItem="Z2f-AG-boC" firstAttribute="top" secondItem="Tte-SX-QgG" secondAttribute="bottom" constant="30" id="gVc-r7-fwR"/>
-                                                                    <constraint firstItem="icj-br-cZm" firstAttribute="top" secondItem="M8z-Ab-2hV" secondAttribute="bottom" constant="30" id="gfO-NS-a7X"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="QBg-19-mvV" secondAttribute="trailing" id="lu1-mo-e01"/>
-                                                                    <constraint firstItem="M8z-Ab-2hV" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="pev-Iq-Z9i"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="dWm-9S-U7A" secondAttribute="trailing" id="t8F-OZ-ibX"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="Tte-SX-QgG" secondAttribute="trailing" id="x9c-18-EZz"/>
-                                                                    <constraint firstItem="QBg-19-mvV" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="xBC-aO-AGE"/>
+                                                                    <constraint firstItem="uoj-3j-ytM" firstAttribute="width" secondItem="PEn-sm-lkg" secondAttribute="width" multiplier="0.25" id="3YQ-NY-CFJ"/>
+                                                                    <constraint firstAttribute="height" secondItem="uoj-3j-ytM" secondAttribute="height" id="4vo-Qa-yvn"/>
+                                                                    <constraint firstItem="4tO-0u-6UN" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" multiplier="0.4" id="KoC-bD-FA2"/>
+                                                                    <constraint firstItem="uoj-3j-ytM" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" id="NxV-XJ-hF3"/>
+                                                                    <constraint firstItem="4tO-0u-6UN" firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="width" id="OfE-ii-H5z"/>
+                                                                    <constraint firstItem="4tO-0u-6UN" firstAttribute="centerY" secondItem="uoj-3j-ytM" secondAttribute="centerY" id="XM4-Ee-1BG"/>
+                                                                    <constraint firstItem="BJA-af-uVF" firstAttribute="width" secondItem="BJA-af-uVF" secondAttribute="height" multiplier="23:15" id="bx8-tZ-Xy9"/>
+                                                                    <constraint firstItem="uoj-3j-ytM" firstAttribute="top" secondItem="PEn-sm-lkg" secondAttribute="top" id="deK-ov-4wk"/>
+                                                                    <constraint firstItem="4tO-0u-6UN" firstAttribute="width" secondItem="4tO-0u-6UN" secondAttribute="height" multiplier="23:15" id="faP-V6-skJ"/>
+                                                                    <constraint firstItem="BJA-af-uVF" firstAttribute="centerY" secondItem="uoj-3j-ytM" secondAttribute="centerY" id="hHN-o4-rUs"/>
+                                                                    <constraint firstItem="BJA-af-uVF" firstAttribute="centerX" secondItem="PEn-sm-lkg" secondAttribute="centerX" multiplier="1.6" id="hh9-ka-hFL"/>
+                                                                    <constraint firstItem="BJA-af-uVF" firstAttribute="width" secondItem="uoj-3j-ytM" secondAttribute="width" id="sl6-YG-Qkt"/>
                                                                 </constraints>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                        <integer key="value" value="5"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8z-Ab-2hV">
+                                                                <rect key="frame" x="0.0" y="101.5" width="256" height="42"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7A0-2C-qJV">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="42"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="4" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="m6J-2P-T8x"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="119" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgP-rJ-Wol">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="height" multiplier="23:15" id="AKr-M4-fws"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="5" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="pwA-ho-zTz"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="127" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCv-zz-MG0">
+                                                                        <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="6" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="B3I-Jp-xby"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" secondItem="mgP-rJ-Wol" secondAttribute="height" id="0Rq-ze-A5L"/>
+                                                                    <constraint firstItem="7A0-2C-qJV" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" multiplier="0.4" id="Aoy-57-PA9"/>
+                                                                    <constraint firstItem="7A0-2C-qJV" firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="width" id="C95-DZ-Y8E"/>
+                                                                    <constraint firstItem="fCv-zz-MG0" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" multiplier="1.6" id="GOW-bL-xnR"/>
+                                                                    <constraint firstItem="7A0-2C-qJV" firstAttribute="width" secondItem="7A0-2C-qJV" secondAttribute="height" multiplier="23:15" id="GnS-xj-C9M"/>
+                                                                    <constraint firstItem="7A0-2C-qJV" firstAttribute="centerY" secondItem="mgP-rJ-Wol" secondAttribute="centerY" id="Ix2-OA-O18"/>
+                                                                    <constraint firstItem="fCv-zz-MG0" firstAttribute="width" secondItem="fCv-zz-MG0" secondAttribute="height" multiplier="23:15" id="UcN-y8-wQw"/>
+                                                                    <constraint firstItem="fCv-zz-MG0" firstAttribute="width" secondItem="mgP-rJ-Wol" secondAttribute="width" id="bnd-bj-iaG"/>
+                                                                    <constraint firstItem="mgP-rJ-Wol" firstAttribute="width" secondItem="M8z-Ab-2hV" secondAttribute="width" multiplier="0.25" id="f3t-Mo-uCa"/>
+                                                                    <constraint firstItem="fCv-zz-MG0" firstAttribute="centerY" secondItem="mgP-rJ-Wol" secondAttribute="centerY" id="m1q-ju-gKG"/>
+                                                                    <constraint firstItem="mgP-rJ-Wol" firstAttribute="centerX" secondItem="M8z-Ab-2hV" secondAttribute="centerX" id="pTV-Zn-gyL"/>
+                                                                    <constraint firstItem="mgP-rJ-Wol" firstAttribute="top" secondItem="M8z-Ab-2hV" secondAttribute="top" id="pVA-Sh-bfv"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icj-br-cZm">
+                                                                <rect key="frame" x="0.0" y="173.5" width="256" height="42"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aP4-5N-Mfx">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="42"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="7" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="KOG-vj-PvY"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mU-hp-dqU">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="height" multiplier="23:15" id="oMB-wH-Asv"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="8" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="7Oh-ef-JAi"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="128" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxR-dD-nTk">
+                                                                        <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="9" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="GjT-Bc-0Wj"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="rxR-dD-nTk" firstAttribute="width" secondItem="rxR-dD-nTk" secondAttribute="height" multiplier="23:15" id="1Bz-7J-0To"/>
+                                                                    <constraint firstItem="0mU-hp-dqU" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" id="22N-Ac-Nh6"/>
+                                                                    <constraint firstItem="rxR-dD-nTk" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" multiplier="1.6" id="6P7-w9-t2F"/>
+                                                                    <constraint firstAttribute="height" secondItem="0mU-hp-dqU" secondAttribute="height" id="8Qo-nt-pHa"/>
+                                                                    <constraint firstItem="0mU-hp-dqU" firstAttribute="width" secondItem="icj-br-cZm" secondAttribute="width" multiplier="0.25" id="CSu-IP-0ks"/>
+                                                                    <constraint firstItem="0mU-hp-dqU" firstAttribute="top" secondItem="icj-br-cZm" secondAttribute="top" id="Mi1-aC-08w"/>
+                                                                    <constraint firstItem="aP4-5N-Mfx" firstAttribute="width" secondItem="aP4-5N-Mfx" secondAttribute="height" multiplier="23:15" id="UCN-la-cm4"/>
+                                                                    <constraint firstItem="aP4-5N-Mfx" firstAttribute="centerX" secondItem="icj-br-cZm" secondAttribute="centerX" multiplier="0.4" id="YqG-Eb-xSH"/>
+                                                                    <constraint firstItem="aP4-5N-Mfx" firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="width" id="Zt6-Is-JjM"/>
+                                                                    <constraint firstItem="rxR-dD-nTk" firstAttribute="width" secondItem="0mU-hp-dqU" secondAttribute="width" id="aG9-rk-UXR"/>
+                                                                    <constraint firstItem="rxR-dD-nTk" firstAttribute="centerY" secondItem="0mU-hp-dqU" secondAttribute="centerY" id="ue8-vt-8Ba"/>
+                                                                    <constraint firstItem="aP4-5N-Mfx" firstAttribute="centerY" secondItem="0mU-hp-dqU" secondAttribute="centerY" id="x1J-pF-Hf4"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBg-19-mvV">
+                                                                <rect key="frame" x="0.0" y="245" width="256" height="41.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3v-aF-pU5">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="频道-" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="KRD-Mf-moc"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="120" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67o-kn-jZF">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="height" multiplier="23:15" id="jal-aH-Aq3"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="0" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="dMr-YO-EY9"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raD-pS-MbZ">
+                                                                        <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="音量-" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Ffj-c0-YdQ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="t3v-aF-pU5" firstAttribute="width" secondItem="t3v-aF-pU5" secondAttribute="height" multiplier="23:15" id="7BM-PA-y1r"/>
+                                                                    <constraint firstItem="raD-pS-MbZ" firstAttribute="width" secondItem="raD-pS-MbZ" secondAttribute="height" multiplier="23:15" id="8Pq-xR-p2q"/>
+                                                                    <constraint firstItem="t3v-aF-pU5" firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="width" id="Cd2-c4-HNZ"/>
+                                                                    <constraint firstItem="t3v-aF-pU5" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" multiplier="0.4" id="Wcc-HZ-VCw"/>
+                                                                    <constraint firstItem="67o-kn-jZF" firstAttribute="width" secondItem="QBg-19-mvV" secondAttribute="width" multiplier="0.25" id="YnV-UK-uur"/>
+                                                                    <constraint firstItem="raD-pS-MbZ" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" multiplier="1.6" id="Z7D-YW-Z73"/>
+                                                                    <constraint firstItem="raD-pS-MbZ" firstAttribute="centerY" secondItem="67o-kn-jZF" secondAttribute="centerY" id="akG-Ql-wnU"/>
+                                                                    <constraint firstItem="67o-kn-jZF" firstAttribute="centerX" secondItem="QBg-19-mvV" secondAttribute="centerX" id="hyR-zL-tei"/>
+                                                                    <constraint firstItem="t3v-aF-pU5" firstAttribute="centerY" secondItem="67o-kn-jZF" secondAttribute="centerY" id="kuJ-xs-9zy"/>
+                                                                    <constraint firstAttribute="height" secondItem="67o-kn-jZF" secondAttribute="height" id="oeX-75-tfE"/>
+                                                                    <constraint firstItem="raD-pS-MbZ" firstAttribute="width" secondItem="67o-kn-jZF" secondAttribute="width" id="p9f-x1-qxb"/>
+                                                                    <constraint firstItem="67o-kn-jZF" firstAttribute="top" secondItem="QBg-19-mvV" secondAttribute="top" id="tys-1g-k5j"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWm-9S-U7A">
+                                                                <rect key="frame" x="0.0" y="316.5" width="256" height="41.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lt-f1-B3f">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="返回" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Svi-MU-wBV"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-Om-170">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="41.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="height" multiplier="23:15" id="6hX-Mu-Jlr"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="退出" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="2j0-Ji-wsN"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsj-Tz-X3b">
+                                                                        <rect key="frame" x="173" y="0.5" width="63.5" height="41"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="确认" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="XeC-C1-OSM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Wsj-Tz-X3b" firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="width" id="2fb-fy-eRQ"/>
+                                                                    <constraint firstItem="Wsj-Tz-X3b" firstAttribute="width" secondItem="Wsj-Tz-X3b" secondAttribute="height" multiplier="23:15" id="4an-LP-bjH"/>
+                                                                    <constraint firstItem="XiW-Om-170" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" id="Ruh-xo-frt"/>
+                                                                    <constraint firstItem="Wsj-Tz-X3b" firstAttribute="centerY" secondItem="XiW-Om-170" secondAttribute="centerY" id="Zpj-N6-6Ko"/>
+                                                                    <constraint firstItem="4lt-f1-B3f" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" multiplier="0.4" id="ZxN-s0-BQO"/>
+                                                                    <constraint firstItem="XiW-Om-170" firstAttribute="width" secondItem="dWm-9S-U7A" secondAttribute="width" multiplier="0.25" id="bhg-ja-Sku"/>
+                                                                    <constraint firstItem="4lt-f1-B3f" firstAttribute="width" secondItem="XiW-Om-170" secondAttribute="width" id="gTd-ZZ-CEd"/>
+                                                                    <constraint firstItem="XiW-Om-170" firstAttribute="top" secondItem="dWm-9S-U7A" secondAttribute="top" id="jS5-ae-jYZ"/>
+                                                                    <constraint firstItem="4lt-f1-B3f" firstAttribute="width" secondItem="4lt-f1-B3f" secondAttribute="height" multiplier="23:15" id="o5u-41-tx7"/>
+                                                                    <constraint firstItem="Wsj-Tz-X3b" firstAttribute="centerX" secondItem="dWm-9S-U7A" secondAttribute="centerX" multiplier="1.6" id="p2Z-zc-4CN"/>
+                                                                    <constraint firstAttribute="height" secondItem="XiW-Om-170" secondAttribute="height" id="vkh-Ki-SPQ"/>
+                                                                    <constraint firstItem="4lt-f1-B3f" firstAttribute="centerY" secondItem="XiW-Om-170" secondAttribute="centerY" id="xeq-n3-omj"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-SX-QgG">
+                                                                <rect key="frame" x="0.0" y="388" width="256" height="42"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPi-1F-mnk">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="42"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="上" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="tXa-KH-9VZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="117" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxN-Sr-pMs">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="height" multiplier="23:15" id="FaL-Wt-HeC"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="下" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="TA7-r4-vxJ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="116" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udd-HO-jgL">
+                                                                        <rect key="frame" x="173" y="0.5" width="63.5" height="41.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="左" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="rRJ-Tt-zez"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" secondItem="PxN-Sr-pMs" secondAttribute="height" id="1cY-15-YNL"/>
+                                                                    <constraint firstItem="udd-HO-jgL" firstAttribute="centerY" secondItem="PxN-Sr-pMs" secondAttribute="centerY" id="37p-jf-JCN"/>
+                                                                    <constraint firstItem="rPi-1F-mnk" firstAttribute="width" secondItem="rPi-1F-mnk" secondAttribute="height" multiplier="23:15" id="7Bm-aX-49E"/>
+                                                                    <constraint firstItem="rPi-1F-mnk" firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="width" id="9BU-eP-wZr"/>
+                                                                    <constraint firstItem="udd-HO-jgL" firstAttribute="width" secondItem="udd-HO-jgL" secondAttribute="height" multiplier="23:15" id="I1D-en-sQp"/>
+                                                                    <constraint firstItem="PxN-Sr-pMs" firstAttribute="top" secondItem="Tte-SX-QgG" secondAttribute="top" id="RCW-1u-vEi"/>
+                                                                    <constraint firstItem="PxN-Sr-pMs" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" id="b0r-b6-YZb"/>
+                                                                    <constraint firstItem="rPi-1F-mnk" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" multiplier="0.4" id="dTw-Zp-Vba"/>
+                                                                    <constraint firstItem="rPi-1F-mnk" firstAttribute="centerY" secondItem="PxN-Sr-pMs" secondAttribute="centerY" id="hAU-wO-g4C"/>
+                                                                    <constraint firstItem="PxN-Sr-pMs" firstAttribute="width" secondItem="Tte-SX-QgG" secondAttribute="width" multiplier="0.25" id="qPm-h6-8CI"/>
+                                                                    <constraint firstItem="udd-HO-jgL" firstAttribute="centerX" secondItem="Tte-SX-QgG" secondAttribute="centerX" multiplier="1.6" id="wIS-2e-ToF"/>
+                                                                    <constraint firstItem="udd-HO-jgL" firstAttribute="width" secondItem="PxN-Sr-pMs" secondAttribute="width" id="xiP-pa-MUQ"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-AG-boC">
+                                                                <rect key="frame" x="0.0" y="460" width="256" height="42"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="132" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-Gk-Lo6">
+                                                                        <rect key="frame" x="19" y="0.0" width="64" height="42"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="右" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="Gst-Gf-dvb"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-xh-2GZ">
+                                                                        <rect key="frame" x="95.5" y="0.0" width="64" height="42"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="height" multiplier="23:15" id="5dR-eC-4NB"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="菜单" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="zDC-0y-QTf"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="115" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXY-2L-jx1">
+                                                                        <rect key="frame" x="173" y="0.0" width="63.5" height="42"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                        <state key="normal" title="静音" backgroundImage="sat_btn_shuzjian_bg">
+                                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="powerTest:" destination="mMY-p5-kaV" eventType="touchUpInside" id="1MS-qQ-T2j"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="MDI-xh-2GZ" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" id="4c3-XF-se5"/>
+                                                                    <constraint firstItem="EXY-2L-jx1" firstAttribute="width" secondItem="EXY-2L-jx1" secondAttribute="height" multiplier="23:15" id="IUH-PO-lzD"/>
+                                                                    <constraint firstItem="MDI-xh-2GZ" firstAttribute="top" secondItem="Z2f-AG-boC" secondAttribute="top" id="JaY-QZ-S9J"/>
+                                                                    <constraint firstItem="EXY-2L-jx1" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" multiplier="1.6" id="Trq-Vz-ByK"/>
+                                                                    <constraint firstItem="EXY-2L-jx1" firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="width" id="Uvi-iy-Bb0"/>
+                                                                    <constraint firstItem="MDI-xh-2GZ" firstAttribute="width" secondItem="Z2f-AG-boC" secondAttribute="width" multiplier="0.25" id="X23-sw-UCD"/>
+                                                                    <constraint firstItem="CVX-Gk-Lo6" firstAttribute="centerY" secondItem="MDI-xh-2GZ" secondAttribute="centerY" id="XSN-W4-bpD"/>
+                                                                    <constraint firstItem="CVX-Gk-Lo6" firstAttribute="width" secondItem="CVX-Gk-Lo6" secondAttribute="height" multiplier="23:15" id="cR1-k6-zOX"/>
+                                                                    <constraint firstItem="EXY-2L-jx1" firstAttribute="centerY" secondItem="MDI-xh-2GZ" secondAttribute="centerY" id="gTY-nC-hAf"/>
+                                                                    <constraint firstItem="CVX-Gk-Lo6" firstAttribute="centerX" secondItem="Z2f-AG-boC" secondAttribute="centerX" multiplier="0.4" id="kqm-6p-lYn"/>
+                                                                    <constraint firstItem="CVX-Gk-Lo6" firstAttribute="width" secondItem="MDI-xh-2GZ" secondAttribute="width" id="y00-Mw-5kl"/>
+                                                                    <constraint firstAttribute="height" secondItem="MDI-xh-2GZ" secondAttribute="height" id="yxe-ie-BWV"/>
+                                                                </constraints>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="sKi-Ob-bjK" secondAttribute="trailing" id="4cQ-tg-ups"/>
-                                                            <constraint firstAttribute="bottom" secondItem="sKi-Ob-bjK" secondAttribute="bottom" id="Ebb-Eu-48c"/>
-                                                            <constraint firstItem="sKi-Ob-bjK" firstAttribute="top" secondItem="N19-6g-nH1" secondAttribute="top" id="GwJ-20-ZnY"/>
-                                                            <constraint firstItem="sKi-Ob-bjK" firstAttribute="centerX" secondItem="N19-6g-nH1" secondAttribute="centerX" id="PWL-vt-bak"/>
-                                                            <constraint firstItem="sKi-Ob-bjK" firstAttribute="leading" secondItem="N19-6g-nH1" secondAttribute="leading" id="Pi7-u5-9Uy"/>
+                                                            <constraint firstItem="icj-br-cZm" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="4ln-o2-TZE"/>
+                                                            <constraint firstItem="Tte-SX-QgG" firstAttribute="top" secondItem="dWm-9S-U7A" secondAttribute="bottom" constant="30" id="5Ms-n7-xus"/>
+                                                            <constraint firstItem="Z2f-AG-boC" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="5oH-yE-lgJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Z2f-AG-boC" secondAttribute="trailing" id="78N-33-irR"/>
+                                                            <constraint firstAttribute="trailing" secondItem="PEn-sm-lkg" secondAttribute="trailing" id="ARC-xl-2l0"/>
+                                                            <constraint firstItem="Tte-SX-QgG" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="CTv-Tq-yov"/>
+                                                            <constraint firstItem="PEn-sm-lkg" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="E68-28-nNL"/>
+                                                            <constraint firstItem="dWm-9S-U7A" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="Egc-Tw-Z8Q"/>
+                                                            <constraint firstAttribute="trailing" secondItem="icj-br-cZm" secondAttribute="trailing" id="EmS-Oo-EIu"/>
+                                                            <constraint firstItem="PEn-sm-lkg" firstAttribute="top" secondItem="sKi-Ob-bjK" secondAttribute="top" constant="30" id="HI6-sI-in6"/>
+                                                            <constraint firstItem="M8z-Ab-2hV" firstAttribute="top" secondItem="PEn-sm-lkg" secondAttribute="bottom" constant="30" id="IgU-b7-EJu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="M8z-Ab-2hV" secondAttribute="trailing" id="JCd-bz-hnn"/>
+                                                            <constraint firstItem="QBg-19-mvV" firstAttribute="top" secondItem="icj-br-cZm" secondAttribute="bottom" constant="30" id="OHs-5i-qcm"/>
+                                                            <constraint firstItem="PEn-sm-lkg" firstAttribute="centerX" secondItem="sKi-Ob-bjK" secondAttribute="centerX" id="RKv-L1-NOy"/>
+                                                            <constraint firstAttribute="height" constant="600" id="S0t-x4-jNR"/>
+                                                            <constraint firstItem="dWm-9S-U7A" firstAttribute="top" secondItem="QBg-19-mvV" secondAttribute="bottom" constant="30" id="fLM-qf-cNn"/>
+                                                            <constraint firstItem="Z2f-AG-boC" firstAttribute="top" secondItem="Tte-SX-QgG" secondAttribute="bottom" constant="30" id="gVc-r7-fwR"/>
+                                                            <constraint firstItem="icj-br-cZm" firstAttribute="top" secondItem="M8z-Ab-2hV" secondAttribute="bottom" constant="30" id="gfO-NS-a7X"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QBg-19-mvV" secondAttribute="trailing" id="lu1-mo-e01"/>
+                                                            <constraint firstItem="M8z-Ab-2hV" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="pev-Iq-Z9i"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dWm-9S-U7A" secondAttribute="trailing" id="t8F-OZ-ibX"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Tte-SX-QgG" secondAttribute="trailing" id="x9c-18-EZz"/>
+                                                            <constraint firstItem="QBg-19-mvV" firstAttribute="leading" secondItem="sKi-Ob-bjK" secondAttribute="leading" id="xBC-aO-AGE"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                <integer key="value" value="10"/>
+                                                                <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                    </scrollView>
+                                                    </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="N19-6g-nH1" secondAttribute="bottom" id="R8K-t6-nK4"/>
-                                                    <constraint firstItem="N19-6g-nH1" firstAttribute="top" secondItem="rFo-yv-H7N" secondAttribute="top" id="XYZ-pi-12L"/>
-                                                    <constraint firstAttribute="trailing" secondItem="N19-6g-nH1" secondAttribute="trailing" id="XkH-c9-sUp"/>
-                                                    <constraint firstItem="N19-6g-nH1" firstAttribute="leading" secondItem="rFo-yv-H7N" secondAttribute="leading" id="nWg-NI-Xv9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sKi-Ob-bjK" secondAttribute="trailing" id="4cQ-tg-ups"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sKi-Ob-bjK" secondAttribute="bottom" id="Ebb-Eu-48c"/>
+                                                    <constraint firstItem="sKi-Ob-bjK" firstAttribute="top" secondItem="N19-6g-nH1" secondAttribute="top" id="GwJ-20-ZnY"/>
+                                                    <constraint firstItem="sKi-Ob-bjK" firstAttribute="centerX" secondItem="N19-6g-nH1" secondAttribute="centerX" id="PWL-vt-bak"/>
+                                                    <constraint firstItem="sKi-Ob-bjK" firstAttribute="leading" secondItem="N19-6g-nH1" secondAttribute="leading" id="Pi7-u5-9Uy"/>
                                                 </constraints>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HF-Rb-fxw">
-                                                <rect key="frame" x="144" y="511" width="32" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="2HF-Rb-fxw" secondAttribute="height" id="txN-VY-0Vk"/>
-                                                </constraints>
-                                                <state key="normal" backgroundImage="test_cancle"/>
-                                                <connections>
-                                                    <action selector="closeMore:" destination="mMY-p5-kaV" eventType="touchUpInside" id="JTW-zn-qeo"/>
-                                                </connections>
-                                            </button>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </scrollView>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="rFo-yv-H7N" firstAttribute="width" secondItem="gfG-ac-EQp" secondAttribute="width" multiplier="0.8" id="C8N-Sm-YN8"/>
-                                            <constraint firstAttribute="bottom" secondItem="2HF-Rb-fxw" secondAttribute="bottom" constant="25" id="DZN-Ep-QRx"/>
-                                            <constraint firstItem="2HF-Rb-fxw" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="IQ9-KM-b7N"/>
-                                            <constraint firstItem="rFo-yv-H7N" firstAttribute="bottom" secondItem="gfG-ac-EQp" secondAttribute="top" id="SzY-59-iCw"/>
-                                            <constraint firstItem="rFo-yv-H7N" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="d57-55-Pd1"/>
-                                            <constraint firstItem="rFo-yv-H7N" firstAttribute="height" secondItem="gfG-ac-EQp" secondAttribute="height" multiplier="0.6" id="eCc-Le-iAu"/>
+                                            <constraint firstAttribute="bottom" secondItem="N19-6g-nH1" secondAttribute="bottom" id="R8K-t6-nK4"/>
+                                            <constraint firstItem="N19-6g-nH1" firstAttribute="top" secondItem="rFo-yv-H7N" secondAttribute="top" id="XYZ-pi-12L"/>
+                                            <constraint firstAttribute="trailing" secondItem="N19-6g-nH1" secondAttribute="trailing" id="XkH-c9-sUp"/>
+                                            <constraint firstItem="N19-6g-nH1" firstAttribute="leading" secondItem="rFo-yv-H7N" secondAttribute="leading" id="nWg-NI-Xv9"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HF-Rb-fxw">
+                                        <rect key="frame" x="144" y="511" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2HF-Rb-fxw" secondAttribute="height" id="txN-VY-0Vk"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="test_cancle"/>
+                                        <connections>
+                                            <action selector="closeMore:" destination="mMY-p5-kaV" eventType="touchUpInside" id="JTW-zn-qeo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="gfG-ac-EQp" secondAttribute="trailing" id="UCs-U9-kHm"/>
-                                    <constraint firstItem="gfG-ac-EQp" firstAttribute="leading" secondItem="Pyj-ON-Kfs" secondAttribute="leading" id="Wxw-Zd-nRF"/>
-                                    <constraint firstItem="gfG-ac-EQp" firstAttribute="top" secondItem="Pyj-ON-Kfs" secondAttribute="top" id="aUF-2G-7fy"/>
-                                    <constraint firstAttribute="bottom" secondItem="gfG-ac-EQp" secondAttribute="bottom" id="tuE-af-NwF"/>
+                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="width" secondItem="gfG-ac-EQp" secondAttribute="width" multiplier="0.8" id="C8N-Sm-YN8"/>
+                                    <constraint firstAttribute="bottom" secondItem="2HF-Rb-fxw" secondAttribute="bottom" constant="25" id="DZN-Ep-QRx"/>
+                                    <constraint firstItem="2HF-Rb-fxw" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="IQ9-KM-b7N"/>
+                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="bottom" secondItem="gfG-ac-EQp" secondAttribute="top" id="SzY-59-iCw"/>
+                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="d57-55-Pd1"/>
+                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="height" secondItem="gfG-ac-EQp" secondAttribute="height" multiplier="0.6" id="eCc-Le-iAu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -2343,6 +2335,7 @@
                         <constraints>
                             <constraint firstItem="lAs-EF-4Pf" firstAttribute="centerY" secondItem="O2l-jA-e0h" secondAttribute="centerY" id="0sc-W7-gRd"/>
                             <constraint firstAttribute="bottom" secondItem="Pyj-ON-Kfs" secondAttribute="bottom" id="0yh-8Z-GeY"/>
+                            <constraint firstItem="gfG-ac-EQp" firstAttribute="top" secondItem="LvY-Sb-1JB" secondAttribute="top" id="2AC-eD-lNd"/>
                             <constraint firstItem="CEM-dS-Tgh" firstAttribute="top" secondItem="q3y-zP-pOz" secondAttribute="bottom" constant="5" id="2h7-fE-FVJ"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="3F2-DS-kcy"/>
                             <constraint firstItem="Fh0-0c-rlA" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="1.6266" id="7o3-Lo-REP"/>
@@ -2351,11 +2344,13 @@
                             <constraint firstItem="d90-sF-JJf" firstAttribute="centerX" secondItem="H1x-Gm-gFv" secondAttribute="centerX" id="DFA-0m-zjh"/>
                             <constraint firstItem="d90-sF-JJf" firstAttribute="top" secondItem="H1x-Gm-gFv" secondAttribute="bottom" constant="5" id="Du8-LT-1SI"/>
                             <constraint firstItem="I4K-Vd-y6M" firstAttribute="centerY" secondItem="O2l-jA-e0h" secondAttribute="centerY" id="E9Y-xA-8k0"/>
+                            <constraint firstItem="gfG-ac-EQp" firstAttribute="leading" secondItem="LvY-Sb-1JB" secondAttribute="leading" id="FCa-iC-WPs"/>
                             <constraint firstItem="I4K-Vd-y6M" firstAttribute="height" secondItem="lAs-EF-4Pf" secondAttribute="height" id="GLl-ht-Ntz"/>
                             <constraint firstItem="ZGl-xd-iTi" firstAttribute="leading" secondItem="y5R-hQ-Aao" secondAttribute="trailing" constant="10" id="HuC-yd-L6C"/>
                             <constraint firstItem="rXy-If-NB1" firstAttribute="top" secondItem="3D2-m0-DW4" secondAttribute="bottom" multiplier="1.15" id="KOu-t7-KGp"/>
                             <constraint firstAttribute="trailing" secondItem="Pyj-ON-Kfs" secondAttribute="trailing" id="Kl5-Yj-aal"/>
                             <constraint firstItem="H1x-Gm-gFv" firstAttribute="top" secondItem="q3y-zP-pOz" secondAttribute="top" id="LhS-eY-hTK"/>
+                            <constraint firstAttribute="trailing" secondItem="gfG-ac-EQp" secondAttribute="trailing" id="Lil-qp-maF"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="top" secondItem="rXy-If-NB1" secondAttribute="bottom" constant="10" id="M9E-k5-Iiy"/>
                             <constraint firstItem="lAs-EF-4Pf" firstAttribute="height" secondItem="O2l-jA-e0h" secondAttribute="height" multiplier="0.5" id="QKA-Pt-9fh"/>
                             <constraint firstItem="yww-lg-kd4" firstAttribute="top" secondItem="pfV-TC-ZS7" secondAttribute="bottom" constant="5" id="Qqy-ml-sIl"/>
@@ -2381,6 +2376,7 @@
                             <constraint firstItem="I4K-Vd-y6M" firstAttribute="width" secondItem="I4K-Vd-y6M" secondAttribute="height" multiplier="126:189" id="mG8-mI-pQZ"/>
                             <constraint firstItem="FUN-8w-iVU" firstAttribute="top" secondItem="Fh0-0c-rlA" secondAttribute="bottom" constant="5" id="nAA-E7-tft"/>
                             <constraint firstItem="lAs-EF-4Pf" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" multiplier="1.71" id="oNZ-De-2ty"/>
+                            <constraint firstItem="yww-lg-kd4" firstAttribute="top" secondItem="gfG-ac-EQp" secondAttribute="bottom" id="otf-X1-Smm"/>
                             <constraint firstItem="O2l-jA-e0h" firstAttribute="width" secondItem="LvY-Sb-1JB" secondAttribute="width" multiplier="0.15" id="rOR-Eo-a1p"/>
                             <constraint firstItem="ZGl-xd-iTi" firstAttribute="centerY" secondItem="y5R-hQ-Aao" secondAttribute="centerY" id="sMe-yh-hVZ"/>
                             <constraint firstItem="3D2-m0-DW4" firstAttribute="centerX" secondItem="LvY-Sb-1JB" secondAttribute="centerX" id="uzA-48-Ay4"/>
@@ -2419,7 +2415,8 @@
                         <outlet property="moreView" destination="Pyj-ON-Kfs" id="6EN-ID-SW8"/>
                         <outlet property="nextBtn" destination="lAs-EF-4Pf" id="h0m-Ln-4Cj"/>
                         <outlet property="previousBtn" destination="I4K-Vd-y6M" id="Nxg-1o-Pf9"/>
-                        <outlet property="testPad" destination="rFo-yv-H7N" id="vfY-XJ-bru"/>
+                        <outlet property="testBg" destination="gfG-ac-EQp" id="PwZ-EX-qaf"/>
+                        <outlet property="testPad" destination="rFo-yv-H7N" id="IAg-uE-9yN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZr-jn-xpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3889,7 +3886,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="320" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SL0-Kg-ljq" id="fzC-9S-USd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyA-ro-qjQ">
@@ -4083,6 +4080,7 @@
                         <outlet property="effectView" destination="rpk-DR-pQg" id="EgO-4u-Z4a"/>
                         <outlet property="favoriteList" destination="t9n-gp-7Jb" id="ftf-h2-lYv"/>
                         <outlet property="funtionView" destination="QIY-Nx-Rys" id="cmQ-S6-qJL"/>
+                        <outlet property="loadingVoice" destination="WWe-uW-jf0" id="1YM-fg-Qez"/>
                         <outlet property="mainScroll" destination="EqD-sI-mi7" id="rcu-XF-63H"/>
                         <outlet property="numView" destination="Udq-XU-YzK" id="xlk-Kv-LhJ"/>
                         <outlet property="resultWord" destination="ewn-kr-vNe" id="rCY-LL-zJ5"/>
@@ -4126,13 +4124,6 @@
                                     <action selector="startVoice:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="E0n-Rb-M63"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKd-ej-NVB">
-                                <rect key="frame" x="151" y="635" width="112" height="53"/>
-                                <state key="normal" title="完成" backgroundImage="test_btn_shi"/>
-                                <connections>
-                                    <action selector="removeEffect:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="PCh-55-lbR"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在识别..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zg-uf-x7d">
                                 <rect key="frame" x="156" y="100" width="103" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -4145,17 +4136,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-uW-jf0">
+                                <rect key="frame" x="189" y="598" width="37" height="37"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ewn-kr-vNe" firstAttribute="centerY" secondItem="K6p-BM-GhR" secondAttribute="centerY" multiplier="0.8" id="1uC-Tp-NA6"/>
                             <constraint firstItem="WL0-mg-rgf" firstAttribute="centerY" secondItem="K6p-BM-GhR" secondAttribute="centerY" multiplier="1.4" id="3S7-36-xke"/>
-                            <constraint firstItem="hKd-ej-NVB" firstAttribute="centerX" secondItem="WL0-mg-rgf" secondAttribute="centerX" id="Crx-hu-k6B"/>
                             <constraint firstItem="0zg-uf-x7d" firstAttribute="centerX" secondItem="K6p-BM-GhR" secondAttribute="centerX" id="G7X-3w-hzl"/>
                             <constraint firstItem="ewn-kr-vNe" firstAttribute="centerX" secondItem="K6p-BM-GhR" secondAttribute="centerX" id="QCz-yx-Odq"/>
+                            <constraint firstItem="WWe-uW-jf0" firstAttribute="top" secondItem="WL0-mg-rgf" secondAttribute="bottom" constant="20" id="ShA-Kg-tjv"/>
                             <constraint firstItem="WL0-mg-rgf" firstAttribute="centerX" secondItem="K6p-BM-GhR" secondAttribute="centerX" id="czQ-vZ-x0C"/>
+                            <constraint firstItem="WWe-uW-jf0" firstAttribute="centerX" secondItem="WL0-mg-rgf" secondAttribute="centerX" id="d06-dy-yFh"/>
                             <constraint firstItem="0zg-uf-x7d" firstAttribute="top" secondItem="K6p-BM-GhR" secondAttribute="top" constant="100" id="fJ7-YM-HqC"/>
                             <constraint firstItem="Q8M-iE-pfh" firstAttribute="centerY" secondItem="WL0-mg-rgf" secondAttribute="centerY" id="h6h-tL-4x6"/>
-                            <constraint firstItem="hKd-ej-NVB" firstAttribute="top" secondItem="WL0-mg-rgf" secondAttribute="bottom" multiplier="1.1" id="ic8-09-24O"/>
                             <constraint firstItem="Q8M-iE-pfh" firstAttribute="centerX" secondItem="WL0-mg-rgf" secondAttribute="centerX" id="r5J-Zq-rD7"/>
                         </constraints>
                     </view>
