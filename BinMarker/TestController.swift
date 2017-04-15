@@ -148,7 +148,7 @@ class TestController: UIViewController{
             return
         }))
         self.present(alert, animated: true, completion: {
-            print("ddd")
+            
         })
         
         
