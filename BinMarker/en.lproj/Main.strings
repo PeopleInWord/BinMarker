@@ -159,7 +159,7 @@
 "KgK-p5-tTk.normalTitle" = "2";
 
 /* Class = "UITabBarItem"; title = "切换模式"; ObjectID = "L62-hE-Ogc"; */
-"L62-hE-Ogc.title" = "switch";
+"L62-hE-Ogc.title" = "Switch";
 
 /* Class = "UIButton"; normalTitle = "双画面"; ObjectID = "L7x-ZQ-wqP"; */
 "L7x-ZQ-wqP.normalTitle" = "PBP";

@@ -9,7 +9,7 @@
 import UIKit
 
 class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-    @IBOutlet weak var controlView: UIView!
+//    @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var funtionView: UIView!
     @IBOutlet weak var numView: UIView!
     @IBOutlet weak var tabBar: UITabBar!
@@ -25,10 +25,12 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var activeLab: UILabel!
     @IBOutlet weak var resultWord: UILabel!
     @IBOutlet weak var loadingVoice: UIActivityIndicatorView!
+    @IBOutlet weak var quitBtn: UIButton!
+    @IBOutlet weak var favoriteBg: UIVisualEffectView!
+
+    //137 109 114 121
     
-//    @IBOutlet weak var voiceCompleteBtn: UIButton!
     var isCommon = true
-    var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
@@ -41,8 +43,12 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     //MARK:方法
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.selectedItem=self.tabBar.items?[lastTabberItemIndex]
-        scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
+        self.tabBar.selectedItem=self.tabBar.items?[1]
+        DispatchQueue.main.async {
+            self.mainScroll.setContentOffset(CGPoint.init(x: self.view.frame.width, y: 0), animated: false)
+        }
+        
+        scrollViewHeight.constant=UIScreen.main.bounds.width*1.4
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
 
@@ -50,21 +56,14 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             // Do any additional setup after loading the view.
     }
     
-    func isLegal(_ sender:Notification) -> Void {
-        if (self.nameField.text?.characters.count)! > 0 && self.numberField.text?.characters.count != 0 && (self.numberField.text?.characters.count)! <= 3{
-            self.actionTemp.isEnabled=true
-        }
-        else
-        {
-            self.actionTemp.isEnabled=false
-        }
+    
+    func isLegal(_ sender:Notification) -> Void {//输入的频道是否合法
+        self.actionTemp.isEnabled=(self.nameField.text?.characters.count)! > 0 && self.numberField.text?.characters.count != 0 && (self.numberField.text?.characters.count)! <= 3
     }
     
     
     @IBAction func longPressOk_Voice(_ sender: UILongPressGestureRecognizer) {
-        print(sender.state.rawValue)
         if sender.state.rawValue == 1 {
-            
             let basic1=CABasicAnimation.init(keyPath: "opacity")
             basic1.fromValue=1.0
             basic1.toValue=0.0
@@ -112,10 +111,18 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             voiceFrame.layer.add(group2, forKey: "voiceFrame")
             
             self.beginVoiceManger()
-            
+            resultWord.text="请说话..."
+            quitBtn.isEnabled=false
+            quitBtn.isHidden=true
         }
         
     }
+    
+    @IBAction func quitVoice(_ sender: UIButton) {
+        self.removeEffect()
+    }
+    
+    
     @IBAction func startVoice(_ sender: UIButton) {
         let basic4=CABasicAnimation.init(keyPath: "transform.scale")
         basic4.fromValue=1.0
@@ -136,6 +143,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         voiceFrame.layer.add(group2, forKey: "voiceFrame")
         
         activeLab.text=NSLocalizedString("正在识别...", comment: "正在识别...")
+
         self.beginVoiceManger()
     }
     
@@ -143,6 +151,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     //MARK:语音回调
     func beginVoiceManger(){
         voiceBtn.isEnabled=false
+        quitBtn.isEnabled=false
         let voiceManger=VoiceManger.shareInstance
         voiceManger.delegate=self
         voiceManger.startHanler()
@@ -153,6 +162,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         voiceFrame.layer.removeAllAnimations()
         activeLab.text=NSLocalizedString("点击按钮开始识别...", comment: "点击按钮开始识别...")
         voiceBtn.isEnabled=true
+        quitBtn.isHidden=false
+        quitBtn.isEnabled=true
     }
     
     func voiceChange(_ volumeValue: Int32) {
@@ -162,6 +173,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     
     func onResults(_ results: String, _ resultArr: [String?]){
+        quitBtn.isHidden=true
         print(resultArr)
         resultWord.text=results
         loadingVoice.startAnimating()
@@ -213,46 +225,21 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.layer.add(basic1, forKey: "effectView")
         effectView.removeFromSuperview()
     }
+
     
-//    @IBAction func completeBtn(_ sender: UIButton) {
-//        self.removeEffect()
-//        let voiceManger=VoiceManger.shareInstance
-//        let returnWords=voiceManger.stopAndConfirm()
-//        if (returnWords.count)>0 {
-//            CommonFunction.startAnimation(NSLocalizedString("匹配中...", comment: "匹配中..."), nil)
-//            //进行语言操作
-//            print(returnWords)
-//
-//            let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
-//            var isContain=false
-//            for channel in channelTitle.keys {
-//                for word in returnWords {
-//                    if channel == word {
-//                        let channelNum:Int = channelTitle[channel]!
-//                        let code:String = self.deviceInfo["codeString"] as! String
-//                        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
-//                        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-//                            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
-//                        }, fail: { (failString) -> UInt in
-//                            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
-//                            return 0
-//                        })
-//                        isContain=true
-//                        break
-//
-//                    }
-//                }
-//            }
-//            if isContain == false {
-//                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
-//            }
-//            
-//        }
-//        
-//    }
+    @IBAction func showFavoriteChannel(_ sender: UIButton) {
+        let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+        alpha?.fromValue=0
+        alpha?.toValue=0.8
+        favoriteBg.pop_add(alpha, forKey: "alpha")
+    }
     
-    
-    
+    @IBAction func touchToHideFavoriteBG(_ sender: UIButton) {
+        let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+        alpha?.fromValue=0.8
+        alpha?.toValue=0.0
+        favoriteBg.pop_add(alpha, forKey: "alpha")
+    }
     //MARK:Tabber
     
     @IBAction func selectCommon(_ sender: UIButton) {
@@ -351,50 +338,19 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         if item==tabBar.items?[0] {
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: 0, y: 0)
-                self.controlView.isHidden=true
-                self.funtionView.isHidden=true
-                self.numView.isHidden=false
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
-                self.lastTabberItemIndex=0
+
             })
             
         }
         else if item==tabBar.items?[1]{
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
-                self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
-                self.controlView.isHidden=false
-                self.funtionView.isHidden=true
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
-            }, completion: { (_) in
-                self.lastTabberItemIndex=1
-                
-            })
-            
-        }
-        else if item==tabBar.items?[2]{
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
-                self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
-                self.controlView.isHidden=true
-                self.funtionView.isHidden=false
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
-            }, completion: { (_) in
-                self.lastTabberItemIndex=2
-            })
-            
-        }
-        else if item==tabBar.items?[3]{
-            
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width, y: 0)
             }, completion: { (_) in
                 
             })
         }
-        else if item==tabBar.items?[4]{
-            
+        else if item==tabBar.items?[2]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width*2, y: 0)
             }, completion: { (_) in
@@ -406,15 +362,15 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     //MARK:列表的代理
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>=self.view.frame.width && scrollView.contentOffset.x<self.view.frame.width*2{
-            self.tabBar.selectedItem=self.tabBar.items?[3]
+            self.tabBar.selectedItem=self.tabBar.items?[1]
         }
         else if scrollView.contentOffset.x>=self.view.frame.width*2
         {
-            self.tabBar.selectedItem=self.tabBar.items?[4]
+            self.tabBar.selectedItem=self.tabBar.items?[2]
         }
         else
         {
-            self.tabBar.selectedItem=self.tabBar.items?[lastTabberItemIndex]
+            self.tabBar.selectedItem=self.tabBar.items?[0]
         }
     }
 
