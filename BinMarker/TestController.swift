@@ -20,7 +20,7 @@ class TestController: UIViewController{
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var chooseDeviceBtn: UIButton!
-    @IBOutlet weak var currentInfoLab: UILabel!
+//    @IBOutlet weak var currentInfoLab: UILabel!
     @IBOutlet weak var currentCode: UILabel!
     
     
@@ -30,11 +30,13 @@ class TestController: UIViewController{
     
     @IBOutlet weak var testBg: UIView!
     
+    @IBOutlet weak var navTitle: UINavigationItem!
     var currentIndex : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentInfoLab.text = brandName
+        navTitle.title=brandName
+//        currentInfoLab.text = brandName
         self.setCurrentcode(0)
 
         // Do any additional setup after loading the view.

@@ -77,6 +77,7 @@
 		3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */; };
 		3CC2D6741E9E07EC006DF2BE /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */; };
 		3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */; };
+		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
@@ -171,6 +172,7 @@
 		3CC2D66E1E9E029F006DF2BE /* NSString+StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
 		3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstaticLib.a; sourceTree = "<group>"; };
 		3CC2D6761EA1BE32006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddDevice.storyboard; sourceTree = "<group>"; };
+		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				3C0D31751DDD9D9500D78924 /* AppDelegate.h */,
 				3C0D31761DDD9D9500D78924 /* AppDelegate.m */,
 				3C0D317B1DDD9D9500D78924 /* Main.storyboard */,
+				3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */,
 				3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */,
 				3C0D317E1DDD9D9500D78924 /* Assets.xcassets */,
 				3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */,
@@ -483,6 +486,7 @@
 				3C2A72761E790E2100137EAB /* 492.bin in Resources */,
 				3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */,
 				3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */,
+				3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C2A727C1E790E2100137EAB /* 2787.bin in Resources */,
 				3C2A727A1E790E2100137EAB /* 2132.bin in Resources */,
@@ -626,6 +630,14 @@
 				3CC2D6761EA1BE32006DF2BE /* Base */,
 			);
 			name = AddDevice.storyboard;
+			sourceTree = "<group>";
+		};
+		3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CC2D6791EA1D189006DF2BE /* Base */,
+			);
+			name = "TV&SAT.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
