@@ -315,9 +315,13 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
             }
         }
         db?.close()
-        return returnString;
+        return returnString
     }
     
+    
+    deinit {
+        self.searchingManger.view.superview?.removeFromSuperview()
+    }
     
     // MARK: - Navigation
 

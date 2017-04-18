@@ -9,8 +9,6 @@
 import UIKit
 
 class TestController: UIViewController{
-
-//    public var version : String!
     public var deviceTypeStr : String!
     public var deviceType:NSIndexPath!
     public var brandName : String!
@@ -20,14 +18,11 @@ class TestController: UIViewController{
     @IBOutlet weak var previousBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     @IBOutlet weak var chooseDeviceBtn: UIButton!
-//    @IBOutlet weak var currentInfoLab: UILabel!
     @IBOutlet weak var currentCode: UILabel!
-    
     
     @IBOutlet weak var moreView: UIView!
     
     @IBOutlet weak var testPad: UIView!
-    
     @IBOutlet weak var testBg: UIView!
     
     @IBOutlet weak var navTitle: UINavigationItem!
@@ -36,7 +31,6 @@ class TestController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navTitle.title=brandName
-//        currentInfoLab.text = brandName
         self.setCurrentcode(0)
 
         // Do any additional setup after loading the view.
@@ -55,7 +49,9 @@ class TestController: UIViewController{
 //        return Bundle.main.path(forResource: code, ofType: "bin") != nil
         return true
     }
-    @IBAction func moreBtn(_ sender: UIBarButtonItem) {
+    
+    
+    @IBAction func moreBtn(_ sender: Any) {
         self.testBg.isHidden=false
         let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
         fade?.fromValue=0
@@ -71,9 +67,10 @@ class TestController: UIViewController{
         let point=POPBasicAnimation.init(propertyNamed: kPOPLayerPosition)
         point?.toValue=NSValue.init(cgPoint: (self.view.window?.center)!)
         self.testPad.layer.pop_add(point, forKey: "point")
-        
-        
+
     }
+    
+
     @IBAction func closeMore(_ sender: UIButton) {
         self.testBg.isHidden = true
         let fade=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
@@ -176,7 +173,7 @@ class TestController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
