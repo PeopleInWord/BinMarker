@@ -10,7 +10,6 @@ import UIKit
 
 class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate{
     @IBOutlet weak var numView: UIView!
-    @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var functionView: UIView!
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
@@ -19,7 +18,6 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     @IBOutlet weak var costom: UIButton!
     @IBOutlet weak var favoriteList: UITableView!
     var isCommon = true
-    var lastTabberItemIndex = 1
     var resourseList=UserDefaults.standard.object(forKey: "BOXfavorite") as! Array<Dictionary<String, Any>>
     public var deviceInfo=Dictionary<String, Any>.init()
     var actionTemp=UIAlertAction.init()
@@ -28,8 +26,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.selectedItem=self.tabBar.items?[lastTabberItemIndex]
-        scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
+        self.tabBar.selectedItem=self.tabBar.items?[0]
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
         
@@ -37,7 +34,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         // Do any additional setup after loading the view.
     }
     
-    
+    //109    137
     func isLegal(_ sender:Notification) -> Void {
         if (self.nameField.text?.characters.count)! > 0 && self.numberField.text?.characters.count != 0 && (self.numberField.text?.characters.count)! <= 3{
             self.actionTemp.isEnabled=true
@@ -144,56 +141,26 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         if item==tabBar.items?[0] {
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
-                self.controlView.isHidden=true
-                self.functionView.isHidden=true
-                self.numView.isHidden=false
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
             }, completion: { (_) in
-                self.lastTabberItemIndex=0
             })
             
         }
         else if item==tabBar.items?[1]{
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
-                self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
-                self.controlView.isHidden=false
-                self.functionView.isHidden=true
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
+                self.mainScroll.contentOffset=CGPoint.init(x:self.view.frame.width, y: 0)
             }, completion: { (_) in
-                self.lastTabberItemIndex=1
             })
             
-        }
-        else if item==tabBar.items?[2]{
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
-                self.mainScroll.contentOffset=CGPoint.init(x:0, y: 0)
-                self.controlView.isHidden=true
-                self.functionView.isHidden=false
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
-            }, completion: { (_) in
-                self.lastTabberItemIndex=2
-            })
-            
-        }
-        else if item==tabBar.items?[3]{
-            
-            UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
-                self.mainScroll.contentOffset=CGPoint.init(x: self.view.frame.width, y: 0)
-            }, completion: { (_) in
-                
-            })
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>=self.view.frame.width {
-            self.tabBar.selectedItem=self.tabBar.items?[3]
+            self.tabBar.selectedItem=self.tabBar.items?[1]
         }
         else
         {
-            self.tabBar.selectedItem=self.tabBar.items?[lastTabberItemIndex]
+            self.tabBar.selectedItem=self.tabBar.items?[0]
         }
     }
     
@@ -263,11 +230,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        
-        if isCommon {
-            return false
-        }
-        return true
+        return !isCommon
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -283,13 +246,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.isCommon {
-            return 7
-        }
-        else
-        {
-            return self.resourseList.count
-        }
+        return isCommon ?7:self.resourseList.count
     }
     
     

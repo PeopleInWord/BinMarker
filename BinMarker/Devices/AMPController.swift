@@ -12,7 +12,6 @@ class AMPController: UIViewController,UITabBarDelegate {
 
     @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tabBar: UITabBar!
-    @IBOutlet weak var controlView: UIView!
     @IBOutlet weak var functionView: UIView!
     @IBOutlet weak var numView: UIView!
     
@@ -20,8 +19,6 @@ class AMPController: UIViewController,UITabBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.selectedItem=self.tabBar.items?[1]
-        scrollViewHeight.constant=UIScreen.main.bounds.height*0.41
         // Do any additional setup after loading the view.
     }
 
@@ -39,43 +36,6 @@ class AMPController: UIViewController,UITabBarDelegate {
             return 0
         })
         
-    }
-    
-    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem)
-    {
-        if item==tabBar.items?[0] {
-            UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
-                self.controlView.isHidden=true
-                self.functionView.isHidden=true
-                self.numView.isHidden=false
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.37
-            }, completion: { (_) in
-                
-            })
-            
-        }
-        else if item==tabBar.items?[1]{
-            UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
-                self.controlView.isHidden=false
-                self.functionView.isHidden=true
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.41
-            }, completion: { (_) in
-                
-            })
-            
-        }
-        else if item==tabBar.items?[2]{
-            UIView.animate(withDuration: 1, delay: 2, options: .curveEaseIn, animations: {
-                
-            }, completion: { (_) in
-                self.controlView.isHidden=true
-                self.functionView.isHidden=false
-                self.numView.isHidden=true
-                self.scrollViewHeight.constant=UIScreen.main.bounds.height*0.48
-            })
-            
-        }
     }
     
     
