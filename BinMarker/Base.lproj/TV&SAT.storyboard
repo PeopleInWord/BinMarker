@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1796,28 +1796,64 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-EY-odP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="10000" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-EY-odP" customClass="FavoriteSubScroll" customModule="BinMarker" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-Fm-eZy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="800" height="100"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="800" height="107"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NeY-cZ-Zgk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="96.5" height="107"/>
+                                                            <subviews>
+                                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="channel-6" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-JW-Z5R">
+                                                                    <rect key="frame" x="12.5" y="10" width="72" height="72.5"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="8i0-JW-Z5R" secondAttribute="height" multiplier="1:1" id="caA-a1-o71"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="湖南卫视" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnH-NW-ojR">
+                                                                    <rect key="frame" x="23.5" y="84.5" width="49.5" height="14.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="8i0-JW-Z5R" firstAttribute="width" secondItem="NeY-cZ-Zgk" secondAttribute="width" multiplier="0.75" id="EWr-IH-xVS"/>
+                                                                <constraint firstItem="dnH-NW-ojR" firstAttribute="top" secondItem="8i0-JW-Z5R" secondAttribute="bottom" constant="2" id="IYi-IM-YHg"/>
+                                                                <constraint firstItem="dnH-NW-ojR" firstAttribute="centerX" secondItem="NeY-cZ-Zgk" secondAttribute="centerX" id="KMC-QZ-i4z"/>
+                                                                <constraint firstAttribute="width" secondItem="NeY-cZ-Zgk" secondAttribute="height" multiplier="0.9" id="dR7-qz-XqL"/>
+                                                                <constraint firstItem="8i0-JW-Z5R" firstAttribute="centerX" secondItem="NeY-cZ-Zgk" secondAttribute="centerX" id="hZe-qe-MzA"/>
+                                                                <constraint firstItem="8i0-JW-Z5R" firstAttribute="top" secondItem="NeY-cZ-Zgk" secondAttribute="top" constant="10" id="iCR-o2-AhU"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="NeY-cZ-Zgk" firstAttribute="leading" secondItem="CaU-Fm-eZy" secondAttribute="leading" id="Nth-aW-hiM"/>
+                                                        <constraint firstItem="NeY-cZ-Zgk" firstAttribute="top" secondItem="CaU-Fm-eZy" secondAttribute="top" id="Qdb-Ey-6au"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NeY-cZ-Zgk" secondAttribute="bottom" id="dXI-Gr-thB"/>
                                                         <constraint firstAttribute="width" constant="800" id="rnf-Ke-UY7"/>
                                                     </constraints>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="NeY-cZ-Zgk"/>
+                                                        </mask>
+                                                    </variation>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CaU-Fm-eZy" firstAttribute="top" secondItem="U6c-EY-odP" secondAttribute="top" id="DSp-aD-HMr"/>
                                                 <constraint firstAttribute="bottom" secondItem="CaU-Fm-eZy" secondAttribute="bottom" id="XsW-eW-rO6"/>
+                                                <constraint firstAttribute="width" secondItem="U6c-EY-odP" secondAttribute="height" multiplier="3.5" id="YcY-Wb-B7P"/>
                                                 <constraint firstItem="CaU-Fm-eZy" firstAttribute="leading" secondItem="U6c-EY-odP" secondAttribute="leading" id="gzp-yr-kdw"/>
                                                 <constraint firstAttribute="trailing" secondItem="CaU-Fm-eZy" secondAttribute="trailing" id="tE2-d6-TG2"/>
                                                 <constraint firstItem="CaU-Fm-eZy" firstAttribute="centerY" secondItem="U6c-EY-odP" secondAttribute="centerY" id="wl0-jk-oxb"/>
-                                                <constraint firstAttribute="height" constant="100" id="xKK-PG-qjh"/>
                                             </constraints>
                                         </scrollView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-MI-LHW">
-                                            <rect key="frame" x="0.0" y="100" width="375" height="503"/>
+                                            <rect key="frame" x="0.0" y="107" width="375" height="496"/>
                                             <connections>
                                                 <action selector="touchToHideFavoriteBG:" destination="Nia-aO-Vjf" eventType="touchUpInside" id="FkL-vy-Ptf"/>
                                             </connections>
@@ -2008,7 +2044,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1275" y="1008"/>
+            <point key="canvasLocation" x="-1276" y="1007.9460269865068"/>
         </scene>
     </scenes>
     <resources>
@@ -2016,6 +2052,7 @@
         <image name="btn_default" width="147" height="53"/>
         <image name="btn_setting" width="18" height="17"/>
         <image name="channel-15" width="60" height="60"/>
+        <image name="channel-6" width="60" height="60"/>
         <image name="mode_bg_biaozhung" width="356" height="140"/>
         <image name="mode_bg_ertong" width="357" height="140"/>
         <image name="mode_btn_qiehuan_default" width="22" height="21"/>

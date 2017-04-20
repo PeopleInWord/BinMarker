@@ -79,6 +79,7 @@
 		3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */; };
 		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
+		3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 		3CC2D6761EA1BE32006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddDevice.storyboard; sourceTree = "<group>"; };
 		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
+		3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSubScroll.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				3C4F514F1E7394CF007E32F2 /* DVDController.swift */,
 				3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */,
 				3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */,
+				3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */,
 			);
 			name = Devices;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				3C125CC91E94962100D8FB92 /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
+				3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
 				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-//    @IBOutlet weak var controlView: UIView!
+class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,UITableViewDelegate ,UIGestureRecognizerDelegate,UITextFieldDelegate,VoiceDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,FavoriteSubScrollDelegate{
     @IBOutlet weak var funtionView: UIView!
     @IBOutlet weak var numView: UIView!
     @IBOutlet weak var tabBar: UITabBar!
@@ -170,8 +169,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
     }
     
-    
-    
     func onResults(_ results: String, _ resultArr: [String?]){
         quitBtn.isHidden=true
         print(resultArr)
@@ -226,21 +223,83 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.removeFromSuperview()
     }
 
-    
+    //MARK:频道快捷
     @IBAction func showFavoriteChannel(_ sender: UIButton) {
         let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
         alpha?.fromValue=0
         alpha?.toValue=0.8
         favoriteBg.pop_add(alpha, forKey: "alpha")
+        
+        let favoriteScroll=self.view.viewWithTag(10000) as! FavoriteSubScroll
+        favoriteScroll.favoriteDelegate=self
+        favoriteScroll.reloadData(with: resourseList)
+        
+        
+        
     }
     
     @IBAction func touchToHideFavoriteBG(_ sender: UIButton) {
         let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
         alpha?.fromValue=0.8
         alpha?.toValue=0.0
-        favoriteBg.pop_add(alpha, forKey: "alpha")
+        self.favoriteBg.pop_add(alpha, forKey: "alpha")
     }
-    //MARK:Tabber
+    //MARK:频道快捷代理
+    func didClickBtn(_ sender: UIButton, _ index: Int) {
+        DispatchQueue.global().async {
+            let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+            alpha?.fromValue=0.8
+            alpha?.toValue=0.0
+            self.favoriteBg.pop_add(alpha, forKey: "alpha")
+            alpha?.completionBlock=({(anim,isFinish) in
+                CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
+                let channelNum={ () -> [Int] in
+                    var temp=Array<Int>.init()
+                    for deviceDicInfo in self.resourseList
+                    {
+                        //                print(deviceDicInfo["channel"])
+                        
+                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
+                    }
+                    return temp
+                }()
+                let code:String = self.deviceInfo["codeString"] as! String
+                let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
+                BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+                    CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
+                }, fail: { (failString) -> UInt in
+                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+                    return 0
+                })
+            })
+            
+            
+//            DispatchQueue.main.async {
+//                print("22")
+//                let channelNum={ () -> [Int] in
+//                    var temp=Array<Int>.init()
+//                    for deviceDicInfo in self.resourseList
+//                    {
+//                        //                print(deviceDicInfo["channel"])
+//                        
+//                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
+//                    }
+//                    return temp
+//                }()
+//                let code:String = self.deviceInfo["codeString"] as! String
+//                let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
+//                BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+//                    CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
+//                }, fail: { (failString) -> UInt in
+//                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+//                    return 0
+//                })
+//
+//            }
+        }
+        
+    }
+
     
     @IBAction func selectCommon(_ sender: UIButton) {
         self.common.backgroundColor=UIColor.black
@@ -439,6 +498,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //固定
         CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
@@ -452,6 +512,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             })
 
         }
+            //用户定制
         else
         {
             let channelNum={ () -> [Int] in
