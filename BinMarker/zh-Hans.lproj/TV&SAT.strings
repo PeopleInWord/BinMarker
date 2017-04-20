@@ -1,0 +1,240 @@
+
+/* Class = "UILabel"; text = "正在识别..."; ObjectID = "0zg-uf-x7d"; */
+"0zg-uf-x7d.text" = "正在识别...";
+
+/* Class = "UIButton"; normalTitle = "输入法"; ObjectID = "1HX-hZ-NcP"; */
+"1HX-hZ-NcP.normalTitle" = "输入法";
+
+/* Class = "UIButton"; normalTitle = "自定义频道"; ObjectID = "2t3-Nn-Zpe"; */
+"2t3-Nn-Zpe.normalTitle" = "自定义频道";
+
+/* Class = "UIButton"; normalTitle = "屏显"; ObjectID = "34U-SL-DXk"; */
+"34U-SL-DXk.normalTitle" = "屏显";
+
+/* Class = "UILabel"; text = "深圳频道"; ObjectID = "3Ji-Hc-lIe"; */
+"3Ji-Hc-lIe.text" = "深圳频道";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "4c6-kL-ho5"; */
+"4c6-kL-ho5.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "电视/视讯"; ObjectID = "5JF-lB-nkX"; */
+"5JF-lB-nkX.normalTitle" = "电视/视讯";
+
+/* Class = "UILabel"; text = "预设"; ObjectID = "8kq-un-wRP"; */
+"8kq-un-wRP.text" = "预设";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "9he-nt-58h"; */
+"9he-nt-58h.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "AV/TV"; ObjectID = "B7O-et-rPP"; */
+"B7O-et-rPP.normalTitle" = "AV/TV";
+
+/* Class = "UIButton"; normalTitle = "回看"; ObjectID = "B8Z-cO-jLZ"; */
+"B8Z-cO-jLZ.normalTitle" = "回看";
+
+/* Class = "UIButton"; normalTitle = "点播"; ObjectID = "BaR-Ua-quX"; */
+"BaR-Ua-quX.normalTitle" = "点播";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "Bna-tF-QNV"; */
+"Bna-tF-QNV.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "设置/预定"; ObjectID = "DjA-vG-9Mt"; */
+"DjA-vG-9Mt.normalTitle" = "设置/预定";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "EMB-UZ-pbr"; */
+"EMB-UZ-pbr.normalTitle" = "0";
+
+/* Class = "UIViewController"; title = "机顶盒"; ObjectID = "HXp-De-2Dl"; */
+"HXp-De-2Dl.title" = "机顶盒";
+
+/* Class = "UIButton"; normalTitle = "黄"; ObjectID = "HqZ-uT-BK7"; */
+"HqZ-uT-BK7.normalTitle" = "黄";
+
+/* Class = "UIButton"; normalTitle = "指南/预告"; ObjectID = "I9x-dF-Fff"; */
+"I9x-dF-Fff.normalTitle" = "指南/预告";
+
+/* Class = "UIButton"; normalTitle = "PLAY"; ObjectID = "J06-3g-vQn"; */
+"J06-3g-vQn.normalTitle" = "PLAY";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "KgK-p5-tTk"; */
+"KgK-p5-tTk.normalTitle" = "2";
+
+/* Class = "UITabBarItem"; title = "切换模式"; ObjectID = "L62-hE-Ogc"; */
+"L62-hE-Ogc.title" = "切换模式";
+
+/* Class = "UIButton"; normalTitle = "双画面"; ObjectID = "L7x-ZQ-wqP"; */
+"L7x-ZQ-wqP.normalTitle" = "双画面";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "LOb-N5-tJa"; */
+"LOb-N5-tJa.text" = "音量";
+
+/* Class = "UITabBarItem"; title = "频道"; ObjectID = "Ldj-o0-jiE"; */
+"Ldj-o0-jiE.title" = "频道";
+
+/* Class = "UIButton"; normalTitle = "收藏列表"; ObjectID = "Myn-k5-JD6"; */
+"Myn-k5-JD6.normalTitle" = "收藏列表";
+
+/* Class = "UIViewController"; title = "电视机"; ObjectID = "Nia-aO-Vjf"; */
+"Nia-aO-Vjf.title" = "电视机";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "P7F-Ll-OBD"; */
+"P7F-Ll-OBD.normalTitle" = "2";
+
+/* Class = "UIButton"; normalTitle = "信号源"; ObjectID = "Ppa-kG-ti8"; */
+"Ppa-kG-ti8.normalTitle" = "信号源";
+
+/* Class = "UIViewController"; title = "定时关机"; ObjectID = "QrD-SY-0tD"; */
+"QrD-SY-0tD.title" = "定时关机";
+
+/* Class = "UIButton"; normalTitle = "SYS"; ObjectID = "S7i-DX-Cyw"; */
+"S7i-DX-Cyw.normalTitle" = "SYS";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "Vbg-hs-VTF"; */
+"Vbg-hs-VTF.normalTitle" = "9";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "W3M-vv-I7m"; */
+"W3M-vv-I7m.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "节目单/导视"; ObjectID = "WNu-yY-R9s"; */
+"WNu-yY-R9s.normalTitle" = "节目单/导视";
+
+/* Class = "UIButton"; normalTitle = "日历"; ObjectID = "Wx6-pp-KYS"; */
+"Wx6-pp-KYS.normalTitle" = "日历";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "XQg-ac-5Rm"; */
+"XQg-ac-5Rm.normalTitle" = "6";
+
+/* Class = "UIButton"; normalTitle = "帮助"; ObjectID = "YWK-HI-Nzr"; */
+"YWK-HI-Nzr.normalTitle" = "帮助";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "Z4f-7d-peu"; */
+"Z4f-7d-peu.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "ZEh-5z-BfM"; */
+"ZEh-5z-BfM.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "邮件/邮箱"; ObjectID = "aP7-ox-pIi"; */
+"aP7-ox-pIi.normalTitle" = "邮件/邮箱";
+
+/* Class = "UIButton"; normalTitle = "-/--"; ObjectID = "bK3-rB-2Bl"; */
+"bK3-rB-2Bl.normalTitle" = "-/--";
+
+/* Class = "UIButton"; normalTitle = "时间"; ObjectID = "bXS-FD-B6D"; */
+"bXS-FD-B6D.normalTitle" = "时间";
+
+/* Class = "UIButton"; normalTitle = "红"; ObjectID = "bjQ-7j-jzP"; */
+"bjQ-7j-jzP.normalTitle" = "红";
+
+/* Class = "UILabel"; text = "状态"; ObjectID = "bvG-MV-wx8"; */
+"bvG-MV-wx8.text" = "状态";
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "c7x-JM-RyF"; */
+"c7x-JM-RyF.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "PAUSE/时移"; ObjectID = "cP3-oK-faQ"; */
+"cP3-oK-faQ.normalTitle" = "PAUSE/时移";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "ccD-6g-1m4"; */
+"ccD-6g-1m4.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "cmp-Ui-hMS"; */
+"cmp-Ui-hMS.normalTitle" = "常用频道";
+
+/* Class = "UILabel"; text = "湖南卫视"; ObjectID = "dnH-NW-ojR"; */
+"dnH-NW-ojR.text" = "湖南卫视";
+
+/* Class = "UILabel"; text = " "; ObjectID = "ewn-kr-vNe"; */
+"ewn-kr-vNe.text" = " ";
+
+/* Class = "UIButton"; normalTitle = "功能"; ObjectID = "fEy-3y-lwe"; */
+"fEy-3y-lwe.normalTitle" = "功能";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "fLw-s6-Zwq"; */
+"fLw-s6-Zwq.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "资讯/SUB"; ObjectID = "fhi-Px-y0k"; */
+"fhi-Px-y0k.normalTitle" = "资讯/SUB";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "hFe-Eh-dCF"; */
+"hFe-Eh-dCF.normalTitle" = "4";
+
+/* Class = "UITabBarItem"; title = "频道"; ObjectID = "hKC-Vi-Suv"; */
+"hKC-Vi-Suv.title" = "频道";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "hwr-6F-YB1"; */
+"hwr-6F-YB1.normalTitle" = "5";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "im7-W8-cDd"; */
+"im7-W8-cDd.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "自定义频道"; ObjectID = "kLR-Xi-jaK"; */
+"kLR-Xi-jaK.normalTitle" = "自定义频道";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "ls9-Rz-UBA"; */
+"ls9-Rz-UBA.normalTitle" = "6";
+
+/* Class = "UIButton"; normalTitle = "蓝"; ObjectID = "lv7-K5-a6n"; */
+"lv7-K5-a6n.normalTitle" = "蓝";
+
+/* Class = "UILabel"; text = "音量"; ObjectID = "mgg-Id-ft2"; */
+"mgg-Id-ft2.text" = "音量";
+
+/* Class = "UINavigationItem"; title = "定时关机"; ObjectID = "nPM-jo-tQJ"; */
+"nPM-jo-tQJ.title" = "定时关机";
+
+/* Class = "UINavigationItem"; title = "机顶盒"; ObjectID = "oYa-0j-9Ss"; */
+"oYa-0j-9Ss.title" = "机顶盒";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "poa-Ml-oXN"; */
+"poa-Ml-oXN.text" = "频道";
+
+/* Class = "UILabel"; text = "频道"; ObjectID = "qJw-VK-CHx"; */
+"qJw-VK-CHx.text" = "频道";
+
+/* Class = "UIButton"; normalTitle = "FF"; ObjectID = "s99-zc-ypj"; */
+"s99-zc-ypj.normalTitle" = "FF";
+
+/* Class = "UIButton"; normalTitle = "编辑"; ObjectID = "sxY-TA-7Wu"; */
+"sxY-TA-7Wu.normalTitle" = "编辑";
+
+/* Class = "UITabBarItem"; title = "功能"; ObjectID = "t40-8T-Cak"; */
+"t40-8T-Cak.title" = "功能";
+
+/* Class = "UIButton"; normalTitle = "STOP"; ObjectID = "tL2-E0-yfX"; */
+"tL2-E0-yfX.normalTitle" = "STOP";
+
+/* Class = "UIButton"; normalTitle = "绿"; ObjectID = "tmT-KI-gi2"; */
+"tmT-KI-gi2.normalTitle" = "绿";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "uas-8T-jAS"; */
+"uas-8T-jAS.normalTitle" = "退出";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "udU-eS-ACK"; */
+"udU-eS-ACK.normalTitle" = "退出";
+
+/* Class = "UIButton"; normalTitle = "图像"; ObjectID = "vW8-Gi-GQg"; */
+"vW8-Gi-GQg.normalTitle" = "图像";
+
+/* Class = "UIBarButtonItem"; title = "确定"; ObjectID = "wMn-QG-3M8"; */
+"wMn-QG-3M8.title" = "确定";
+
+/* Class = "UILabel"; text = "深圳频道"; ObjectID = "xDT-Cc-vLf"; */
+"xDT-Cc-vLf.text" = "深圳频道";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "xuO-IL-qDq"; */
+"xuO-IL-qDq.normalTitle" = "7";
+
+/* Class = "UIButton"; normalTitle = "常用频道"; ObjectID = "y5t-xf-dTR"; */
+"y5t-xf-dTR.normalTitle" = "常用频道";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "yBO-EL-6vb"; */
+"yBO-EL-6vb.normalTitle" = "4";
+
+/* Class = "UITabBarItem"; title = "扩展"; ObjectID = "yHu-i3-PvT"; */
+"yHu-i3-PvT.title" = "扩展";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "zBA-zn-DfE"; */
+"zBA-zn-DfE.normalTitle" = "3";
+
+/* Class = "UIButton"; normalTitle = "REW"; ObjectID = "zsh-OF-2gU"; */
+"zsh-OF-2gU.normalTitle" = "REW";

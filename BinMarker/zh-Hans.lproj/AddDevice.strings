@@ -1,0 +1,123 @@
+
+/* Class = "UIButton"; normalTitle = "8"; ObjectID = "0mU-hp-dqU"; */
+"0mU-hp-dqU.normalTitle" = "8";
+
+/* Class = "UIButton"; normalTitle = "返回"; ObjectID = "4lt-f1-B3f"; */
+"4lt-f1-B3f.normalTitle" = "返回";
+
+/* Class = "UIButton"; normalTitle = "1"; ObjectID = "4tO-0u-6UN"; */
+"4tO-0u-6UN.normalTitle" = "1";
+
+/* Class = "UIButton"; normalTitle = "0"; ObjectID = "67o-kn-jZF"; */
+"67o-kn-jZF.normalTitle" = "0";
+
+/* Class = "UIButton"; normalTitle = "4"; ObjectID = "7A0-2C-qJV"; */
+"7A0-2C-qJV.normalTitle" = "4";
+
+/* Class = "UILabel"; text = "1.请将遥控器对准电器发送指令\n2.根据电器响应选择是/否"; ObjectID = "7Mj-tE-kF7"; */
+"7Mj-tE-kF7.text" = "1.请将遥控器对准电器发送指令\n2.根据电器响应选择是/否";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "BJA-af-uVF"; */
+"BJA-af-uVF.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "频道 +"; ObjectID = "CEM-dS-Tgh"; */
+"CEM-dS-Tgh.text" = "频道 +";
+
+/* Class = "UIButton"; normalTitle = "右"; ObjectID = "CVX-Gk-Lo6"; */
+"CVX-Gk-Lo6.normalTitle" = "右";
+
+/* Class = "UIButton"; normalTitle = "静音"; ObjectID = "EXY-2L-jx1"; */
+"EXY-2L-jx1.normalTitle" = "静音";
+
+/* Class = "UILabel"; text = "数字0"; ObjectID = "FUN-8w-iVU"; */
+"FUN-8w-iVU.text" = "数字0";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "H1x-Gm-gFv"; */
+"H1x-Gm-gFv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "音量 -"; ObjectID = "Lkx-Lq-8mW"; */
+"Lkx-Lq-8mW.text" = "音量 -";
+
+/* Class = "UIButton"; normalTitle = "菜单"; ObjectID = "MDI-xh-2GZ"; */
+"MDI-xh-2GZ.normalTitle" = "菜单";
+
+/* Class = "UINavigationItem"; title = "选择类型"; ObjectID = "MJT-MJ-Gpe"; */
+"MJT-MJ-Gpe.title" = "选择类型";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NGg-NT-eXq"; */
+"NGg-NT-eXq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "下"; ObjectID = "PxN-Sr-pMs"; */
+"PxN-Sr-pMs.normalTitle" = "下";
+
+/* Class = "UIBarButtonItem"; title = "品牌"; ObjectID = "RJE-IT-aNT"; */
+"RJE-IT-aNT.title" = "品牌";
+
+/* Class = "UIButton"; normalTitle = "确认"; ObjectID = "Wsj-Tz-X3b"; */
+"Wsj-Tz-X3b.normalTitle" = "确认";
+
+/* Class = "UIButton"; normalTitle = "退出"; ObjectID = "XiW-Om-170"; */
+"XiW-Om-170.normalTitle" = "退出";
+
+/* Class = "UIBarButtonItem"; title = "类型"; ObjectID = "Y7S-tA-h9F"; */
+"Y7S-tA-h9F.title" = "类型";
+
+/* Class = "UILabel"; text = "更多"; ObjectID = "YlH-cv-ilE"; */
+"YlH-cv-ilE.text" = "更多";
+
+/* Class = "UIButton"; normalTitle = "否"; ObjectID = "ZGl-xd-iTi"; */
+"ZGl-xd-iTi.normalTitle" = "否";
+
+/* Class = "UIButton"; normalTitle = "7"; ObjectID = "aP4-5N-Mfx"; */
+"aP4-5N-Mfx.normalTitle" = "7";
+
+/* Class = "UILabel"; text = "音量 +"; ObjectID = "d90-sF-JJf"; */
+"d90-sF-JJf.text" = "音量 +";
+
+/* Class = "UIButton"; normalTitle = "6"; ObjectID = "fCv-zz-MG0"; */
+"fCv-zz-MG0.normalTitle" = "6";
+
+/* Class = "UIViewController"; title = "添加设备"; ObjectID = "gxA-jw-NDc"; */
+"gxA-jw-NDc.title" = "添加设备";
+
+/* Class = "UIButton"; normalTitle = "5"; ObjectID = "mgP-rJ-Wol"; */
+"mgP-rJ-Wol.normalTitle" = "5";
+
+/* Class = "UILabel"; text = "本版本为Demo版,硬件均有限支持"; ObjectID = "pfV-TC-ZS7"; */
+"pfV-TC-ZS7.text" = "本版本为Demo版,硬件均有限支持";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "q3y-zP-pOz"; */
+"q3y-zP-pOz.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "上"; ObjectID = "rPi-1F-mnk"; */
+"rPi-1F-mnk.normalTitle" = "上";
+
+/* Class = "UILabel"; text = "Power"; ObjectID = "rXy-If-NB1"; */
+"rXy-If-NB1.text" = "Power";
+
+/* Class = "UIButton"; normalTitle = "音量-"; ObjectID = "raD-pS-MbZ"; */
+"raD-pS-MbZ.normalTitle" = "音量-";
+
+/* Class = "UIButton"; normalTitle = "9"; ObjectID = "rxR-dD-nTk"; */
+"rxR-dD-nTk.normalTitle" = "9";
+
+/* Class = "UIButton"; normalTitle = "频道-"; ObjectID = "t3v-aF-pU5"; */
+"t3v-aF-pU5.normalTitle" = "频道-";
+
+/* Class = "UINavigationItem"; title = "测试码组"; ObjectID = "u0p-za-S3O"; */
+"u0p-za-S3O.title" = "测试码组";
+
+/* Class = "UIButton"; normalTitle = "左"; ObjectID = "udd-HO-jgL"; */
+"udd-HO-jgL.normalTitle" = "左";
+
+/* Class = "UIButton"; normalTitle = "2"; ObjectID = "uoj-3j-ytM"; */
+"uoj-3j-ytM.normalTitle" = "2";
+
+/* Class = "UINavigationItem"; title = "选择品牌"; ObjectID = "vOu-qP-SFb"; */
+"vOu-qP-SFb.title" = "选择品牌";
+
+/* Class = "UIButton"; normalTitle = "是"; ObjectID = "y5R-hQ-Aao"; */
+"y5R-hQ-Aao.normalTitle" = "是";
+
+/* Class = "UILabel"; text = "频道 -"; ObjectID = "yzE-We-nYH"; */
+"yzE-We-nYH.text" = "频道 -";

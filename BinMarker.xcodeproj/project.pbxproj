@@ -46,7 +46,6 @@
 		3C2A72841E790E2100137EAB /* T32DBA_01FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72701E790E2100137EAB /* T32DBA_01FE.bin */; };
 		3C2A72851E790E2100137EAB /* T32DBA_08FE.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */; };
 		3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */; };
-		3C2A72891E7916B800137EAB /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72881E7916B800137EAB /* InfraredBrandList.plist */; };
 		3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */; };
 		3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72921E7A824900137EAB /* CoreTelephony.framework */; };
 		3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72941E7A825300137EAB /* OpenGLES.framework */; };
@@ -80,6 +79,7 @@
 		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
 		3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */; };
+		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +91,6 @@
 		3C0D317C1DDD9D9500D78924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C0D317E1DDD9D9500D78924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C0D31811DDD9D9500D78924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3C0D31831DDD9D9500D78924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C0D318A1DDDA3A600D78924 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		3C0D318B1DDDA3A600D78924 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		3C0D318D1DDEA29F00D78924 /* AddDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceController.h; sourceTree = "<group>"; };
@@ -140,7 +139,6 @@
 		3C2A72701E790E2100137EAB /* T32DBA_01FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_01FE.bin; path = "Bin&SQL/T32DBA_01FE.bin"; sourceTree = "<group>"; };
 		3C2A72711E790E2100137EAB /* T32DBA_08FE.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_08FE.bin; path = "Bin&SQL/T32DBA_08FE.bin"; sourceTree = "<group>"; };
 		3C2A72721E790E2100137EAB /* T32DBA_40EF.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; name = T32DBA_40EF.bin; path = "Bin&SQL/T32DBA_40EF.bin"; sourceTree = "<group>"; };
-		3C2A72881E7916B800137EAB /* InfraredBrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfraredBrandList.plist; sourceTree = "<group>"; };
 		3C2A72901E794FA500137EAB /* Infrared_Datebase.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = Infrared_Datebase.sqlite; sourceTree = "<group>"; };
 		3C2A72921E7A824900137EAB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		3C2A72941E7A825300137EAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -176,6 +174,17 @@
 		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSubScroll.swift; sourceTree = "<group>"; };
+		3CEE34521EA8963A0047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/TV&SAT.strings"; sourceTree = "<group>"; };
+		3CEE34541EA896460047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TV&SAT.strings"; sourceTree = "<group>"; };
+		3CEE34561EA8964D0047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AddDevice.strings; sourceTree = "<group>"; };
+		3CEE34581EA896530047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AddDevice.strings"; sourceTree = "<group>"; };
+		3CEE345A1EA8966D0047BA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/InfraredBrandList.plist; sourceTree = "<group>"; };
+		3CEE345C1EA896700047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/InfraredBrandList.plist; sourceTree = "<group>"; };
+		3CEE345D1EA896710047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/InfraredBrandList.plist"; sourceTree = "<group>"; };
+		3CEE345E1EA8969A0047BA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		3CEE34601EA896A80047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
+		3CEE34611EA896A90047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
+		3CEE34621EA8974E0047BA5F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Info.plist"; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,7 +255,7 @@
 				3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */,
 				3C0D317E1DDD9D9500D78924 /* Assets.xcassets */,
 				3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */,
-				3C0D31831DDD9D9500D78924 /* Info.plist */,
+				3CEE345F1EA8969A0047BA5F /* Info.plist */,
 				3C0D31721DDD9D9500D78924 /* Supporting Files */,
 			);
 			path = BinMarker;
@@ -332,7 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */,
-				3C2A72881E7916B800137EAB /* InfraredBrandList.plist */,
+				3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */,
 				3C27460D1E712A5500662A9F /* searching.gif */,
 				3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */,
 				3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */,
@@ -506,7 +515,7 @@
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
 				3C27460E1E712A5500662A9F /* searching.gif in Resources */,
 				3C2A727B1E790E2100137EAB /* 2314.bin in Resources */,
-				3C2A72891E7916B800137EAB /* InfraredBrandList.plist in Resources */,
+				3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,6 +641,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3CC2D6761EA1BE32006DF2BE /* Base */,
+				3CEE34561EA8964D0047BA5F /* en */,
+				3CEE34581EA896530047BA5F /* zh-Hans */,
 			);
 			name = AddDevice.storyboard;
 			sourceTree = "<group>";
@@ -640,8 +651,31 @@
 			isa = PBXVariantGroup;
 			children = (
 				3CC2D6791EA1D189006DF2BE /* Base */,
+				3CEE34521EA8963A0047BA5F /* en */,
+				3CEE34541EA896460047BA5F /* zh-Hans */,
 			);
 			name = "TV&SAT.storyboard";
+			sourceTree = "<group>";
+		};
+		3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CEE345A1EA8966D0047BA5F /* Base */,
+				3CEE345C1EA896700047BA5F /* en */,
+				3CEE345D1EA896710047BA5F /* zh-Hans */,
+			);
+			name = InfraredBrandList.plist;
+			sourceTree = "<group>";
+		};
+		3CEE345F1EA8969A0047BA5F /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3CEE345E1EA8969A0047BA5F /* Base */,
+				3CEE34601EA896A80047BA5F /* en */,
+				3CEE34611EA896A90047BA5F /* zh-Hans */,
+				3CEE34621EA8974E0047BA5F /* zh-Hant */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
