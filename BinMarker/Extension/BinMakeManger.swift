@@ -71,6 +71,7 @@ class BinMakeManger: NSObject {
         targetHandle?.write(sourceData1!)
         targetHandle?.closeFile()
     }
+    
     func copyNewData(with sourceName:String) -> String {//转化成文件
         let sourcePath=Bundle.main.path(forResource: sourceName, ofType: "bin")
         let sourceData=NSData.init(contentsOfFile: sourcePath!)

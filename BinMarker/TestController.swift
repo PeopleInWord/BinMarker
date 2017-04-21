@@ -142,6 +142,7 @@ class TestController: UIViewController{
             user.synchronize()
 
             let _ = self.navigationController?.popToRootViewController(animated: true)
+            
         }))
         alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .destructive, handler: { (action) in
             return

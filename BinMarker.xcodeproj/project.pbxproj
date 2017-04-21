@@ -80,6 +80,7 @@
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
 		3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */; };
 		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
+		3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +186,7 @@
 		3CEE34601EA896A80047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		3CEE34611EA896A90047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
 		3CEE34621EA8974E0047BA5F /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Info.plist"; sourceTree = "<group>"; };
+		3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBFunctions.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				3C125CC41E94962100D8FB92 /* VoiceManger.swift */,
 				3C125CC51E94962100D8FB92 /* BinMakeManger.swift */,
 				3C125CB91E94928F00D8FB92 /* FavoriteScrollView.swift */,
+				3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
+				3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */,
 				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
