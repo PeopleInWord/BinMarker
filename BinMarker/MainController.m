@@ -8,27 +8,26 @@
 
 #import "MainController.h"
 #import "BinMarker-Swift.h"
-#import "AppDelegate.h"
-
 
 static NSString *const targetName=@"IrRemoteControllerA";
 
-@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate>
+@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *noneView;
-@property (strong,nonatomic)NSMutableArray <NSDictionary <NSString *,id>*>*alldevices;
+@property (strong,nonatomic)NSMutableArray <DeviceInfo *>*alldevices;
 @property (nonatomic, strong) UIDocumentInteractionController *documentController;
+
 @end
 
 
 @implementation MainController
 
--(NSMutableArray< NSDictionary<NSString *, id> *> *)alldevices
+-(NSMutableArray<DeviceInfo *> *)alldevices
 {
     if (!_alldevices) {
-        _alldevices=[NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults]objectForKey:@"deviceInfo"]];
+        _alldevices=[FMDBFunctions.shareInstance getAllData].mutableCopy;
     }
     return _alldevices;
 }
@@ -75,11 +74,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     _alldevices=nil;
     [self.mainTableView reloadData];
     _noneView.hidden= self.alldevices.count != 0;
-//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-//    if (!app.autoScan.valid) {
-//        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
-//        [app.autoScan fire];
-//    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -88,21 +82,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     
 }
 
-
-//- (void)viewWillDisappear:(BOOL)animated {
-//    [super viewWillDisappear:animated];
-//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-//    if (app.autoScan.valid) {
-//        [app.autoScan invalidate];
-//    }
-//}
-
-
 #pragma mark 托线
 
-- (void)autoScan:(id)sender {
-//    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
-}
 
 - (IBAction)userInfo:(UIBarButtonItem *)sender {
     if (1) {
@@ -156,15 +137,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
-    self.alldevices=[self addIndex:self.alldevices];
-    BinMakeManger *manger=[BinMakeManger shareInstance];
-    NSString *binPath=[manger makeTypeWith:self.alldevices];
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"成功" message:@"下一步,用Starter打开" preferredStyle: UIAlertControllerStyleAlert];
-    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"用刷固件软件打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self openWithPath:[NSURL fileURLWithPath:binPath]];
-    }];
-    [alertController addAction:OKAction];
-    [self presentViewController:alertController animated:YES completion:nil];
+//    self.alldevices=[self addIndex:self.alldevices];
+//    BinMakeManger *manger=[BinMakeManger shareInstance];
+//    NSString *binPath=[manger makeTypeWith:self.alldevices];
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"成功" message:@"下一步,用Starter打开" preferredStyle: UIAlertControllerStyleAlert];
+//    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"用刷固件软件打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [self openWithPath:[NSURL fileURLWithPath:binPath]];
+//    }];
+//    [alertController addAction:OKAction];
+//    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 -(void)openWithPath:(NSURL *)url
@@ -212,34 +193,58 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[indexPath.section]];
+    return rowCount==0?0:100;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[section]];
+    return  rowCount==0?0:10;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return section==0?10:0;
+}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.alldevices.count;
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[section]];
+    
+    return rowCount;
 }
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 4;
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell=nil;
+    UITableViewCell *cell;
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[indexPath.section]];
+    if (rowCount==0) {
+        cell=[tableView dequeueReusableCellWithIdentifier:@"noneCell" forIndexPath:indexPath];
+    } else {
+        cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
+        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        DeviceInfo *device=deviceArray[indexPath.row];
+        NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
+        UIImageView *iconImage=[cell viewWithTag:1001];
+        UILabel *brandName=[cell viewWithTag:1003];
+        UILabel *codeName=[cell viewWithTag:1004];
+        codeName.text= [NSString stringWithFormat:NSLocalizedString(@"码组号:%@", @"码组号:%@"), device.code];
+        iconImage.image=[UIImage imageNamed:imageDic[device.devicetype]];
+        brandName.text=[device.customname length]>0?device.customname:device.brandname;
+    }
     
-    NSDictionary *subDic=_alldevices[indexPath.row];
-    NSDictionary *imageDic=@{@"\"TV\"":@"icon_TV",@"\"DVD\"":@"icon_DVD",@"\"COMBI\"":@"icon_AMP",@"\"SAT\"":@"icon_BOX"};
-    cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
-    UIImageView *iconImage=[cell viewWithTag:1001];
-    UILabel *brandName=[cell viewWithTag:1003];
-    UILabel *codeName=[cell viewWithTag:1004];
-    codeName.text= [NSString stringWithFormat:NSLocalizedString(@"码组号:%@", @"码组号:%@"), subDic[@"codeString"]];
-    iconImage.image=[UIImage imageNamed:imageDic[subDic[@"deviceType"]]];
-    if ([subDic[@"defineName"] length]>1) {
-        brandName.text=subDic[@"defineName"];
-    }
-    else
-    {
-        brandName.text=subDic[@"brandName"];
-    }
+    
     return cell;
 }
 
@@ -250,35 +255,28 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        [_alldevices removeObjectAtIndex:indexPath.row];
+    UITableViewRowAction *deleteAction;
+    deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        DeviceInfo *device=deviceArray[indexPath.row];
+        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        if (self.alldevices.count==0) {
+        if ([[FMDBFunctions shareInstance] getAllData].count==0) {
             _noneView.hidden=NO;
         }
-        
-        [[NSUserDefaults standardUserDefaults]setObject:_alldevices forKey:@"deviceInfo"];
     }];
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"编辑", @"编辑") handler:^(UITableViewRowAction *_Nonnull action, NSIndexPath *_Nonnull indexPath) {
-        NSMutableDictionary *deviceInfo = self.alldevices[indexPath.row].mutableCopy;
+        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        DeviceInfo *device=deviceArray[indexPath.row];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"名称", @"名称") message:NSLocalizedString(@"输入设备名称", @"输入设备名称") preferredStyle:UIAlertControllerStyleAlert];
         [alertController addTextFieldWithConfigurationHandler:^(UITextField *_Nonnull textField) {
-            if ([deviceInfo[@"defineName"] length] > 1) {
-                textField.text = deviceInfo[@"defineName"];
-            } else {
-                textField.text = deviceInfo[@"brandName"];
-            }
+            textField.text=[device.customname length]>1?device.customname:device.brandname;
         }];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", @"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
-            if (alertController.textFields.firstObject.text.length > 0) {
-                deviceInfo[@"defineName"] = alertController.textFields.firstObject.text;
-            } else {
-                deviceInfo[@"defineName"] = deviceInfo[@"brandName"];
-            }
-            [_alldevices removeObjectAtIndex:indexPath.row];
-            [self.alldevices addObject:deviceInfo];
-            [[NSUserDefaults standardUserDefaults] setObject:_alldevices forKey:@"deviceInfo"];
-
+            device.customname=alertController.textFields.firstObject.text.length > 0?alertController.textFields.firstObject.text:device.brandname;
+            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", @"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
@@ -293,18 +291,18 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *deviceInfo= self.alldevices[indexPath.row];
-    NSString *deviceType=deviceInfo[@"deviceType"];
-    if ([deviceType isEqualToString:@"\"TV\""]) {
+    DeviceInfo * deviceInfo=self.alldevices[indexPath.row];
+    NSString *deviceType=deviceInfo.devicetype;
+    if ([deviceType isEqualToString:@"TV"]) {
         [self performSegueWithIdentifier:@"tv" sender:deviceInfo];
     }
-    else if ([deviceType isEqualToString:@"\"DVD\""]){
+    else if ([deviceType isEqualToString:@"DVD"]){
         [self performSegueWithIdentifier:@"dvd" sender:deviceInfo];
     }
-    else if ([deviceType isEqualToString:@"\"COMBI\""]){
+    else if ([deviceType isEqualToString:@"COMBI"]){
         [self performSegueWithIdentifier:@"amp" sender:deviceInfo];
     }
-    else if ([deviceType isEqualToString:@"\"SAT\""]){
+    else if ([deviceType isEqualToString:@"SAT"]){
         [self performSegueWithIdentifier:@"box" sender:deviceInfo];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

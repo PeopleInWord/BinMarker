@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01766cb2-07bb-4fca-891e-f437910d613c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/MainViewControlSwift.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Model/DeviceInfo.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/AddDeviceController.m" afterPath="$PROJECT_DIR$/BinMarker/AddDeviceController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/AppDelegate.m" afterPath="$PROJECT_DIR$/BinMarker/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Base.lproj/Info.plist" afterPath="$PROJECT_DIR$/BinMarker/Base.lproj/Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/BinMarker/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" afterPath="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Devices/TVController.swift" afterPath="$PROJECT_DIR$/BinMarker/Devices/TVController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Info.plist" afterPath="$PROJECT_DIR$/BinMarker/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Extension/FMDBFunctions.swift" afterPath="$PROJECT_DIR$/BinMarker/Extension/FMDBFunctions.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/Extension/UIViewController+NamePrint.m" afterPath="$PROJECT_DIR$/BinMarker/Extension/UIViewController+NamePrint.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/MainController.h" afterPath="$PROJECT_DIR$/BinMarker/MainController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/MainController.m" afterPath="$PROJECT_DIR$/BinMarker/MainController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/TestController.swift" afterPath="$PROJECT_DIR$/BinMarker/TestController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <ignored path="BinMarker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +31,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_8245e58990ce05b82d5a1f86d3bbe4767567671b" />
   <component name="FavoritesManager">
     <favorites_list name="BinMarker" />
   </component>
@@ -37,15 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestController.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinMarker/TestController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
-              <folding>
-                <marker date="1491381791000" expanded="true" signature="1402:1457" ph="{...}" />
-                <marker date="1491381791000" expanded="true" signature="4307:4501" ph="{...}" />
-              </folding>
+            <state relative-caret-position="-1301">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,29 +60,47 @@
       <file leaf-file-name="MainController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1680">
-              <caret line="120" column="92" lean-forward="false" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="92" />
+            <state relative-caret-position="133">
+              <caret line="331" column="13" lean-forward="false" selection-start-line="331" selection-start-column="13" selection-end-line="331" selection-end-column="13" />
               <folding>
                 <element signature="e#127#153#0" expanded="true" />
-                <element signature="e#3601#3638#0" expanded="true" />
-                <element signature="e#3640#3675#0" expanded="true" />
-                <element signature="e#3677#3708#0" expanded="true" />
-                <element signature="e#3710#3745#0" expanded="true" />
-                <element signature="e#4497#4536#0" expanded="true" />
-                <element signature="e#4733#4772#0" expanded="true" />
-                <element signature="e#4900#4939#0" expanded="true" />
-                <element signature="e#8222#8261#0" expanded="true" />
-                <element signature="e#9471#9502#0" expanded="true" />
-                <element signature="e#9762#9793#0" expanded="true" />
-                <element signature="e#9802#9841#0" expanded="true" />
-                <element signature="e#10276#10307#0" expanded="true" />
-                <element signature="e#11052#11083#0" expanded="true" />
+                <element signature="e#10458#10489#0" expanded="true" />
+                <element signature="e#10806#10837#0" expanded="true" />
+                <element signature="e#10846#10885#0" expanded="true" />
+                <element signature="e#11422#11453#0" expanded="true" />
+                <element signature="e#12579#12610#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TVController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Devices/TVController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="602" column="39" lean-forward="false" selection-start-line="602" selection-start-column="39" selection-end-line="602" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FMDBFunctions.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BinMarker/Extension/FMDBFunctions.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>makeTypeWith</find>
+      <find>deviceInfo</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -84,17 +109,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BinMarker/ModelVersionController.swift" />
-        <option value="$PROJECT_DIR$/BinMarker/MainController.m" />
         <option value="$PROJECT_DIR$/BinMarker/ScaningController.m" />
         <option value="$PROJECT_DIR$/BinMarker/ChooseBrandController.swift" />
         <option value="$PROJECT_DIR$/BinMarker/TestController.swift" />
+        <option value="$PROJECT_DIR$/BinMarker/MainController.m" />
+        <option value="$PROJECT_DIR$/BinMarker/Devices/TVController.swift" />
+        <option value="$PROJECT_DIR$/BinMarker/Extension/FMDBFunctions.swift" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1436" />
-    <option name="height" value="877" />
+    <option name="width" value="1440" />
+    <option name="height" value="838" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -240,6 +267,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BinMarker" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Extension" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -299,27 +344,28 @@
       <workItem from="1491372055852" duration="3623000" />
       <workItem from="1491535733849" duration="636000" />
       <workItem from="1491790806399" duration="478000" />
+      <workItem from="1493259308361" duration="1586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10687000" />
+    <option name="totallyTimeSpent" value="12273000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1436" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="838" extended-state="6" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24946997" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297587" sideWeight="0.4918957" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299363" sideWeight="0.5024735" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297587" sideWeight="0.5081043" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299363" sideWeight="0.4975265" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -347,6 +393,37 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4284">
+          <caret line="306" column="21" lean-forward="false" selection-start-line="306" selection-start-column="21" selection-end-line="306" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="120" column="72" lean-forward="true" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="72" />
+          <folding>
+            <element signature="e#127#153#0" expanded="true" />
+            <element signature="e#10458#10489#0" expanded="true" />
+            <element signature="e#10806#10837#0" expanded="true" />
+            <element signature="e#10846#10885#0" expanded="true" />
+            <element signature="e#11422#11453#0" expanded="true" />
+            <element signature="e#12579#12610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/TestController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="51" column="4" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -357,10 +434,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
-          <folding>
-            <marker date="1491381791000" expanded="true" signature="1402:1457" ph="{...}" />
-            <marker date="1491381791000" expanded="true" signature="4307:4501" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -370,19 +444,11 @@
           <caret line="120" column="92" lean-forward="false" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="92" />
           <folding>
             <element signature="e#127#153#0" expanded="true" />
-            <element signature="e#3601#3638#0" expanded="true" />
-            <element signature="e#3640#3675#0" expanded="true" />
-            <element signature="e#3677#3708#0" expanded="true" />
-            <element signature="e#3710#3745#0" expanded="true" />
-            <element signature="e#4497#4536#0" expanded="true" />
-            <element signature="e#4733#4772#0" expanded="true" />
-            <element signature="e#4900#4939#0" expanded="true" />
-            <element signature="e#8222#8261#0" expanded="true" />
-            <element signature="e#9471#9502#0" expanded="true" />
-            <element signature="e#9762#9793#0" expanded="true" />
-            <element signature="e#9802#9841#0" expanded="true" />
-            <element signature="e#10276#10307#0" expanded="true" />
-            <element signature="e#11052#11083#0" expanded="true" />
+            <element signature="e#10458#10489#0" expanded="true" />
+            <element signature="e#10806#10837#0" expanded="true" />
+            <element signature="e#10846#10885#0" expanded="true" />
+            <element signature="e#11422#11453#0" expanded="true" />
+            <element signature="e#12579#12610#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -401,19 +467,11 @@
           <caret line="115" column="92" lean-forward="false" selection-start-line="115" selection-start-column="55" selection-end-line="115" selection-end-column="92" />
           <folding>
             <element signature="e#127#153#0" expanded="true" />
-            <element signature="e#3601#3638#0" expanded="true" />
-            <element signature="e#3640#3675#0" expanded="true" />
-            <element signature="e#3677#3708#0" expanded="true" />
-            <element signature="e#3710#3745#0" expanded="true" />
-            <element signature="e#4497#4536#0" expanded="true" />
-            <element signature="e#4733#4772#0" expanded="true" />
-            <element signature="e#4900#4939#0" expanded="true" />
-            <element signature="e#8222#8261#0" expanded="true" />
-            <element signature="e#9471#9502#0" expanded="true" />
-            <element signature="e#9762#9793#0" expanded="true" />
-            <element signature="e#9802#9841#0" expanded="true" />
-            <element signature="e#10276#10307#0" expanded="true" />
-            <element signature="e#11052#11083#0" expanded="true" />
+            <element signature="e#10458#10489#0" expanded="true" />
+            <element signature="e#10806#10837#0" expanded="true" />
+            <element signature="e#10846#10885#0" expanded="true" />
+            <element signature="e#11422#11453#0" expanded="true" />
+            <element signature="e#12579#12610#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,10 +480,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
-          <folding>
-            <marker date="1491381791000" expanded="true" signature="1402:1457" ph="{...}" />
-            <marker date="1491381791000" expanded="true" signature="4307:4501" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -450,19 +505,11 @@
           <caret line="119" column="97" lean-forward="true" selection-start-line="119" selection-start-column="97" selection-end-line="119" selection-end-column="97" />
           <folding>
             <element signature="e#127#153#0" expanded="true" />
-            <element signature="e#3601#3638#0" expanded="true" />
-            <element signature="e#3640#3675#0" expanded="true" />
-            <element signature="e#3677#3708#0" expanded="true" />
-            <element signature="e#3710#3745#0" expanded="true" />
-            <element signature="e#4497#4536#0" expanded="true" />
-            <element signature="e#4733#4772#0" expanded="true" />
-            <element signature="e#4900#4939#0" expanded="true" />
-            <element signature="e#8222#8261#0" expanded="true" />
-            <element signature="e#9471#9502#0" expanded="true" />
-            <element signature="e#9762#9793#0" expanded="true" />
-            <element signature="e#9802#9841#0" expanded="true" />
-            <element signature="e#10276#10307#0" expanded="true" />
-            <element signature="e#11052#11083#0" expanded="true" />
+            <element signature="e#10458#10489#0" expanded="true" />
+            <element signature="e#10806#10837#0" expanded="true" />
+            <element signature="e#10846#10885#0" expanded="true" />
+            <element signature="e#11422#11453#0" expanded="true" />
+            <element signature="e#12579#12610#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -647,29 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="120" column="92" lean-forward="false" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="92" />
-          <folding>
-            <element signature="e#127#153#0" expanded="true" />
-            <element signature="e#3601#3638#0" expanded="true" />
-            <element signature="e#3640#3675#0" expanded="true" />
-            <element signature="e#3677#3708#0" expanded="true" />
-            <element signature="e#3710#3745#0" expanded="true" />
-            <element signature="e#4497#4536#0" expanded="true" />
-            <element signature="e#4733#4772#0" expanded="true" />
-            <element signature="e#4900#4939#0" expanded="true" />
-            <element signature="e#8222#8261#0" expanded="true" />
-            <element signature="e#9471#9502#0" expanded="true" />
-            <element signature="e#9762#9793#0" expanded="true" />
-            <element signature="e#9802#9841#0" expanded="true" />
-            <element signature="e#10276#10307#0" expanded="true" />
-            <element signature="e#11052#11083#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BinMarker/ChooseBrandController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4284">
@@ -680,12 +704,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BinMarker/TestController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="69" selection-end-line="51" selection-end-column="69" />
+        <state relative-caret-position="-1301">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="331" column="13" lean-forward="false" selection-start-line="331" selection-start-column="13" selection-end-line="331" selection-end-column="13" />
           <folding>
-            <marker date="1491381791000" expanded="true" signature="1402:1457" ph="{...}" />
-            <marker date="1491381791000" expanded="true" signature="4307:4501" ph="{...}" />
+            <element signature="e#127#153#0" expanded="true" />
+            <element signature="e#10458#10489#0" expanded="true" />
+            <element signature="e#10806#10837#0" expanded="true" />
+            <element signature="e#10846#10885#0" expanded="true" />
+            <element signature="e#11422#11453#0" expanded="true" />
+            <element signature="e#12579#12610#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Devices/TVController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="602" column="39" lean-forward="false" selection-start-line="602" selection-start-column="39" selection-end-line="602" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinMarker/Extension/FMDBFunctions.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

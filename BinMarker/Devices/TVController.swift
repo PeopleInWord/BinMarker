@@ -38,7 +38,10 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var selectedChannelTitle=String.init()
     
     
-    public var deviceInfo:Dictionary<String, Any> = [:]
+//    public var deviceInfo:Dictionary<String, Any> = [:]
+
+    public var deviceInfo = DeviceInfo.init()
+
     //MARK:方法
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -192,7 +195,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     for word in resultArr {
                         if channel == word {
                             let channelNum:Int = channelTitle[channel]!
-                            let code:String = self.deviceInfo["codeString"] as! String
+                            let code:String = self.deviceInfo.code
                             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
                             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                                 CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
@@ -263,7 +266,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     }
                     return temp
                 }()
-                let code:String = self.deviceInfo["codeString"] as! String
+                let code:String = self.deviceInfo.code
                 let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
                 BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                     CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
@@ -326,7 +329,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        let code:String = deviceInfo["codeString"] as! String
+        let code:String = deviceInfo.code
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 0)
         let deviceID:String="IrRemoteControllerA"
         
@@ -502,7 +505,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
-            let code:String = self.deviceInfo["codeString"] as! String
+            let code:String = deviceInfo.code
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                 CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
@@ -523,7 +526,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 }
                 return temp
             }()
-            let code:String = self.deviceInfo["codeString"] as! String
+            let code:String = deviceInfo.code
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                 CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)

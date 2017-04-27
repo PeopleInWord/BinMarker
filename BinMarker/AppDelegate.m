@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <Bugly/Bugly.h>
 #import "iflyMSC/iflyMSC.h"
-
+#import "BinMarker-Swift.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Bugly startWithAppId:@"7f4dfcd92a"];
-//    [self pgySetting];
+    [FMDBFunctions.shareInstance translateData];
+//    FMDBFunctions *s=[[FMDBFunctions alloc]shareInstance];
+//    [s translateData];
     self.window.rootViewController=[self rootView];
     // Override point for customization after application launch.
     return YES;
@@ -30,25 +32,8 @@
 {
     BOOL isSelect=[[[NSUserDefaults standardUserDefaults]objectForKey:@"Selected"] boolValue];
     UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
-    if (isSelect) {
-        return [board instantiateViewControllerWithIdentifier:@"alreadySelected"];
-    }
-    else
-    {
-        return [board instantiateViewControllerWithIdentifier:@"selecting"];
-    }
+    return isSelect?[board instantiateViewControllerWithIdentifier:@"alreadySelected"]:[board instantiateViewControllerWithIdentifier:@"selecting"];
 }
-
-//-(void)pgySetting
-//{
-//    //启动基本SDK
-//    [[PgyManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
-//    //启动更新检查SDK
-//    [[PgyUpdateManager sharedPgyManager] startManagerWithAppId:@"3938c9a81384f25cceff10e41c912b6a"];
-//    [[PgyManager sharedPgyManager] setEnableFeedback:NO];
-//    [[PgyUpdateManager sharedPgyManager] checkUpdate];
-//}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

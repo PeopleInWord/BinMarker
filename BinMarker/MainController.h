@@ -10,7 +10,7 @@
 
 
 #import <UIKit/UIKit.h>
-
+//@class FMDBFunctions;
 @interface MainController : UIViewController
 
 @property (nonatomic,strong)NSMutableArray <NSString *>*nearRemote;

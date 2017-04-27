@@ -173,7 +173,7 @@
             [brandNameList addObject:str];
         }
         target.deviceBrandList=brandNameList;
-        target.deviceType=sender;
+        target.deviceTypeIndex=sender;
     }
     else
     {

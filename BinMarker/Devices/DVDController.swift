@@ -16,7 +16,8 @@ class DVDController: UIViewController ,UITabBarDelegate{
     @IBOutlet weak var functionView: UIView!
     @IBOutlet weak var numView: UIView!
     
-    public var deviceInfo=Dictionary<String, Any>.init()
+//    public var deviceInfo=Dictionary<String, Any>.init()
+    public var deviceInfo = DeviceInfo.init()
     //131  141 152 121 156 156
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class DVDController: UIViewController ,UITabBarDelegate{
 
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        let code:String = deviceInfo["codeString"] as! String
+        let code:String = deviceInfo.code
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 1)
         let deviceID:String="IrRemoteControllerA"
         CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)

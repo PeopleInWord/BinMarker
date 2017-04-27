@@ -10,7 +10,7 @@ import UIKit
 
 class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,UISearchResultsUpdating{
     public var deviceBrandList: NSArray!
-    public var deviceType:NSIndexPath!
+    public var deviceTypeIndex:NSIndexPath!
     var searchList : Array<Any>!
     lazy var tableTitle:Array<Dictionary<String,Int>> = {
         var temp:Array<Dictionary<String,Int>>=[]
@@ -123,7 +123,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         DispatchQueue.global().async {
             var deviceInfo=Dictionary<String, Any>.init()
             if (db?.open())! {
-                let deviceTypeStr = self.deviceTypeStr(self.deviceType);
+                let deviceTypeStr = self.deviceTypeStrReturn(self.deviceTypeIndex);
                 let brandName = self.brandNameStr(indexPath)
                 let sqlStr=self.SQLString(deviceTypeStr!,brandName!)
                 
@@ -148,17 +148,17 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         }
     }
     
-    private func deviceTypeStr(_ deviceType:NSIndexPath) ->String?
+    private func deviceTypeStrReturn(_ deviceType:NSIndexPath) ->String?
     {
         switch deviceType.row {
         case 0:
-            return "\"TV\""
+            return "TV"
         case 1:
-            return "\"DVD\""
+            return "DVD"
         case 2:
-            return "\"COMBI\""
+            return "COMBI"
         case 3:
-            return "\"SAT\""
+            return "SAT"
         default:
             return nil
         }
@@ -180,7 +180,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
     private func SQLString(_ deviceType:String ,_ brandName:String) ->String!
     {
         var sqlStr="select DISTINCT (DeviceNo) from RemoteIndex where DeviceType = "
-        sqlStr = sqlStr + deviceType + " AND Brand =" + "\""
+        sqlStr = sqlStr + "\"" + deviceType + "\"" + " AND Brand =" + "\""
         sqlStr = sqlStr + brandName + "\"" + " order by DeviceNo"
         print(sqlStr)
         return sqlStr
@@ -332,7 +332,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
             let target=segue.destination as! TestController
             let deviceInfo=sender as! Dictionary<String,Any>
             target.deviceTypeStr=deviceInfo["deviceType"] as! String!
-            target.deviceType=self.deviceType
+            target.deviceType=self.deviceTypeIndex
             target.codeList=deviceInfo["deviceNoList"] as! [String]!
             target.brandName=deviceInfo["brandName"] as! String!
         }

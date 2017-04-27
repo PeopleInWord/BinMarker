@@ -119,27 +119,32 @@ class TestController: UIViewController{
             nameField.placeholder=self.brandName! + " " + self.codeList[self.currentIndex]
         })
         alert.addAction(UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
-            let deviceSubInfoDic:Dictionary<String,String>=[
-                "deviceType" : self.deviceTypeStr,
-                "brandName" : self.brandName!,
-                "codeString" : self.codeList[self.currentIndex],
-                "defineName" : alert.textFields!.first!.text!]
+//            let deviceSubInfoDic:Dictionary<String,String>=[
+//                "deviceType" : self.deviceTypeStr,
+//                "brandName" : self.brandName!,
+//                "codeString" : self.codeList[self.currentIndex],
+//                "defineName" : alert.textFields!.first!.text!]
             
-            let user = UserDefaults.init()
-            if (user.array(forKey: "deviceInfo") != nil)
-            {
-                let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
-                deviceInfoArr .add(deviceSubInfoDic)
-                user.set(deviceInfoArr, forKey: "deviceInfo")
-            }
-            else
-            {
-                let deviceInfoArr = NSMutableArray.init()
-                deviceInfoArr .add(deviceSubInfoDic)
-                user.set(deviceInfoArr, forKey: "deviceInfo")
-            }
+//            let user = UserDefaults.init()
+            FMDBFunctions.shareInstance
+            .insertData(devicetype: self.deviceTypeStr, brandname: self.brandName, codeString: self.codeList[self.currentIndex], customname: alert.textFields!.first!.text!, isDefault: 0, fail: {
+                
+            })
             
-            user.synchronize()
+//            if (user.array(forKey: "deviceInfo") != nil)
+//            {
+//                let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
+//                deviceInfoArr .add(deviceSubInfoDic)
+//                user.set(deviceInfoArr, forKey: "deviceInfo")
+//            }
+//            else
+//            {
+//                let deviceInfoArr = NSMutableArray.init()
+//                deviceInfoArr .add(deviceSubInfoDic)
+//                user.set(deviceInfoArr, forKey: "deviceInfo")
+//            }
+//            
+//            user.synchronize()
 
             let _ = self.navigationController?.popToRootViewController(animated: true)
             

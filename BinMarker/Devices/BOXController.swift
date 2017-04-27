@@ -19,7 +19,8 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     @IBOutlet weak var favoriteList: UITableView!
     var isCommon = true
     var resourseList=UserDefaults.standard.object(forKey: "BOXfavorite") as! Array<Dictionary<String, Any>>
-    public var deviceInfo=Dictionary<String, Any>.init()
+//    public var deviceInfo=Dictionary<String, Any>.init()
+    public var deviceInfo = DeviceInfo.init()
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
@@ -71,7 +72,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        let code:String = deviceInfo["codeString"] as! String
+        let code:String = deviceInfo.code
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 3)
         let deviceID:String="IrRemoteControllerA"
         CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)
@@ -195,7 +196,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + indexPath.row.description, nil)
         if isCommon{
             let channelNum=[11,12,13,14,15,16,17,18]
-            let code:String = self.deviceInfo["codeString"] as! String
+            let code:String = self.deviceInfo.code
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                 CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
@@ -216,7 +217,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                 }
                 return temp
             }()
-            let code:String = self.deviceInfo["codeString"] as! String
+            let code:String = self.deviceInfo.code
             let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
             BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
                 CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)

@@ -15,8 +15,8 @@ class AMPController: UIViewController,UITabBarDelegate {
     @IBOutlet weak var functionView: UIView!
     @IBOutlet weak var numView: UIView!
     
-    public var deviceInfo=Dictionary<String, Any>.init()
-    
+//    public var deviceInfo=Dictionary<String, Any>.init()
+    public var deviceInfo = DeviceInfo.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,7 +24,7 @@ class AMPController: UIViewController,UITabBarDelegate {
 
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        let code:String = deviceInfo["codeString"] as! String
+        let code:String = deviceInfo.code
         let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 2)
         let deviceID:String="IrRemoteControllerA"
         CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)

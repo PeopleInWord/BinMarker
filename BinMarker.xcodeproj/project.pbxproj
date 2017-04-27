@@ -55,6 +55,7 @@
 		3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729E1E7A920B00137EAB /* libz.tbd */; };
 		3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72A01E7A922300137EAB /* libc++.tbd */; };
 		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
+		3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C43FADF1E88EB9500F01330 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FADE1E88EB9500F01330 /* AddressBook.framework */; };
@@ -78,6 +79,7 @@
 		3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */; };
 		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
+		3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */; };
 		3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */; };
 		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
 		3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */; };
@@ -149,6 +151,7 @@
 		3C2A729E1E7A920B00137EAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3C2A72A01E7A922300137EAB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Model/DeviceInfo.swift; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C43FADE1E88EB9500F01330 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -174,6 +177,7 @@
 		3CC2D6761EA1BE32006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddDevice.storyboard; sourceTree = "<group>"; };
 		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
+		3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPForSoapFunction.swift; sourceTree = "<group>"; };
 		3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSubScroll.swift; sourceTree = "<group>"; };
 		3CEE34521EA8963A0047BA5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "en.lproj/TV&SAT.strings"; sourceTree = "<group>"; };
 		3CEE34541EA896460047BA5F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TV&SAT.strings"; sourceTree = "<group>"; };
@@ -246,17 +250,15 @@
 		3C0D31711DDD9D9500D78924 /* BinMarker */ = {
 			isa = PBXGroup;
 			children = (
+				3C33FA301EB0744400432C8C /* StoryBoard */,
+				3C33FA2D1EB0728C00432C8C /* Model */,
 				3CCB1AF71E810BCC000C3A80 /* Extension */,
 				3C72B6E91E7159F50088925F /* old */,
 				3C589D7A1E5FCDA3002D3637 /* Lib */,
 				3C0D31891DDDA38800D78924 /* List */,
 				3C0D31751DDD9D9500D78924 /* AppDelegate.h */,
 				3C0D31761DDD9D9500D78924 /* AppDelegate.m */,
-				3C0D317B1DDD9D9500D78924 /* Main.storyboard */,
-				3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */,
-				3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */,
 				3C0D317E1DDD9D9500D78924 /* Assets.xcassets */,
-				3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */,
 				3CEE345F1EA8969A0047BA5F /* Info.plist */,
 				3C0D31721DDD9D9500D78924 /* Supporting Files */,
 			);
@@ -339,6 +341,25 @@
 			name = bin;
 			sourceTree = "<group>";
 		};
+		3C33FA2D1EB0728C00432C8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3C33FA301EB0744400432C8C /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3C0D317B1DDD9D9500D78924 /* Main.storyboard */,
+				3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */,
+				3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */,
+				3C0D31801DDD9D9500D78924 /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +407,7 @@
 				3C125CC51E94962100D8FB92 /* BinMakeManger.swift */,
 				3C125CB91E94928F00D8FB92 /* FavoriteScrollView.swift */,
 				3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */,
+				3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -584,6 +606,8 @@
 				3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */,
 				3C125CCA1E94962100D8FB92 /* VoiceManger.swift in Sources */,
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
+				3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */,
+				3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
 				3C125CBA1E94928F00D8FB92 /* FavoriteScrollView.swift in Sources */,
 				3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */,
@@ -790,6 +814,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = BinMarker/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -822,6 +847,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BinMarker",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = BinMarker/Base.lproj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
