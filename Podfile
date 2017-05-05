@@ -7,4 +7,6 @@ target 'BinMarker' do
     pod 'FLAnimatedImage'
     pod 'BlurryModalSegue'
     pod 'pop'
+    pod 'AFNetworking'
+    pod 'SDWebImage'
 end

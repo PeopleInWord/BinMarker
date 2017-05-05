@@ -7,12 +7,27 @@
 //
 
 import UIKit
-
 class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
+    @IBOutlet weak var userPic: UIImageView!
+    
+    @IBOutlet weak var userName: UILabel!
+    
+    
+    
+    var user=UserInfo.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.subviews.first?.alpha=0.0
+        userName.text=user.userName
+//        @"http://120.76.74.87/PMSWebService/services/"
+        let urlstr="http://120.76.74.87/PMSWebService/services/" + user.photoAddress
+//        let url=URL.init(string: urlstr)
+//
+//        let imagedata=try!Data.init(contentsOf: url!)
+//        userPic.image=UIImage.init(data: imagedata)
+
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +35,8 @@ class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

@@ -71,6 +71,9 @@
 		3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */; };
 		3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */; };
 		3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */; };
+		3C4C878F1EB2E5F400495F97 /* NetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C878E1EB2E5F300495F97 /* NetWorkingManager.m */; };
+		3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C87901EB2E96700495F97 /* UserFunction.swift */; };
+		3C4C87931EB319EF00495F97 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C87921EB319EF00495F97 /* UserInfo.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
@@ -167,6 +170,10 @@
 		3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegeditController.swift; sourceTree = "<group>"; };
 		3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVBOXTimeSetting.swift; sourceTree = "<group>"; };
+		3C4C878D1EB2E5F300495F97 /* NetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingManager.h; sourceTree = "<group>"; };
+		3C4C878E1EB2E5F300495F97 /* NetWorkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkingManager.m; sourceTree = "<group>"; };
+		3C4C87901EB2E96700495F97 /* UserFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFunction.swift; sourceTree = "<group>"; };
+		3C4C87921EB319EF00495F97 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = Model/UserInfo.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
@@ -345,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */,
+				3C4C87921EB319EF00495F97 /* UserInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -405,9 +413,12 @@
 				3C125CC31E94962100D8FB92 /* UIViewController+NamePrint.m */,
 				3C125CC41E94962100D8FB92 /* VoiceManger.swift */,
 				3C125CC51E94962100D8FB92 /* BinMakeManger.swift */,
+				3C4C878D1EB2E5F300495F97 /* NetWorkingManager.h */,
+				3C4C878E1EB2E5F300495F97 /* NetWorkingManager.m */,
 				3C125CB91E94928F00D8FB92 /* FavoriteScrollView.swift */,
 				3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */,
 				3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */,
+				3C4C87901EB2E96700495F97 /* UserFunction.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -605,9 +616,11 @@
 				3C125CCB1E94962100D8FB92 /* BinMakeManger.swift in Sources */,
 				3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */,
 				3C125CCA1E94962100D8FB92 /* VoiceManger.swift in Sources */,
+				3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */,
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
 				3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */,
 				3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */,
+				3C4C878F1EB2E5F400495F97 /* NetWorkingManager.m in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
 				3C125CBA1E94928F00D8FB92 /* FavoriteScrollView.swift in Sources */,
 				3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */,
@@ -625,6 +638,7 @@
 				3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */,
 				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,
 				3C0D318C1DDDA3A600D78924 /* MainController.m in Sources */,
+				3C4C87931EB319EF00495F97 /* UserInfo.swift in Sources */,
 				3C0D31741DDD9D9500D78924 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

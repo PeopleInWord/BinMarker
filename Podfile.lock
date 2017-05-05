@@ -1,8 +1,23 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - BlurryModalSegue (1.1.2):
     - MZAppearance (~> 1.1.1)
     - UIImage+BlurredFrame (~> 0.0.4)
-  - Bugly (2.4.7)
+  - Bugly (2.4.8)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -11,9 +26,13 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MZAppearance (1.1.6)
   - pop (1.0.9)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - UIImage+BlurredFrame (0.0.4)
 
 DEPENDENCIES:
+  - AFNetworking
   - BlurryModalSegue
   - Bugly
   - FLAnimatedImage
@@ -21,18 +40,21 @@ DEPENDENCIES:
   - FTPopOverMenu
   - MBProgressHUD
   - pop
+  - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlurryModalSegue: 35cdad34eba31228e4d84073033a9ea7d6537aa4
-  Bugly: 2c256069145f550171907c5cb1c0f84ad291f6c1
+  Bugly: da3c02408c14838d498429320545a8e439392978
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   FTPopOverMenu: a12bb907b8402acc4566ce3ac85f706e09af19e8
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   UIImage+BlurredFrame: ad2f7195c6947ea3117c7d202f75a51958d5061a
 
-PODFILE CHECKSUM: 12163eadf8aabaf2e5de30088303598138f030f1
+PODFILE CHECKSUM: 04028b094a6bebc4790f8d8d5251c0e3d5498395
 
 COCOAPODS: 1.2.0.rc.1

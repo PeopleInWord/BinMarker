@@ -12,3 +12,5 @@
 #import "FLAnimatedImage.h"
 #import "iflyMSC/iflyMSC.h"
 #import "POP.h"
+#import "NetWorkingManager.h"
+#import "SDWebImage/UIImageView+WebCache.h"

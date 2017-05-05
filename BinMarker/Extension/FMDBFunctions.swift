@@ -6,6 +6,41 @@
 //  Copyright © 2017年 彭子上. All rights reserved.
 //
 
+//CREATE TABLE IF NOT EXISTS T_UserInfo(
+//    userID INTEGER PRIMARY KEY,
+//    couponsNum integer KEY,
+//    createTime char KEY,
+//    editedTime char KEY,
+//    loginName char KEY,
+//    mobile char KEY,
+//    nickName char KEY,
+//    passWord char KEY,
+//    photoAddress char KEY,
+//    userName char NOT NULL UNIQUE,
+//    sex char KEY,
+//    isLogin integer KEY
+//);
+//
+//CREATE TABLE IF NOT EXISTS T_DeviceInfo(
+//    userID INTEGER  KEY,
+//    DeviceID INTEGER PRIMARY KEY,
+//    devicetype char NOT NULL,
+//    brandname char NOT NULL,
+//    code char(3) NOT NULL,
+//    customname char,
+//    isDefault integer,
+//    foreign key (userID) references T_UserInfo(userID)
+//);
+//
+//CREATE TABLE IF NOT EXISTS T_DeviceFavorite(
+//    DeviceID INTEGER  KEY,
+//    channelID INTEGER PRIMARY KEY,
+//    channelNum INTEGER NOT NULL,
+//    channelName char NOT NULL,
+//    isCustom integer,
+//    foreign key (DeviceID) references T_DeviceInfo(DeviceID)
+//);
+
 import UIKit
 
 class FMDBFunctions: NSObject {
@@ -19,18 +54,18 @@ class FMDBFunctions: NSObject {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             
-            let creatSQL="CREATE TABLE IF NOT EXISTS T_DeviceInfo" +
-            "(DeviceID INTEGER PRIMARY KEY, " +
-            "devicetype char NOT NULL, " +
-            "brandname char NOT NULL, " +
-            "code char(3) NOT NULL, " +
-            "customname char, " +
-            "isDefault integer)"
-            
-            
-            if (database?.executeUpdate(creatSQL, withArgumentsIn: nil))! {
-                print("数据库建立或者打开成功")
-                database?.close()
+            let creatSQL1 = "CREATE TABLE IF NOT EXISTS T_UserInfo( userID INTEGER PRIMARY KEY, couponsNum integer KEY, createTime char KEY, editedTime char KEY, loginName char KEY, mobile char KEY, nickName char KEY, passWord char KEY, photoAddress char KEY, userName char NOT NULL UNIQUE, sex char KEY ,isLogin integer KEY); "
+            if (database?.executeUpdate(creatSQL1, withArgumentsIn: nil))! {
+                print("数据库1建立或者打开成功")
+                let creatSQL2 = "CREATE TABLE IF NOT EXISTS T_DeviceInfo( userID INTEGER  KEY, DeviceID INTEGER PRIMARY KEY, devicetype char NOT NULL, brandname char NOT NULL, code char(3) NOT NULL, customname char, isDefault integer, foreign key (userID) references T_UserInfo(userID) ); "
+                if(database?.executeUpdate(creatSQL2, withArgumentsIn: nil))!{
+                    print("数据库2建立或者打开成功")
+                    let creatSQL3 = "CREATE TABLE IF NOT EXISTS T_DeviceFavorite( DeviceID INTEGER  KEY, channelID INTEGER PRIMARY KEY, channelNum INTEGER NOT NULL, channelName char NOT NULL, isCustom integer, foreign key (DeviceID) references T_DeviceInfo(DeviceID) );"
+                    if(database?.executeUpdate(creatSQL3, withArgumentsIn: nil))!{
+                        print("数据库3建立或者打开成功")
+                        database?.close()
+                    }
+                }
             }
             else
             {
@@ -48,7 +83,7 @@ class FMDBFunctions: NSObject {
                 for value in tempArray {
                     var deviceTypeString=value["deviceType"]!
                     deviceTypeString=deviceTypeString.replacingOccurrences(of: "\"", with: "")
-                    self.insertData(devicetype: deviceTypeString, brandname: value["brandName"]!, codeString: value["codeString"]! , customname: value["defineName"]!, isDefault: 0, fail: {
+                    self.insertDeviceData(devicetype: deviceTypeString, brandname: value["brandName"]!, codeString: value["codeString"]! , customname: value["defineName"]!, isDefault: 0, fail: {
                         
                     })
                 }
@@ -59,7 +94,7 @@ class FMDBFunctions: NSObject {
         }
     }
     
-    func insertData(devicetype:String,brandname:String,codeString:String,customname:String,isDefault:Int,fail:@escaping ()->Void) -> Void {
+    func insertDeviceData(devicetype:String,brandname:String,codeString:String,customname:String,isDefault:Int,fail:@escaping ()->Void) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
@@ -82,9 +117,27 @@ class FMDBFunctions: NSObject {
 
     }
     
+    func insertUserData(user:UserInfo) -> Void {
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                let sqlString = "INSERT INTO T_UserInfo (sex,nickName,photoAddress,userName,isLogin,mobile,editedTime,createTime) VALUES (?,?,?,?,?,?,?,?)"
+                do {
+                    try database?.executeUpdate(sqlString, values: [user.sex,user.nickName,user.photoAddress,user.userName,NSNumber.init(value: 0),user.mobile,user.editedTime,user.createTime])
+                } catch  {
+                    print("插入数据失败")
+                    database?.close()
+                }
+            }
+            else
+            {
+                print("打开失败")
+            }
+        })
+    }
     
-//    
-//    
+ 
     func getAllData() -> [DeviceInfo] {
         var resultArray = Array<DeviceInfo>.init()
         let quene=FMDatabaseQueue.init(path: targetPath)
@@ -97,7 +150,7 @@ class FMDBFunctions: NSObject {
                 while (result?.next())!
                 {
                     let device=DeviceInfo.init()
-                    device.deviceID=(result?.string(forColumn: "deviceID")!)!
+                    device.deviceID=(result?.string(forColumn: "DeviceID")!)!
                     device.devicetype=(result?.string(forColumn: "devicetype")!)!
                     device.code=(result?.string(forColumn: "code")!)!
                     device.brandname=(result?.string(forColumn: "brandname")!)!
@@ -115,10 +168,17 @@ class FMDBFunctions: NSObject {
         return resultArray
     }
     
-    func getSelectData(targetParameters : String,content:String) -> [DeviceInfo] {
+    /// 得到设备列表
+    ///
+    /// - Parameters:
+    ///   - table: <#table description#>
+    ///   - targetParameters: <#targetParameters description#>
+    ///   - content: <#content description#>
+    /// - Returns: <#return value description#>
+    func getSelectData(table:String,targetParameters : String,content:String) -> [DeviceInfo] {
         var resultArray = Array<DeviceInfo>.init()
         let quene=FMDatabaseQueue.init(path: targetPath)
-        let sqlString="select * from T_DeviceInfo where " + targetParameters + " like " + "\"" + content + "\""
+        let sqlString="select * from " + table + " where " + targetParameters + " like " + "\"" + content + "\""
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {
@@ -126,13 +186,58 @@ class FMDBFunctions: NSObject {
                 while (result?.next())!
                 {
                     let device=DeviceInfo.init()
-                    device.deviceID=(result?.string(forColumn: "deviceID")!)!
+                    device.deviceID=(result?.string(forColumn: "DeviceID")!)!
                     device.devicetype=(result?.string(forColumn: "devicetype")!)!
                     device.code=(result?.string(forColumn: "code")!)!
                     device.brandname=(result?.string(forColumn: "brandname")!)!
                     device.isDefault=(result?.bool(forColumn: "isDefault"))!
                     device.customname=(result?.string(forColumn: "customname")!)!
                     resultArray.append(device)
+                }
+            }
+            else
+            {
+                print("打开失败")
+            }
+            
+        })
+        return resultArray
+    }
+    
+    func getUserData(targetParameters : String,content:Any) -> [UserInfo] {
+        var resultArray = Array<UserInfo>.init()
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        var sqlString="select * from " + "T_UserInfo" + " where " + targetParameters + " like "
+        
+        
+        if content is String {
+            sqlString += "\"" + (content as! String) + "\""
+        }
+        else if content is NSNumber
+        {
+            let num=content as! NSNumber
+            sqlString += num.stringValue
+        }
+        else
+        {
+            
+        }
+        
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                let result=database?.executeQuery(sqlString, withArgumentsIn: nil)
+                while (result?.next())!
+                {
+                    let user:UserInfo=UserInfo.init()
+                    user.mobile=(result?.string(forColumn: "mobile")!)!
+                    user.createTime=(result?.string(forColumn: "createTime")!)!
+                    user.editedTime=(result?.string(forColumn: "editedTime")!)!
+                    user.nickName=(result?.string(forColumn: "nickName")!)!
+                    user.photoAddress=(result?.string(forColumn: "photoAddress")!)!
+                    user.sex=(result?.string(forColumn: "sex")!)!
+                    user.userName=(result?.string(forColumn: "userName")!)!
+                    resultArray.append(user)
                 }
             }
             else
@@ -178,13 +283,12 @@ class FMDBFunctions: NSObject {
                 returnCount=(result?.int(forColumn: "COUNT(devicetype)"))!
             }
         })
-//        print(content + " " + returnCount.description)
         return returnCount
     }
 
     
-    func delData(parameters:String ,_ content:String) -> Void {
-        let sqlString="DELETE FROM T_DeviceInfo where " + parameters + " LIKE \"" + content + "\""
+    func delData(table:String,parameters:String ,_ content:String) -> Void {
+        let sqlString="DELETE FROM " + table + " where " + parameters + " LIKE \"" + content + "\""
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
@@ -206,8 +310,8 @@ class FMDBFunctions: NSObject {
         })
     }
     
-    func setData(targetParameters:String,targetContent:Any,parameters:String ,content:Any) -> Void {
-        var sqlString = "UPDATE T_DeviceInfo set "
+    func setData(table:String,targetParameters:String,targetContent:Any,parameters:String ,content:Any) -> Void {
+        var sqlString = "UPDATE " + table + " set "
             + targetParameters
         
         if targetContent is String {
@@ -215,15 +319,32 @@ class FMDBFunctions: NSObject {
         }
         else
         {
-            sqlString += " = " + (targetContent as! String) + " WHERE " + parameters
+            if targetContent is NSNumber{
+                let num=targetContent as! NSNumber
+                sqlString += " = " + num.stringValue + " WHERE " + parameters
+                
+            } else {
+                sqlString += " = " + (targetContent as! String) + " WHERE " + parameters
+            }
+            
         }
         
-        if content is String {
+        
+        
+        
+        if content is String{
             sqlString += " IS \"" + (content as! String) + "\""
         }
         else
         {
-            sqlString += " IS " + (content as! String)
+            if content is NSNumber {
+                let num=content as! NSNumber
+                sqlString += " IS " + num.stringValue
+            }
+            else
+            {
+                sqlString += " IS " + (content as! String)
+            }
         }
         
         let quene=FMDatabaseQueue.init(path: targetPath)

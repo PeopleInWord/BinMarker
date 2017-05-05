@@ -126,8 +126,7 @@ class TestController: UIViewController{
 //                "defineName" : alert.textFields!.first!.text!]
             
 //            let user = UserDefaults.init()
-            FMDBFunctions.shareInstance
-            .insertData(devicetype: self.deviceTypeStr, brandname: self.brandName, codeString: self.codeList[self.currentIndex], customname: alert.textFields!.first!.text!, isDefault: 0, fail: {
+            FMDBFunctions.shareInstance.insertDeviceData(devicetype: self.deviceTypeStr, brandname: self.brandName, codeString: self.codeList[self.currentIndex], customname: alert.textFields!.first!.text!, isDefault: 0, fail: {
                 
             })
             

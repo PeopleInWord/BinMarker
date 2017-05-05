@@ -8,21 +8,30 @@
 
 #import "MainController.h"
 #import "BinMarker-Swift.h"
-
+#import "SDWebImageManager.h"
 static NSString *const targetName=@"IrRemoteControllerA";
 
-@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource,LoginDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *noneView;
 @property (strong,nonatomic)NSMutableArray <DeviceInfo *>*alldevices;
-@property (nonatomic, strong) UIDocumentInteractionController *documentController;
+@property (strong,nonatomic) UIDocumentInteractionController *documentController;
+@property (strong,nonatomic) UserInfo *user;
 
 @end
 
 
 @implementation MainController
+
+-(UserInfo *)user
+{
+    if (!_user) {
+        _user=[[FMDBFunctions shareInstance]getUserDataWithTargetParameters:@"isLogin" content:@(YES)].firstObject;
+    }
+    return _user;
+}
 
 -(NSMutableArray<DeviceInfo *> *)alldevices
 {
@@ -42,8 +51,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+    
     
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -76,20 +85,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
     _noneView.hidden= self.alldevices.count != 0;
 }
 
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-}
-
 #pragma mark 托线
 
 
 - (IBAction)userInfo:(UIBarButtonItem *)sender {
-    if (1) {
+    BOOL isLogin= [[NSUserDefaults standardUserDefaults]objectForKey:@"isLogin"];
+    if (!isLogin) {
         [self performSegueWithIdentifier:@"loginIn" sender:nil];
     } else {
-        [self performSegueWithIdentifier:@"userInfo" sender:nil];
+        [self performSegueWithIdentifier:@"userInfo" sender:self.user];
     }
     
 }
@@ -155,28 +159,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [_documentController presentOptionsMenuFromRect: CGRectMake(self.view.frame.size.width/2,self.view.frame.size.height/2, 0.0, 0.0) inView:self.view animated:YES];
 }
 
-#pragma mark 刷机跳转
-
--(void)documentInteractionControllerWillPresentOpenInMenu:(UIDocumentInteractionController *)controller
-{
-    NSLog(@"documentInteractionControllerWillPresentOpenInMenu");
-}
-
--(void)documentInteractionControllerWillPresentOptionsMenu:(UIDocumentInteractionController *)controller
-{
-    NSLog(@"documentInteractionControllerWillPresentOptionsMenu");
-}
-
--(void)documentInteractionControllerDidEndPreview:(UIDocumentInteractionController *)controller
-{
-    NSLog(@"documentInteractionControllerDidEndPreview");
-}
-
--(void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application
-{
-    NSLog(@"willBeginSendingToApplication");
-}
-
 
 -(NSMutableArray *)addIndex:(NSMutableArray < NSDictionary<NSString *, id> *> *)array
 {
@@ -233,8 +215,10 @@ static NSString *const targetName=@"IrRemoteControllerA";
         cell=[tableView dequeueReusableCellWithIdentifier:@"noneCell" forIndexPath:indexPath];
     } else {
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
-        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
+//        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+//        DeviceInfo *device=deviceArray[indexPath.row];
         NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *brandName=[cell viewWithTag:1003];
@@ -258,9 +242,10 @@ static NSString *const targetName=@"IrRemoteControllerA";
     UITableViewRowAction *deleteAction;
     deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
         NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
-        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
-        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
+        [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID];
+//        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         if ([[FMDBFunctions shareInstance] getAllData].count==0) {
             _noneView.hidden=NO;
@@ -268,7 +253,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"编辑", @"编辑") handler:^(UITableViewRowAction *_Nonnull action, NSIndexPath *_Nonnull indexPath) {
         NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
-        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"名称", @"名称") message:NSLocalizedString(@"输入设备名称", @"输入设备名称") preferredStyle:UIAlertControllerStyleAlert];
         [alertController addTextFieldWithConfigurationHandler:^(UITextField *_Nonnull textField) {
@@ -276,7 +261,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", @"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
             device.customname=alertController.textFields.firstObject.text.length > 0?alertController.textFields.firstObject.text:device.brandname;
-            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
+//            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
+            [FMDBFunctions.shareInstance setDataWithTable:@"T_DeviceInfo" targetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", @"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
@@ -312,9 +298,16 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark -login
+-(void)didLoginWithUser:(UserInfo *)user
+{
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
+    [[FMDBFunctions shareInstance]setDataWithTable:@"T_UserInfo" targetParameters:@"isLogin" targetContent:@(YES) parameters:@"mobile" content:user.mobile];
+    self.user=user;
+}
 
 #pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -333,6 +326,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
     else if ([segue.identifier isEqualToString:@"box"]){
         BOXController *target=segue.destinationViewController;
         target.deviceInfo=sender;
+    }
+    else if ([segue.identifier isEqualToString:@"loginIn"]){
+        LoginController *target=segue.destinationViewController;
+        target.delegate=self;
+    }
+    else if ([segue.identifier isEqualToString:@"userInfo"]){
+        UserInfoController *target=segue.destinationViewController;
+        target.user=sender;
     }
 }
 
