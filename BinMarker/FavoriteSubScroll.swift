@@ -17,13 +17,13 @@ class FavoriteSubScroll: UIScrollView {
     var channelInfoList = Array<Dictionary<String,Any>>.init()
     weak var favoriteDelegate:FavoriteSubScrollDelegate?
     
-    func reloadData(with channelArray:Array<Dictionary<String,Any>>) -> Void {
+    func reloadData(with channelArray:[FavoriteInfo]) -> Void {
         let containView=self.subviews.first!
         for subView in containView.subviews {
             subView.removeFromSuperview()
         }
         self.contentSize=CGSize.init(width: CGFloat(channelArray.count*Int(self.bounds.width)/4), height: self.bounds.height)
-        for (index,value) in channelArray.enumerated() {
+        for (index,favoriteValue) in channelArray.enumerated() {
             
             let width=self.bounds.width/4
             let high=width/0.9
@@ -44,8 +44,9 @@ class FavoriteSubScroll: UIScrollView {
             
             
             let channelLab = UILabel.init(frame: CGRect.init(origin: CGPoint.init(x: channelImageBtn.center.x-40,y: channelImageBtn.frame.maxY), size: CGSize.init(width: 80, height: 20)))
-
-            channelLab.text=value["name"] as? String
+            
+//            channelLab.text=value["name"] as? String
+            channelLab.text=favoriteValue.channelName
             channelLab.textAlignment = .center
             bgView.addSubview(channelLab)
             //图片未解决

@@ -1,5 +1,6 @@
 platform :ios, '9.3'
 target 'BinMarker' do
+
     pod 'FMDB'
     pod 'FTPopOverMenu'
     pod 'MBProgressHUD'
@@ -9,4 +10,5 @@ target 'BinMarker' do
     pod 'pop'
     pod 'AFNetworking'
     pod 'SDWebImage'
+    pod 'IQKeyboardManager'
 end

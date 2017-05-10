@@ -21,12 +21,16 @@ class LoginController: UIViewController {
     @IBOutlet weak var activer: UIActivityIndicatorView!
     
     @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var getCode: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
     @IBAction func login(_ sender: UIButton) {
+        
+        
         sender.isEnabled=false
         registerBtn.isEnabled=false
         activer.startAnimating()
@@ -43,6 +47,43 @@ class LoginController: UIViewController {
             print(errorStr)
         }
     }
+    
+    @IBAction func loginMethoes(_ sender: UISegmentedControl, forEvent event: UIEvent) {
+        if sender.selectedSegmentIndex == 0 {
+            getCode.isHidden=true
+        } else {
+            getCode.isHidden=false
+            pwd.text=""
+        }
+    }
+
+    @IBAction func didGetCode(_ sender: UIButton) {
+        let manger=UserFunction.init()
+        manger.getUserRegisterCode(tel: "15919716485") { (code) in
+            CommonFunction.showForShortTime(2, "验证码请求成功", "")
+        }
+        var i = 60
+        sender.isEnabled = false
+        DispatchQueue.global().async {
+            while i>0
+            {
+                i-=1
+                DispatchQueue.main.async {
+                    sender.setTitle(i.description, for: .normal)
+                }
+                Thread.sleep(forTimeInterval: 1)
+            }
+            DispatchQueue.main.async {
+                sender.isEnabled = true
+                sender.setTitle("获取验证码", for: .normal)
+            }
+        }
+    }
+    
+    
+
+
+
 
     func success(user:UserInfo) -> Void {
         let mobile = FMDBFunctions.shareInstance.getUserData(targetParameters: "mobile", content: user.mobile)

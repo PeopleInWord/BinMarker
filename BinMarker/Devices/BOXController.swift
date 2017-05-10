@@ -18,15 +18,18 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     @IBOutlet weak var costom: UIButton!
     @IBOutlet weak var favoriteList: UITableView!
     var isCommon = true
-    var resourseList=UserDefaults.standard.object(forKey: "BOXfavorite") as! Array<Dictionary<String, Any>>
+//    var resourseList=UserDefaults.standard.object(forKey: "BOXfavorite") as! Array<Dictionary<String, Any>>
 //    public var deviceInfo=Dictionary<String, Any>.init()
     public var deviceInfo = DeviceInfo.init()
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
+    var favoriteDB = Array<FavoriteInfo>.init()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title=self.deviceInfo.brandname
         self.tabBar.selectedItem=self.tabBar.items?[0]
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
@@ -109,12 +112,18 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                 })
                 let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
                     //加限制
-                    var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
-                    let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
-                    channelList?.append(channelInfo)
-                    self.resourseList=channelList!
-                    UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
-                    UserDefaults.standard.synchronize()
+                    let favoriteTemp=FavoriteInfo.init()
+                    favoriteTemp.DeviceID=self.deviceInfo.deviceID
+                    favoriteTemp.channelName=(alert.textFields?[0].text)!
+                    favoriteTemp.channelNum=(alert.textFields?[1].text)!
+                    favoriteTemp.isCustom=true
+//                    var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
+//                    let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
+//                    channelList?.append(channelInfo)
+//                    
+//                    self.resourseList=channelList!
+//                    UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
+//                    UserDefaults.standard.synchronize()
                     self.favoriteList.reloadData()
                     
                 })
@@ -181,10 +190,14 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         {
             let channelTitle={ () -> Array<String> in
                 var temp=Array<String>.init()
-                for deviceDicInfo in self.resourseList
+                for favoriteItem in self.favoriteDB
                 {
-                    temp.append(deviceDicInfo.keys.first!)
+                    temp.append(favoriteItem.channelName)
                 }
+//                for deviceDicInfo in self.resourseList
+//                {
+//                    temp.append(deviceDicInfo.keys.first!)
+//                }
                 return temp
             }()
             channelTitleLab.text=channelTitle[indexPath.row]
@@ -211,10 +224,14 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
         {
             let channelNum={ () -> [Int] in
                 var temp=Array<Int>.init()
-                for deviceDicInfo in self.resourseList
+                for favoriteItem in self.favoriteDB
                 {
-                    temp.append(Int(deviceDicInfo.values.first! as! String)!)
+                    temp.append(Int(favoriteItem.channelNum)!)
                 }
+//                for deviceDicInfo in self.resourseList
+//                {
+//                    temp.append(Int(deviceDicInfo.values.first! as! String)!)
+//                }
                 return temp
             }()
             let code:String = self.deviceInfo.code
@@ -236,18 +253,23 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
-            var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
-            channelList?.remove(at: indexPath.row)
-            self.resourseList=channelList!
-            UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
-            UserDefaults.standard.synchronize()
+//            var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
+//            channelList?.remove(at: indexPath.row)
+//            self.resourseList=channelList!
+//            UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
+//            UserDefaults.standard.synchronize()
+            
+            
+            let favoriteTemp=self.favoriteDB[indexPath.row]
+            FMDBFunctions.shareInstance.delData(table: "T_DeviceFavorite", parameters: "channelID", favoriteTemp.channelID)
+            self.favoriteDB.remove(at: indexPath.row)
             tableView.reloadData()
         }
         return [delete]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return isCommon ?7:self.resourseList.count
+        return isCommon ?7:self.favoriteDB.count
     }
     
     

@@ -51,22 +51,22 @@ static NSString *const targetName=@"IrRemoteControllerA";
     // Do any additional setup after loading the view.
 }
 
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    if (!app.autoScan.valid) {
-        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
-        [app.autoScan fire];
-    }
-}
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+//    if (!app.autoScan.valid) {
+//        app.autoScan = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(autoScan:) userInfo:nil repeats:YES];
+//        [app.autoScan fire];
+//    }
+//}
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
-    if (app.autoScan.valid) {
-        [app.autoScan invalidate];
-    }
+//    [super viewWillDisappear:animated];
+//    AppDelegate *app = (AppDelegate *) [[UIApplication sharedApplication] delegate];
+//    if (app.autoScan.valid) {
+//        [app.autoScan invalidate];
+//    }
     [[BluetoothManager getInstance] removeObserver:self forKeyPath:@"peripheralsInfo"];
 }
 
@@ -136,10 +136,10 @@ static NSString *const targetName=@"IrRemoteControllerA";
 {
     [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];;
 }
-
-- (void)autoScan:(id)sender {
-    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
-}
+//
+//- (void)autoScan:(id)sender {
+//    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+//}
 
 
 - (IBAction)bindingLater:(UIButton *)sender {

@@ -30,7 +30,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     //137 109 114 121
     
     var isCommon = true
-    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
+//    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
+    var favoriteDB = Array<FavoriteInfo>.init()
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
     var numberField=UITextField.init()
@@ -235,8 +236,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
         let favoriteScroll=self.view.viewWithTag(10000) as! FavoriteSubScroll
         favoriteScroll.favoriteDelegate=self
-        favoriteScroll.reloadData(with: resourseList)
-        
+//        favoriteScroll.reloadData(with: resourseList)
+        favoriteScroll.reloadData(with: favoriteDB)
         
         
     }
@@ -258,12 +259,16 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 CommonFunction.startAnimation(NSLocalizedString("操作中...", comment: "操作中..."), nil)
                 let channelNum={ () -> [Int] in
                     var temp=Array<Int>.init()
-                    for deviceDicInfo in self.resourseList
+                    for favoriteItem in self.favoriteDB
                     {
-                        //                print(deviceDicInfo["channel"])
-                        
-                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
+                        temp.append(Int(favoriteItem.channelNum)!)
                     }
+//                    for deviceDicInfo in self.resourseList
+//                    {
+//                        //                print(deviceDicInfo["channel"])
+//                        
+//                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
+//                    }
                     return temp
                 }()
                 let code:String = self.deviceInfo.code
@@ -364,12 +369,22 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     number.placeholder=NSLocalizedString("输入频道号(不超过3位)", comment: "输入频道号(不超过3位)")
                 })
                 let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
-                    var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
-                    let channelInfo:Dictionary<String,Any>=["name":(alert.textFields?[0].text)!,"channel":(alert.textFields?[1].text)!,"image":Data.init()]
-                    channelList?.append(channelInfo)
-                    self.resourseList=channelList!
-                    UserDefaults.standard.set(channelList, forKey: "TVfavorite")
-                    UserDefaults.standard.synchronize()
+                    let favoriteTemp=FavoriteInfo.init()
+                    favoriteTemp.DeviceID=self.deviceInfo.deviceID
+                    favoriteTemp.channelName=(alert.textFields?[0].text)!
+                    favoriteTemp.channelNum=(alert.textFields?[1].text)!
+                    favoriteTemp.isCustom=true
+                    FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp)
+                    self.favoriteDB.append(favoriteTemp)
+//                    var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
+//                    let channelInfo:Dictionary<String,Any>=["name":(alert.textFields?[0].text)!,"channel":(alert.textFields?[1].text)!,"image":Data.init()]
+//                    channelList?.append(channelInfo)
+                    
+                    
+                    
+//                    self.resourseList=channelList!
+//                    UserDefaults.standard.set(channelList, forKey: "TVfavorite")
+//                    UserDefaults.standard.synchronize()
                     self.favoriteList.reloadData()
                     
                 })
@@ -455,22 +470,31 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             editBtn.addTarget(self, action: #selector(editIcon(_:)), for: .touchUpInside)
             let channelTitle={ () -> Array<String> in
                 var temp=Array<String>.init()
-                for deviceDicInfo in self.resourseList
+                for favoriteItem in self.favoriteDB
                 {
-                    temp.append(deviceDicInfo["name"] as! String)
+                    temp.append(favoriteItem.channelName)
                 }
+                
+//                for deviceDicInfo in self.resourseList
+//                {
+//                    temp.append(deviceDicInfo["name"] as! String)
+//                }
                 return temp
             }()
-            let channelImageArr={ () -> Array<Data> in
-                var temp=Array<Data>.init()
-                for deviceDicInfo in self.resourseList
-                {
-                    temp.append(deviceDicInfo["image"] as! Data)
-                }
-                return temp
-            }()
+            
+            //图片设置联网
+            
+            
+//            let channelImageArr={ () -> Array<Data> in
+//                var temp=Array<Data>.init()
+//                for deviceDicInfo in self.resourseList
+//                {
+//                    temp.append(deviceDicInfo["image"] as! Data)
+//                }
+//                return temp
+//            }()
             channelTitleLab.text=channelTitle[indexPath.row]
-            editBtn.setBackgroundImage(UIImage.init(data: channelImageArr[indexPath.row]), for: .normal)
+//            editBtn.setBackgroundImage(UIImage.init(data: channelImageArr[indexPath.row]), for: .normal)
             
         }
         
@@ -520,10 +544,14 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         {
             let channelNum={ () -> [Int] in
                 var temp=Array<Int>.init()
-                for deviceDicInfo in self.resourseList
+                for favoriteItem in self.favoriteDB
                 {
-                    temp.append(Int(deviceDicInfo.values.first! as! String)!)
+                    temp.append(Int(favoriteItem.channelNum)!)
                 }
+//                for deviceDicInfo in self.resourseList
+//                {
+//                    temp.append(Int(deviceDicInfo.values.first! as! String)!)
+//                }
                 return temp
             }()
             let code:String = deviceInfo.code
@@ -547,11 +575,19 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
-            var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
-            channelList?.remove(at: indexPath.row)
-            self.resourseList=channelList!
-            UserDefaults.standard.set(channelList, forKey: "TVfavorite")
-            UserDefaults.standard.synchronize()
+            
+            let favoriteTemp=self.favoriteDB[indexPath.row]
+            FMDBFunctions.shareInstance.delData(table: "T_DeviceFavorite", parameters: "channelID", favoriteTemp.channelID)
+            self.favoriteDB.remove(at: indexPath.row)
+            
+//            var channelList=UserDefaults.standard.object(forKey: "TVfavorite") as? Array<Dictionary<String, Any>>
+//            channelList?.remove(at: indexPath.row)
+//            self.resourseList=channelList!
+//            
+//            
+//            
+//            UserDefaults.standard.set(channelList, forKey: "TVfavorite")
+//            UserDefaults.standard.synchronize()
             tableView.reloadData()
         }
         return [delete]
@@ -563,8 +599,8 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         }
         else
         {
-            
-            return self.resourseList.count
+            return self.favoriteDB.count
+//            return self.resourseList.count
         }
     }
     
@@ -579,19 +615,33 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             let tempImage=info["UIImagePickerControllerOriginalImage"] as? UIImage
             self.selectedImageBtn.setBackgroundImage(tempImage, for: .normal)
             let imageData=UIImagePNGRepresentation(tempImage!)
-            var selectDic=Dictionary<String, Any>.init()
-            for dic in self.resourseList
+            var selectFavoriteItem=FavoriteInfo.init()
+            
+            
+            for favoriteItem in self.favoriteDB
             {
-                let name=dic["name"] as! String
+                let name=favoriteItem.channelName
                 if name==self.selectedChannelTitle
                 {
-                    selectDic=dic
+                    selectFavoriteItem=favoriteItem
                     break
                 }
             }
-            selectDic["image"]=imageData
-            UserDefaults.standard.set(self.resourseList, forKey: "TVfavorite")
-            UserDefaults.standard.synchronize()
+            //这个地方是同步图片的地方,下次修改
+            
+//            for dic in self.resourseList
+//            {
+//                let name=dic["name"] as! String
+//                if name==self.selectedChannelTitle
+//                {
+//                    selectDic=dic
+//                    break
+//                }
+//            }
+//            selectFavoriteItem.imageUrl=
+//            selectDic["image"]=imageData
+//            UserDefaults.standard.set(self.resourseList, forKey: "TVfavorite")
+//            UserDefaults.standard.synchronize()
         }
     }
     

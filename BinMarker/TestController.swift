@@ -126,9 +126,18 @@ class TestController: UIViewController{
 //                "defineName" : alert.textFields!.first!.text!]
             
 //            let user = UserDefaults.init()
-            FMDBFunctions.shareInstance.insertDeviceData(devicetype: self.deviceTypeStr, brandname: self.brandName, codeString: self.codeList[self.currentIndex], customname: alert.textFields!.first!.text!, isDefault: 0, fail: {
+            
+            let device = DeviceInfo.init()
+            device.devicetype = self.deviceTypeStr
+            device.brandname = self.brandName!
+            device.code = self.codeList[self.currentIndex]
+            device.customname = alert.textFields!.first!.text!
+            let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+            FMDBFunctions.shareInstance.insertDeviceData(in: user!, with: device, fail: { 
                 
             })
+            
+            
             
 //            if (user.array(forKey: "deviceInfo") != nil)
 //            {

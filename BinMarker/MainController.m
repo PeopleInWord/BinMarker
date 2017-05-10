@@ -8,17 +8,20 @@
 
 #import "MainController.h"
 #import "BinMarker-Swift.h"
-#import "SDWebImageManager.h"
+#import "UIImageView+WebCache.h"
+#import "UIImage+MultiFormat.h"
+
 static NSString *const targetName=@"IrRemoteControllerA";
 
-@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource,LoginDelegate>
+@interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource,LoginDelegate,UserDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (weak, nonatomic) IBOutlet UIButton *noneBtn;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navTitle;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *noneView;
-@property (strong,nonatomic)NSMutableArray <DeviceInfo *>*alldevices;
+@property (strong,nonatomic) NSMutableArray <DeviceInfo *>*alldevices;
 @property (strong,nonatomic) UIDocumentInteractionController *documentController;
 @property (strong,nonatomic) UserInfo *user;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barLeft;
 
 @end
 
@@ -51,8 +54,27 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+    [manger getAllChangeWith:@"123" :^{
+        
+    }];
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
     
+    if (self.user) {
+        SDWebImageManager *manger=[SDWebImageManager sharedManager];
+        NSURL *imageUrl=[NSURL URLWithString:[NSString stringWithFormat:@"http://120.76.74.87/PMSWebService/services/%@",self.user.photoAddress]];
+        [manger loadImageWithURL:imageUrl options:SDWebImageHighPriority progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+            
+        } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+            if (image) {
+                _barLeft.image=image;
+            }
+            
+        }];
+    } else {
+        
+    }
     
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -66,13 +88,13 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
     
     
-//    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
-//    dispatch_async(queue, ^{
-//        [NSThread sleepForTimeInterval:1.0];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self performSegueWithIdentifier:@"loginIn" sender:nil];
-//        });
-//    });
+    //    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
+    //    dispatch_async(queue, ^{
+    //        [NSThread sleepForTimeInterval:1.0];
+    //        dispatch_async(dispatch_get_main_queue(), ^{
+    //            [self performSegueWithIdentifier:@"loginIn" sender:nil];
+    //        });
+    //    });
 }
 
 #pragma mark 视图
@@ -137,19 +159,19 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 - (IBAction)addDevice:(UIButton *)sender {
-        [self performSegueWithIdentifier:@"addDevice" sender:nil];
+    [self performSegueWithIdentifier:@"addDevice" sender:nil];
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
-//    self.alldevices=[self addIndex:self.alldevices];
-//    BinMakeManger *manger=[BinMakeManger shareInstance];
-//    NSString *binPath=[manger makeTypeWith:self.alldevices];
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"成功" message:@"下一步,用Starter打开" preferredStyle: UIAlertControllerStyleAlert];
-//    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"用刷固件软件打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        [self openWithPath:[NSURL fileURLWithPath:binPath]];
-//    }];
-//    [alertController addAction:OKAction];
-//    [self presentViewController:alertController animated:YES completion:nil];
+    //    self.alldevices=[self addIndex:self.alldevices];
+    //    BinMakeManger *manger=[BinMakeManger shareInstance];
+    //    NSString *binPath=[manger makeTypeWith:self.alldevices];
+    //    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"成功" message:@"下一步,用Starter打开" preferredStyle: UIAlertControllerStyleAlert];
+    //    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"用刷固件软件打开" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //        [self openWithPath:[NSURL fileURLWithPath:binPath]];
+    //    }];
+    //    [alertController addAction:OKAction];
+    //    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 -(void)openWithPath:(NSURL *)url
@@ -217,8 +239,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
-//        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
-//        DeviceInfo *device=deviceArray[indexPath.row];
+        //        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+        //        DeviceInfo *device=deviceArray[indexPath.row];
         NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *brandName=[cell viewWithTag:1003];
@@ -245,7 +267,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
         [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID];
-//        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
+        //        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         if ([[FMDBFunctions shareInstance] getAllData].count==0) {
             _noneView.hidden=NO;
@@ -261,7 +283,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", @"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
             device.customname=alertController.textFields.firstObject.text.length > 0?alertController.textFields.firstObject.text:device.brandname;
-//            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
+            //            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
             [FMDBFunctions.shareInstance setDataWithTable:@"T_DeviceInfo" targetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
@@ -277,8 +299,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DeviceInfo * deviceInfo=self.alldevices[indexPath.row];
-    NSString *deviceType=deviceInfo.devicetype;
+//    DeviceInfo * deviceInfo=self.alldevices[indexPath.row];
+//    NSString *deviceType=deviceInfo.devicetype;
+            NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
+    DeviceInfo *deviceInfo=deviceArray[indexPath.row];
+        NSString *deviceType=deviceInfo.devicetype;
     if ([deviceType isEqualToString:@"TV"]) {
         [self performSegueWithIdentifier:@"tv" sender:deviceInfo];
     }
@@ -301,9 +327,39 @@ static NSString *const targetName=@"IrRemoteControllerA";
 #pragma mark -login
 -(void)didLoginWithUser:(UserInfo *)user
 {
+    
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
     [[FMDBFunctions shareInstance]setDataWithTable:@"T_UserInfo" targetParameters:@"isLogin" targetContent:@(YES) parameters:@"mobile" content:user.mobile];
     self.user=user;
+    SDWebImageManager *manger=[SDWebImageManager sharedManager];
+    NSURL *imageUrl=[NSURL URLWithString:[NSString stringWithFormat:@"http://120.76.74.87/PMSWebService/services/%@",self.user.photoAddress]];
+    [manger loadImageWithURL:imageUrl options:SDWebImageHighPriority progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        
+    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
+        if (image) {
+            _barLeft.image=image;
+        }
+    }];
+    
+    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    
+    [self presentViewController:alert animated:YES completion:^{
+        
+    }];
+    
+    
+}
+
+-(void)didUnLogin
+{
+    self.user=nil;
+    [self.mainTableView reloadData];
 }
 
 #pragma mark - Navigation
@@ -313,6 +369,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"tv"]) {
         TVController *target=segue.destinationViewController;
+        target.favoriteDB=[[FMDBFunctions shareInstance]getChannelDataWith:sender];
         target.deviceInfo=sender;
     }
     else if ([segue.identifier isEqualToString:@"dvd"]){
@@ -325,6 +382,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
     else if ([segue.identifier isEqualToString:@"box"]){
         BOXController *target=segue.destinationViewController;
+        target.favoriteDB=[[FMDBFunctions shareInstance]getChannelDataWith:sender];
         target.deviceInfo=sender;
     }
     else if ([segue.identifier isEqualToString:@"loginIn"]){
@@ -333,7 +391,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
     else if ([segue.identifier isEqualToString:@"userInfo"]){
         UserInfoController *target=segue.destinationViewController;
+        target.delegate=self;
         target.user=sender;
+        target.userPic.image=_barLeft.image;
     }
 }
 

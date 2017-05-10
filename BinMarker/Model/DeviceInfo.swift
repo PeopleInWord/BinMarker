@@ -9,11 +9,11 @@
 import UIKit
 
 class DeviceInfo: NSObject {
+    var mobile = String.init()
     var deviceID = String.init()
     var devicetype = String.init()
     var brandname = String.init()
     var code = String.init()
     var customname = String.init()
     var isDefault = Bool.init()
-    
 }

@@ -58,21 +58,25 @@ class UserFunction: NSObject {
     func leadIn(user:UserInfo) -> Void {
         let deviceArray=FMDBFunctions.shareInstance.getAllData()
         deviceArray.forEach { (device) in
-            FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "DeviceID", targetContent: device.deviceID, parameters: "userID", content: user.userName)
+            FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "DeviceID", targetContent: device.deviceID, parameters: "mobile", content: user.mobile)
         }
-        FMDBFunctions.shareInstance.setData(table: "T_UserInfo", targetParameters: "userID", targetContent: user.userName, parameters: "isLogin", content: 1)
+        FMDBFunctions.shareInstance.setData(table: "T_UserInfo", targetParameters: "mobile", targetContent: user.mobile, parameters: "isLogin", content: 1)
     }
     
     
-//    func getUserRegisterCode(tel:String,_ success:@escaping (String)->Void) -> Void {
-//        let interface="getUserRegisterCode"
-//        let requestBody:Dictionary<String,String>=["mobile":tel]
-//        httpManger.sendDataToServer(withInterface: interface, requestBody: requestBody, success: { (requestDic) in
-//            print(requestDic)
-////            success(requestDic)
-//        }) { (error) in
-//            print(error!)
-//        }
-//    }
+    func getUserRegisterCode(tel:String,_ success:@escaping (String)->Void) -> Void {
+        let interface="getUserRegisterCode"
+        let requestBody:Dictionary<String,String>=["mobile":tel]
+        httpManger.sendDataToServer(withInterface: interface, requestBody: requestBody, success: { (requestDic) in
+            print(requestDic)
+            success("success")
+        }) { (error) in
+            print(error!)
+        }
+    }
+    
+    
+    
+
     
 }

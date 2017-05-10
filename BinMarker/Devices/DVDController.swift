@@ -16,10 +16,10 @@ class DVDController: UIViewController ,UITabBarDelegate{
     @IBOutlet weak var functionView: UIView!
     @IBOutlet weak var numView: UIView!
     
-//    public var deviceInfo=Dictionary<String, Any>.init()
     public var deviceInfo = DeviceInfo.init()
     //131  141 152 121 156 156
     override func viewDidLoad() {
+        self.navigationItem.title=self.deviceInfo.brandname
         super.viewDidLoad()
     }
 

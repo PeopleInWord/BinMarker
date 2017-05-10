@@ -7,26 +7,24 @@
 //
 
 import UIKit
+@objc(UserDelegate)
+protocol UserDelegate : NSObjectProtocol{
+    func didUnLogin() -> Void
+}
+
 class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     @IBOutlet weak var userPic: UIImageView!
     
     @IBOutlet weak var userName: UILabel!
     
-    
+    weak var delegate:UserDelegate!
     
     var user=UserInfo.init()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.subviews.first?.alpha=0.0
         userName.text=user.userName
-//        @"http://120.76.74.87/PMSWebService/services/"
-        let urlstr="http://120.76.74.87/PMSWebService/services/" + user.photoAddress
-//        let url=URL.init(string: urlstr)
-//
-//        let imagedata=try!Data.init(contentsOf: url!)
-//        userPic.image=UIImage.init(data: imagedata)
-
         
         // Do any additional setup after loading the view.
     }
@@ -43,6 +41,25 @@ class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataS
         self.navigationController?.navigationBar.subviews.first?.alpha=1.0
     }
     
+    
+    @IBAction func didClickExit(_ sender: UIButton) {
+        UserDefaults.standard.removeObject(forKey: "isLogin")
+//        UserDefaults.standard.set(false, forKey: "isLogin")
+        UserDefaults.standard.synchronize()
+        FMDBFunctions.shareInstance.setData(table: "T_UserInfo", targetParameters: "isLogin", targetContent: NSNumber.init(value: false), parameters: "isLogin", content: NSNumber.init(value: true))
+        self.dismiss(animated: true) { 
+            self.delegate.didUnLogin()
+        }
+    }
+
+    @IBAction func backToMain(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true) { 
+            
+        }
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section==0 {
             let cell = tableView .dequeueReusableCell(withIdentifier: "option", for: indexPath) as UITableViewCell;
@@ -52,6 +69,7 @@ class UserInfoController: UIViewController ,UITableViewDelegate,UITableViewDataS
             let optionBtn=cell.viewWithTag(1002) as! UIButton
             imageView.image=imageArr[indexPath.row]
             optionBtn.setTitle(optionTitle[indexPath.row], for: .normal)
+//            optionBtn.addTarget(self, action: #selector(didClickExit), for: .touchUpInside)
             return cell
         }
         else

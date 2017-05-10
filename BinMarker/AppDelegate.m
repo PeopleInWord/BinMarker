@@ -10,6 +10,7 @@
 #import <Bugly/Bugly.h>
 #import "iflyMSC/iflyMSC.h"
 #import "BinMarker-Swift.h"
+#import "IQKeyboardManager.h"
 @interface AppDelegate ()
 
 @end
@@ -21,8 +22,9 @@
 {
     [Bugly startWithAppId:@"7f4dfcd92a"];
     [FMDBFunctions.shareInstance translateData];
-//    FMDBFunctions *s=[[FMDBFunctions alloc]shareInstance];
-//    [s translateData];
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = YES;
     self.window.rootViewController=[self rootView];
     // Override point for customization after application launch.
     return YES;

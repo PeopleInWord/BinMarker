@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */; };
 		3C0D31741DDD9D9500D78924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31731DDD9D9500D78924 /* main.m */; };
 		3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31761DDD9D9500D78924 /* AppDelegate.m */; };
 		3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D317B1DDD9D9500D78924 /* Main.storyboard */; };
@@ -55,6 +54,7 @@
 		3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A729E1E7A920B00137EAB /* libz.tbd */; };
 		3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2A72A01E7A922300137EAB /* libc++.tbd */; };
 		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
+		3C316F601EBC82D4005D30E1 /* FavoriteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C316F5F1EBC82D4005D30E1 /* FavoriteInfo.swift */; };
 		3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
@@ -75,6 +75,7 @@
 		3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C87901EB2E96700495F97 /* UserFunction.swift */; };
 		3C4C87931EB319EF00495F97 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C87921EB319EF00495F97 /* UserInfo.swift */; };
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
+		3C503FE01EBC6FBF006D0F2D /* HTTPFuntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
 		3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */; };
@@ -87,6 +88,7 @@
 		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
 		3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
+		F1ABEF3C90BFDF926B491356 /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +156,7 @@
 		3C2A729E1E7A920B00137EAB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3C2A72A01E7A922300137EAB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		3C316F5F1EBC82D4005D30E1 /* FavoriteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInfo.swift; sourceTree = "<group>"; };
 		3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Model/DeviceInfo.swift; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		3C4C87901EB2E96700495F97 /* UserFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFunction.swift; sourceTree = "<group>"; };
 		3C4C87921EB319EF00495F97 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = Model/UserInfo.swift; sourceTree = "<group>"; };
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
+		3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFuntion.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
@@ -201,7 +205,7 @@
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
-		98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BinMarker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BinMarker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B06F660B7C0797452319BB /* Pods-BinMarker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,7 +233,7 @@
 				3C2A72951E7A825300137EAB /* OpenGLES.framework in Frameworks */,
 				3C2A72931E7A824A00137EAB /* CoreTelephony.framework in Frameworks */,
 				3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */,
-				0C950FBCAC616E3546A47CFD /* libPods-BinMarker.a in Frameworks */,
+				F1ABEF3C90BFDF926B491356 /* libPods-BinMarker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +357,7 @@
 			children = (
 				3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */,
 				3C4C87921EB319EF00495F97 /* UserInfo.swift */,
+				3C316F5F1EBC82D4005D30E1 /* FavoriteInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */,
 				3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */,
 				3C4C87901EB2E96700495F97 /* UserFunction.swift */,
+				3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -452,7 +458,7 @@
 				3C2A72941E7A825300137EAB /* OpenGLES.framework */,
 				3C2A72921E7A824900137EAB /* CoreTelephony.framework */,
 				3C589D861E5FD107002D3637 /* CoreBluetooth.framework */,
-				98B9796DF7DF0EE5C4374E5F /* libPods-BinMarker.a */,
+				B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -610,6 +616,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C503FE01EBC6FBF006D0F2D /* HTTPFuntion.swift in Sources */,
 				3C125CC81E94962100D8FB92 /* UIView+AutoFont.m in Sources */,
 				3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */,
 				3C125CC71E94962100D8FB92 /* UIButton+touchLimit.m in Sources */,
@@ -634,6 +641,7 @@
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */,
+				3C316F601EBC82D4005D30E1 /* FavoriteInfo.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
 				3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */,
 				3C482FEB1E8E5FB300012E7D /* TVBOXTimeSetting.swift in Sources */,

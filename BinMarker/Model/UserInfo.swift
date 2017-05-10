@@ -9,12 +9,11 @@
 import UIKit
 
 class UserInfo: NSObject {
-    
+    var mobile = String.init()//手机号做主键了
     var sex = String.init()
     var nickName = String.init()
     var photoAddress = String.init()
     var userName = String.init()
-    var mobile = String.init()
     var editedTime = String.init()
     var createTime = String.init()
     

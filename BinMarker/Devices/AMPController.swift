@@ -18,6 +18,7 @@ class AMPController: UIViewController,UITabBarDelegate {
 //    public var deviceInfo=Dictionary<String, Any>.init()
     public var deviceInfo = DeviceInfo.init()
     override func viewDidLoad() {
+        self.navigationItem.title=self.deviceInfo.brandname
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

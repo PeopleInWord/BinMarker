@@ -7,12 +7,11 @@
 //
 
 //CREATE TABLE IF NOT EXISTS T_UserInfo(
-//    userID INTEGER PRIMARY KEY,
 //    couponsNum integer KEY,
 //    createTime char KEY,
 //    editedTime char KEY,
 //    loginName char KEY,
-//    mobile char KEY,
+//    mobile char PRIMARY KEY,
 //    nickName char KEY,
 //    passWord char KEY,
 //    photoAddress char KEY,
@@ -22,14 +21,14 @@
 //);
 //
 //CREATE TABLE IF NOT EXISTS T_DeviceInfo(
-//    userID INTEGER  KEY,
+//    mobile char KEY,
 //    DeviceID INTEGER PRIMARY KEY,
 //    devicetype char NOT NULL,
 //    brandname char NOT NULL,
 //    code char(3) NOT NULL,
 //    customname char,
 //    isDefault integer,
-//    foreign key (userID) references T_UserInfo(userID)
+//    foreign key (mobile) references T_UserInfo(mobile)
 //);
 //
 //CREATE TABLE IF NOT EXISTS T_DeviceFavorite(
@@ -37,6 +36,7 @@
 //    channelID INTEGER PRIMARY KEY,
 //    channelNum INTEGER NOT NULL,
 //    channelName char NOT NULL,
+//    imageUrl char NULL,
 //    isCustom integer,
 //    foreign key (DeviceID) references T_DeviceInfo(DeviceID)
 //);
@@ -53,16 +53,15 @@ class FMDBFunctions: NSObject {
         
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
-            
-            let creatSQL1 = "CREATE TABLE IF NOT EXISTS T_UserInfo( userID INTEGER PRIMARY KEY, couponsNum integer KEY, createTime char KEY, editedTime char KEY, loginName char KEY, mobile char KEY, nickName char KEY, passWord char KEY, photoAddress char KEY, userName char NOT NULL UNIQUE, sex char KEY ,isLogin integer KEY); "
+            let creatSQL1 = "CREATE TABLE IF NOT EXISTS T_UserInfo(couponsNum integer KEY,createTime char KEY,editedTime char KEY,loginName char KEY,mobile char PRIMARY KEY,nickName char KEY,passWord char KEY,photoAddress char KEY,userName char NOT NULL UNIQUE,sex char KEY,isLogin integer KEY); "
             if (database?.executeUpdate(creatSQL1, withArgumentsIn: nil))! {
-                print("数据库1建立或者打开成功")
-                let creatSQL2 = "CREATE TABLE IF NOT EXISTS T_DeviceInfo( userID INTEGER  KEY, DeviceID INTEGER PRIMARY KEY, devicetype char NOT NULL, brandname char NOT NULL, code char(3) NOT NULL, customname char, isDefault integer, foreign key (userID) references T_UserInfo(userID) ); "
+                print("用户库建立或者打开成功")
+                let creatSQL2 = "CREATE TABLE IF NOT EXISTS T_DeviceInfo( mobile char KEY,DeviceID INTEGER PRIMARY KEY,devicetype char NOT NULL,brandname char NOT NULL,code char(3) NOT NULL,customname char,isDefault integer,foreign key (mobile) references T_UserInfo(mobile)); "
                 if(database?.executeUpdate(creatSQL2, withArgumentsIn: nil))!{
-                    print("数据库2建立或者打开成功")
-                    let creatSQL3 = "CREATE TABLE IF NOT EXISTS T_DeviceFavorite( DeviceID INTEGER  KEY, channelID INTEGER PRIMARY KEY, channelNum INTEGER NOT NULL, channelName char NOT NULL, isCustom integer, foreign key (DeviceID) references T_DeviceInfo(DeviceID) );"
+                    print("设备库建立或者打开成功")
+                    let creatSQL3 = "CREATE TABLE IF NOT EXISTS T_DeviceFavorite( DeviceID INTEGER  KEY, channelID INTEGER PRIMARY KEY, channelNum INTEGER NOT NULL, channelName char NOT NULL,imageUrl char NULL, isCustom integer, foreign key (DeviceID) references T_DeviceInfo(DeviceID) );"
                     if(database?.executeUpdate(creatSQL3, withArgumentsIn: nil))!{
-                        print("数据库3建立或者打开成功")
+                        print("频道库建立或者打开成功")
                         database?.close()
                     }
                 }
@@ -101,7 +100,7 @@ class FMDBFunctions: NSObject {
             {
                 let sqlString = "INSERT INTO T_DeviceInfo (devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?)"
                 do {
-                    try database?.executeUpdate(sqlString, values: [devicetype,brandname,codeString,customname,NSNumber.init(value: isDefault)])
+                    try database?.executeUpdate(sqlString, values: [devicetype,brandname,codeString,"22",NSNumber.init(value: isDefault)])
                 } catch  {
                     print("插入数据失败")
                     fail()
@@ -116,6 +115,30 @@ class FMDBFunctions: NSObject {
         })
 
     }
+    
+    func insertDeviceData(in user:UserInfo,with device:DeviceInfo,fail:@escaping ()->Void) -> Void {
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                let sqlString = "INSERT INTO T_DeviceInfo (mobile,devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?,?)"
+                do {
+                    try database?.executeUpdate(sqlString, values:[user.mobile,device.devicetype,device.brandname,device.code,device.customname,NSNumber.init(value: device.isDefault)])
+                } catch  {
+                    print("插入数据失败")
+                    fail()
+                    database?.close()
+                }
+                
+            }
+            else
+            {
+                print("打开失败")
+            }
+        })
+        
+    }
+    
     
     func insertUserData(user:UserInfo) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
@@ -137,6 +160,33 @@ class FMDBFunctions: NSObject {
         })
     }
     
+    //    DeviceID INTEGER  KEY,
+    //    channelID INTEGER PRIMARY KEY,
+    //    channelNum INTEGER NOT NULL,
+    //    channelName char NOT NULL,
+    //    imageUrl char NULL,
+    //    isCustom integer,
+    //    foreign key (DeviceID) references T_DeviceInfo(DeviceID)
+    
+    func insertChannelData(device:DeviceInfo,channel:FavoriteInfo) -> Void {
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                let sqlString = "INSERT INTO T_DeviceFavorite (DeviceID,channelNum,channelName,isCustom,imageUrl) VALUES (?,?,?,?,?)"
+                do {
+                    try database?.executeUpdate(sqlString, values: [NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
+                } catch  {
+                    print("插入数据失败")
+                    database?.close()
+                }
+            }
+            else
+            {
+                print("打开失败")
+            }
+        })
+    }
  
     func getAllData() -> [DeviceInfo] {
         var resultArray = Array<DeviceInfo>.init()
@@ -204,6 +254,8 @@ class FMDBFunctions: NSObject {
         return resultArray
     }
     
+    
+    
     func getUserData(targetParameters : String,content:Any) -> [UserInfo] {
         var resultArray = Array<UserInfo>.init()
         let quene=FMDatabaseQueue.init(path: targetPath)
@@ -249,6 +301,65 @@ class FMDBFunctions: NSObject {
         return resultArray
     }
     
+
+    func getDeviceData(with user:UserInfo) -> [DeviceInfo]{
+        let sqlString="select * from T_DeviceInfo where mobile is" + user.mobile
+        var resultArray = Array<DeviceInfo>.init()
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            
+            if (database?.open())!
+            {
+                let result=database?.executeQuery(sqlString, withArgumentsIn: nil)
+                while (result?.next())!
+                {
+                    let device=DeviceInfo.init()
+                    device.mobile=user.mobile
+                    device.brandname=(result?.string(forColumn: "brandname"))!
+                    device.code=(result?.string(forColumn: "code"))!
+                    device.customname=(result?.string(forColumn: "customname"))!
+                    device.isDefault=(result?.bool(forColumn: "isDefault"))!
+                    device.devicetype=(result?.string(forColumn: "devicetype"))!
+                    device.deviceID=(result?.string(forColumn: "deviceID"))!
+                    resultArray.append(device)
+                }
+            }
+        })
+        return resultArray
+    }
+    
+    
+    func getChannelData(with device:DeviceInfo) -> [FavoriteInfo] {
+        let sqlString="select * from T_DeviceFavorite where DeviceID is " + device.deviceID
+        var resultArray = Array<FavoriteInfo>.init()
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                let result=database?.executeQuery(sqlString, withArgumentsIn: nil)
+                while (result?.next())!
+                {
+                    let favorite=FavoriteInfo.init()
+                    favorite.DeviceID=device.deviceID
+                    favorite.channelID=(result?.string(forColumn: "channelID"))!
+                    favorite.channelNum=(result?.string(forColumn: "channelNum"))!
+                    favorite.channelName=(result?.string(forColumn: "channelName"))!
+                    favorite.isCustom=(result?.bool(forColumn: "isCustom"))!
+                    if result?.bool(forColumn: "isCustom") != nil
+                    {
+                        favorite.imageUrl=(result?.string(forColumn: "imageUrl"))!
+                    }
+                    else
+                    {
+                        favorite.imageUrl=""
+                    }
+                    resultArray.append(favorite)
+                }
+            }
+        })
+        return resultArray
+    }
+    
     /// 返回某一列下内容的个数
     ///
     /// - Parameters:
@@ -287,6 +398,12 @@ class FMDBFunctions: NSObject {
     }
 
     
+    /// 删除某一条数据
+    ///
+    /// - Parameters:
+    ///   - table: <#table description#>
+    ///   - parameters: <#parameters description#>
+    ///   - content: <#content description#>
     func delData(table:String,parameters:String ,_ content:String) -> Void {
         let sqlString="DELETE FROM " + table + " where " + parameters + " LIKE \"" + content + "\""
         let quene=FMDatabaseQueue.init(path: targetPath)
@@ -310,6 +427,15 @@ class FMDBFunctions: NSObject {
         })
     }
     
+    
+    /// 修改某一条数据
+    ///
+    /// - Parameters:
+    ///   - table: <#table description#>
+    ///   - targetParameters: <#targetParameters description#>
+    ///   - targetContent: <#targetContent description#>
+    ///   - parameters: <#parameters description#>
+    ///   - content: <#content description#>
     func setData(table:String,targetParameters:String,targetContent:Any,parameters:String ,content:Any) -> Void {
         var sqlString = "UPDATE " + table + " set "
             + targetParameters
@@ -328,8 +454,6 @@ class FMDBFunctions: NSObject {
             }
             
         }
-        
-        
         
         
         if content is String{
