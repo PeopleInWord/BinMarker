@@ -9,6 +9,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -256,7 +257,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="个人中心" id="5bZ-lT-JBN"/>
                     <connections>
-                        <outlet property="backToMain" destination="RhF-wp-l6l" id="rB1-KR-eqo"/>
                         <outlet property="userName" destination="QpO-Uk-fy1" id="6xZ-xY-srv"/>
                         <outlet property="userPic" destination="LIw-Cp-foC" id="haX-sU-6xj"/>
                     </connections>
@@ -679,12 +679,20 @@
                                 <action selector="userInfo:" destination="HcQ-rv-CFL" id="Gjs-tj-3W9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="btn_setting" id="Qfj-5d-6Dc">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="didClickSetting:event:" destination="HcQ-rv-CFL" id="q7H-ep-PV8"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="btn_setting" id="Qfj-5d-6Dc">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didClickSetting:event:" destination="HcQ-rv-CFL" id="q7H-ep-PV8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="test" id="bkz-Ho-haK">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="test:" destination="HcQ-rv-CFL" id="cyu-0U-M3x"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="barLeft" destination="ipo-KJ-rkx" id="TAZ-Nm-oaC"/>
@@ -699,7 +707,7 @@
                         <segue destination="HHc-1l-ajj" kind="show" identifier="amp" id="fwY-yz-W6u"/>
                         <segue destination="3wR-vv-M9p" kind="show" identifier="setting" id="PjP-hK-8gn"/>
                         <segue destination="mZx-GT-WMO" kind="presentation" identifier="loginIn" id="w9e-UJ-yzf"/>
-                        <segue destination="z1J-8Y-yBe" kind="presentation" identifier="userInfo" customClass="BlurryModalSegue" id="cgj-LT-s3u"/>
+                        <segue destination="z1J-8Y-yBe" kind="presentation" identifier="userInfo" id="cgj-LT-s3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk4-G3-cft" userLabel="First Responder" sceneMemberID="firstResponder"/>

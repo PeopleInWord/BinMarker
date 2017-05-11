@@ -4,6 +4,7 @@
 
 #import "AddDeviceController.h"
 #import "MainController.h"
+#import "AppDelegate.h"
 #import "FMDB.h"
 #import "FTPopOverMenu.h"
 #import "BluetoothManager.h"
@@ -14,3 +15,4 @@
 #import "POP.h"
 #import "NetWorkingManager.h"
 #import "SDWebImage/UIImageView+WebCache.h"
+#import <CommonCrypto/CommonCrypto.h>

@@ -47,62 +47,72 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         
     }
     
-    func uploadAllData(user:UserInfo) -> Void {
+    func uploadAllData(user:UserInfo,success:@escaping ()->Void,fail:()->Void) -> Void {
         var uploadDic = Dictionary<String, Any>.init()
-//        var deviceDataArray=Array<Any>.init()
         var devicesDataArray=Array<Dictionary<String, Any>>.init()
-        
-        
-//        var collectData = Dictionary<String, Array<Dictionary<String,String>>>.init()
-        
-//        uploadDic["mobile"]=user.mobile
-//        uploadDic["userName"]=user.userName
-        
 
         FMDBFunctions.shareInstance.getDeviceData(with: user).forEach { (device) in
             var deviceDic=Dictionary<String, Any>.init()
             var deviceInfo=Dictionary<String, Any>.init()
             var collectData=Array<Dictionary<String,Any>>.init()
-            
+            //
             deviceInfo["collectData"]=device.customname
-            deviceInfo["code"]=device.code
+            deviceInfo["deviceNo"]=device.code
             deviceInfo["deviceType"]=device.devicetype
             deviceInfo["deviceId"]=device.deviceID
             deviceInfo["brandName"]=device.brandname
             deviceInfo["mobile"]=device.mobile
-            
-            deviceDic["userControl"]=deviceInfo
-            
-            
-//            deviceDic["mobile"]=device.mobile
-//            deviceDic["brandname"]=device.brandname
-//            deviceDic["code"]=device.code
-//            deviceDic["customname"]=device.customname
-//            deviceDic["deviceID"]=device.deviceID
-//            deviceDic["devicetype"]=device.devicetype
-//            deviceDic["isDefault"]=device.isDefault
-//            deviceDic["mobile"]=device.mobile
-            
-//            var favorites=Array<Dictionary<String, Any>>.init()
+            //
+            deviceDic["device"]=deviceInfo
+            //
             FMDBFunctions.shareInstance.getChannelData(with: device).forEach({ (favorite) in
                 var favoriteDic=Dictionary<String, Any>.init()
                 
-                favoriteDic["channelID"]=favorite.channelID
+                favoriteDic["channelId"]=favorite.channelID
                 favoriteDic["isCustom"]=favorite.isCustom
-                favoriteDic["DeviceID"]=favorite.DeviceID
+                favoriteDic["deviceID"]=favorite.DeviceID
                 
-                favoriteDic["uid"]=user.mobile
-                favoriteDic["name"]=favorite.channelName
-                favoriteDic["remoteId"]=favorite.channelNum
+//                favoriteDic["uid"]=user.mobile
+                favoriteDic["channelCustomName"]=favorite.channelName
+                favoriteDic["channelNum"]=favorite.channelNum
                 collectData.append(favoriteDic)
             })
-            deviceDic["collectData"]=collectData
+            deviceDic["channel"]=collectData
             devicesDataArray.append(deviceDic)
-//            devices.append(deviceDic)
         }
-        uploadDic["testaa"]=devicesDataArray
+        uploadDic["data"]=devicesDataArray
         
-        print(uploadDic)
+        if JSONSerialization.isValidJSONObject(uploadDic) {
+            let jsondata = try?JSONSerialization.data(withJSONObject: uploadDic, options: JSONSerialization.WritingOptions(rawValue: 0))
+            
+            if jsondata != nil {
+                let str = String.init(data: jsondata!, encoding: .utf8)
+                print(str!)
+                
+                let urlStr="http://120.76.74.87/PMSWebService/AjaxService.jsp?action=collectionChannel"
+                var request=URLRequest.init(url: URL(string: urlStr)!)
+                request.httpMethod = "POST"
+                request.httpBody = jsondata
+                request.timeoutInterval = 10
+                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                
+                let config=URLSessionConfiguration.default
+                let datasession=URLSession(configuration: config)
+                let dataTask=datasession.dataTask(with: request) { (data, response, error) in
+                    let data1 = try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
+                    //Data转换成String打印输出
+                    success()
+                    print(data1?["rspMsg"]! as! String)
+                }
+                
+                dataTask.resume()
+            }
+        }
+        else
+        {
+            fail()
+            print("不能转换")
+        }
     }
     
     
@@ -110,15 +120,13 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         
     }
     
-    func getAllChange(with userid:String,_ success:()->Void) -> Void {
+    func getAllChange(with mobile:String,_ success:()->Void) -> Void {
         var urlStr="http://120.76.74.87/PMSWebService/AjaxService.jsp?"
         let bodyDic=["action":"downloadChannel",
                      "appId":"100070001",
                      "timestamp":"1476087104",
-                     "Sign":"0fd30f5721e105521a2d3e1d8d366446",
-                     "userId":userid,
-                     "deviceType":"",
-                     "brand":""]
+                     "Sign":"47b3435414dff3ab4d7a082563095294",
+                     "mobile":mobile]
         
         let bodylist  = NSMutableArray()
         for subDic in bodyDic {
@@ -136,17 +144,16 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         let config=URLSessionConfiguration.default
         let datasession=URLSession(configuration: config)
         let dataTask=datasession.dataTask(with: request) { (data, response, error) in
-            let data1 = try!JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+//            let data1 = try!JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
             //Data转换成String打印输出
+            let data1 = try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
+            //Data转换成String打印输出
+//            success()
             print(data1)
         }
         
         dataTask.resume()
         
-
+        
     }
-    
-    
-    
-    
 }

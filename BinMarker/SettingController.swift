@@ -12,7 +12,7 @@ class SettingController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let y=averageOfFunction(a: 2, b: 2) { (x)  in  {
+        let _=averageOfFunction(a: 2, b: 2) { (x)  in  {
             var temp = x+2
             temp = temp+3
             return temp

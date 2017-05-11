@@ -60,4 +60,52 @@ class CommonFunction: NSObject {
         }
         return window?.subviews.first
     }
+    
+    class func md5eight(with str:String) -> String? {
+        let cStr = str.cString(using: String.Encoding.utf8);
+        let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 4)
+        
+        CC_MD5(cStr!,(CC_LONG)(strlen(cStr!)), buffer)
+        let md5String = NSMutableString();
+        for i in 0 ..< 4{
+            md5String.appendFormat("%02x", buffer[i])
+        }
+        free(buffer)
+        return CommonFunction.replaceMd5(md5Str: md5String as String)
+    }
+    
+    class func replaceMd5(md5Str:String) -> String {
+        var returnStr = ""
+        for single in md5Str.characters
+        {
+            var temp = String.init()
+            switch single {
+            case "a":
+                temp = "10"
+                break;
+            case "b":
+                temp = "11"
+                break;
+            case "c":
+                temp = "12"
+                break;
+            case "d":
+                temp = "13"
+                break;
+            case "e":
+                temp = "14"
+                break;
+            case "f":
+                temp = "15"
+                break;
+                
+            default:
+                temp = "0" + single.description
+                break
+            }
+            returnStr += temp
+        }
+        return returnStr
+    }
+    
 }

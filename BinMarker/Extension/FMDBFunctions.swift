@@ -53,7 +53,7 @@ class FMDBFunctions: NSObject {
         
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
-            let creatSQL1 = "CREATE TABLE IF NOT EXISTS T_UserInfo(couponsNum integer KEY,createTime char KEY,editedTime char KEY,loginName char KEY,mobile char PRIMARY KEY,nickName char KEY,passWord char KEY,photoAddress char KEY,userName char NOT NULL UNIQUE,sex char KEY,isLogin integer KEY); "
+            let creatSQL1 = "CREATE TABLE IF NOT EXISTS T_UserInfo(mobile char PRIMARY KEY,couponsNum integer KEY,createTime char KEY,editedTime char KEY,loginName char KEY,nickName char KEY,passWord char KEY,photoAddress char KEY,userName char NOT NULL UNIQUE,sex char KEY,isLogin integer KEY); "
             if (database?.executeUpdate(creatSQL1, withArgumentsIn: nil))! {
                 print("用户库建立或者打开成功")
                 let creatSQL2 = "CREATE TABLE IF NOT EXISTS T_DeviceInfo( mobile char KEY,DeviceID INTEGER PRIMARY KEY,devicetype char NOT NULL,brandname char NOT NULL,code char(3) NOT NULL,customname char,isDefault integer,foreign key (mobile) references T_UserInfo(mobile)); "
@@ -100,7 +100,9 @@ class FMDBFunctions: NSObject {
             {
                 let sqlString = "INSERT INTO T_DeviceInfo (devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?)"
                 do {
-                    try database?.executeUpdate(sqlString, values: [devicetype,brandname,codeString,"22",NSNumber.init(value: isDefault)])
+                    let custring=customname.characters.count == 0 ?brandname:customname
+                    
+                    try database?.executeUpdate(sqlString, values: [devicetype,brandname,codeString,custring,NSNumber.init(value: isDefault)])
                 } catch  {
                     print("插入数据失败")
                     fail()
@@ -121,9 +123,12 @@ class FMDBFunctions: NSObject {
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {
-                let sqlString = "INSERT INTO T_DeviceInfo (mobile,devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?,?)"
+                let sqlString = "INSERT INTO T_DeviceInfo (DeviceID,mobile,devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?,?,?)"
                 do {
-                    try database?.executeUpdate(sqlString, values:[user.mobile,device.devicetype,device.brandname,device.code,device.customname,NSNumber.init(value: device.isDefault)])
+                    let deviceid = NSNumber.init(value: Int64(device.deviceID)!)
+                    let custring=device.customname.characters.count == 0 ?device.brandname:device.customname
+                    
+                    try database?.executeUpdate(sqlString, values:[deviceid ,user.mobile,device.devicetype,device.brandname,device.code,custring,NSNumber.init(value: device.isDefault)])
                 } catch  {
                     print("插入数据失败")
                     fail()
@@ -173,9 +178,9 @@ class FMDBFunctions: NSObject {
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {
-                let sqlString = "INSERT INTO T_DeviceFavorite (DeviceID,channelNum,channelName,isCustom,imageUrl) VALUES (?,?,?,?,?)"
+                let sqlString = "INSERT INTO T_DeviceFavorite (channelID,DeviceID,channelNum,channelName,isCustom,imageUrl) VALUES (?,?,?,?,?,?)"
                 do {
-                    try database?.executeUpdate(sqlString, values: [NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
+                    try database?.executeUpdate(sqlString, values: [NSNumber.init(value: Int64(channel.channelID)!),NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
                 } catch  {
                     print("插入数据失败")
                     database?.close()
@@ -303,7 +308,7 @@ class FMDBFunctions: NSObject {
     
 
     func getDeviceData(with user:UserInfo) -> [DeviceInfo]{
-        let sqlString="select * from T_DeviceInfo where mobile is" + user.mobile
+        let sqlString="select * from T_DeviceInfo where mobile is " + user.mobile
         var resultArray = Array<DeviceInfo>.init()
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in

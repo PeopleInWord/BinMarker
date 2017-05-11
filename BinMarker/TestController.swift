@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestController: UIViewController{
+class TestController: UIViewController,UIApplicationDelegate{
     public var deviceTypeStr : String!
     public var deviceType:NSIndexPath!
     public var brandName : String!
@@ -119,40 +119,33 @@ class TestController: UIViewController{
             nameField.placeholder=self.brandName! + " " + self.codeList[self.currentIndex]
         })
         alert.addAction(UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
-//            let deviceSubInfoDic:Dictionary<String,String>=[
-//                "deviceType" : self.deviceTypeStr,
-//                "brandName" : self.brandName!,
-//                "codeString" : self.codeList[self.currentIndex],
-//                "defineName" : alert.textFields!.first!.text!]
-            
-//            let user = UserDefaults.init()
-            
             let device = DeviceInfo.init()
             device.devicetype = self.deviceTypeStr
             device.brandname = self.brandName!
             device.code = self.codeList[self.currentIndex]
             device.customname = alert.textFields!.first!.text!
+            if device.customname.characters.count == 0
+            {
+                device.customname = device.brandname
+            }
+            
             let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
-            FMDBFunctions.shareInstance.insertDeviceData(in: user!, with: device, fail: { 
-                
-            })
+            if user != nil {
+                let md5 = CommonFunction.md5eight(with: (user?.mobile)! + device.devicetype + device.brandname + device.code + device.customname)
+                device.deviceID = md5!
+                print(md5!)
+                FMDBFunctions.shareInstance.insertDeviceData(in: user!, with: device, fail: {
+                    
+                })
+            }
+            else
+            {
+                FMDBFunctions.shareInstance.insertDeviceData(devicetype: device.devicetype, brandname: device.brandname, codeString: device.code, customname: device.customname, isDefault: 0, fail: {
+                    
+                })
+            }
             
             
-            
-//            if (user.array(forKey: "deviceInfo") != nil)
-//            {
-//                let deviceInfoArr = NSMutableArray.init(array: user.array(forKey: "deviceInfo")!)
-//                deviceInfoArr .add(deviceSubInfoDic)
-//                user.set(deviceInfoArr, forKey: "deviceInfo")
-//            }
-//            else
-//            {
-//                let deviceInfoArr = NSMutableArray.init()
-//                deviceInfoArr .add(deviceSubInfoDic)
-//                user.set(deviceInfoArr, forKey: "deviceInfo")
-//            }
-//            
-//            user.synchronize()
 
             let _ = self.navigationController?.popToRootViewController(animated: true)
             

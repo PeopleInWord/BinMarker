@@ -10,6 +10,7 @@
 #import "BinMarker-Swift.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+MultiFormat.h"
+#import "AppDelegate.h"
 
 static NSString *const targetName=@"IrRemoteControllerA";
 
@@ -32,6 +33,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
 {
     if (!_user) {
         _user=[[FMDBFunctions shareInstance]getUserDataWithTargetParameters:@"isLogin" content:@(YES)].firstObject;
+        AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
+        app.user=_user;
+        
     }
     return _user;
 }
@@ -56,7 +60,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [super viewDidLoad];
     
     HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-    [manger getAllChangeWith:@"123" :^{
+    [manger getAllChangeWith:self.user.mobile :^{
         
     }];
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
@@ -80,12 +84,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"TVfavorite"]) {
-        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
-    }
-    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"BOXfavorite"]) {
-        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
-    }
+//    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"TVfavorite"]) {
+//        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
+//    }
+//    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"BOXfavorite"]) {
+//        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
+//    }
     
     
     //    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
@@ -118,6 +122,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [self performSegueWithIdentifier:@"userInfo" sender:self.user];
     }
     
+}
+- (IBAction)test:(UIBarButtonItem *)sender {
+    HTTPFuntion *s = [[HTTPFuntion alloc]init];
+    [s uploadAllDataWithUser:self.user success:^{
+        
+    } fail:^{
+        
+    }];
 }
 
 -(void)loadBluetooth
@@ -331,6 +343,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"isLogin"];
     [[FMDBFunctions shareInstance]setDataWithTable:@"T_UserInfo" targetParameters:@"isLogin" targetContent:@(YES) parameters:@"mobile" content:user.mobile];
     self.user=user;
+    AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
+    app.user=_user;
     SDWebImageManager *manger=[SDWebImageManager sharedManager];
     NSURL *imageUrl=[NSURL URLWithString:[NSString stringWithFormat:@"http://120.76.74.87/PMSWebService/services/%@",self.user.photoAddress]];
     [manger loadImageWithURL:imageUrl options:SDWebImageHighPriority progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
@@ -342,7 +356,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
     
     UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"是(还没做好)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -359,6 +373,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 -(void)didUnLogin
 {
     self.user=nil;
+    AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
+    app.user=nil;
     [self.mainTableView reloadData];
 }
 

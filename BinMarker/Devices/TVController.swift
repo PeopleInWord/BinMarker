@@ -373,6 +373,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     favoriteTemp.DeviceID=self.deviceInfo.deviceID
                     favoriteTemp.channelName=(alert.textFields?[0].text)!
                     favoriteTemp.channelNum=(alert.textFields?[1].text)!
+                    favoriteTemp.channelID = CommonFunction.md5eight(with: self.deviceInfo.deviceID + favoriteTemp.DeviceID + favoriteTemp.channelName + favoriteTemp.channelNum)!
                     favoriteTemp.isCustom=true
                     FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp)
                     self.favoriteDB.append(favoriteTemp)
