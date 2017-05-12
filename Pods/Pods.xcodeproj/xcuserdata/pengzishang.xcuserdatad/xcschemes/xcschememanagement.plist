@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MZAppearance.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,6 +72,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>10C4559521B7984855F7556C44F4A976</key>
 		<dict>
 			<key>primary</key>
@@ -77,7 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48351E8353AE907A6DEFD9B565F2EFA8</key>
+		<key>16F07ED4A2072CA8B02F16E80D2D6D1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>508BE31ACF0A0B5BF74C5937CF7BDBBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C39B13E31B799D3D642E8BB5A46EC84</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -113,16 +133,6 @@
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D00B1878AD22173B0C9D554EB80E79D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D2657E57E3CC7DF0F777B06A5F4DD6CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

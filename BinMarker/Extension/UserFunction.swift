@@ -48,6 +48,7 @@ class UserFunction: NSObject {
                 fail(failString)
             }
         }) { (error) in
+            fail("服务器错误")
             print(error!)
         }
     }

@@ -1,6 +1,6 @@
 platform :ios, '9.3'
 target 'BinMarker' do
-
+    pod 'MJRefresh'
     pod 'FMDB'
     pod 'FTPopOverMenu'
     pod 'MBProgressHUD'

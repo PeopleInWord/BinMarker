@@ -11,7 +11,7 @@
 #import "UIImageView+WebCache.h"
 #import "UIImage+MultiFormat.h"
 #import "AppDelegate.h"
-
+#import "MJRefresh.h"
 static NSString *const targetName=@"IrRemoteControllerA";
 
 @interface MainController ()<UIDocumentInteractionControllerDelegate,UIApplicationDelegate,UITableViewDelegate,UITableViewDataSource,LoginDelegate,UserDelegate>
@@ -58,11 +58,28 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __weak MainController * weakself = self;
     
-    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-    [manger getAllChangeWith:self.user.mobile :^{
-        
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [CommonFunction startAnimation:@"同步中" :@""];
+        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+        [manger getAllChangeWith: weakself.user :^{
+            _alldevices=nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [ weakself.mainTableView reloadData];
+                _noneView.hidden=  weakself.alldevices.count != 0;
+            });
+            [CommonFunction stopAnimation:@"同步成功" :@"" :1];
+            [ weakself.mainTableView.mj_header endRefreshing];
+        }];
     }];
+    
+    [header setTitle:@"下拉刷新数据" forState:MJRefreshStateIdle];
+    [header setTitle:@"松开刷新数据" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新数据" forState:MJRefreshStateRefreshing];
+    
+    self.mainTableView.mj_header = header;
+    [header beginRefreshing];
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
     
     if (self.user) {
@@ -74,31 +91,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
             if (image) {
                 _barLeft.image=image;
             }
-            
         }];
-    } else {
-        
-    }
-    
-    
+    } 
+
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self.navigationController.navigationItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-//    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"TVfavorite"]) {
-//        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"TVfavorite"];
-//    }
-//    if (![[NSUserDefaults standardUserDefaults]objectForKey:@"BOXfavorite"]) {
-//        [[NSUserDefaults standardUserDefaults]setObject:@[] forKey:@"BOXfavorite"];
-//    }
-    
-    
-    //    dispatch_queue_t queue=dispatch_queue_create("tk.bourne.testQueue", DISPATCH_QUEUE_CONCURRENT);
-    //    dispatch_async(queue, ^{
-    //        [NSThread sleepForTimeInterval:1.0];
-    //        dispatch_async(dispatch_get_main_queue(), ^{
-    //            [self performSegueWithIdentifier:@"loginIn" sender:nil];
-    //        });
-    //    });
 }
 
 #pragma mark 视图
@@ -121,7 +119,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     } else {
         [self performSegueWithIdentifier:@"userInfo" sender:self.user];
     }
-    
 }
 - (IBAction)test:(UIBarButtonItem *)sender {
     HTTPFuntion *s = [[HTTPFuntion alloc]init];
@@ -130,6 +127,20 @@ static NSString *const targetName=@"IrRemoteControllerA";
     } fail:^{
         
     }];
+}
+- (IBAction)test1:(UIBarButtonItem *)sender {
+    [CommonFunction startAnimation:@"同步中" :@""];
+    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+    [manger getAllChangeWith:self.user :^{
+        _alldevices=nil;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mainTableView reloadData];
+            _noneView.hidden= self.alldevices.count != 0;
+        });
+        [CommonFunction stopAnimation:@"同步成功" :@"" :2];
+        
+    }];
+    
 }
 
 -(void)loadBluetooth
@@ -251,8 +262,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
-        //        NSArray *deviceArray=[[FMDBFunctions shareInstance]getSelectDataWithTargetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
-        //        DeviceInfo *device=deviceArray[indexPath.row];
         NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *brandName=[cell viewWithTag:1003];
@@ -278,9 +287,23 @@ static NSString *const targetName=@"IrRemoteControllerA";
         NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
-        [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID];
-        //        [FMDBFunctions.shareInstance delDataWithParameters:@"deviceID" :device.deviceID];
+        [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID success:^{
+            
+        } fail:^{
+            
+        }];
+//        [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        if (self.user) {
+            HTTPFuntion *updata = [[HTTPFuntion alloc]init];
+            [updata uploadAllDataWithUser:self.user success:^{
+                [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
+            } fail:^{
+                [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
+            }];
+        }
+        
         if ([[FMDBFunctions shareInstance] getAllData].count==0) {
             _noneView.hidden=NO;
         }
@@ -295,8 +318,19 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", @"确定") style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
             device.customname=alertController.textFields.firstObject.text.length > 0?alertController.textFields.firstObject.text:device.brandname;
-            //            [FMDBFunctions.shareInstance setDataWithTargetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
             [FMDBFunctions.shareInstance setDataWithTable:@"T_DeviceInfo" targetParameters:@"customname" targetContent:device.customname parameters:@"deviceID" content:device.deviceID];//更新
+            
+            if (self.user) {
+                HTTPFuntion *updata = [[HTTPFuntion alloc]init];
+                [updata uploadAllDataWithUser:self.user success:^{
+                    [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
+                } fail:^{
+                    [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
+                }];
+            }
+            
+            
+            
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }]];
         [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"取消", @"取消") style:UIAlertActionStyleCancel handler:^(UIAlertAction *_Nonnull action) {
@@ -311,12 +345,10 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    DeviceInfo * deviceInfo=self.alldevices[indexPath.row];
-//    NSString *deviceType=deviceInfo.devicetype;
-            NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
     NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
     DeviceInfo *deviceInfo=deviceArray[indexPath.row];
-        NSString *deviceType=deviceInfo.devicetype;
+    NSString *deviceType=deviceInfo.devicetype;
     if ([deviceType isEqualToString:@"TV"]) {
         [self performSegueWithIdentifier:@"tv" sender:deviceInfo];
     }
@@ -356,11 +388,46 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
     
     UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"是(还没做好)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [CommonFunction startAnimation:@"同步中" :@""];
+        [FMDBFunctions.shareInstance syncDataWith:self.user success:^{
+            
+        } fail:^{
+            
+        }];
+        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+        [manger getAllChangeWith:self.user :^{
+            [manger uploadAllDataWithUser:self.user success:^{
+                [CommonFunction stopAnimation:@"同步成功" :@"" :2];
+                _alldevices=nil;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.mainTableView reloadData];
+                    _noneView.hidden= self.alldevices.count != 0;
+                });
+                
+            } fail:^{
+                [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+            }];
+        }];
         
     }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        
+    [alert addAction:[UIAlertAction actionWithTitle:@"否(同步数据覆盖)" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [FMDBFunctions.shareInstance delAllWithSuccess:^{
+            
+        } fail:^{
+            
+        }];//多一步删除
+        HTTPFuntion *updata = [[HTTPFuntion alloc]init];
+        [updata uploadAllDataWithUser:self.user success:^{
+            [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
+            _alldevices=nil;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.mainTableView reloadData];
+                _noneView.hidden= self.alldevices.count != 0;
+            });
+        } fail:^{
+            [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
+        }];
     }]];
     
     [self presentViewController:alert animated:YES completion:^{
@@ -387,6 +454,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         TVController *target=segue.destinationViewController;
         target.favoriteDB=[[FMDBFunctions shareInstance]getChannelDataWith:sender];
         target.deviceInfo=sender;
+        target.user=self.user;
     }
     else if ([segue.identifier isEqualToString:@"dvd"]){
         DVDController *target=segue.destinationViewController;
@@ -400,6 +468,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         BOXController *target=segue.destinationViewController;
         target.favoriteDB=[[FMDBFunctions shareInstance]getChannelDataWith:sender];
         target.deviceInfo=sender;
+        target.user=self.user;
     }
     else if ([segue.identifier isEqualToString:@"loginIn"]){
         LoginController *target=segue.destinationViewController;

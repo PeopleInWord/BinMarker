@@ -124,6 +124,7 @@ class TestController: UIViewController,UIApplicationDelegate{
             device.brandname = self.brandName!
             device.code = self.codeList[self.currentIndex]
             device.customname = alert.textFields!.first!.text!
+            device.deviceID = CommonFunction.idMaker().stringValue
             if device.customname.characters.count == 0
             {
                 device.customname = device.brandname
@@ -131,18 +132,26 @@ class TestController: UIViewController,UIApplicationDelegate{
             
             let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
             if user != nil {
-                let md5 = CommonFunction.md5eight(with: (user?.mobile)! + device.devicetype + device.brandname + device.code + device.customname)
-                device.deviceID = md5!
-                print(md5!)
-                FMDBFunctions.shareInstance.insertDeviceData(in: user!, with: device, fail: {
+                FMDBFunctions.shareInstance.insertDeviceData(in: user!, with: device, success: { 
+                    
+                }, fail: { 
+                    
+                })
+                let updater=HTTPFuntion.init()
+                updater.uploadAllData(user: user!, success: {
+                    
+                }, fail: {
                     
                 })
             }
             else
             {
-                FMDBFunctions.shareInstance.insertDeviceData(devicetype: device.devicetype, brandname: device.brandname, codeString: device.code, customname: device.customname, isDefault: 0, fail: {
+                FMDBFunctions.shareInstance.insertDeviceData(devicetype: device.devicetype, brandname: device.brandname, codeString: device.code, customname: device.customname, isDefault: 0, success: { 
+                    
+                }, fail: { 
                     
                 })
+                
             }
             
             

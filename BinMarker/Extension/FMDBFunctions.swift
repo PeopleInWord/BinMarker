@@ -82,10 +82,12 @@ class FMDBFunctions: NSObject {
                 for value in tempArray {
                     var deviceTypeString=value["deviceType"]!
                     deviceTypeString=deviceTypeString.replacingOccurrences(of: "\"", with: "")
-                    self.insertDeviceData(devicetype: deviceTypeString, brandname: value["brandName"]!, codeString: value["codeString"]! , customname: value["defineName"]!, isDefault: 0, fail: {
+                    
+                    self.insertDeviceData(devicetype: deviceTypeString, brandname: value["brandName"]!, codeString: value["codeString"]! , customname: value["defineName"]!, isDefault: 0, success: { 
                         
-                    })
-                }
+                    }, fail: { 
+                        
+                    })                }
                 UserDefaults.standard.removeObject(forKey: "deviceInfo")
                 UserDefaults.standard.synchronize()
             }
@@ -93,7 +95,7 @@ class FMDBFunctions: NSObject {
         }
     }
     
-    func insertDeviceData(devicetype:String,brandname:String,codeString:String,customname:String,isDefault:Int,fail:@escaping ()->Void) -> Void {
+    func insertDeviceData(devicetype:String,brandname:String,codeString:String,customname:String,isDefault:Int,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
@@ -104,7 +106,7 @@ class FMDBFunctions: NSObject {
                     
                     try database?.executeUpdate(sqlString, values: [devicetype,brandname,codeString,custring,NSNumber.init(value: isDefault)])
                 } catch  {
-                    print("插入数据失败")
+                    print("插入设备数据失败")
                     fail()
                     database?.close()
                 }
@@ -112,23 +114,28 @@ class FMDBFunctions: NSObject {
             }
             else
             {
+                fail()
                 print("打开失败")
             }
         })
 
     }
     
-    func insertDeviceData(in user:UserInfo,with device:DeviceInfo,fail:@escaping ()->Void) -> Void {
+    func insertDeviceData(in user:UserInfo,with device:DeviceInfo,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {
                 let sqlString = "INSERT INTO T_DeviceInfo (DeviceID,mobile,devicetype,brandname,code,customname,isDefault) VALUES (?,?,?,?,?,?,?)"
                 do {
-                    let deviceid = NSNumber.init(value: Int64(device.deviceID)!)
-                    let custring=device.customname.characters.count == 0 ?device.brandname:device.customname
                     
+                    let custring=device.customname.characters.count == 0 ?device.brandname:device.customname
+                    let deviceid = NSNumber.init(value: Int(device.deviceID)!)
+//                    let deviceid = CommonFunction.idMaker()
+//                    device.deviceID = deviceid.stringValue
+                    print("设备ID" + deviceid.description)
                     try database?.executeUpdate(sqlString, values:[deviceid ,user.mobile,device.devicetype,device.brandname,device.code,custring,NSNumber.init(value: device.isDefault)])
+                    
                 } catch  {
                     print("插入数据失败")
                     fail()
@@ -139,13 +146,14 @@ class FMDBFunctions: NSObject {
             else
             {
                 print("打开失败")
+                fail()
             }
         })
         
     }
     
     
-    func insertUserData(user:UserInfo) -> Void {
+    func insertUserData(user:UserInfo,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
@@ -154,13 +162,15 @@ class FMDBFunctions: NSObject {
                 do {
                     try database?.executeUpdate(sqlString, values: [user.sex,user.nickName,user.photoAddress,user.userName,NSNumber.init(value: 0),user.mobile,user.editedTime,user.createTime])
                 } catch  {
-                    print("插入数据失败")
+                    print("插入用户数据失败")
+                    fail()
                     database?.close()
                 }
             }
             else
             {
                 print("打开失败")
+                fail()
             }
         })
     }
@@ -173,22 +183,29 @@ class FMDBFunctions: NSObject {
     //    isCustom integer,
     //    foreign key (DeviceID) references T_DeviceInfo(DeviceID)
     
-    func insertChannelData(device:DeviceInfo,channel:FavoriteInfo) -> Void {
+    func insertChannelData(device:DeviceInfo,channel:FavoriteInfo,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {
                 let sqlString = "INSERT INTO T_DeviceFavorite (channelID,DeviceID,channelNum,channelName,isCustom,imageUrl) VALUES (?,?,?,?,?,?)"
                 do {
-                    try database?.executeUpdate(sqlString, values: [NSNumber.init(value: Int64(channel.channelID)!),NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
+                    //如果有user的时候,是不需要重新算ID
+//                    let md5 = CommonFunction.md5eight(with: (device.deviceID) + device.devicetype + device.brandname + device.code + device.customname)
+//                    channel.channelID = md5!
+                    print("频道 :" + channel.channelID)
+                    
+                    try database?.executeUpdate(sqlString, values: [NSNumber.init(value: Int(channel.channelID)!),NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
                 } catch  {
                     print("插入数据失败")
                     database?.close()
+                    fail()
                 }
             }
             else
             {
                 print("打开失败")
+                fail()
             }
         })
     }
@@ -409,7 +426,7 @@ class FMDBFunctions: NSObject {
     ///   - table: <#table description#>
     ///   - parameters: <#parameters description#>
     ///   - content: <#content description#>
-    func delData(table:String,parameters:String ,_ content:String) -> Void {
+    func delData(table:String,parameters:String ,_ content:String,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
         let sqlString="DELETE FROM " + table + " where " + parameters + " LIKE \"" + content + "\""
         let quene=FMDatabaseQueue.init(path: targetPath)
         quene?.inDatabase({ (database) in
@@ -482,11 +499,95 @@ class FMDBFunctions: NSObject {
             {
                 if (database?.executeUpdate(sqlString, withArgumentsIn: nil))!
                 {
-                    print("成功")
+                    print("修改成功")
                 }
                 else
                 {
+                    print("修改失败")
+                }
+            }
+            else
+            {
+                print("打开失败")
+            }
+        })
+    }
+    
+    func syncData(with user:UserInfo,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
+        let devices = self.getDeviceData(with: user)
+        let sqlString = "DELETE FROM T_DeviceInfo"
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                if (database?.executeUpdate(sqlString, withArgumentsIn: nil))!
+                {
+                    print("成功")
+                    devices.forEach { (device) in
+                        device.mobile = user.mobile
+                        self.insertDeviceData(in: user, with: device, success: { 
+                            
+                        }, fail: { 
+                            
+                        })
+                        
+                        let channels = self.getChannelData(with: device)
+                        let sqlString1 = "DELETE FROM T_DeviceFavorite"
+                        let quene2=FMDatabaseQueue.init(path: self.targetPath)
+                        quene2?.inDatabase({ (database) in
+                            if (database?.open())!
+                            {
+                                if (database?.executeUpdate(sqlString1, withArgumentsIn: nil))!
+                                {
+                                    print("成功")
+                                    channels.forEach({ (channel) in
+                                        channel.DeviceID = device.deviceID
+                                        self.insertChannelData(device: device, channel: channel, success: { 
+                                            
+                                        }, fail: { 
+                                            
+                                        })
+                                        
+                                    })
+                                }else{
+                                    fail()
+                                    print("失败")}
+                            }
+                        })
+                    }
+                }
+                else
+                {
+                    fail()
                     print("失败")
+                }
+            }
+        })
+        
+        
+    }
+    
+    
+    func delAll(success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
+        let sqlString = "DELETE FROM T_DeviceInfo"
+        let quene=FMDatabaseQueue.init(path: targetPath)
+        quene?.inDatabase({ (database) in
+            if (database?.open())!
+            {
+                if (database?.executeUpdate(sqlString, withArgumentsIn: nil))!
+                {
+                    let sql2 = "DELETE FROM T_DeviceFavorite"
+                    if (database?.executeUpdate(sql2, withArgumentsIn: nil))!
+                    {
+                        success()
+                        print("删除所有成功")
+                    }
+                    
+                }
+                else
+                {
+                    fail()
+                    print("删除失败")
                 }
             }
             else

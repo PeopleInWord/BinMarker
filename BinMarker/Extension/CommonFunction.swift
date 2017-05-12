@@ -12,37 +12,44 @@ class CommonFunction: NSObject {
     //MARK:动画
     class func startAnimation(_ mainTitle:String? ,_ subTitle:String?) {
         let frontView=self.getCurrentView()
-        var hub = frontView?.viewWithTag(10001) as? MBProgressHUD
-        if hub == nil {
-            hub = MBProgressHUD.showAdded(to: frontView!, animated: true)
-            hub?.tag=10001
-            hub?.removeFromSuperViewOnHide=true
+        DispatchQueue.main.async {
+            var hub = frontView?.viewWithTag(10001) as? MBProgressHUD
+            if hub == nil {
+                hub = MBProgressHUD.showAdded(to: frontView!, animated: true)
+                hub?.tag=10001
+                hub?.removeFromSuperViewOnHide=true
+            }
+            hub?.label.text = mainTitle;
+            hub?.detailsLabel.text = subTitle;
         }
-        hub?.label.text = mainTitle;
-        hub?.detailsLabel.text = subTitle;
     }
     
     
     class func stopAnimation(_ mainTitle:String? ,_ subTitle:String?,_ hideTime:TimeInterval) {
         let frontView=self.getCurrentView()
-        let hub = frontView?.viewWithTag(10001) as? MBProgressHUD
-        hub?.label.text = mainTitle;
-        hub?.detailsLabel.text = subTitle;
-        hub?.hide(animated: true, afterDelay: hideTime)
+        DispatchQueue.main.async {
+            let hub = frontView?.viewWithTag(10001) as? MBProgressHUD
+            hub?.label.text = mainTitle;
+            hub?.detailsLabel.text = subTitle;
+            hub?.hide(animated: true, afterDelay: hideTime)
+        }
     }
     
     
     class func showForShortTime(_ time:TimeInterval ,_ mainTitle:String? ,_ subTitle:String?) {
         let frontView=self.getCurrentView()
-        var hub = frontView?.viewWithTag(10001) as? MBProgressHUD
-        if hub == nil {
-            hub = MBProgressHUD.showAdded(to: frontView!, animated: true)
-            hub?.removeFromSuperViewOnHide=true
-            hub?.tag=10001
+        DispatchQueue.main.async {
+            var hub = frontView?.viewWithTag(10001) as? MBProgressHUD
+            if hub == nil {
+                hub = MBProgressHUD.showAdded(to: frontView!, animated: true)
+                hub?.removeFromSuperViewOnHide=true
+                hub?.tag=10001
+            }
+            hub?.label.text = mainTitle
+            hub?.detailsLabel.text = subTitle
+            hub?.hide(animated: true, afterDelay: time)
+            
         }
-        hub?.label.text = mainTitle
-        hub?.detailsLabel.text = subTitle
-        hub?.hide(animated: true, afterDelay: time)
     }
     
     
@@ -61,7 +68,7 @@ class CommonFunction: NSObject {
         return window?.subviews.first
     }
     
-    class func md5eight(with str:String) -> String? {
+    class func md5four(with str:String) -> String? {
         let cStr = str.cString(using: String.Encoding.utf8);
         let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: 4)
         
@@ -106,6 +113,10 @@ class CommonFunction: NSObject {
             returnStr += temp
         }
         return returnStr
+    }
+    
+    class func idMaker() -> NSNumber {
+        return NSNumber.init(value: Int(NSDate().timeIntervalSince1970))
     }
     
 }

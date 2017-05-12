@@ -26,6 +26,7 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     var numberField=UITextField.init()
     var favoriteDB = Array<FavoriteInfo>.init()
     
+    var user:UserInfo = UserInfo.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,9 +117,26 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                     favoriteTemp.DeviceID=self.deviceInfo.deviceID
                     favoriteTemp.channelName=(alert.textFields?[0].text)!
                     favoriteTemp.channelNum=(alert.textFields?[1].text)!
-                    favoriteTemp.channelID = CommonFunction.md5eight(with: self.deviceInfo.deviceID + favoriteTemp.DeviceID + favoriteTemp.channelName + favoriteTemp.channelNum)!
+//                    favoriteTemp.channelID = CommonFunction.md5eight(with: self.deviceInfo.deviceID + favoriteTemp.DeviceID + favoriteTemp.channelName + favoriteTemp.channelNum)!
                     favoriteTemp.isCustom=true
-                    FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp)
+                    FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp, success: {
+                        
+                    }, fail: {
+                        
+                    })
+                    
+                    let userdb = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+                    
+                    if userdb != nil
+                    {
+                        let updata = HTTPFuntion.init()
+                        updata.uploadAllData(user: self.user, success: {
+                            CommonFunction.showForShortTime(0.5, "更新成功", "")
+                        }, fail: {
+                            CommonFunction.showForShortTime(1.5, "更新失败", "")
+                        })
+                    }
+                    
                     self.favoriteDB.append(favoriteTemp)
 //                    var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
 //                    let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
@@ -256,16 +274,26 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction.init(style: .destructive, title: NSLocalizedString("删除", comment: "删除")) { (deleteAction, deleteIndex) in
-//            var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
-//            channelList?.remove(at: indexPath.row)
-//            self.resourseList=channelList!
-//            UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
-//            UserDefaults.standard.synchronize()
-            
             
             let favoriteTemp=self.favoriteDB[indexPath.row]
-            FMDBFunctions.shareInstance.delData(table: "T_DeviceFavorite", parameters: "channelID", favoriteTemp.channelID)
+            FMDBFunctions.shareInstance.delData(table: "T_DeviceFavorite", parameters: "channelID", favoriteTemp.channelID, success: {
+                
+            }, fail: {
+                
+            })
             self.favoriteDB.remove(at: indexPath.row)
+            
+            let userdb = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+            if userdb != nil
+            {
+                let updata = HTTPFuntion.init()
+                updata.uploadAllData(user: self.user, success: {
+                    CommonFunction.showForShortTime(0.5, "更新成功", "")
+                }, fail: {
+                    CommonFunction.showForShortTime(1.5, "更新失败", "")
+                })
+            }
+            
             tableView.reloadData()
         }
         return [delete]

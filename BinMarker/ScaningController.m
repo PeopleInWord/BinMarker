@@ -10,6 +10,7 @@
 #import "BluetoothManager.h"
 #import "AppDelegate.h"
 #import "FLAnimatedImage.h"
+#import "BinMarker-Swift.h"
 @class CBPeripheral;
 @interface ScaningController ()<CAAnimationDelegate>
 {
@@ -47,7 +48,9 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [super viewDidLoad];
     [self loadUIView];
     [self loadBluetooth];
-    
+//    NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+//    NSLog(@"%zd",@(time).integerValue);
+    NSLog(@"%@",[CommonFunction idMaker]);
     // Do any additional setup after loading the view.
 }
 

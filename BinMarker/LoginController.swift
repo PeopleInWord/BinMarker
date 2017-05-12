@@ -44,6 +44,7 @@ class LoginController: UIViewController {
             self.activer.stopAnimating()
             sender.isEnabled=true
             self.registerBtn.isEnabled=true
+            CommonFunction.showForShortTime(2, "", "")
             print(errorStr)
         }
     }
@@ -88,12 +89,24 @@ class LoginController: UIViewController {
     func success(user:UserInfo) -> Void {
         let mobile = FMDBFunctions.shareInstance.getUserData(targetParameters: "mobile", content: user.mobile)
         if mobile.count == 0 {
-            FMDBFunctions.shareInstance.insertUserData(user: user)
+            FMDBFunctions.shareInstance.insertUserData(user: user, success: {
+                
+            }, fail: {
+                
+            })
         }
         else
         {
-            FMDBFunctions.shareInstance.delData(table: "T_UserInfo", parameters: "mobile", user.mobile)
-            FMDBFunctions.shareInstance.insertUserData(user: user)
+            FMDBFunctions.shareInstance.delData(table: "T_UserInfo", parameters: "mobile", user.mobile, success: {
+                
+            }, fail: {
+                
+            })
+            FMDBFunctions.shareInstance.insertUserData(user: user, success: {
+                
+            }, fail: {
+                
+            })
         }
         
         self.dismiss(animated: true) {
