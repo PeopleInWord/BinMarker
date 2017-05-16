@@ -29,22 +29,7 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
     
     override init() {
         super.init()
-        self.delegate=self
-    }
-    
-    func uploadMutiDevice(devices:[DeviceInfo],user:UserInfo,success:()->Void) -> Void {
-        //        let body:Dictionary = ["userId":user]
-        //        let firstDevice =  devices.first!
-        //        let urlStr="http://120.76.74.87/PMSWebService/AjaxService.jsp?"
-        //        let bodyDic=["userId":user.mobile,
-        //                     "deviceType":firstDevice.devicetype,
-        //                     "brand":firstDevice.brandname,
-        //                     "codeId":firstDevice.code,
-        //                      "channelId":firstDevice.]
-    }
-    
-    func uploadSingleDevice(with device:DeviceInfo,user:UserInfo,success:()->Void,fail:()->Void) -> Void {
-        
+//        self.delegate=self
     }
     
     func uploadAllData(user:UserInfo,success:@escaping ()->Void,fail:@escaping ()->Void) -> Void {
@@ -90,18 +75,23 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
             return
         }
         let str = String.init(data: jsondata!, encoding: .utf8)
-        print(str!)
+        print("数据 :" + str!)
         
         let urlStr="http://120.76.74.87/PMSWebService/AjaxService.jsp?action=collectionChannel"
         var request=URLRequest.init(url: URL(string: urlStr)!)
         request.httpMethod = "POST"
         request.httpBody = jsondata
-        request.timeoutInterval = 10
+        request.timeoutInterval = 3
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let config=URLSessionConfiguration.default
         let datasession=URLSession(configuration: config)
         let dataTask=datasession.dataTask(with: request) { (data, response, error) in
+            guard data != nil else {
+                print("data is nil")
+                return
+            }
+            
             guard (try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers)) != nil else
             {
                 fail()
@@ -123,17 +113,21 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         
     }
     
-    func getAllChange(with user:UserInfo,_ success:@escaping ()->Void) -> Void {
+    func getAllChange(with user:UserInfo,_ successGET:@escaping ()->Void,_ failGET:@escaping ()->Void ) -> Void {
+
+        let timeStamp = CommonFunction.idMaker().description
+        let signStr = "action=downloadChannel&mobile=" + user.mobile + "&appId=100070001&timestamp=" + timeStamp + "&key=tts_b5e91349967601"
+        let sign = CommonFunction.md5(with: signStr)
         var urlStr="http://120.76.74.87/PMSWebService/AjaxService.jsp?"
         let bodyDic=["action":"downloadChannel",
                      "appId":"100070001",
-                     "timestamp":"1476087104",
-                     "Sign":"47b3435414dff3ab4d7a082563095294",
+                     "timestamp":timeStamp,
+                     "Sign":sign,
                      "mobile":user.mobile]
         
         let bodylist  = NSMutableArray()
         for subDic in bodyDic {
-            let tmpStr = subDic.key + "=" + subDic.value
+            let tmpStr = subDic.key + "=" + subDic.value!
             bodylist.add(tmpStr)
         }
         
@@ -143,29 +137,35 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         
         var request=URLRequest.init(url: URL(string: urlStr)!)
         request.httpMethod = "GET"
-        
+        request.timeoutInterval = 3
         let config=URLSessionConfiguration.default
         let datasession=URLSession(configuration: config)
         let dataTask=datasession.dataTask(with: request) { (data, response, error) in
-            //            let data1 = try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
-            //Data转换成String打印输出
+            guard error == nil else {
+                print(error!)
+                failGET()
+                return
+            }
             guard ((try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers)) != nil) else {
+                failGET()
                 return
             }
             let data1 = try!JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
             guard data1["data"] != nil else {
+                failGET()
                 return
             }
             FMDBFunctions.shareInstance.delAll(success: {
                 
             }, fail: {
-                
+                failGET()
             })
             let arr1=data1["data"] as! Array<Dictionary<String,Any>>
             print(arr1)
             for value in arr1
             {
                 let deviceDic=value["device"] as! Dictionary<String,Any>
+                print(deviceDic)
                 let channel = value["channel"] as! Array<Dictionary<String,Any>>
                 let device = DeviceInfo.init()
                 device.brandname = deviceDic["brandName"]! as! String
@@ -174,39 +174,35 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
                 device.devicetype = deviceDic["deviceType"]! as! String
                 device.customname = deviceDic["customName"]! as! String
                 FMDBFunctions.shareInstance.insertDeviceData(in: user, with: device, success: {
-                    
+                    channel.forEach({ (channelDic) in
+                        let singleChannel = FavoriteInfo.init()
+                        singleChannel.channelName =  channelDic["channelCustomName"]! as! String
+                        singleChannel.channelID = channelDic["channelId"]! as! String
+                        singleChannel.channelNum = channelDic["channelNum"]! as! String
+                        singleChannel.DeviceID = device.deviceID
+                        if channelDic["photoAddress"] == nil || channelDic["photoAddress"] is NSNull
+                        {
+                        }
+                        else
+                        {
+                            singleChannel.imageUrl = channelDic["photoAddress"] as! String
+                        }
+                        
+                        FMDBFunctions.shareInstance.insertChannelData(device: device, channel: singleChannel, success: {
+                            
+                        }, fail: {
+                            failGET()
+                        })
+                    })
                 }, fail: {
-                    
+                    failGET()
                 })
                 
-                channel.forEach({ (channelDic) in
-//                    print( channelDic)
-                    let singleChannel = FavoriteInfo.init()
-                    singleChannel.channelName =  channelDic["channelCustomName"]! as! String
-                    singleChannel.channelID = channelDic["channelId"]! as! String
-                    singleChannel.channelNum = channelDic["channelNum"]! as! String
-                    singleChannel.DeviceID = device.deviceID
-                    if channelDic["photoAddress"] == nil || channelDic["photoAddress"] is NSNull
-                    {
-                    }
-                    else
-                    {
-                        singleChannel.imageUrl = channelDic["photoAddress"] as! String
-                    }
-                    
-                    FMDBFunctions.shareInstance.insertChannelData(device: device, channel: singleChannel, success: {
-                        
-                    }, fail: {
-                        
-                    })
-                })
+                
             }
             
-            success()
+            successGET()
         }
-        
-
-        
         dataTask.resume()
         
         

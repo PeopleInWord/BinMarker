@@ -117,7 +117,9 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                     favoriteTemp.DeviceID=self.deviceInfo.deviceID
                     favoriteTemp.channelName=(alert.textFields?[0].text)!
                     favoriteTemp.channelNum=(alert.textFields?[1].text)!
-//                    favoriteTemp.channelID = CommonFunction.md5eight(with: self.deviceInfo.deviceID + favoriteTemp.DeviceID + favoriteTemp.channelName + favoriteTemp.channelNum)!
+                    
+                    favoriteTemp.channelID = CommonFunction.idMaker().stringValue
+                    
                     favoriteTemp.isCustom=true
                     FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp, success: {
                         
@@ -138,13 +140,6 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                     }
                     
                     self.favoriteDB.append(favoriteTemp)
-//                    var channelList=UserDefaults.standard.object(forKey: "BOXfavorite") as? Array<Dictionary<String, String>>
-//                    let channelInfo:Dictionary<String,String>=[(alert.textFields?[0].text)!:(alert.textFields?[1].text)!]
-//                    channelList?.append(channelInfo)
-//                    
-//                    self.resourseList=channelList!
-//                    UserDefaults.standard.set(channelList, forKey: "BOXfavorite")
-//                    UserDefaults.standard.synchronize()
                     self.favoriteList.reloadData()
                     
                 })
@@ -215,10 +210,6 @@ class BOXController: UIViewController ,UITabBarDelegate,UITableViewDataSource ,U
                 {
                     temp.append(favoriteItem.channelName)
                 }
-//                for deviceDicInfo in self.resourseList
-//                {
-//                    temp.append(deviceDicInfo.keys.first!)
-//                }
                 return temp
             }()
             channelTitleLab.text=channelTitle[indexPath.row]

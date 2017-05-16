@@ -717,7 +717,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yp7-mv-eaE" id="dEs-m4-x8X">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="channel-15" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-2f-s5e">
@@ -1691,7 +1691,7 @@
                                                                 <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SL0-Kg-ljq" id="fzC-9S-USd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyA-ro-qjQ">
@@ -1905,7 +1905,7 @@
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv_btn_xialai" translatesAutoresizingMaskIntoConstraints="NO" id="9Bk-OD-abn">
-                                    <rect key="frame" x="126" y="13" width="12" height="7"/>
+                                    <rect key="frame" x="127.5" y="15" width="12" height="7"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="9Bk-OD-abn" secondAttribute="height" multiplier="54:30" id="QO4-YN-8nN"/>
                                         <constraint firstAttribute="width" constant="12" id="gze-HN-taf"/>
@@ -1914,9 +1914,9 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="9Bk-OD-abn" firstAttribute="centerX" secondItem="lhe-tp-GZA" secondAttribute="centerX" multiplier="1.61" id="1yg-nl-Ubc"/>
+                                <constraint firstItem="9Bk-OD-abn" firstAttribute="centerX" secondItem="lhe-tp-GZA" secondAttribute="centerX" multiplier="1.62" id="1yg-nl-Ubc"/>
                                 <constraint firstItem="Myn-k5-JD6" firstAttribute="top" secondItem="lhe-tp-GZA" secondAttribute="top" id="2uK-P4-JHD"/>
-                                <constraint firstItem="9Bk-OD-abn" firstAttribute="centerY" secondItem="lhe-tp-GZA" secondAttribute="centerY" id="Kmb-qG-i0Z"/>
+                                <constraint firstItem="9Bk-OD-abn" firstAttribute="centerY" secondItem="lhe-tp-GZA" secondAttribute="centerY" constant="2" id="Kmb-qG-i0Z"/>
                                 <constraint firstItem="Myn-k5-JD6" firstAttribute="leading" secondItem="lhe-tp-GZA" secondAttribute="leading" id="Kos-ti-AbA"/>
                                 <constraint firstAttribute="bottom" secondItem="Myn-k5-JD6" secondAttribute="bottom" id="MkM-S3-PMq"/>
                                 <constraint firstAttribute="trailing" secondItem="Myn-k5-JD6" secondAttribute="trailing" id="wOn-30-lxG"/>

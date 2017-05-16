@@ -30,6 +30,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     //137 109 114 121
     
     var isCommon = true
+    var isOpen = false
 //    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
     var favoriteDB = Array<FavoriteInfo>.init()
     var actionTemp=UIAlertAction.init()
@@ -228,17 +229,26 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
 
     //MARK:频道快捷
     @IBAction func showFavoriteChannel(_ sender: UIButton) {
-        let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
-        alpha?.fromValue=0
-        alpha?.toValue=0.8
-        favoriteBg.pop_add(alpha, forKey: "alpha")
         
-        let favoriteScroll=self.view.viewWithTag(10000) as! FavoriteSubScroll
-        favoriteScroll.favoriteDelegate=self
-//        favoriteScroll.reloadData(with: resourseList)
-        favoriteScroll.reloadData(with: favoriteDB)
-        
-        
+        isOpen = !isOpen
+        if isOpen {
+            let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+            alpha?.fromValue=0
+            alpha?.toValue=0.8
+            favoriteBg.pop_add(alpha, forKey: "alpha")
+            
+            let favoriteScroll=self.view.viewWithTag(10000) as! FavoriteSubScroll
+            favoriteScroll.favoriteDelegate=self
+            favoriteScroll.reloadData(with: favoriteDB)
+        }
+        else
+        {
+            let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
+            alpha?.fromValue=0.8
+            alpha?.toValue=0.0
+            self.favoriteBg.pop_add(alpha, forKey: "alpha")
+
+        }
     }
     
     @IBAction func touchToHideFavoriteBG(_ sender: UIButton) {
@@ -246,6 +256,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         alpha?.fromValue=0.8
         alpha?.toValue=0.0
         self.favoriteBg.pop_add(alpha, forKey: "alpha")
+        isOpen = false
     }
     //MARK:频道快捷代理
     func didClickBtn(_ sender: UIButton, _ index: Int) {
@@ -369,10 +380,13 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 })
                 let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
                     let favoriteTemp=FavoriteInfo.init()
+                    let userdb = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+                    
                     favoriteTemp.DeviceID=self.deviceInfo.deviceID
                     favoriteTemp.channelName=(alert.textFields?[0].text)!
                     favoriteTemp.channelNum=(alert.textFields?[1].text)!
                     favoriteTemp.channelID = CommonFunction.idMaker().stringValue
+                    
                     favoriteTemp.isCustom=true
                     FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp, success: {
                         
@@ -381,7 +395,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     })
                     self.favoriteDB.append(favoriteTemp)
                     
-                    let userdb = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+                    
                     
                     if userdb != nil
                     {
@@ -392,6 +406,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                             CommonFunction.showForShortTime(1.5, "更新失败", "")
                         })
                     }
+                   
                     
                     self.favoriteList.reloadData()
                     

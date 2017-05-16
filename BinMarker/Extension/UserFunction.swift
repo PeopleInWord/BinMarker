@@ -75,9 +75,4 @@ class UserFunction: NSObject {
             print(error!)
         }
     }
-    
-    
-    
-
-    
 }

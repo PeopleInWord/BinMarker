@@ -63,7 +63,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [CommonFunction startAnimation:@"同步中" :@""];
         HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-        [manger getAllChangeWith: weakself.user :^{
+        [manger getAllChangeWith:weakself.user :^{
             _alldevices=nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [ weakself.mainTableView reloadData];
@@ -71,7 +71,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
             });
             [CommonFunction stopAnimation:@"同步成功" :@"" :1];
             [ weakself.mainTableView.mj_header endRefreshing];
+        } :^{
+            [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+            NSLog(@"错误");
+            [ weakself.mainTableView.mj_header endRefreshing];
         }];
+        
     }];
     
     [header setTitle:@"下拉刷新数据" forState:MJRefreshStateIdle];
@@ -79,7 +84,12 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [header setTitle:@"正在刷新数据" forState:MJRefreshStateRefreshing];
     
     self.mainTableView.mj_header = header;
-    [header beginRefreshing];
+    if (self.user) {
+        
+        [header beginRefreshing];
+    }
+    
+    
     [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
     
     if (self.user) {
@@ -128,20 +138,22 @@ static NSString *const targetName=@"IrRemoteControllerA";
         
     }];
 }
-- (IBAction)test1:(UIBarButtonItem *)sender {
-    [CommonFunction startAnimation:@"同步中" :@""];
-    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-    [manger getAllChangeWith:self.user :^{
-        _alldevices=nil;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.mainTableView reloadData];
-            _noneView.hidden= self.alldevices.count != 0;
-        });
-        [CommonFunction stopAnimation:@"同步成功" :@"" :2];
-        
-    }];
-    
-}
+//- (IBAction)test1:(UIBarButtonItem *)sender {
+//    [CommonFunction startAnimation:@"同步中" :@""];
+//    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+//    [manger getAllChangeWith:self.user :^{
+//        _alldevices=nil;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [self.mainTableView reloadData];
+//            _noneView.hidden= self.alldevices.count != 0;
+//        });
+//        [CommonFunction stopAnimation:@"同步成功" :@"" :2];
+//    } :^{
+//        [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+//        NSLog(@"cuowu");
+//    }];
+//    
+//}
 
 -(void)loadBluetooth
 {
@@ -292,7 +304,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
         } fail:^{
             
         }];
-//        [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         
         if (self.user) {
@@ -388,44 +399,48 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }];
     
     UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"是(网络数据与本地合并)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [CommonFunction startAnimation:@"同步中" :@""];
-        [FMDBFunctions.shareInstance syncDataWith:self.user success:^{
-            
-        } fail:^{
-            
-        }];
-        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-        [manger getAllChangeWith:self.user :^{
-            [manger uploadAllDataWithUser:self.user success:^{
-                [CommonFunction stopAnimation:@"同步成功" :@"" :2];
-                _alldevices=nil;
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self.mainTableView reloadData];
-                    _noneView.hidden= self.alldevices.count != 0;
-                });
-                
-            } fail:^{
+        [FMDBFunctions.shareInstance syncDataWith:self.user successSync:^{//首先把本地库转换
+            HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+            [manger getAllChangeWith:self.user :^{//下载网络库
+                [manger uploadAllDataWithUser:self.user success:^{//合并两库
+                    [CommonFunction stopAnimation:@"同步成功" :@"" :2];
+                    _alldevices=nil;
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.mainTableView reloadData];
+                        _noneView.hidden= self.alldevices.count != 0;
+                    });
+                    
+                } fail:^{
+                    [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+                }];
+            } :^{
                 [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+                NSLog(@"错误");
             }];
+        } failSync:^{
+            
         }];
         
+        
     }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"否(同步数据覆盖)" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"否(本地数据删除)" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         [FMDBFunctions.shareInstance delAllWithSuccess:^{
             
         } fail:^{
             
         }];//多一步删除
-        HTTPFuntion *updata = [[HTTPFuntion alloc]init];
-        [updata uploadAllDataWithUser:self.user success:^{
+        
+        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+        [manger getAllChangeWith:self.user :^{
             [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
             _alldevices=nil;
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.mainTableView reloadData];
                 _noneView.hidden= self.alldevices.count != 0;
             });
-        } fail:^{
+        } :^{
             [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
         }];
     }]];
@@ -439,10 +454,18 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 -(void)didUnLogin
 {
-    self.user=nil;
-    AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
-    app.user=nil;
-    [self.mainTableView reloadData];
+    [[FMDBFunctions shareInstance] delAllWithSuccess:^{
+        _alldevices=nil;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mainTableView reloadData];
+            _noneView.hidden= self.alldevices.count != 0;
+            self.user=nil;
+            AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
+            app.user=nil;
+        });
+    } fail:^{
+        
+    }];
 }
 
 #pragma mark - Navigation

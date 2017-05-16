@@ -50,6 +50,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [self loadBluetooth];
 //    NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
 //    NSLog(@"%zd",@(time).integerValue);
+//    action=downloadChannel&mobile=15907114531&appId=100070001&timestamp=1494581244&key=tts_b5e91349967601
+//    CommonFunction md5fourWith:""
     NSLog(@"%@",[CommonFunction idMaker]);
     // Do any additional setup after loading the view.
 }
