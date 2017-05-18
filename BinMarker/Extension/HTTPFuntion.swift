@@ -47,6 +47,7 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
             deviceInfo["deviceId"]=device.deviceID
             deviceInfo["brandName"]=device.brandname
             deviceInfo["mobile"]=device.mobile
+            deviceInfo["isDefalut"] = device.isDefault
             
             deviceDic["device"]=deviceInfo
             //

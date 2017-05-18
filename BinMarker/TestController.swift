@@ -125,6 +125,7 @@ class TestController: UIViewController,UIApplicationDelegate{
             device.code = self.codeList[self.currentIndex]
             device.customname = alert.textFields!.first!.text!
             device.deviceID = CommonFunction.idMaker().stringValue
+            
             if device.customname.characters.count == 0
             {
                 device.customname = device.brandname

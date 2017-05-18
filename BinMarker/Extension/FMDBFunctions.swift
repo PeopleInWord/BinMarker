@@ -246,10 +246,23 @@ class FMDBFunctions: NSObject {
     ///   - targetParameters: <#targetParameters description#>
     ///   - content: <#content description#>
     /// - Returns: <#return value description#>
-    func getSelectData(table:String,targetParameters : String,content:String) -> [DeviceInfo] {
+    func getSelectData(table:String,targetParameters : String,content:Any) -> [DeviceInfo] {
         var resultArray = Array<DeviceInfo>.init()
         let quene=FMDatabaseQueue.init(path: targetPath)
-        let sqlString="select * from " + table + " where " + targetParameters + " like " + "\"" + content + "\""
+        
+        var sqlString="select * from " + table + " where " + targetParameters + " like "
+//        + "\"" + content + "\""
+        
+        if content is String
+        {
+            sqlString += "\"" + (content as! String) + "\""
+        }
+        else
+        {
+            sqlString += (content as! NSNumber).stringValue
+        }
+        
+        
         quene?.inDatabase({ (database) in
             if (database?.open())!
             {

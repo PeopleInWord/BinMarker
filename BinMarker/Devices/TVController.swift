@@ -259,7 +259,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         isOpen = false
     }
     //MARK:频道快捷代理
-    func didClickBtn(_ sender: UIButton, _ index: Int) {
+    internal func didClickBtn(_ sender: UIButton, _ index: Int) {
         DispatchQueue.global().async {
             let alpha=POPBasicAnimation.init(propertyNamed: kPOPViewAlpha)
             alpha?.fromValue=0.8
@@ -273,12 +273,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     {
                         temp.append(Int(favoriteItem.channelNum)!)
                     }
-//                    for deviceDicInfo in self.resourseList
-//                    {
-//                        //                print(deviceDicInfo["channel"])
-//                        
-//                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
-//                    }
                     return temp
                 }()
                 let code:String = self.deviceInfo.code
@@ -290,30 +284,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     return 0
                 })
             })
-            
-            
-//            DispatchQueue.main.async {
-//                print("22")
-//                let channelNum={ () -> [Int] in
-//                    var temp=Array<Int>.init()
-//                    for deviceDicInfo in self.resourseList
-//                    {
-//                        //                print(deviceDicInfo["channel"])
-//                        
-//                        temp.append(Int(deviceDicInfo["channel"] as! String)!)
-//                    }
-//                    return temp
-//                }()
-//                let code:String = self.deviceInfo["codeString"] as! String
-//                let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
-//                BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-//                    CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
-//                }, fail: { (failString) -> UInt in
-//                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
-//                    return 0
-//                })
-//
-//            }
         }
         
     }
@@ -360,9 +330,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func favoriteBtn(_ sender: UIBarButtonItem,_ event:UIEvent) {
         FTPopOverMenuConfiguration.default().menuWidth=100
-        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
-            UserDefaults.standard.set([], forKey: "TVfavorite")
-        }
+//        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
+//            UserDefaults.standard.set([], forKey: "TVfavorite")
+//        }
         FTPopOverMenu.show(from: event, withMenuArray: [NSLocalizedString("添加频道收藏", comment: "添加频道收藏"),NSLocalizedString("定时关机", comment: "定时关机")], doneBlock: { (index) in
             if index==0
             {
@@ -387,7 +357,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     favoriteTemp.channelNum=(alert.textFields?[1].text)!
                     favoriteTemp.channelID = CommonFunction.idMaker().stringValue
                     
-                    favoriteTemp.isCustom=true
+                    favoriteTemp.isCustom=false
                     FMDBFunctions.shareInstance.insertChannelData(device: self.deviceInfo, channel: favoriteTemp, success: {
                         
                     }, fail: {
@@ -458,7 +428,88 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             })
         }
     }
+    //MARK:儿童模式
     
+    
+    @IBAction func childrenModeSetting(_ sender: UIButton) {
+        
+        let securityPin = UserDefaults.standard.string(forKey: "securityPin") ?? nil
+        if securityPin != nil {
+            self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
+//            FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+            
+        }
+        else
+        {
+            let alert = UIAlertController.init(title: "设置4位安全码", message: "第一次请设置安全码", preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (textField) in
+                textField.keyboardType = .numberPad
+                
+            })
+            alert.addAction(UIAlertAction.init(title: "确认", style: .default, handler: { (action) in
+                let code = alert.textFields?.first?.text
+                UserDefaults.standard.set(code, forKey: "securityPin")
+//                self.dismiss(animated: true, completion: {
+//                    FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+                    self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
+//                })
+            }))
+            alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true, completion: {
+                
+            })
+            
+        }
+    }
+    
+    @IBAction func activateChildren(_ sender: UIButton) {
+        let securityPin = UserDefaults.standard.string(forKey: "securityPin") ?? nil
+        if securityPin != nil {
+            
+            FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+            UserDefaults.standard.set(self.deviceInfo.deviceID, forKey: "DefaultDevice")
+
+            self.performSegue(withIdentifier: "tv2children", sender: self.deviceInfo)
+        }
+        else
+        {
+            let alert = UIAlertController.init(title: "设置4位安全码", message: "第一次请设置安全码", preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (textField) in
+                textField.keyboardType = .numberPad
+                
+            })
+            alert.addAction(UIAlertAction.init(title: "确认", style: .default, handler: { (action) in
+                let code = alert.textFields?.first?.text
+                UserDefaults.standard.set(code, forKey: "securityPin")
+//                self.dismiss(animated: true, completion: {
+                    FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+                            UserDefaults.standard.set(self.deviceInfo.deviceID, forKey: "DefaultDevice")
+//                let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+//                let updater = HTTPFuntion.init()
+//                updater.uploadAllData(user: user!, success: { 
+//                    
+//                }, fail: { 
+//                    
+//                })
+                
+                
+                    self.performSegue(withIdentifier: "tv2children", sender: self.deviceInfo)
+//                })
+            }))
+            alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true, completion: { 
+                
+            })
+            
+        }
+        
+    }
+    
+        
     //MARK:列表的代理
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>=self.view.frame.width && scrollView.contentOffset.x<self.view.frame.width*2{
@@ -571,10 +622,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 {
                     temp.append(Int(favoriteItem.channelNum)!)
                 }
-//                for deviceDicInfo in self.resourseList
-//                {
-//                    temp.append(Int(deviceDicInfo.values.first! as! String)!)
-//                }
                 return temp
             }()
             let code:String = deviceInfo.code
@@ -591,10 +638,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return !isCommon
-//        if isCommon {
-//            return false
-//        }
-//        return true
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -684,14 +727,27 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tv2children"
+        {
+            let target = segue.destination as! ChildrenModeController
+            target.device = sender as! DeviceInfo
+        }
+        else if segue.identifier == "childrenSet"
+        {
+            let target = segue.destination as! ChildrenSettingController
+            target.device = sender as! DeviceInfo
+            target.channelList = FMDBFunctions.shareInstance.getChannelData(with: sender as! DeviceInfo)
+        }
+        
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

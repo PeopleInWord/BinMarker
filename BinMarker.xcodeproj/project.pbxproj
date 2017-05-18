@@ -77,6 +77,8 @@
 		3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4F514F1E7394CF007E32F2 /* DVDController.swift */; };
 		3C503FE01EBC6FBF006D0F2D /* HTTPFuntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */; };
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
+		3C5A29821ECC1F6C00C2F674 /* ChildrenModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */; };
+		3C5A29841ECC5CCB00C2F674 /* ChildrenSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */; };
 		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
 		3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */; };
 		3CC2D6741E9E07EC006DF2BE /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */; };
@@ -180,6 +182,8 @@
 		3C4F514F1E7394CF007E32F2 /* DVDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVDController.swift; path = Devices/DVDController.swift; sourceTree = "<group>"; };
 		3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPFuntion.swift; sourceTree = "<group>"; };
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenModeController.swift; sourceTree = "<group>"; };
+		3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenSettingController.swift; sourceTree = "<group>"; };
 		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
 		3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
@@ -298,7 +302,6 @@
 				3CFB38391E6FD6D00069AEC6 /* ScaningController.h */,
 				3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */,
 				3C2A72A41E7BBBA800137EAB /* SettingController.swift */,
-				3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -320,6 +323,8 @@
 				3C482FDF1E8C985600012E7D /* LoginController.swift */,
 				3C482FE41E8CFB7100012E7D /* LoginRegeditController.swift */,
 				3C482FE61E8D0F1B00012E7D /* UserInfoController.swift */,
+				3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */,
+				3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 		3C72B6EA1E728A000088925F /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				3C482FEA1E8E5FB300012E7D /* TVBOXTimeSetting.swift */,
 				3CCF5C591E9768F700BFC567 /* TVController.swift */,
 				3C4F514F1E7394CF007E32F2 /* DVDController.swift */,
 				3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */,
@@ -621,6 +627,7 @@
 				3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */,
 				3C125CC71E94962100D8FB92 /* UIButton+touchLimit.m in Sources */,
 				3C125CCB1E94962100D8FB92 /* BinMakeManger.swift in Sources */,
+				3C5A29821ECC1F6C00C2F674 /* ChildrenModeController.swift in Sources */,
 				3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */,
 				3C125CCA1E94962100D8FB92 /* VoiceManger.swift in Sources */,
 				3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */,
@@ -632,6 +639,7 @@
 				3C125CBA1E94928F00D8FB92 /* FavoriteScrollView.swift in Sources */,
 				3C482FE51E8CFB7100012E7D /* LoginRegeditController.swift in Sources */,
 				3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */,
+				3C5A29841ECC5CCB00C2F674 /* ChildrenSettingController.swift in Sources */,
 				3C0D318F1DDEA29F00D78924 /* AddDeviceController.m in Sources */,
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
 				3C125CC61E94962100D8FB92 /* CommonFunction.swift in Sources */,
