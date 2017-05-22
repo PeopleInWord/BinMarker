@@ -26,12 +26,12 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     @IBOutlet weak var loadingVoice: UIActivityIndicatorView!
     @IBOutlet weak var quitBtn: UIButton!
     @IBOutlet weak var favoriteBg: UIVisualEffectView!
-
+    
     //137 109 114 121
     
     var isCommon = true
     var isOpen = false
-//    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
+    //    var resourseList=UserDefaults.standard.object(forKey: "TVfavorite") as! Array<Dictionary<String, Any>>
     var favoriteDB = Array<FavoriteInfo>.init()
     var actionTemp=UIAlertAction.init()
     var nameField=UITextField.init()
@@ -40,9 +40,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     var selectedChannelTitle=String.init()
     
     var user:UserInfo = UserInfo.init()
-
+    
     public var deviceInfo = DeviceInfo.init()
-
+    
     //MARK:方法
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +54,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         scrollViewHeight.constant=UIScreen.main.bounds.width*1.4
         self.common.layer.cornerRadius=5.0
         self.costom.layer.cornerRadius=5.0
-
+        
         NotificationCenter.default.addObserver(self, selector:#selector(isLegal(_:)) , name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
-            // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     }
     
     
@@ -104,7 +104,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             basic5.fromValue=1.0
             basic5.toValue=0.0
             basic5.duration=1.0
-
+            
             let group2=CAAnimationGroup.init()
             group2.animations=[basic4,basic5]
             
@@ -146,7 +146,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         voiceFrame.layer.add(group2, forKey: "voiceFrame")
         
         activeLab.text=NSLocalizedString("正在识别...", comment: "正在识别...")
-
+        
         self.beginVoiceManger()
     }
     
@@ -158,7 +158,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         let voiceManger=VoiceManger.shareInstance
         voiceManger.delegate=self
         voiceManger.startHanler()
-
+        
     }
     
     func endOfSpeech() {
@@ -178,8 +178,15 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         print(resultArr)
         resultWord.text=results
         loadingVoice.startAnimating()
+        var resultWords = ""
         if (resultArr.count)==0 {
             return
+        }
+        else
+        {
+            resultArr.forEach({ (str) in
+                resultWords += str!
+            })
         }
         DispatchQueue.global().async {
             Thread.sleep(forTimeInterval: 1.5)
@@ -190,28 +197,72 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 //进行语言操作
                 print(results)
                 
-                let channelTitle=["广东":0,"湖南":1,"浙江":13,"深圳":14,"中央":15,"北京":16,"江苏":17]
+                let path = Bundle.main.path(forResource: "VoiceCommand", ofType: "plist")
+                
+                let voiceDictemp = NSDictionary.init(contentsOfFile: path!)
+                let voiceDic = voiceDictemp as! Dictionary<String, Any>
+                let commandDic = voiceDic["Control"] as? Dictionary<String, NSNumber>
+                let channelDic = voiceDic["Channel"]  as? Dictionary<String, NSNumber>
+                
                 var isContain=false
-                for channel in channelTitle.keys {
-                    for word in resultArr {
-                        if channel == word {
-                            let channelNum:Int = channelTitle[channel]!
-                            let code:String = self.deviceInfo.code
-                            let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
-                            BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                                CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channel,1)
-                            }, fail: { (failString) -> UInt in
-                                CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
-                                return 0
-                            })
-                            isContain=true
-                            break
-                        }
+                
+                for (key,value) in commandDic!
+                {
+                    //                    for wordsItem in resultArr
+                    //                    {
+                    guard key == resultWords else
+                    {
+                        continue
                     }
-                    if isContain == false {
-                        CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
+                    isContain = true
+                    
+                    let code:String = self.deviceInfo.code
+                    let commandNum:Int = Int(value)
+                    let command = BinMakeManger.shareInstance.singleCommand(code, commandNum, 0)
+                    let deviceID:String="IrRemoteControllerA"
+                    
+                    CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + value.intValue.description, nil)
+                    BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
+                        CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
+                    }, fail: { (failString) -> UInt in
+                        let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+                        CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
+                        return 0
+                    })
+                    
+                    
+                    
+                    //                    }
+                    
+                }
+                
+                if !isContain
+                {
+                    for (key,value)  in channelDic!
+                    {
+                        guard key == resultWords else
+                        {
+                            continue
+                        }
+                        isContain = true
+                        let channelNum:Int = Int(value)
+                        let code:String = self.deviceInfo.code
+                        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum, 0)
+                        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+                            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), channelNum.description,1)
+                        }, fail: { (failString) -> UInt in
+                            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+                            return 0
+                        })
+                        
+                        //                        }
                     }
                 }
+                
+                if !isContain {
+                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), NSLocalizedString("没找到对应控制指令", comment: "没找到对应控制指令"),1.5)
+                }
+                
             }
         }
     }
@@ -226,7 +277,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         effectView.layer.add(basic1, forKey: "effectView")
         effectView.removeFromSuperview()
     }
-
+    
     //MARK:频道快捷
     @IBAction func showFavoriteChannel(_ sender: UIButton) {
         
@@ -247,7 +298,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             alpha?.fromValue=0.8
             alpha?.toValue=0.0
             self.favoriteBg.pop_add(alpha, forKey: "alpha")
-
+            
         }
     }
     
@@ -287,7 +338,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         }
         
     }
-
+    
     
     @IBAction func selectCommon(_ sender: UIButton) {
         self.common.backgroundColor=UIColor.black
@@ -300,7 +351,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     
     @IBAction func selectCostom(_ sender: UIButton) {
-//        self.costom.backgroundColor=UIColor.init(red: 3, green: 139, blue: 244, alpha: 1)
+        //        self.costom.backgroundColor=UIColor.init(red: 3, green: 139, blue: 244, alpha: 1)
         self.costom.backgroundColor=UIColor.black
         self.common.backgroundColor=UIColor.white
         self.costom.setTitleColor(UIColor.white, for: .normal)
@@ -330,9 +381,9 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func favoriteBtn(_ sender: UIBarButtonItem,_ event:UIEvent) {
         FTPopOverMenuConfiguration.default().menuWidth=100
-//        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
-//            UserDefaults.standard.set([], forKey: "TVfavorite")
-//        }
+        //        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
+        //            UserDefaults.standard.set([], forKey: "TVfavorite")
+        //        }
         FTPopOverMenu.show(from: event, withMenuArray: [NSLocalizedString("添加频道收藏", comment: "添加频道收藏"),NSLocalizedString("定时关机", comment: "定时关机")], doneBlock: { (index) in
             if index==0
             {
@@ -376,14 +427,14 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                             CommonFunction.showForShortTime(1.5, "更新失败", "")
                         })
                     }
-                   
+                    
                     
                     self.favoriteList.reloadData()
                     
                 })
-            actionOK.isEnabled=false
-            self.actionTemp=actionOK
-            alert.addAction(actionOK)
+                actionOK.isEnabled=false
+                self.actionTemp=actionOK
+                alert.addAction(actionOK)
                 alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .default, handler: { (action) in
                     return
                 }))
@@ -409,7 +460,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: {
                 self.mainScroll.contentOffset=CGPoint.init(x: 0, y: 0)
             }, completion: { (_) in
-
+                
             })
             
         }
@@ -433,10 +484,27 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func childrenModeSetting(_ sender: UIButton) {
         
+        
+        
         let securityPin = UserDefaults.standard.string(forKey: "securityPin") ?? nil
         if securityPin != nil {
-            self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
-//            FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+            
+            let alert = UIAlertController.init(title: "输入4位安全码", message: "输入4位安全码", preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (textField) in
+                textField.keyboardType = .numberPad
+                
+            })
+            alert.addAction(UIAlertAction.init(title: "确认", style: .default, handler: { (action) in
+                let code = alert.textFields?.first?.text
+                UserDefaults.standard.set(code, forKey: "securityPin")
+                self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
+            }))
+            alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true, completion: {
+                
+            })
             
         }
         else
@@ -449,10 +517,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             alert.addAction(UIAlertAction.init(title: "确认", style: .default, handler: { (action) in
                 let code = alert.textFields?.first?.text
                 UserDefaults.standard.set(code, forKey: "securityPin")
-//                self.dismiss(animated: true, completion: {
-//                    FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
-                    self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
-//                })
+                self.performSegue(withIdentifier: "childrenSet", sender: self.deviceInfo)
             }))
             alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { (action) in
                 
@@ -470,7 +535,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             
             FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
             UserDefaults.standard.set(self.deviceInfo.deviceID, forKey: "DefaultDevice")
-
+            
             self.performSegue(withIdentifier: "tv2children", sender: self.deviceInfo)
         }
         else
@@ -483,25 +548,25 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             alert.addAction(UIAlertAction.init(title: "确认", style: .default, handler: { (action) in
                 let code = alert.textFields?.first?.text
                 UserDefaults.standard.set(code, forKey: "securityPin")
-//                self.dismiss(animated: true, completion: {
-                    FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
-                            UserDefaults.standard.set(self.deviceInfo.deviceID, forKey: "DefaultDevice")
-//                let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
-//                let updater = HTTPFuntion.init()
-//                updater.uploadAllData(user: user!, success: { 
-//                    
-//                }, fail: { 
-//                    
-//                })
+                //                self.dismiss(animated: true, completion: {
+                FMDBFunctions.shareInstance.setData(table: "T_DeviceInfo", targetParameters: "isDefault", targetContent: NSNumber.init(value: true), parameters: "DeviceID", content: Int(self.deviceInfo.deviceID)!)
+                UserDefaults.standard.set(self.deviceInfo.deviceID, forKey: "DefaultDevice")
+                //                let user = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+                //                let updater = HTTPFuntion.init()
+                //                updater.uploadAllData(user: user!, success: {
+                //
+                //                }, fail: {
+                //
+                //                })
                 
                 
-                    self.performSegue(withIdentifier: "tv2children", sender: self.deviceInfo)
-//                })
+                self.performSegue(withIdentifier: "tv2children", sender: self.deviceInfo)
+                //                })
             }))
             alert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: { (action) in
                 
             }))
-            self.present(alert, animated: true, completion: { 
+            self.present(alert, animated: true, completion: {
                 
             })
             
@@ -509,7 +574,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
     }
     
-        
+    
     //MARK:列表的代理
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.x>=self.view.frame.width && scrollView.contentOffset.x<self.view.frame.width*2{
@@ -524,7 +589,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             self.tabBar.selectedItem=self.tabBar.items?[0]
         }
     }
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView .dequeueReusableCell(withIdentifier: "channel", for: indexPath) as UITableViewCell;
@@ -549,26 +614,26 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     temp.append(favoriteItem.channelName)
                 }
                 
-//                for deviceDicInfo in self.resourseList
-//                {
-//                    temp.append(deviceDicInfo["name"] as! String)
-//                }
+                //                for deviceDicInfo in self.resourseList
+                //                {
+                //                    temp.append(deviceDicInfo["name"] as! String)
+                //                }
                 return temp
             }()
             
             //图片设置联网
             
             
-//            let channelImageArr={ () -> Array<Data> in
-//                var temp=Array<Data>.init()
-//                for deviceDicInfo in self.resourseList
-//                {
-//                    temp.append(deviceDicInfo["image"] as! Data)
-//                }
-//                return temp
-//            }()
+            //            let channelImageArr={ () -> Array<Data> in
+            //                var temp=Array<Data>.init()
+            //                for deviceDicInfo in self.resourseList
+            //                {
+            //                    temp.append(deviceDicInfo["image"] as! Data)
+            //                }
+            //                return temp
+            //            }()
             channelTitleLab.text=channelTitle[indexPath.row]
-//            editBtn.setBackgroundImage(UIImage.init(data: channelImageArr[indexPath.row]), for: .normal)
+            //            editBtn.setBackgroundImage(UIImage.init(data: channelImageArr[indexPath.row]), for: .normal)
             
         }
         
@@ -584,7 +649,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             picker.allowsEditing=false
             picker.sourceType = .photoLibrary
             picker.delegate = self
-            self.present(picker, animated: true, completion: { 
+            self.present(picker, animated: true, completion: {
                 
             })
         }))
@@ -592,7 +657,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             print("22")
         }))
         chooseAlert.addAction(UIAlertAction.init(title: "取消", style: .cancel, handler: nil))
-        self.present(chooseAlert, animated: true) { 
+        self.present(chooseAlert, animated: true) {
             
         }
     }
@@ -611,7 +676,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
                 return 0
             })
-
+            
         }
             //用户定制
         else
@@ -672,7 +737,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         else
         {
             return self.favoriteDB.count
-//            return self.resourseList.count
+            //            return self.resourseList.count
         }
     }
     
@@ -701,19 +766,19 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
             }
             //这个地方是同步图片的地方,下次修改
             
-//            for dic in self.resourseList
-//            {
-//                let name=dic["name"] as! String
-//                if name==self.selectedChannelTitle
-//                {
-//                    selectDic=dic
-//                    break
-//                }
-//            }
-//            selectFavoriteItem.imageUrl=
-//            selectDic["image"]=imageData
-//            UserDefaults.standard.set(self.resourseList, forKey: "TVfavorite")
-//            UserDefaults.standard.synchronize()
+            //            for dic in self.resourseList
+            //            {
+            //                let name=dic["name"] as! String
+            //                if name==self.selectedChannelTitle
+            //                {
+            //                    selectDic=dic
+            //                    break
+            //                }
+            //            }
+            //            selectFavoriteItem.imageUrl=
+            //            selectDic["image"]=imageData
+            //            UserDefaults.standard.set(self.resourseList, forKey: "TVfavorite")
+            //            UserDefaults.standard.synchronize()
         }
     }
     
@@ -726,10 +791,10 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tv2children"
@@ -749,5 +814,5 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         // Pass the selected object to the new view controller.
     }
     
-
+    
 }

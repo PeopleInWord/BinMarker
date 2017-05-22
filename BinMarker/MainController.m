@@ -159,14 +159,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [self performSegueWithIdentifier:@"userInfo" sender:self.user];
     }
 }
-- (IBAction)test:(UIBarButtonItem *)sender {
-    HTTPFuntion *s = [[HTTPFuntion alloc]init];
-    [s uploadAllDataWithUser:self.user success:^{
-        
-    } fail:^{
-        
-    }];
-}
+//- (IBAction)test:(UIBarButtonItem *)sender {
+//    HTTPFuntion *s = [[HTTPFuntion alloc]init];
+//    [s uploadAllDataWithUser:self.user success:^{
+//        
+//    } fail:^{
+//        
+//    }];
+//}
 //- (IBAction)test1:(UIBarButtonItem *)sender {
 //    [CommonFunction startAnimation:@"同步中" :@""];
 //    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
@@ -195,7 +195,17 @@ static NSString *const targetName=@"IrRemoteControllerA";
     [FTPopOverMenu showFromEvent:event withMenuArray:@[NSLocalizedString(@"添加设备", @"添加设备顶部"), NSLocalizedString(@"寻找设备", @"寻找设备"), NSLocalizedString(@"设置", @"设置"), NSLocalizedString(@"当前版本", @"当前版本")] doneBlock:^(NSInteger selectedIndex) {
         switch (selectedIndex) {
             case 0:
-                [self performSegueWithIdentifier:@"addDevice" sender:nil];
+            {
+                BOOL isLogin= [[NSUserDefaults standardUserDefaults]objectForKey:@"isLogin"];
+                if (!isLogin) {
+                    [self performSegueWithIdentifier:@"loginIn" sender:nil];
+                }
+                else
+                {
+                    [self performSegueWithIdentifier:@"addDevice" sender:nil];
+                }
+                
+            }
                 break;
             case 1:
                 [self foundRemote];
@@ -223,7 +233,15 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 
 - (IBAction)addDevice:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"addDevice" sender:nil];
+    BOOL isLogin= [[NSUserDefaults standardUserDefaults]objectForKey:@"isLogin"];
+    if (!isLogin) {
+        [self performSegueWithIdentifier:@"loginIn" sender:nil];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"addDevice" sender:nil];
+    }
+//    [self performSegueWithIdentifier:@"addDevice" sender:nil];
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {
@@ -439,57 +457,67 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }
     }];
     
-    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"是(网络数据与本地合并)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [CommonFunction startAnimation:@"同步中" :@""];
-        [FMDBFunctions.shareInstance syncDataWith:self.user successSync:^{//首先把本地库转换
-            HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-            [manger getAllChangeWith:self.user :^{//下载网络库
-                [manger uploadAllDataWithUser:self.user success:^{//合并两库
-                    [CommonFunction stopAnimation:@"同步成功" :@"" :2];
-                    _alldevices=nil;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.mainTableView reloadData];
-                        _noneView.hidden= self.alldevices.count != 0;
-                    });
-                    
-                } fail:^{
-                    [CommonFunction stopAnimation:@"同步失败" :@"" :2];
-                }];
-            } :^{
-                [CommonFunction stopAnimation:@"同步失败" :@"" :2];
-                NSLog(@"错误");
-            }];
-        } failSync:^{
-            
-        }];
-        
-        
-    }]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"否(本地数据删除)" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [FMDBFunctions.shareInstance delAllWithSuccess:^{
-            
-        } fail:^{
-            
-        }];//多一步删除
-        
-        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-        [manger getAllChangeWith:self.user :^{
-            [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
-            _alldevices=nil;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.mainTableView reloadData];
-                _noneView.hidden= self.alldevices.count != 0;
-            });
-        } :^{
-            [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
-        }];
-    }]];
-    
-    [self presentViewController:alert animated:YES completion:^{
-        
+//    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"导入数据" message:@"是否导入当前数据" preferredStyle:UIAlertControllerStyleAlert];
+//    [alert addAction:[UIAlertAction actionWithTitle:@"是(网络数据与本地合并)" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [CommonFunction startAnimation:@"同步中" :@""];
+//        [FMDBFunctions.shareInstance syncDataWith:self.user successSync:^{//首先把本地库转换
+//            HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+//            [manger getAllChangeWith:self.user :^{//下载网络库
+//                [manger uploadAllDataWithUser:self.user success:^{//合并两库
+//                    [CommonFunction stopAnimation:@"同步成功" :@"" :2];
+//                    _alldevices=nil;
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [self.mainTableView reloadData];
+//                        _noneView.hidden= self.alldevices.count != 0;
+//                    });
+//                    
+//                } fail:^{
+//                    [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+//                }];
+//            } :^{
+//                [CommonFunction stopAnimation:@"同步失败" :@"" :2];
+//                NSLog(@"错误");
+//            }];
+//        } failSync:^{
+//            
+//        }];
+//        
+//        
+//    }]];
+//    [alert addAction:[UIAlertAction actionWithTitle:@"否(本地数据删除)" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        [FMDBFunctions.shareInstance delAllWithSuccess:^{
+//            
+//        } fail:^{
+//            
+//        }];//多一步删除
+//        
+//        HTTPFuntion *manger=[[HTTPFuntion alloc]init];
+//        [manger getAllChangeWith:self.user :^{
+//            [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
+//            _alldevices=nil;
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [self.mainTableView reloadData];
+//                _noneView.hidden= self.alldevices.count != 0;
+//            });
+//        } :^{
+//            [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
+//        }];
+//    }]];
+//    
+//    [self presentViewController:alert animated:YES completion:^{
+//        
+//    }];
+    HTTPFuntion *mangerhttp=[[HTTPFuntion alloc]init];
+    [mangerhttp getAllChangeWith:self.user :^{
+        [CommonFunction showForShortTime:0.5 :@"更新成功" :@""];
+        _alldevices=nil;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.mainTableView reloadData];
+            _noneView.hidden= self.alldevices.count != 0;
+        });
+    } :^{
+        [CommonFunction showForShortTime:1.5 :@"更新失败" :@""];
     }];
-    
     
 }
 
@@ -503,6 +531,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
             self.user=nil;
             AppDelegate *app=(AppDelegate *)[UIApplication sharedApplication].delegate;
             app.user=nil;
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"DefaultDevice"];
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"isChildrenMode"];
         });
     } fail:^{
         

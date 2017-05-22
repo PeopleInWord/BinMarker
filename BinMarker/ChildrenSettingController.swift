@@ -8,21 +8,31 @@
 
 import UIKit
 
-class ChildrenSettingController: UIViewController , UITableViewDataSource , UITableViewDelegate{
+class ChildrenSettingController: UIViewController , UITableViewDataSource , UITableViewDelegate ,UITextFieldDelegate{
 
     var device = DeviceInfo.init()
     var channelList =  Array<FavoriteInfo>.init()
+    var actionTemp=UIAlertAction.init()
+    var nameField=UITextField.init()
+    var numberField=UITextField.init()
+    
+    
     
     @IBOutlet weak var mainTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        NotificationCenter.default.addObserver(self, selector:#selector(isLegal(_:)) , name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         
         // Do any additional setup after loading the view.
     }
 
+    func isLegal(_ sender:Notification) -> Void {//输入的频道是否合法
+        self.actionTemp.isEnabled=(self.nameField.text?.characters.count)! > 0 && self.numberField.text?.characters.count != 0 && (self.numberField.text?.characters.count)! <= 3
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let favorite =  self.channelList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -63,28 +73,66 @@ class ChildrenSettingController: UIViewController , UITableViewDataSource , UITa
         
         
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let channelNum={ () -> [Int] in
-//            var temp=Array<Int>.init()
-//            for favoriteItem in self.channelList
-//            {
-//                temp.append(Int(favoriteItem.channelNum)!)
-//            }
-//            return temp
-//        }()
-//        let code:String = self.device.code
-//        let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[indexPath.row], 0)
-//        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-//            CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
-//        }, fail: { (failString) -> UInt in
-//            CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
-//            return 0
-//        })
-//        
-//        
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-    
+
+    @IBAction func addFavorite(_ sender: UIBarButtonItem) {
+            let alert=UIAlertController.init(title: NSLocalizedString("收藏频道号", comment: "收藏频道号"), message: NSLocalizedString("请输入要收藏的频道", comment: "请输入要收藏的频道"), preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (nameF) in
+                self.nameField=nameF
+                nameF.delegate=self
+                nameF.placeholder=NSLocalizedString("输入频道名称", comment: "输入频道名称")
+            })
+            alert.addTextField(configurationHandler: { (number) in
+                self.numberField=number
+                number.delegate=self
+                number.keyboardType = .numberPad
+                number.placeholder=NSLocalizedString("输入频道号(不超过3位)", comment: "输入频道号(不超过3位)")
+            })
+            let actionOK=UIAlertAction.init(title: NSLocalizedString("好的", comment: "好的"), style: .default, handler: { (action) in
+                let favoriteTemp=FavoriteInfo.init()
+                let userdb = FMDBFunctions.shareInstance.getUserData(targetParameters: "isLogin", content: NSNumber.init(value: true)).first
+                
+                favoriteTemp.DeviceID=self.device.deviceID
+                favoriteTemp.channelName=(alert.textFields?[0].text)!
+                favoriteTemp.channelNum=(alert.textFields?[1].text)!
+                favoriteTemp.channelID = CommonFunction.idMaker().stringValue
+                
+                favoriteTemp.isCustom=false
+                FMDBFunctions.shareInstance.insertChannelData(device: self.device, channel: favoriteTemp, success: {
+                    
+                }, fail: {
+                    
+                })
+                self.channelList.append(favoriteTemp)
+                
+                
+                
+                if userdb != nil
+                {
+                    let updata = HTTPFuntion.init()
+                    updata.uploadAllData(user: userdb!, success: {
+                        CommonFunction.showForShortTime(0.5, "更新成功", "")
+                    }, fail: {
+                        CommonFunction.showForShortTime(1.5, "更新失败", "")
+                    })
+                }
+                
+                
+                self.mainTable.reloadData()
+                
+            })
+            actionOK.isEnabled=false
+            self.actionTemp=actionOK
+            alert.addAction(actionOK)
+            alert.addAction(UIAlertAction.init(title: NSLocalizedString("取消", comment: "取消"), style: .default, handler: { (action) in
+                return
+            }))
+            self.present(alert, animated: true, completion: {
+                
+            })
+        
+        
+    }
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.channelList.count
     }

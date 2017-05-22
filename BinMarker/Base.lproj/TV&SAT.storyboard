@@ -847,18 +847,21 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EuT-lf-8Fv" id="2oP-e1-Ve0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rh-XY-cNR">
-                                                    <rect key="frame" x="38" y="27" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="38" y="29.5" width="100" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="nEx-SV-xSH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxe-Zs-nb2">
-                                                    <rect key="frame" x="110" y="27" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="168" y="29.5" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -910,7 +913,14 @@
                             <constraint firstItem="JKz-ET-Voh" firstAttribute="leading" secondItem="2a8-TV-eTT" secondAttribute="leading" id="xTL-CN-5Gb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="设置可看频道" id="Y4M-W7-Q3v"/>
+                    <navigationItem key="navigationItem" title="设置可看频道" id="Y4M-W7-Q3v">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qSB-13-XRr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addFavorite:" destination="3dQ-e5-ud6" id="pgT-28-u1F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTable" destination="JKz-ET-Voh" id="AUO-AV-BG3"/>
                     </connections>
@@ -2004,6 +2014,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qeH-26-9kC">
                         <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="返回" id="39Q-e4-H1a"/>
                         <view key="titleView" contentMode="scaleToFill" id="lhe-tp-GZA">
                             <rect key="frame" x="105" y="5.5" width="165" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

@@ -55,7 +55,9 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
                 var favoriteDic=Dictionary<String, Any>.init()
                 
                 favoriteDic["channelId"]=favorite.channelID
-                favoriteDic["isCustom"]=favorite.isCustom
+                
+                favoriteDic["isCustom"]=favorite.isCustom ? NSNumber.init(value: 1) : NSNumber.init(value: 0)
+                
                 favoriteDic["deviceId"]=favorite.DeviceID
                 
                 favoriteDic["channelCustomName"]=favorite.channelName
@@ -102,7 +104,7 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
             let data1 = try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
             //Data转换成String打印输出
             success()
-            print(data1?["rspMsg"]! as! String)
+            print("结果:->" + (data1?["rspMsg"]! as! String))
         }
         
         dataTask.resume()
@@ -181,6 +183,13 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
                         singleChannel.channelID = channelDic["channelId"]! as! String
                         singleChannel.channelNum = channelDic["channelNum"]! as! String
                         singleChannel.DeviceID = device.deviceID
+                        if !(channelDic["isCustom"] is NSNull)
+                        {
+                            let isIntCustom =  (channelDic["isCustom"]! as! NSNumber).intValue
+                            singleChannel.isCustom = isIntCustom > 0 ? true : false
+                        }
+                        
+                        
                         if channelDic["photoAddress"] == nil || channelDic["photoAddress"] is NSNull
                         {
                         }
@@ -198,8 +207,6 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
                 }, fail: {
                     failGET()
                 })
-                
-                
             }
             
             successGET()

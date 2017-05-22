@@ -56,6 +56,7 @@
 		3C2A72A51E7BBBA800137EAB /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2A72A41E7BBBA800137EAB /* SettingController.swift */; };
 		3C316F601EBC82D4005D30E1 /* FavoriteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C316F5F1EBC82D4005D30E1 /* FavoriteInfo.swift */; };
 		3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */; };
+		3C38B2E41ED291000082DB3B /* VoiceCommand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C38B2E31ED290FF0082DB3B /* VoiceCommand.plist */; };
 		3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */; };
 		3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */; };
 		3C43FADF1E88EB9500F01330 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C43FADE1E88EB9500F01330 /* AddressBook.framework */; };
@@ -160,6 +161,7 @@
 		3C2A72A41E7BBBA800137EAB /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		3C316F5F1EBC82D4005D30E1 /* FavoriteInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInfo.swift; sourceTree = "<group>"; };
 		3C33FA2E1EB072C800432C8C /* DeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceInfo.swift; path = Model/DeviceInfo.swift; sourceTree = "<group>"; };
+		3C38B2E31ED290FF0082DB3B /* VoiceCommand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VoiceCommand.plist; sourceTree = "<group>"; };
 		3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BOXController.swift; path = Devices/BOXController.swift; sourceTree = "<group>"; };
 		3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AMPController.swift; path = Devices/AMPController.swift; sourceTree = "<group>"; };
 		3C43FADE1E88EB9500F01330 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -388,6 +390,7 @@
 				3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */,
 				3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */,
 				3CC2D66E1E9E029F006DF2BE /* NSString+StringOperation.h */,
+				3C38B2E31ED290FF0082DB3B /* VoiceCommand.plist */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				3C2A72791E790E2100137EAB /* 2009.bin in Resources */,
 				3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */,
 				3C2A72831E790E2100137EAB /* P14AAA_16.bin in Resources */,
+				3C38B2E41ED291000082DB3B /* VoiceCommand.plist in Resources */,
 				3C2A727D1E790E2100137EAB /* 3075.bin in Resources */,
 				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
 				3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */,

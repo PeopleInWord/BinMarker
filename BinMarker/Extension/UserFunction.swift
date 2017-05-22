@@ -38,7 +38,38 @@ class UserFunction: NSObject {
                 var failString=String.init()
                 if requestDic["isMember"] as! String == "NO"
                 {
-                    failString = "不是会员"
+                    failString = "不是内测会员"
+                }
+                else
+                {
+                    failString = "账号或者密码错误"
+                }
+                
+                fail(failString)
+            }
+        }) { (error) in
+            fail("服务器错误")
+            print(error!)
+        }
+    }
+    
+    func codeLoginIn(tel:String,code:String,_ success:@escaping (UserInfo)->Void,_ fail:@escaping (String)->Void ) -> Void{
+        let interface="userRegLogin"
+        let requestBody:Dictionary<String,String>=["mobile":tel,"regCode":code]
+        
+        httpManger.sendDataToServer(withInterface: interface, requestBody: requestBody, success: { (requestDic) in
+            if requestDic["resultType"] as! String == "1"
+            {
+                let userInfo:Array<Dictionary<String,Any>>=requestDic["userAccountLogin"]! as! Array<Dictionary<String, Any>>
+                let user = UserInfo.init(info: userInfo.first!)
+                success(user)
+            }
+            else
+            {
+                var failString=String.init()
+                if requestDic["isMember"] as! String == "NO"
+                {
+                    failString = "不是内测会员"
                 }
                 else
                 {

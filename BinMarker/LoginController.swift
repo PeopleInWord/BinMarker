@@ -23,44 +23,103 @@ class LoginController: UIViewController {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var getCode: UIButton!
     
+    var isRegCode = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
     @IBAction func login(_ sender: UIButton) {
-        
-        
+        guard (userName.text?.characters.count)! == 11 else {
+            let alert = UIAlertController.init(title: "账号错误", message: "输入正常的手机号", preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "好的", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true, completion: {
+                
+            })
+            return
+        }
         sender.isEnabled=false
         registerBtn.isEnabled=false
         activer.startAnimating()
         let manger=UserFunction.init()
-        manger.loginIn(tel: userName.text!, password: pwd.text!, { (user) in
-            self.activer.stopAnimating()
-            sender.isEnabled=true
-            self.registerBtn.isEnabled=true
-            self.success(user: user)
-        }) { (errorStr) in
-            self.activer.stopAnimating()
-            sender.isEnabled=true
-            self.registerBtn.isEnabled=true
-            CommonFunction.showForShortTime(2, "", "")
-            print(errorStr)
+
+        if isRegCode {
+            
+            manger.codeLoginIn(tel: userName.text!, code: pwd.text!, { (user) in
+                self.activer.stopAnimating()
+                sender.isEnabled=true
+                self.registerBtn.isEnabled=true
+                self.success(user: user)
+            }, { (errorStr) in
+                self.activer.stopAnimating()
+                sender.isEnabled=true
+                self.registerBtn.isEnabled=true
+                
+                print(errorStr)
+                let alert = UIAlertController.init(title: "登录错误", message: errorStr, preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "好的", style: .cancel, handler: { (action) in
+                    
+                }))
+                self.present(alert, animated: true, completion: {
+                    
+                })
+            })
         }
+        else
+        {
+            
+            manger.loginIn(tel: userName.text!, password: pwd.text!, { (user) in
+                self.activer.stopAnimating()
+                sender.isEnabled=true
+                self.registerBtn.isEnabled=true
+                self.success(user: user)
+            }) { (errorStr) in
+                self.activer.stopAnimating()
+                sender.isEnabled=true
+                self.registerBtn.isEnabled=true
+                
+                print(errorStr)
+                let alert = UIAlertController.init(title: "登录错误", message: errorStr, preferredStyle: .alert)
+                alert.addAction(UIAlertAction.init(title: "好的", style: .cancel, handler: { (action) in
+                    
+                }))
+                self.present(alert, animated: true, completion: {
+                    
+                })
+            }
+        }
+        
+        
     }
     
     @IBAction func loginMethoes(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         if sender.selectedSegmentIndex == 0 {
+            isRegCode = false
             getCode.isHidden=true
         } else {
+            isRegCode = true
             getCode.isHidden=false
             pwd.text=""
         }
     }
 
     @IBAction func didGetCode(_ sender: UIButton) {
+        guard (userName.text?.characters.count)! == 11 else {
+            let alert = UIAlertController.init(title: "账号错误", message: "输入正常的手机号", preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "好的", style: .cancel, handler: { (action) in
+                
+            }))
+            self.present(alert, animated: true, completion: {
+                
+            })
+            return
+        }
         let manger=UserFunction.init()
-        manger.getUserRegisterCode(tel: "15919716485") { (code) in
+        manger.getUserRegisterCode(tel: userName.text!) { (code) in
             CommonFunction.showForShortTime(2, "验证码请求成功", "")
         }
         var i = 60
@@ -86,7 +145,7 @@ class LoginController: UIViewController {
 
 
 
-    func success(user:UserInfo) -> Void {
+    internal func success(user:UserInfo) -> Void {
         let mobile = FMDBFunctions.shareInstance.getUserData(targetParameters: "mobile", content: user.mobile)
         if mobile.count == 0 {
             FMDBFunctions.shareInstance.insertUserData(user: user, success: {
