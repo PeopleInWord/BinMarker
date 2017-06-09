@@ -159,36 +159,37 @@ static NSString *const targetName=@"IrRemoteControllerA";
         [self performSegueWithIdentifier:@"userInfo" sender:self.user];
     }
 }
-//- (IBAction)test:(UIBarButtonItem *)sender {
-//    HTTPFuntion *s = [[HTTPFuntion alloc]init];
-//    [s uploadAllDataWithUser:self.user success:^{
-//        
-//    } fail:^{
-//        
-//    }];
-//}
-//- (IBAction)test1:(UIBarButtonItem *)sender {
-//    [CommonFunction startAnimation:@"同步中" :@""];
-//    HTTPFuntion *manger=[[HTTPFuntion alloc]init];
-//    [manger getAllChangeWith:self.user :^{
-//        _alldevices=nil;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.mainTableView reloadData];
-//            _noneView.hidden= self.alldevices.count != 0;
-//        });
-//        [CommonFunction stopAnimation:@"同步成功" :@"" :2];
-//    } :^{
-//        [CommonFunction stopAnimation:@"同步失败" :@"" :2];
-//        NSLog(@"cuowu");
-//    }];
-//    
-//}
+
 
 -(void)loadBluetooth
 {
     [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];
     
 }
+
+- (IBAction)didClickVoice:(UIButton *)sender {
+    NSString *defaultDevice = [[NSUserDefaults standardUserDefaults]stringForKey:@"defaultDevice"];
+    if (defaultDevice) {
+        DeviceInfo *device = [FMDBFunctions.shareInstance getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"DeviceID" content:defaultDevice].firstObject;
+        if (device) {
+            [self performSegueWithIdentifier:@"mainVoice" sender:device];
+        }
+        else
+        {
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"defaultDevice"];
+            NSArray *tvList = [FMDBFunctions.shareInstance getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"devicetype" content:@"TV"];
+            [self performSegueWithIdentifier:@"setdefault" sender:tvList];
+        }
+        
+        //进入语音界面
+    } else {
+        
+        NSArray *tvList = [FMDBFunctions.shareInstance getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"devicetype" content:@"TV"];
+        [self performSegueWithIdentifier:@"setdefault" sender:tvList];
+    }
+}
+
+
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
@@ -578,7 +579,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
         ChildrenModeController *target = segue.destinationViewController;
         target.device = sender;
     }
-    
+    else if ([segue.identifier isEqualToString:@"setdefault"]){
+        DefaultDeviceController *target = segue.destinationViewController;
+        target.deviceList = sender;
+    }
+    else if ([segue.identifier isEqualToString:@"mainVoice"]){
+        VoiceController *target = segue.destinationViewController;
+        target.device = sender;
+    }
 }
 
 

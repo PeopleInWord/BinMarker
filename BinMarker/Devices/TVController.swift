@@ -173,7 +173,7 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
         
     }
     
-    func onResults(_ results: String, _ resultArr: [String?]){
+    func results(_ results: String, _ resultArr: [String?]){
         quitBtn.isHidden=true
         print(resultArr)
         resultWord.text=results
@@ -208,8 +208,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                 
                 for (key,value) in commandDic!
                 {
-                    //                    for wordsItem in resultArr
-                    //                    {
                     guard key == resultWords else
                     {
                         continue
@@ -229,11 +227,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                         CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
                         return 0
                     })
-                    
-                    
-                    
-                    //                    }
-                    
                 }
                 
                 if !isContain
@@ -254,8 +247,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                             CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
                             return 0
                         })
-                        
-                        //                        }
                     }
                 }
                 
@@ -381,9 +372,6 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func favoriteBtn(_ sender: UIBarButtonItem,_ event:UIEvent) {
         FTPopOverMenuConfiguration.default().menuWidth=100
-        //        if UserDefaults.standard.object(forKey: "TVfavorite") == nil{
-        //            UserDefaults.standard.set([], forKey: "TVfavorite")
-        //        }
         FTPopOverMenu.show(from: event, withMenuArray: [NSLocalizedString("添加频道收藏", comment: "添加频道收藏"),NSLocalizedString("定时关机", comment: "定时关机")], doneBlock: { (index) in
             if index==0
             {
