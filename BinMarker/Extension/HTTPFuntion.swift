@@ -75,12 +75,8 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
         }
         let jsondata = try?JSONSerialization.data(withJSONObject: uploadDic, options: JSONSerialization.WritingOptions(rawValue: 0))
         guard jsondata != nil else {
-            fail()
-            print("jsondata为空")
             return
         }
-        
-        
         let str = String.init(data: jsondata!, encoding: .utf8)
         print("数据 :" + str!)
         

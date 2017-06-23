@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C056C161ED56DED00596DC9 /* DefaultDeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C056C151ED56DED00596DC9 /* DefaultDeviceController.swift */; };
-		3C056C181ED5868000596DC9 /* VoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C056C171ED5868000596DC9 /* VoiceController.swift */; };
 		3C0D31741DDD9D9500D78924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31731DDD9D9500D78924 /* main.m */; };
 		3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D31761DDD9D9500D78924 /* AppDelegate.m */; };
 		3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D317B1DDD9D9500D78924 /* Main.storyboard */; };
@@ -82,13 +80,11 @@
 		3C589D871E5FD107002D3637 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C589D861E5FD107002D3637 /* CoreBluetooth.framework */; };
 		3C5A29821ECC1F6C00C2F674 /* ChildrenModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */; };
 		3C5A29841ECC5CCB00C2F674 /* ChildrenSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */; };
-		3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */; };
+		3CB922411EFD0EAB002F6E32 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */; };
 		3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */; };
 		3CC2D6741E9E07EC006DF2BE /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */; };
 		3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */; };
 		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
-		3CCCE2661EE004F9002F5BA6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCE2651EE004F9002F5BA6 /* Reachability.m */; };
-		3CCCE2681EE0116D002F5BA6 /* CustomStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCE2671EE0116D002F5BA6 /* CustomStatusBar.swift */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
 		3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */; };
 		3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */; };
@@ -99,8 +95,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C056C151ED56DED00596DC9 /* DefaultDeviceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultDeviceController.swift; path = Devices/DefaultDeviceController.swift; sourceTree = "<group>"; };
-		3C056C171ED5868000596DC9 /* VoiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VoiceController.swift; path = Devices/VoiceController.swift; sourceTree = "<group>"; };
 		3C0D316F1DDD9D9500D78924 /* BinMarker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinMarker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C0D31731DDD9D9500D78924 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C0D31751DDD9D9500D78924 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,16 +186,13 @@
 		3C589D861E5FD107002D3637 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenModeController.swift; sourceTree = "<group>"; };
 		3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenSettingController.swift; sourceTree = "<group>"; };
-		3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
 		3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
 		3CC2D66E1E9E029F006DF2BE /* NSString+StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
 		3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstaticLib.a; sourceTree = "<group>"; };
 		3CC2D6761EA1BE32006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddDevice.storyboard; sourceTree = "<group>"; };
 		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
-		3CCCE2641EE004F9002F5BA6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		3CCCE2651EE004F9002F5BA6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		3CCCE2671EE0116D002F5BA6 /* CustomStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStatusBar.swift; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
 		3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPForSoapFunction.swift; sourceTree = "<group>"; };
 		3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSubScroll.swift; sourceTree = "<group>"; };
@@ -237,8 +228,8 @@
 				3C43FAE71E88EC0D00F01330 /* QuartzCore.framework in Frameworks */,
 				3C43FAE51E88EBFB00F01330 /* CoreLocation.framework in Frameworks */,
 				3C43FAE31E88EBD900F01330 /* CoreGraphics.framework in Frameworks */,
+				3CB922411EFD0EAB002F6E32 /* iflyMSC.framework in Frameworks */,
 				3C43FAE11E88EBC400F01330 /* AudioToolbox.framework in Frameworks */,
-				3CA4D3D11E8A50B30009E2DC /* iflyMSC.framework in Frameworks */,
 				3C43FADF1E88EB9500F01330 /* AddressBook.framework in Frameworks */,
 				3C2A72A11E7A922300137EAB /* libc++.tbd in Frameworks */,
 				3C2A729F1E7A920B00137EAB /* libz.tbd in Frameworks */,
@@ -392,9 +383,7 @@
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				3CCCE2641EE004F9002F5BA6 /* Reachability.h */,
-				3CCCE2651EE004F9002F5BA6 /* Reachability.m */,
-				3CA4D3D01E8A50B30009E2DC /* iflyMSC.framework */,
+				3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */,
 				3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */,
 				3C27460D1E712A5500662A9F /* searching.gif */,
 				3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */,
@@ -422,8 +411,6 @@
 				3C3A11CB1E762F5700C9E9E3 /* AMPController.swift */,
 				3C3A11C91E73A64F00C9E9E3 /* BOXController.swift */,
 				3CE4EA211EA74B77005D0CC7 /* FavoriteSubScroll.swift */,
-				3C056C151ED56DED00596DC9 /* DefaultDeviceController.swift */,
-				3C056C171ED5868000596DC9 /* VoiceController.swift */,
 			);
 			name = Devices;
 			sourceTree = "<group>";
@@ -447,7 +434,6 @@
 				3CDD64C41EB1F72200AD1599 /* HTTPForSoapFunction.swift */,
 				3C4C87901EB2E96700495F97 /* UserFunction.swift */,
 				3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */,
-				3CCCE2671EE0116D002F5BA6 /* CustomStatusBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -641,16 +627,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C503FE01EBC6FBF006D0F2D /* HTTPFuntion.swift in Sources */,
-				3C056C161ED56DED00596DC9 /* DefaultDeviceController.swift in Sources */,
 				3C125CC81E94962100D8FB92 /* UIView+AutoFont.m in Sources */,
 				3C0D31771DDD9D9500D78924 /* AppDelegate.m in Sources */,
 				3C125CC71E94962100D8FB92 /* UIButton+touchLimit.m in Sources */,
 				3C125CCB1E94962100D8FB92 /* BinMakeManger.swift in Sources */,
-				3CCCE2661EE004F9002F5BA6 /* Reachability.m in Sources */,
 				3C5A29821ECC1F6C00C2F674 /* ChildrenModeController.swift in Sources */,
 				3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */,
 				3C125CCA1E94962100D8FB92 /* VoiceManger.swift in Sources */,
-				3CCCE2681EE0116D002F5BA6 /* CustomStatusBar.swift in Sources */,
 				3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */,
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
 				3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */,
@@ -668,7 +651,6 @@
 				3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */,
 				3C125CC91E94962100D8FB92 /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
-				3C056C181ED5868000596DC9 /* VoiceController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */,
 				3C316F601EBC82D4005D30E1 /* FavoriteInfo.swift in Sources */,

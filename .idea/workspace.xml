@@ -2,75 +2,322 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01766cb2-07bb-4fca-891e-f437910d613c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Devices/DefaultDeviceController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Devices/VoiceController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Extension/CustomStatusBar.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Reachability.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BinMarker/Reachability.m" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_back.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_back.imageset/返回.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_back.imageset/返回@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_back.imageset/返回@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_common.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_common.imageset/椭圆-1-拷贝-5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_common.imageset/椭圆-1-拷贝-5@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_common.imageset/椭圆-1-拷贝-5@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_down.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_down.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_down.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_down.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_left.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_left.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_left.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_left.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_line.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_line.imageset/椭圆-1-拷贝-7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_line.imageset/椭圆-1-拷贝-7@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_line.imageset/椭圆-1-拷贝-7@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_menu.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_menu.imageset/菜单.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_menu.imageset/菜单@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_menu.imageset/菜单@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_middle.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_middle.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_middle.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_middle.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok.imageset/ok.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok.imageset/ok@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok.imageset/ok@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok_bg.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok_bg.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok_bg.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_ok_bg.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_powoff.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_powoff.imageset/开关默认.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_powoff.imageset/开关默认@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_powoff.imageset/开关默认@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_right.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_right.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_right.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_right.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_sound.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_sound.imageset/静音.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_sound.imageset/静音@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_sound.imageset/静音@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_top_background.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_top_background.imageset/背景-拷贝.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_top_background.imageset/背景-拷贝@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_top_background.imageset/背景-拷贝@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_tv.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_tv.imageset/矩形-21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_tv.imageset/矩形-21@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_tv.imageset/矩形-21@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_up.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_up.imageset/turn_the_page-default_btn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_up.imageset/turn_the_page-default_btn@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/tv_up.imageset/turn_the_page-default_btn@3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/开关点击.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/开关点击.imageset/开关点击.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/开关点击.imageset/开关点击@2x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/New/开关点击.imageset/开关点击@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/default_unselect_btn.imageset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/default_unselect_btn.imageset/default_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/default_unselect_btn.imageset/default_btn@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/default_unselect_btn.imageset/default_btn@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/pressed_select_btn.imageset/Contents.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/pressed_select_btn.imageset/pressed_btn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/pressed_select_btn.imageset/pressed_btn@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Assets.xcassets/Main/pressed_select_btn.imageset/pressed_btn@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Bin&amp;SQL/NSE_Database.sqlite" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Devices/DefaultDeviceController.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Devices/VoiceController.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Extension/CustomStatusBar.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Reachability.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/Reachability.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyAudioSession.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyContact.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyDataUploader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyDebugLog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyISVDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyISVRecognizer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyMSC.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyPcmRecorder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyRecognizerView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyRecognizerViewDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyResourceUtil.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySetting.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechConstant.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechError.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechEvaluator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechEvaluatorDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechRecognizer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechRecognizerDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechSynthesizer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechSynthesizerDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechUnderstander.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlySpeechUtility.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyTextUnderstander.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyUserWords.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyVoiceWakeuper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/Headers/IFlyVoiceWakeuperDelegate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BinMarker/iflyMSC.framework/iflyMSC" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Bugly/Bugly.framework/Bugly" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Bugly/Bugly.framework/Headers/Bugly.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Bugly/Bugly.framework/Headers/BuglyConfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Bugly/Bugly.framework/Headers/BuglyLog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Bugly/Bugly.framework/Modules/module.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFAutoPurgingImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFHTTPSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkActivityIndicatorManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworkReachabilityManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFSecurityPolicy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLRequestSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLResponseSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/AFURLSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIActivityIndicatorView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIButton+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIImage+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIImageView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIKit+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIProgressView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIRefreshControl+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/AFNetworking/UIWebView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/BlurryModalSegue/BlurryModalSegue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FLAnimatedImage/FLAnimatedImage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FLAnimatedImage/FLAnimatedImageView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMDB.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMDatabase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMDatabaseAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMDatabasePool.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMDatabaseQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FMDB/FMResultSet.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/FTPopOverMenu/FTPopOverMenu.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQBarButtonItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQKeyboardManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQKeyboardManagerConstants.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQKeyboardManagerConstantsInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQKeyboardReturnKeyHandler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQNSArray+Sort.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQPreviousNextView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQTextView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQTitleBarButtonItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQToolbar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUIScrollView+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUITextFieldView+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUIView+Hierarchy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUIView+IQKeyboardToolbar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUIViewController+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/IQKeyboardManager/IQUIWindow+Hierarchy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MBProgressHUD/MBProgressHUD.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshAutoFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshAutoGifFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshAutoNormalFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshAutoStateFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshBackFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshBackGifFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshBackNormalFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshBackStateFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshComponent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshConst.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshGifHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshNormalHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/MJRefreshStateHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/NSBundle+MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIScrollView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIScrollView+MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MJRefresh/UIView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MZAppearance/MZAppearance.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/MZAppearance/NSInvocation+Copy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/NSData+ImageContentType.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/NSImage+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDImageCacheConfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageCompat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImageOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/SDWebImagePrefetcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIButton+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImage+GIF.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImage+MultiFormat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIImageView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/SDWebImage/UIView+WebCacheOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/UIImage+BlurredFrame/UIImage+BlurredFrame.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/UIImage+BlurredFrame/UIImage+ImageEffects.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/FloatConversion.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POP.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAction.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimatableProperty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationEventInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationExtras.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationPrivate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationRuntime.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationTracer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimationTracerInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPAnimatorPrivate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPBasicAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPBasicAnimationInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPCGUtils.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPCustomAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPDecayAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPDecayAnimationInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPDefines.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPGeometry.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPLayerExtras.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPMath.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPPropertyAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPPropertyAnimationInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPSpringAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPSpringAnimationInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPSpringSolver.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/POPVector.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/TransformationMatrix.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/pop/UnitBezier.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFAutoPurgingImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFHTTPSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworkActivityIndicatorManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworkReachabilityManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFSecurityPolicy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLRequestSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLResponseSerialization.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/AFURLSessionManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIActivityIndicatorView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIButton+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIImage+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIImageView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIKit+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIProgressView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIRefreshControl+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/AFNetworking/UIWebView+AFNetworking.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/BlurryModalSegue/BlurryModalSegue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Bugly/Bugly/Bugly.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Bugly/Bugly/BuglyConfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Bugly/Bugly/BuglyLog.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FLAnimatedImage/FLAnimatedImage.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FLAnimatedImage/FLAnimatedImageView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMDB.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMDatabase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMDatabaseAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMDatabasePool.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMDatabaseQueue.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FMDB/FMResultSet.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/FTPopOverMenu/FTPopOverMenu.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQBarButtonItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQKeyboardManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQKeyboardManagerConstants.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQKeyboardManagerConstantsInternal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQKeyboardReturnKeyHandler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQNSArray+Sort.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQPreviousNextView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQTextView.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQTitleBarButtonItem.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQToolbar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUIScrollView+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUITextFieldView+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUIView+Hierarchy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUIView+IQKeyboardToolbar.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUIViewController+Additions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/IQKeyboardManager/IQUIWindow+Hierarchy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MBProgressHUD/MBProgressHUD.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshAutoFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshAutoGifFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshAutoNormalFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshAutoStateFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshBackFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshBackGifFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshBackNormalFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshBackStateFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshComponent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshConst.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshFooter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshGifHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshNormalHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/MJRefreshStateHeader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/NSBundle+MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/UIScrollView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/UIScrollView+MJRefresh.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MJRefresh/UIView+MJExtension.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MZAppearance/MZAppearance.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/MZAppearance/NSInvocation+Copy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/NSData+ImageContentType.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/NSImage+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDImageCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDImageCacheConfig.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageCompat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageDecoder.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageDownloader.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageDownloaderOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageManager.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImageOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/SDWebImagePrefetcher.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIButton+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIImage+GIF.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIImage+MultiFormat.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIImageView+HighlightedWebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIImageView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIView+WebCache.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/SDWebImage/UIView+WebCacheOperation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/UIImage+BlurredFrame/UIImage+BlurredFrame.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/UIImage+BlurredFrame/UIImage+ImageEffects.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POP.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimatableProperty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimationEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimationExtras.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimationTracer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPAnimator.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPBasicAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPCustomAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPDecayAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPDefines.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPGeometry.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPLayerExtras.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPPropertyAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/pop/POPSpringAnimation.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/AFNetworking/AFNetworking.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/BlurryModalSegue/BlurryModalSegue-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/BlurryModalSegue/BlurryModalSegue-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/BlurryModalSegue/BlurryModalSegue.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FLAnimatedImage/FLAnimatedImage.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FMDB/FMDB-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FMDB/FMDB-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FMDB/FMDB.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FTPopOverMenu/FTPopOverMenu-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FTPopOverMenu/FTPopOverMenu-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/FTPopOverMenu/FTPopOverMenu.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/IQKeyboardManager/IQKeyboardManager.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MBProgressHUD/MBProgressHUD.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MJRefresh/MJRefresh-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MJRefresh/MJRefresh-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MJRefresh/MJRefresh.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MZAppearance/MZAppearance-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MZAppearance/MZAppearance-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/MZAppearance/MZAppearance.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-acknowledgements.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-frameworks.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker-resources.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/SDWebImage/SDWebImage-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/SDWebImage/SDWebImage.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/UIImage+BlurredFrame/UIImage+BlurredFrame.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/pop/pop-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/pop/pop-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/pop/pop.xcconfig" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/BinMarker.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/BinMarker.xcscheme" afterPath="$PROJECT_DIR$/BinMarker.xcodeproj/xcuserdata/pengzishang.xcuserdatad/xcschemes/BinMarker.xcscheme" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BinMarker/AppDelegate.m" afterPath="$PROJECT_DIR$/BinMarker/AppDelegate.m" />
@@ -93,7 +340,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_8bd9b230d69075b65e0e523c93b168f6760615f9" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_8245e58990ce05b82d5a1f86d3bbe4767567671b" />
   <component name="FavoritesManager">
     <favorites_list name="BinMarker" />
   </component>
@@ -122,8 +369,8 @@
       <file leaf-file-name="MainController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4634">
-              <caret line="331" column="5" lean-forward="false" selection-start-line="331" selection-start-column="5" selection-end-line="331" selection-end-column="5" />
+            <state relative-caret-position="4620">
+              <caret line="330" column="5" lean-forward="false" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
               <folding>
                 <element signature="e#127#153#0" expanded="true" />
                 <element signature="e#10458#10489#0" expanded="true" />
@@ -140,8 +387,24 @@
         <entry file="file://$PROJECT_DIR$/BinMarker/Devices/TVController.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8428">
-              <caret line="602" column="17" lean-forward="false" selection-start-line="602" selection-start-column="17" selection-end-line="602" selection-end-column="17" />
-              <folding />
+              <caret line="614" column="17" lean-forward="false" selection-start-line="614" selection-start-column="17" selection-end-line="614" selection-end-column="17" />
+              <folding>
+                <marker date="1498194037995" expanded="true" signature="15896:19126" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="19202:20115" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="20201:22082" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="22144:24448" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="24542:24973" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="25083:27389" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="27440:28380" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="28473:30318" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="30412:30444" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="30564:31613" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="31707:31909" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="32006:32067" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="32191:33552" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="33569:33632" ph="{...}" />
+                <marker date="1498194037995" expanded="true" signature="33682:33788" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -407,15 +670,16 @@
       <workItem from="1491535733849" duration="636000" />
       <workItem from="1491790806399" duration="478000" />
       <workItem from="1493259308361" duration="1586000" />
-      <workItem from="1496993099460" duration="298000" />
+      <workItem from="1498204230631" duration="357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12571000" />
+    <option name="totallyTimeSpent" value="12630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -489,7 +753,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8428">
           <caret line="602" column="17" lean-forward="true" selection-start-line="602" selection-start-column="17" selection-end-line="602" selection-end-column="17" />
-          <folding />
+          <folding>
+            <marker date="1498194037995" expanded="true" signature="15896:19126" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="19202:20115" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="20201:22082" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="22144:24448" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="24542:24973" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="25083:27389" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="27440:28380" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="28473:30318" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="30412:30444" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="30564:31613" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="31707:31909" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="32006:32067" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="32191:33552" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="33569:33632" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="33682:33788" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -820,8 +1100,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BinMarker/MainController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4634">
-          <caret line="331" column="5" lean-forward="false" selection-start-line="331" selection-start-column="5" selection-end-line="331" selection-end-column="5" />
+        <state relative-caret-position="4620">
+          <caret line="330" column="5" lean-forward="false" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
           <folding>
             <element signature="e#127#153#0" expanded="true" />
             <element signature="e#10458#10489#0" expanded="true" />
@@ -836,8 +1116,24 @@
     <entry file="file://$PROJECT_DIR$/BinMarker/Devices/TVController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8428">
-          <caret line="602" column="17" lean-forward="false" selection-start-line="602" selection-start-column="17" selection-end-line="602" selection-end-column="17" />
-          <folding />
+          <caret line="614" column="17" lean-forward="false" selection-start-line="614" selection-start-column="17" selection-end-line="614" selection-end-column="17" />
+          <folding>
+            <marker date="1498194037995" expanded="true" signature="15896:19126" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="19202:20115" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="20201:22082" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="22144:24448" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="24542:24973" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="25083:27389" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="27440:28380" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="28473:30318" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="30412:30444" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="30564:31613" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="31707:31909" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="32006:32067" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="32191:33552" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="33569:33632" ph="{...}" />
+            <marker date="1498194037995" expanded="true" signature="33682:33788" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -11,43 +11,21 @@
 #import "iflyMSC/iflyMSC.h"
 #import "BinMarker-Swift.h"
 #import "IQKeyboardManager.h"
-#import "Reachability.h"
 @interface AppDelegate ()
-
-@property (strong,nonatomic)CustomStatusBar *netBar;
 
 @end
 
 @implementation AppDelegate
 
--(CustomStatusBar *)netBar
-{
-    if (!_netBar) {
-        _netBar = [[CustomStatusBar alloc]initWithFrame:self.window.frame];
-        [self.window addSubview:_netBar];
-    }
-    return _netBar;
-}
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Bugly startWithAppId:@"7f4dfcd92a"];
-    
-
     [FMDBFunctions.shareInstance translateData];
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
     [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = YES;
     self.window.rootViewController=[self rootView];
-    Reachability *reachManger = [Reachability reachabilityWithHostName:@"http://120.76.74.87/PMSWebService/services/"];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reachabilityChanged:)
-                                                 name:kReachabilityChangedNotification
-                                               object:nil];
-    [reachManger startNotifier];
-    
     // Override point for customization after application launch.
     return YES;
 }
@@ -57,32 +35,6 @@
     BOOL isSelect=[[[NSUserDefaults standardUserDefaults]objectForKey:@"Selected"] boolValue];
     UIStoryboard *board = [UIStoryboard storyboardWithName: @"Main" bundle: nil];
     return isSelect?[board instantiateViewControllerWithIdentifier:@"alreadySelected"]:[board instantiateViewControllerWithIdentifier:@"selecting"];
-}
-
-
--(void)reachabilityChanged:(NSNotification *)notification{
-    
-    Reachability *reach = [notification object];
-    if([reach isKindOfClass:[Reachability class]]){
-        NetworkStatus status = [reach currentReachabilityStatus];
-        NSLog(@"%zd",status);
-        if (status == NotReachable) {
-            if (self.netBar.hidden == YES) {
-                [self.netBar showWith:@"dddd"];
-                [CommonFunction showForShortTime:2 :@"网络有问题" :@""];
-            }
-        }
-        else
-        {
-            if (self.netBar.hidden==NO) {
-                [CommonFunction showForShortTime:2 :@"网络恢复" :@""];
-                [self.netBar hide];
-            }
-            
-        }
-        
-    }
-    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
