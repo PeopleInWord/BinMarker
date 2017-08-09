@@ -25,6 +25,8 @@
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
     [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = YES;
+    [[BluetoothManager getInstance] effect];
+    
     self.window.rootViewController=[self rootView];
     // Override point for customization after application launch.
     return YES;

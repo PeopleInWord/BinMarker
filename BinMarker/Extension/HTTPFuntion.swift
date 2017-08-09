@@ -104,7 +104,7 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
             let data1 = try?JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! Dictionary<String, Any>
             //Data转换成String打印输出
             success()
-            print("结果:->" + (data1?["rspMsg"]! as! String))
+//            print("结果:->" + (data1?["rspMsg"]! as! String))
         }
         
         dataTask.resume()
@@ -164,11 +164,11 @@ class HTTPFuntion: NSObject ,HTTPFuntionDelegate{
                 failGET()
             })
             let arr1=data1["data"] as! Array<Dictionary<String,Any>>
-            print(arr1)
+//            print(arr1)
             for value in arr1
             {
                 let deviceDic=value["device"] as! Dictionary<String,Any>
-                print(deviceDic)
+//                print(deviceDic)
                 let channel = value["channel"] as! Array<Dictionary<String,Any>>
                 let device = DeviceInfo.init()
                 device.brandname = deviceDic["brandName"]! as! String

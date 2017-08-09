@@ -58,8 +58,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     __weak MainController * weakself = self;
-    
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [CommonFunction startAnimation:@"同步中" :@""];
@@ -90,7 +90,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     }
     
     
-    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
+//    [[BluetoothManager getInstance] scanPeriherals:NO AllowPrefix:@[@(ScanTypeAll)]];
     
     if (self.user) {
         SDWebImageManager *manger=[SDWebImageManager sharedManager];
@@ -115,35 +115,33 @@ static NSString *const targetName=@"IrRemoteControllerA";
 {
     [super viewWillAppear:animated];
     
-//    BOOL isChildrenMode =  [[NSUserDefaults standardUserDefaults]boolForKey:@"isChildrenMode"];
-//    
-//    if (isChildrenMode) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            __block BOOL isContain = NO;
-            [NSThread sleepForTimeInterval:0.5];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[[FMDBFunctions shareInstance]getAllData] enumerateObjectsUsingBlock:^(DeviceInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    NSString *defalutDeviceID =  [[NSUserDefaults standardUserDefaults]stringForKey:@"DefaultDevice"];
-                    if (!defalutDeviceID) {
-                        return ;
-                    }
-                    if ([obj.deviceID isEqualToString:defalutDeviceID]) {
-                        *stop = YES;
-                        isContain = YES;
-                        [self performSegueWithIdentifier:@"main2children" sender:obj];
-                    }
-                }];
-                if (!isContain) {
-                    [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"isChildrenMode"];
+    //    BOOL isChildrenMode =  [[NSUserDefaults standardUserDefaults]boolForKey:@"isChildrenMode"];
+    //
+    //    if (isChildrenMode) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        __block BOOL isContain = NO;
+        [NSThread sleepForTimeInterval:0.5];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[[FMDBFunctions shareInstance]getAllData] enumerateObjectsUsingBlock:^(DeviceInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSString *defalutDeviceID =  [[NSUserDefaults standardUserDefaults]stringForKey:@"DefaultDevice"];
+                if (!defalutDeviceID) {
+                    return ;
                 }
-            });
+                if ([obj.deviceID isEqualToString:defalutDeviceID]) {
+                    *stop = YES;
+                    isContain = YES;
+                    [self performSegueWithIdentifier:@"main2children" sender:obj];
+                }
+            }];
+            if (!isContain) {
+                [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"isChildrenMode"];
+            }
         });
-//    }
+    });
+    //    }
     _alldevices=nil;
     [self.mainTableView reloadData];
     _noneView.hidden= self.alldevices.count != 0;
-    
-    
     
     
 }
@@ -184,11 +182,11 @@ static NSString *const targetName=@"IrRemoteControllerA";
 //    
 //}
 
--(void)loadBluetooth
-{
-    [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];
-    
-}
+//-(void)loadBluetooth
+//{
+//    [[BluetoothManager getInstance]addObserver:self forKeyPath:@"peripheralsInfo" options:NSKeyValueObservingOptionOld context:nil];
+//
+//}
 
 - (IBAction)didClickSetting:(UIBarButtonItem *)sender event:(UIEvent *)event{
     [FTPopOverMenuConfiguration defaultConfiguration].menuWidth=100;
@@ -224,7 +222,8 @@ static NSString *const targetName=@"IrRemoteControllerA";
 - (void)foundRemote {
     NSString *codeStr=[[BinMakeManger shareInstance] foundCommand];
     [CommonFunction startAnimation:NSLocalizedString(@"寻找遥控器中", @"寻找遥控器中") :nil];
-    [[BluetoothManager getInstance]sendByteCommandWithString:codeStr deviceID:@"IrRemoteControllerA" sendType:SendTypeRemoteTemp success:^(NSData * _Nullable stateData) {
+    
+    [[BluetoothManager getInstance]sendByteCommandWithString:codeStr deviceID:@"IrRemoteControllerA" sendType:SendTypeRemoteNew success:^(NSData * _Nullable stateData) {
         [CommonFunction stopAnimation:NSLocalizedString(@"命令发送成功", @"命令发送成功") :nil :1];
     } fail:^NSUInteger(NSString * _Nullable stateCode) {
         [CommonFunction stopAnimation:NSLocalizedString(@"命令发送失败", @"命令发送失败") :nil :1];
@@ -241,7 +240,6 @@ static NSString *const targetName=@"IrRemoteControllerA";
     {
         [self performSegueWithIdentifier:@"addDevice" sender:nil];
     }
-//    [self performSegueWithIdentifier:@"addDevice" sender:nil];
 }
 
 - (IBAction)buildingBin:(UIButton *)sender {

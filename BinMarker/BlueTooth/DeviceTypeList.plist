@@ -107,6 +107,8 @@
 			<string>灯光调节器</string>
 			<key>Name17</key>
 			<string>中央空调</string>
+			<key>Name26</key>
+			<string>售货机</string>
 		</dict>
 	</array>
 	<key>ScanTypeWIFIControl</key>

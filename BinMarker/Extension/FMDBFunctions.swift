@@ -128,7 +128,7 @@ class FMDBFunctions: NSObject {
                     
                     let custring=device.customname.characters.count == 0 ?device.brandname:device.customname
                     let deviceid = NSNumber.init(value: Int(device.deviceID)!)
-                    print("设备ID" + deviceid.description)
+//                    print("设备ID" + deviceid.description)
                     try database?.executeUpdate(sqlString, values:[deviceid ,user.mobile,device.devicetype,device.brandname,device.code,custring,NSNumber.init(value: device.isDefault)])
                     success()
                     
@@ -191,7 +191,7 @@ class FMDBFunctions: NSObject {
                     //如果有user的时候,是不需要重新算ID
 //                    let md5 = CommonFunction.md5eight(with: (device.deviceID) + device.devicetype + device.brandname + device.code + device.customname)
 //                    channel.channelID = md5!
-                    print("频道 :" + channel.channelID)
+//                    print("频道 :" + channel.channelID)
                     
                     try database?.executeUpdate(sqlString, values: [NSNumber.init(value: Int(channel.channelID)!),NSNumber.init(value:Int(device.deviceID)!) ,channel.channelNum,channel.channelName,NSNumber.init(value: channel.isCustom),channel.imageUrl])
                     success()

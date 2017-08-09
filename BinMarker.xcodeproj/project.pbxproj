@@ -81,8 +81,6 @@
 		3C5A29821ECC1F6C00C2F674 /* ChildrenModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */; };
 		3C5A29841ECC5CCB00C2F674 /* ChildrenSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */; };
 		3CB922411EFD0EAB002F6E32 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */; };
-		3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */; };
-		3CC2D6741E9E07EC006DF2BE /* libstaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */; };
 		3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6751EA1BE32006DF2BE /* AddDevice.storyboard */; };
 		3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC2D6781EA1D189006DF2BE /* TV&SAT.storyboard */; };
 		3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF5C591E9768F700BFC567 /* TVController.swift */; };
@@ -91,6 +89,13 @@
 		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
 		3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
+		642597CA1F3AAA6D005635C7 /* ToolsFuntion.m in Sources */ = {isa = PBXBuildFile; fileRef = 642597C31F3AA40E005635C7 /* ToolsFuntion.m */; };
+		642597CB1F3AAA6F005635C7 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 642597C61F3AA411005635C7 /* BluetoothManager.m */; };
+		642597CC1F3AAA78005635C7 /* AUX.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C11F3AA40C005635C7 /* AUX.json */; };
+		642597CD1F3AAA7B005635C7 /* DVD.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597BF1F3AA40B005635C7 /* DVD.json */; };
+		642597CE1F3AAA7E005635C7 /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 642597C21F3AA40D005635C7 /* DeviceTypeList.plist */; };
+		642597CF1F3AAA81005635C7 /* SAT.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C91F3AA414005635C7 /* SAT.json */; };
+		642597D01F3AAA83005635C7 /* TV.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C51F3AA410005635C7 /* TV.json */; };
 		F1ABEF3C90BFDF926B491356 /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */; };
 /* End PBXBuildFile section */
 
@@ -187,10 +192,6 @@
 		3C5A29811ECC1F6C00C2F674 /* ChildrenModeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenModeController.swift; sourceTree = "<group>"; };
 		3C5A29831ECC5CCB00C2F674 /* ChildrenSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenSettingController.swift; sourceTree = "<group>"; };
 		3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
-		3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
-		3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
-		3CC2D66E1E9E029F006DF2BE /* NSString+StringOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
-		3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libstaticLib.a; sourceTree = "<group>"; };
 		3CC2D6761EA1BE32006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddDevice.storyboard; sourceTree = "<group>"; };
 		3CC2D6791EA1D189006DF2BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/TV&SAT.storyboard"; sourceTree = "<group>"; };
 		3CCF5C591E9768F700BFC567 /* TVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVController.swift; path = Devices/TVController.swift; sourceTree = "<group>"; };
@@ -210,6 +211,17 @@
 		3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBFunctions.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
+		642597BF1F3AA40B005635C7 /* DVD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DVD.json; sourceTree = "<group>"; };
+		642597C01F3AA40C005635C7 /* NSString+StringOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
+		642597C11F3AA40C005635C7 /* AUX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AUX.json; sourceTree = "<group>"; };
+		642597C21F3AA40D005635C7 /* DeviceTypeList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DeviceTypeList.plist; sourceTree = "<group>"; };
+		642597C31F3AA40E005635C7 /* ToolsFuntion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolsFuntion.m; sourceTree = "<group>"; };
+		642597C41F3AA40F005635C7 /* ToolsFuntion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolsFuntion.h; sourceTree = "<group>"; };
+		642597C51F3AA410005635C7 /* TV.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TV.json; sourceTree = "<group>"; };
+		642597C61F3AA411005635C7 /* BluetoothManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothManager.m; sourceTree = "<group>"; };
+		642597C71F3AA412005635C7 /* BluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
+		642597C81F3AA413005635C7 /* NSString+StringOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringOperation.m"; sourceTree = "<group>"; };
+		642597C91F3AA414005635C7 /* SAT.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SAT.json; sourceTree = "<group>"; };
 		6F8FA3D48EBE9487D67E5777 /* Pods-BinMarker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.release.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.release.xcconfig"; sourceTree = "<group>"; };
 		B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BinMarker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B06F660B7C0797452319BB /* Pods-BinMarker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinMarker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BinMarker/Pods-BinMarker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,7 +235,6 @@
 				3C43FAEF1E88EEAD00F01330 /* Contacts.framework in Frameworks */,
 				3C43FAED1E88ED2300F01330 /* libz.1.dylib in Frameworks */,
 				3C43FAEB1E88EC2D00F01330 /* Foundation.framework in Frameworks */,
-				3CC2D6741E9E07EC006DF2BE /* libstaticLib.a in Frameworks */,
 				3C43FAE91E88EC1C00F01330 /* UIKit.framework in Frameworks */,
 				3C43FAE71E88EC0D00F01330 /* QuartzCore.framework in Frameworks */,
 				3C43FAE51E88EBFB00F01330 /* CoreLocation.framework in Frameworks */,
@@ -383,13 +394,10 @@
 		3C589D7A1E5FCDA3002D3637 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				642597BE1F3AA3D6005635C7 /* BlueTooth */,
 				3CB922401EFD0EAB002F6E32 /* iflyMSC.framework */,
 				3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */,
 				3C27460D1E712A5500662A9F /* searching.gif */,
-				3CC2D66B1E9E029F006DF2BE /* BluetoothManager.h */,
-				3CC2D66C1E9E029F006DF2BE /* DeviceTypeList.plist */,
-				3CC2D6731E9E07EC006DF2BE /* libstaticLib.a */,
-				3CC2D66E1E9E029F006DF2BE /* NSString+StringOperation.h */,
 				3C38B2E31ED290FF0082DB3B /* VoiceCommand.plist */,
 			);
 			name = Lib;
@@ -436,6 +444,24 @@
 				3C503FDF1EBC6FBF006D0F2D /* HTTPFuntion.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		642597BE1F3AA3D6005635C7 /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				642597C11F3AA40C005635C7 /* AUX.json */,
+				642597C91F3AA414005635C7 /* SAT.json */,
+				642597BF1F3AA40B005635C7 /* DVD.json */,
+				642597C51F3AA410005635C7 /* TV.json */,
+				642597C71F3AA412005635C7 /* BluetoothManager.h */,
+				642597C61F3AA411005635C7 /* BluetoothManager.m */,
+				642597C21F3AA40D005635C7 /* DeviceTypeList.plist */,
+				642597C01F3AA40C005635C7 /* NSString+StringOperation.h */,
+				642597C81F3AA413005635C7 /* NSString+StringOperation.m */,
+				642597C41F3AA40F005635C7 /* ToolsFuntion.h */,
+				642597C31F3AA40E005635C7 /* ToolsFuntion.m */,
+			);
+			path = BlueTooth;
 			sourceTree = "<group>";
 		};
 		C93512C1FF97EC979024132C /* Pods */ = {
@@ -508,7 +534,7 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = LD2KPD7UX3;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -541,32 +567,36 @@
 				3C2A72841E790E2100137EAB /* T32DBA_01FE.bin in Resources */,
 				3C2A727F1E790E2100137EAB /* 6123.bin in Resources */,
 				3C2A72791E790E2100137EAB /* 2009.bin in Resources */,
-				3CC2D66F1E9E029F006DF2BE /* DeviceTypeList.plist in Resources */,
 				3C2A72831E790E2100137EAB /* P14AAA_16.bin in Resources */,
 				3C38B2E41ED291000082DB3B /* VoiceCommand.plist in Resources */,
 				3C2A727D1E790E2100137EAB /* 3075.bin in Resources */,
 				3C2A72771E790E2100137EAB /* 531.bin in Resources */,
 				3CC2D6771EA1BE32006DF2BE /* AddDevice.storyboard in Resources */,
 				3C2A72761E790E2100137EAB /* 492.bin in Resources */,
+				642597CC1F3AAA78005635C7 /* AUX.json in Resources */,
 				3C2A72821E790E2100137EAB /* P14AAA_03.bin in Resources */,
 				3C2A72911E794FA500137EAB /* Infrared_Datebase.sqlite in Resources */,
 				3CC2D67A1EA1D189006DF2BE /* TV&SAT.storyboard in Resources */,
+				642597CD1F3AAA7B005635C7 /* DVD.json in Resources */,
 				3C0D31821DDD9D9500D78924 /* LaunchScreen.storyboard in Resources */,
 				3C2A727C1E790E2100137EAB /* 2787.bin in Resources */,
 				3C2A727A1E790E2100137EAB /* 2132.bin in Resources */,
 				3C2A72781E790E2100137EAB /* 691.bin in Resources */,
+				642597CE1F3AAA7E005635C7 /* DeviceTypeList.plist in Resources */,
 				3C2A72731E790E2100137EAB /* NSE_Database.sqlite in Resources */,
 				3C0D317F1DDD9D9500D78924 /* Assets.xcassets in Resources */,
 				3C125CCC1E94990B00D8FB92 /* Localizable.strings in Resources */,
 				3C2A72801E790E2100137EAB /* 8078.bin in Resources */,
 				3C2A72811E790E2100137EAB /* P14AAA_0A.bin in Resources */,
 				3C2A72741E790E2100137EAB /* Ir_Remote_ImageB.bin in Resources */,
+				642597D01F3AAA83005635C7 /* TV.json in Resources */,
 				3C2A72851E790E2100137EAB /* T32DBA_08FE.bin in Resources */,
 				3C2A727E1E790E2100137EAB /* 6014.bin in Resources */,
 				3C2A72861E790E2100137EAB /* T32DBA_40EF.bin in Resources */,
 				3C0D317D1DDD9D9500D78924 /* Main.storyboard in Resources */,
 				3C27460E1E712A5500662A9F /* searching.gif in Resources */,
 				3C2A727B1E790E2100137EAB /* 2314.bin in Resources */,
+				642597CF1F3AAA81005635C7 /* SAT.json in Resources */,
 				3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,6 +666,7 @@
 				3C125CCA1E94962100D8FB92 /* VoiceManger.swift in Sources */,
 				3C4C87911EB2E96700495F97 /* UserFunction.swift in Sources */,
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
+				642597CB1F3AAA6F005635C7 /* BluetoothManager.m in Sources */,
 				3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */,
 				3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */,
 				3C4C878F1EB2E5F400495F97 /* NetWorkingManager.m in Sources */,
@@ -648,6 +679,7 @@
 				3C28BD3D1E5D3D9B0028B7BF /* TestController.swift in Sources */,
 				3C125CC61E94962100D8FB92 /* CommonFunction.swift in Sources */,
 				3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */,
+				642597CA1F3AAA6D005635C7 /* ToolsFuntion.m in Sources */,
 				3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */,
 				3C125CC91E94962100D8FB92 /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
@@ -842,7 +874,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = LD2KPD7UX3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,8 +892,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1496dfec-d11b-4982-83ee-a99c84c4c6b0";
-				PROVISIONING_PROFILE_SPECIFIER = Test;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -874,8 +908,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = LD2KPD7UX3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -891,8 +926,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amj.BinMaker.Store;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3ccbaaa9-3320-49ae-a220-3a518b0ede62";
-				PROVISIONING_PROFILE_SPECIFIER = Distribution_PZS_BinMaker_2017_3_16;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BinMarker/BinMarker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

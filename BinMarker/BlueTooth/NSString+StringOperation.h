@@ -30,16 +30,36 @@
  */
 -(NSString *)fullWithLengthCountBehide:(NSUInteger)length;
 
-//-(NSString *(^)(NSUInteger length))fullWithLengthCountBehide;
+
+
+/**
+  转成10进制
+
+ @param hexStr <#hexStr description#>
+ @return <#return value description#>
+ */
+-(NSUInteger)ToIntWithHex;
+
+
+
+
+/**
+ 转16进制
+
+ @param tmpid <#tmpid description#>
+ @return <#return value description#>
+ */
++(NSString *)ToHex:(NSUInteger)tmpid;
 
 /**
  转化时间为锁指定字符串
-
+ 
  @param date     <#date description#>
  @param isRemote <#isRemote description#>
-
+ 
  @return <#return value description#>
  */
+
 +(NSString *)initWithDate:(NSDate *)date isRemote:(BOOL)isRemote;
 
 
@@ -61,12 +81,17 @@
 +(NSString *)translateDateToTime:(NSDate *)date;
 
 +(NSString *)convertPassWord:(NSString *)passWord;
-
+/**
+ 顺序将MAC转BCD码
+ 
+ @param MacID <#MacID description#>
+ @return <#return value description#>
+ */
 +(NSString *)convertMacID:(NSString *)MacID;
 
-+(NSString *)ListNameWithPrefix:(NSString *)prefix;
++(NSString *)convertMacID:(NSString *)MacID reversed:(BOOL)isReversed;
 
-//+(NSDate *)initCommandWithStr:(NSString *)commandStr deviceID:(NSString *)deviceID;
++(NSString *)ListNameWithPrefix:(NSString *)prefix;
 
 +(Byte *)translateToByte:(NSString *)part;
 
@@ -74,5 +99,8 @@
 
 +(NSString *)divideCode:(NSString *)code;
 
++(NSInteger)dataToInt:(NSData *)data;
+
++(NSString *)dataToString:(NSData *)data;
 
 @end

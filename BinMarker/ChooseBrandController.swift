@@ -117,6 +117,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         
         let path=Bundle.main.path(forResource: "Infrared_Datebase", ofType: "sqlite")
         let db=FMDatabase.init(path: path)
+        
         let mbp=MBProgressHUD.showAdded(to: self.view, animated: true)
         mbp.label.text=NSLocalizedString("加载中...", comment: "加载中...")
         mbp.removeFromSuperViewOnHide=true
