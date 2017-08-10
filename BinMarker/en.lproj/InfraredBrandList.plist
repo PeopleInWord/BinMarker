@@ -765,726 +765,596 @@
 	</array>
 	<key>DVD</key>
 	<array>
-        <dict>
-            <key>brand</key>
-            <string>IDALL</string>
-            
-            <key>code</key>
-            <array>
-                <string>009</string>
-                <string>010</string>
-                <string>017</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>BBK</string>
-            
-            <key>code</key>
-            <array>
-                <string>015</string>
-                <string>016</string>
-                <string>062</string>
-                <string>065</string>
-                
-                <string>071</string>
-                <string>072</string>
-                <string>076</string>
-                <string>091</string>
-                
-                <string>121</string>
-                <string>134</string>
-                <string>152</string>
-                <string>152</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>YTO</string>
-            
-            <key>code</key>
-            <array>
-                <string>294</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Tsinghua Tongfang</string>
-            
-            <key>code</key>
-            <array>
-                <string>001</string>
-                <string>099</string>
-                <string>100</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>QiSheng</string>
-            
-            <key>code</key>
-            <array>
-                <string>004</string>
-                <string>011</string>
-                <string>012</string>
-                <string>026</string>
-                
-                <string>028</string>
-                <string>029</string>
-                <string>049</string>
-                <string>080</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Malata</string>
-            
-            <key>code</key>
-            <array>
-                <string>006</string>
-                <string>007</string>
-                <string>008</string>
-                <string>030</string>
-                
-                <string>046</string>
-                <string>053</string>
-                <string>067</string>
-                <string>068</string>
-                
-                <string>116</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Sokkia</string>
-            
-            <key>code</key>
-            <array>
-                <string>014</string>
-                <string>027</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Avlight</string>
-            
-            <key>code</key>
-            <array>
-                <string>038</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Desay</string>
-            
-            <key>code</key>
-            <array>
-                <string>020</string>
-                <string>070</string>
-                <string>117</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>GIEC</string>
-            
-            <key>code</key>
-            <array>
-                <string>018</string>
-                <string>019</string>
-                <string>132</string>
-                <string>157</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Haier</string>
-            
-            <key>code</key>
-            <array>
-                <string>037</string>
-                <string>142</string>
-                <string>158</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Hisense</string>
-            
-            <key>code</key>
-            <array>
-                <string>160</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Hitachi</string>
-            
-            <key>code</key>
-            <array>
-                <string>023</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>HUALU</string>
-            
-            <key>code</key>
-            <array>
-                <string>043</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>JVC</string>
-            
-            <key>code</key>
-            <array>
-                <string>040</string>
-                <string>088</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>LG</string>
-            
-            <key>code</key>
-            <array>
-                <string>021</string>
-                <string>032</string>
-                <string>052</string>
-                <string>144</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Panasonic</string>
-            
-            <key>code</key>
-            <array>
-                <string>031</string>
-                <string>039</string>
-                <string>042</string>
-                <string>058</string>
-                
-                <string>156</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Pascmio</string>
-            
-            <key>code</key>
-            <array>
-                <string>013</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Philips</string>
-            
-            <key>code</key>
-            <array>
-                <string>002</string>
-                <string>033</string>
-                <string>056</string>
-                <string>143</string>
-                
-                <string>153</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Samsung</string>
-            
-            <key>code</key>
-            <array>
-                <string>024</string>
-                <string>048</string>
-                <string>061</string>
-                <string>092</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Shinco</string>
-            
-            <key>code</key>
-            <array>
-                <string>022</string>
-                <string>045</string>
-                <string>054</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Skyworth</string>
-            
-            <key>code</key>
-            <array>
-                <string>005</string>
-                <string>062</string>
-                <string>066</string>
-                <string>069</string>
-                
-                <string>075</string>
-                <string>077</string>
-                <string>101</string>
-                <string>138</string>
-                
-                <string>139</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>SONY</string>
-            
-            <key>code</key>
-            <array>
-                <string>025</string>
-                <string>083</string>
-                <string>155</string>
-                <string>161</string>
-                
-                <string>162</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Toshiba</string>
-            
-            <key>code</key>
-            <array>
-                <string>034</string>
-                <string>035</string>
-                <string>036</string>
-                <string>040</string>
-                
-                <string>084</string>
-                <string>112</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>TCL</string>
-            
-            <key>code</key>
-            <array>
-                <string>044</string>
-                <string>059</string>
-                <string>082</string>
-                <string>097</string>
-                
-                <string>098</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>奥莱克</string>
-            
-            <key>code</key>
-            <array>
-                <string>141</string>
-                <string>145</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>夏新</string>
-            
-            <key>code</key>
-            <array>
-                <string>150</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>威莱</string>
-            
-            <key>code</key>
-            <array>
-                <string>148</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>SAST</string>
-            
-            <key>code</key>
-            <array>
-                <string>064</string>
-                <string>102</string>
-                <string>103</string>
-                <string>119</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>VICTOR</string>
-            
-            <key>code</key>
-            <array>
-                <string>090</string>
-                <string>127</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Gradiente</string>
-            
-            <key>code</key>
-            <array>
-                <string>159</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>HAOZI</string>
-            
-            <key>code</key>
-            <array>
-                <string>111</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>OKON</string>
-            
-            <key>code</key>
-            <array>
-                <string>115</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>THOMSON</string>
-            
-            <key>code</key>
-            <array>
-                <string>126</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Daewoo</string>
-            
-            <key>code</key>
-            <array>
-                <string>129</string>
-                <string>130</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Playmates</string>
-            
-            <key>code</key>
-            <array>
-                <string>131</string>
-                <string>137</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Modern</string>
-            
-            <key>code</key>
-            <array>
-                <string>128</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Chilinh Star</string>
-            
-            <key>code</key>
-            <array>
-                <string>135</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>帝和</string>
-            
-            <key>code</key>
-            <array>
-                <string>113</string>
-                <string>120</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Landscape</string>
-            
-            <key>code</key>
-            <array>
-                <string>057</string>
-                <string>089</string>
-                <string>147</string>
-                <string>149</string>
-                
-                <string>151</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Brant</string>
-            
-            <key>code</key>
-            <array>
-                <string>107</string>
-                <string>108</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Ayr</string>
-            
-            <key>code</key>
-            <array>
-                <string>109</string>
-                <string>110</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Nintaus</string>
-            
-            <key>code</key>
-            <array>
-                <string>047</string>
-                <string>114</string>
-                <string>122</string>
-                <string>123</string>
-                
-                <string>124</string>
-                <string>125</string>
-                <string>133</string>
-                <string>136</string>
-                
-                <string>140</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>GingKo</string>
-            
-            <key>code</key>
-            <array>
-                <string>062</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Kingking</string>
-            
-            <key>code</key>
-            <array>
-                <string>062</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>LECOR</string>
-            
-            <key>code</key>
-            <array>
-                <string>079</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Panda</string>
-            
-            <key>code</key>
-            <array>
-                <string>081</string>
-                <string>094</string>
-                <string>095</string>
-                <string>096</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>DENON</string>
-            
-            <key>code</key>
-            <array>
-                <string>085</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>ONKYO</string>
-            
-            <key>code</key>
-            <array>
-                <string>086</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Pioneer</string>
-            
-            <key>code</key>
-            <array>
-                <string>087</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>AKAI</string>
-            
-            <key>code</key>
-            <array>
-                <string>050</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>JinWei</string>
-            
-            <key>code</key>
-            <array>
-                <string>055</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Kenwood</string>
-            
-            <key>code</key>
-            <array>
-                <string>118</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Warburg</string>
-            
-            <key>code</key>
-            <array>
-                <string>062</string>
-                <string>073</string>
-                <string>104</string>
-                <string>105</string>
-                
-                <string>106</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Cottey</string>
-            
-            <key>code</key>
-            <array>
-                <string>074</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>ViFi</string>
-            
-            <key>code</key>
-            <array>
-                <string>093</string>
-                
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Other</string>
-            
-            <key>code</key>
-            <array>
-                <string>051</string>
-                <string>060</string>
-                <string>063</string>
-                <string>146</string>
-                
-            </array>
-        </dict>
-    </array>
-    <key>COMBI</key>
-    <array>
-        <dict>
-            <key>brand</key>
-            <string>Skyworth</string>
-            <key>code</key>
-            <array>
-                <string>001</string>
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>Sabah</string>
-            <key>code</key>
-            <array>
-                <string>002</string>
-            </array>
-        </dict>
-        <dict>
-            <key>brand</key>
-            <string>SANYO</string>
-            <key>code</key>
-            <array>
-                <string>003</string>
-            </array>
+		<dict>
+			<key>brand</key>
+			<string>IDALL</string>
+			<key>code</key>
+			<array>
+				<string>009</string>
+				<string>010</string>
+				<string>017</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>BBK</string>
+			<key>code</key>
+			<array>
+				<string>015</string>
+				<string>016</string>
+				<string>062</string>
+				<string>065</string>
+				<string>071</string>
+				<string>072</string>
+				<string>076</string>
+				<string>091</string>
+				<string>121</string>
+				<string>134</string>
+				<string>152</string>
+				<string>152</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>YTO</string>
+			<key>code</key>
+			<array>
+				<string>294</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Tsinghua Tongfang</string>
+			<key>code</key>
+			<array>
+				<string>001</string>
+				<string>099</string>
+				<string>100</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>QiSheng</string>
+			<key>code</key>
+			<array>
+				<string>004</string>
+				<string>011</string>
+				<string>012</string>
+				<string>026</string>
+				<string>028</string>
+				<string>029</string>
+				<string>049</string>
+				<string>080</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Malata</string>
+			<key>code</key>
+			<array>
+				<string>006</string>
+				<string>007</string>
+				<string>008</string>
+				<string>030</string>
+				<string>046</string>
+				<string>053</string>
+				<string>067</string>
+				<string>068</string>
+				<string>116</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Sokkia</string>
+			<key>code</key>
+			<array>
+				<string>014</string>
+				<string>027</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Avlight</string>
+			<key>code</key>
+			<array>
+				<string>038</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Desay</string>
+			<key>code</key>
+			<array>
+				<string>020</string>
+				<string>070</string>
+				<string>117</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>GIEC</string>
+			<key>code</key>
+			<array>
+				<string>018</string>
+				<string>019</string>
+				<string>132</string>
+				<string>157</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Haier</string>
+			<key>code</key>
+			<array>
+				<string>037</string>
+				<string>142</string>
+				<string>158</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Hisense</string>
+			<key>code</key>
+			<array>
+				<string>160</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Hitachi</string>
+			<key>code</key>
+			<array>
+				<string>023</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>HUALU</string>
+			<key>code</key>
+			<array>
+				<string>043</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>JVC</string>
+			<key>code</key>
+			<array>
+				<string>040</string>
+				<string>088</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>LG</string>
+			<key>code</key>
+			<array>
+				<string>021</string>
+				<string>032</string>
+				<string>052</string>
+				<string>144</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Panasonic</string>
+			<key>code</key>
+			<array>
+				<string>031</string>
+				<string>039</string>
+				<string>042</string>
+				<string>058</string>
+				<string>156</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Pascmio</string>
+			<key>code</key>
+			<array>
+				<string>013</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Philips</string>
+			<key>code</key>
+			<array>
+				<string>002</string>
+				<string>033</string>
+				<string>056</string>
+				<string>143</string>
+				<string>153</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Samsung</string>
+			<key>code</key>
+			<array>
+				<string>024</string>
+				<string>048</string>
+				<string>061</string>
+				<string>092</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Shinco</string>
+			<key>code</key>
+			<array>
+				<string>022</string>
+				<string>045</string>
+				<string>054</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Skyworth</string>
+			<key>code</key>
+			<array>
+				<string>005</string>
+				<string>062</string>
+				<string>066</string>
+				<string>069</string>
+				<string>075</string>
+				<string>077</string>
+				<string>101</string>
+				<string>138</string>
+				<string>139</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>SONY</string>
+			<key>code</key>
+			<array>
+				<string>025</string>
+				<string>083</string>
+				<string>155</string>
+				<string>161</string>
+				<string>162</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Toshiba</string>
+			<key>code</key>
+			<array>
+				<string>034</string>
+				<string>035</string>
+				<string>036</string>
+				<string>040</string>
+				<string>084</string>
+				<string>112</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>TCL</string>
+			<key>code</key>
+			<array>
+				<string>044</string>
+				<string>059</string>
+				<string>082</string>
+				<string>097</string>
+				<string>098</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>奥莱克</string>
+			<key>code</key>
+			<array>
+				<string>141</string>
+				<string>145</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>夏新</string>
+			<key>code</key>
+			<array>
+				<string>150</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>威莱</string>
+			<key>code</key>
+			<array>
+				<string>148</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>SAST</string>
+			<key>code</key>
+			<array>
+				<string>064</string>
+				<string>102</string>
+				<string>103</string>
+				<string>119</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>VICTOR</string>
+			<key>code</key>
+			<array>
+				<string>090</string>
+				<string>127</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Gradiente</string>
+			<key>code</key>
+			<array>
+				<string>159</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>HAOZI</string>
+			<key>code</key>
+			<array>
+				<string>111</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>OKON</string>
+			<key>code</key>
+			<array>
+				<string>115</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>THOMSON</string>
+			<key>code</key>
+			<array>
+				<string>126</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Daewoo</string>
+			<key>code</key>
+			<array>
+				<string>129</string>
+				<string>130</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Playmates</string>
+			<key>code</key>
+			<array>
+				<string>131</string>
+				<string>137</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Modern</string>
+			<key>code</key>
+			<array>
+				<string>128</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Chilinh Star</string>
+			<key>code</key>
+			<array>
+				<string>135</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>帝和</string>
+			<key>code</key>
+			<array>
+				<string>113</string>
+				<string>120</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Landscape</string>
+			<key>code</key>
+			<array>
+				<string>057</string>
+				<string>089</string>
+				<string>147</string>
+				<string>149</string>
+				<string>151</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Brant</string>
+			<key>code</key>
+			<array>
+				<string>107</string>
+				<string>108</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Ayr</string>
+			<key>code</key>
+			<array>
+				<string>109</string>
+				<string>110</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Nintaus</string>
+			<key>code</key>
+			<array>
+				<string>047</string>
+				<string>114</string>
+				<string>122</string>
+				<string>123</string>
+				<string>124</string>
+				<string>125</string>
+				<string>133</string>
+				<string>136</string>
+				<string>140</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>GingKo</string>
+			<key>code</key>
+			<array>
+				<string>062</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Kingking</string>
+			<key>code</key>
+			<array>
+				<string>062</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>LECOR</string>
+			<key>code</key>
+			<array>
+				<string>079</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Panda</string>
+			<key>code</key>
+			<array>
+				<string>081</string>
+				<string>094</string>
+				<string>095</string>
+				<string>096</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>DENON</string>
+			<key>code</key>
+			<array>
+				<string>085</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>ONKYO</string>
+			<key>code</key>
+			<array>
+				<string>086</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Pioneer</string>
+			<key>code</key>
+			<array>
+				<string>087</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>AKAI</string>
+			<key>code</key>
+			<array>
+				<string>050</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>JinWei</string>
+			<key>code</key>
+			<array>
+				<string>055</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Kenwood</string>
+			<key>code</key>
+			<array>
+				<string>118</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Warburg</string>
+			<key>code</key>
+			<array>
+				<string>062</string>
+				<string>073</string>
+				<string>104</string>
+				<string>105</string>
+				<string>106</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Cottey</string>
+			<key>code</key>
+			<array>
+				<string>074</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>ViFi</string>
+			<key>code</key>
+			<array>
+				<string>093</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Other</string>
+			<key>code</key>
+			<array>
+				<string>051</string>
+				<string>060</string>
+				<string>063</string>
+				<string>146</string>
+			</array>
+		</dict>
+	</array>
+	<key>AUX</key>
+	<array>
+		<dict>
+			<key>brand</key>
+			<string>Skyworth</string>
+			<key>code</key>
+			<array>
+				<string>001</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>Sabah</string>
+			<key>code</key>
+			<array>
+				<string>002</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>SANYO</string>
+			<key>code</key>
+			<array>
+				<string>003</string>
+			</array>
 		</dict>
 		<dict>
 			<key>brand</key>

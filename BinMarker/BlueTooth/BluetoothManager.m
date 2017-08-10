@@ -340,7 +340,7 @@ NSString *_Nonnull const ScanTypeDescription[] = {
             }
             _curPeripheral = nil;
             if (finish) {
-                finish(YES);
+                finish(NO);
             }
         }
         
@@ -360,7 +360,7 @@ NSString *_Nonnull const ScanTypeDescription[] = {
                 }
                 _curPeripheral = nil;
                 if (finish) {
-                    finish(YES);
+                    finish(NO);
                 }
             }
             
@@ -465,16 +465,16 @@ NSString *_Nonnull const ScanTypeDescription[] = {
                 deviceIndex = commands.count;
             }
             
-            if (deviceIndex<commands.count) {
+            if (deviceIndex<commands.count) {//重试次数可用
                 SendType type = sendTypes? (SendType)sendTypes[0].integerValue:SendTypeQuery;
                 [blockManger sendCommmandWithDeviceID:devices[deviceIndex] sendType:type deviceIndex:deviceIndex command:commands[deviceIndex] isLast:YES];
                 
             }
             else
-            {
+            {//重试次数到
                 _curPeripheral = nil;
                 if (finish) {
-                    finish(YES);
+                    finish(NO);
                 }
             }
         }
@@ -500,7 +500,7 @@ NSString *_Nonnull const ScanTypeDescription[] = {
                 {
                     _curPeripheral = nil;
                     if (finish) {
-                        finish(YES);
+                        finish(NO);
                     }
                 }
             }

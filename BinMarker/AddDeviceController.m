@@ -10,6 +10,7 @@
 #import "AddDeviceController.h"
 #import "BinMarker-Swift.h"
 #import "FMDB.h"
+#import "ToolsFuntion.h"
 
 @interface AddDeviceController ()
 
@@ -63,12 +64,12 @@
     return UIEdgeInsetsMake(10, 10, 0, 10);
 }
 //67346768
-//UICollectionView被选中时调用的方法
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier:@"chooseBrand" sender:indexPath];
-    
- 
+//    NSArray *numArray = [ToolsFuntion getAllDeviceNumWithDeviceType:(RemoteDevice)indexPath.row];
+//    [self performSegueWithIdentifier:@"chooseNum" sender:numArray];
 }
 
 - (IBAction)temp:(UIBarButtonItem *)sender {
@@ -119,9 +120,6 @@
         return;
     }
     
-    
-    
-    
     NSDictionary <NSString *,NSArray *>*root=[NSDictionary dictionaryWithContentsOfFile:path];
     [root enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull key, NSArray <NSDictionary *>* _Nonnull obj1, BOOL * _Nonnull stop)
     {
@@ -150,34 +148,32 @@
     }];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(NSIndexPath *)sender {
-    ChooseBrandController *target=segue.destinationViewController;
-    NSString *path=[[NSBundle mainBundle]pathForResource:@"Infrared_Datebase" ofType:@"sqlite"];
-    FMDatabase *db=[FMDatabase databaseWithPath:path];
-    if ([db open]) {
-        NSDictionary *selectWord=@{@(0):@"TV",@(1):@"DVD",@(2):@"COMBI",@(3):@"SAT"};
-        FMResultSet *result = [db executeQuery:[NSString stringWithFormat:@"select DISTINCT (brand) from RemoteIndex where DeviceType = \"%@\" order by brand",selectWord[@(sender.row)]]];
-        NSMutableArray *brandNameList=[NSMutableArray array];
-        while ([result next]) {
-            NSString *str=[result stringForColumn:@"Brand"];
-            [brandNameList addObject:str];
+    if ([segue.identifier isEqualToString:@"chooseBrand"]) {
+        ChooseBrandController *target=segue.destinationViewController;
+        NSString *path=[[NSBundle mainBundle]pathForResource:@"Infrared_Datebase" ofType:@"sqlite"];
+        FMDatabase *db=[FMDatabase databaseWithPath:path];
+        if ([db open]) {
+            NSDictionary *selectWord=@{@(0):@"TV",@(1):@"DVD",@(2):@"AUX",@(3):@"SAT"};
+            FMResultSet *result = [db executeQuery:[NSString stringWithFormat:@"select DISTINCT (brand) from RemoteIndex where DeviceType = \"%@\" order by brand",selectWord[@(sender.row)]]];
+            NSMutableArray *brandNameList=[NSMutableArray array];
+            while ([result next]) {
+                NSString *str=[result stringForColumn:@"Brand"];
+                [brandNameList addObject:str];
+            }
+            target.deviceBrandList=brandNameList;
+            target.deviceTypeIndex=sender;
         }
-        target.deviceBrandList=brandNameList;
-        target.deviceTypeIndex=sender;
+        else
+        {
+            NSLog(@"创建表fail");
+        }
     }
-    else
-    {
-        NSLog(@"创建表fail");
+    else if ([segue.identifier isEqualToString:@"chooseNum"]){
+        
     }
     
     // Get the new view controller using [segue destinationViewController].

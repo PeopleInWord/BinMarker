@@ -277,14 +277,14 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
     NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[indexPath.section]];
     return rowCount==0?0:100;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
     NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[section]];
     return  rowCount==0?0:10;
 }
@@ -295,7 +295,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
     NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[section]];
     
     return rowCount;
@@ -311,7 +311,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
     NSUInteger rowCount = [FMDBFunctions.shareInstance returnSectionRowCountWithParameters:@"devicetype" content:deviceTypeArray[indexPath.section]];
     if (rowCount==0) {
         cell=[tableView dequeueReusableCellWithIdentifier:@"noneCell" forIndexPath:indexPath];
@@ -319,7 +319,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         cell=[tableView dequeueReusableCellWithIdentifier:@"brandcell" forIndexPath:indexPath];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
-        NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"COMBI":@"icon_AMP",@"SAT":@"icon_BOX"};
+        NSDictionary *imageDic=@{@"TV":@"icon_TV",@"DVD":@"icon_DVD",@"AUX":@"icon_AMP",@"SAT":@"icon_BOX"};
         UIImageView *iconImage=[cell viewWithTag:1001];
         UILabel *brandName=[cell viewWithTag:1003];
         UILabel *codeName=[cell viewWithTag:1004];
@@ -353,7 +353,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction *deleteAction;
     deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
         [FMDBFunctions.shareInstance delDataWithTable:@"T_DeviceInfo" parameters:@"deviceID" :device.deviceID success:^{
@@ -377,7 +377,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
         }
     }];
     UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:NSLocalizedString(@"编辑", @"编辑") handler:^(UITableViewRowAction *_Nonnull action, NSIndexPath *_Nonnull indexPath) {
-        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+        NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
         NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
         DeviceInfo *device=deviceArray[indexPath.row];
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"名称", @"名称") message:NSLocalizedString(@"输入设备名称", @"输入设备名称") preferredStyle:UIAlertControllerStyleAlert];
@@ -413,7 +413,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"COMBI",@"SAT"];
+    NSArray *deviceTypeArray=@[@"TV",@"DVD",@"AUX",@"SAT"];
     NSArray *deviceArray =[[FMDBFunctions shareInstance]getSelectDataWithTable:@"T_DeviceInfo" targetParameters:@"deviceType" content:deviceTypeArray[indexPath.section]];
     DeviceInfo *deviceInfo=deviceArray[indexPath.row];
     NSString *deviceType=deviceInfo.devicetype;
@@ -423,7 +423,7 @@ static NSString *const targetName=@"IrRemoteControllerA";
     else if ([deviceType isEqualToString:@"DVD"]){
         [self performSegueWithIdentifier:@"dvd" sender:deviceInfo];
     }
-    else if ([deviceType isEqualToString:@"COMBI"]){
+    else if ([deviceType isEqualToString:@"AUX"]){
         [self performSegueWithIdentifier:@"amp" sender:deviceInfo];
     }
     else if ([deviceType isEqualToString:@"SAT"]){

@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="mainView" destination="kob-Zl-HdA" id="9SY-vE-hJX"/>
                         <segue destination="Ihv-rE-HoU" kind="show" identifier="chooseBrand" id="iSu-kA-qRh"/>
+                        <segue destination="mMY-p5-kaV" kind="show" identifier="chooseNum" id="fk9-ON-SWT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2L-EG-ra5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fh0-c1-au1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="130"/>
+            <point key="canvasLocation" x="2282" y="130"/>
         </scene>
         <!--测试码组-->
         <scene sceneID="gs6-6N-sea">
@@ -401,10 +402,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rFo-yv-H7N">
-                                        <rect key="frame" x="32.5" y="-341" width="256" height="341"/>
+                                        <rect key="frame" x="32.5" y="-397.5" width="256" height="397.5"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N19-6g-nH1">
-                                                <rect key="frame" x="0.0" y="0.0" width="256" height="341"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="397.5"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-Ob-bjK">
                                                         <rect key="frame" x="0.0" y="0.0" width="256" height="600"/>
@@ -812,6 +813,17 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <variation key="default">
+                                                            <mask key="subviews">
+                                                                <exclude reference="PEn-sm-lkg"/>
+                                                                <exclude reference="M8z-Ab-2hV"/>
+                                                                <exclude reference="icj-br-cZm"/>
+                                                                <exclude reference="QBg-19-mvV"/>
+                                                                <exclude reference="dWm-9S-U7A"/>
+                                                                <exclude reference="Tte-SX-QgG"/>
+                                                                <exclude reference="Z2f-AG-boC"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -854,7 +866,7 @@
                                     <constraint firstItem="2HF-Rb-fxw" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="IQ9-KM-b7N"/>
                                     <constraint firstItem="rFo-yv-H7N" firstAttribute="bottom" secondItem="gfG-ac-EQp" secondAttribute="top" id="SzY-59-iCw"/>
                                     <constraint firstItem="rFo-yv-H7N" firstAttribute="centerX" secondItem="gfG-ac-EQp" secondAttribute="centerX" id="d57-55-Pd1"/>
-                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="height" secondItem="gfG-ac-EQp" secondAttribute="height" multiplier="0.6" id="eCc-Le-iAu"/>
+                                    <constraint firstItem="rFo-yv-H7N" firstAttribute="height" secondItem="gfG-ac-EQp" secondAttribute="height" multiplier="0.7" id="eCc-Le-iAu"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -900,10 +912,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="测试码组" id="u0p-za-S3O"/>
                     <connections>
+                        <outlet property="channelDown" destination="b8Z-kz-icN" id="3YC-cN-yfE"/>
+                        <outlet property="channelup" destination="q3y-zP-pOz" id="AiK-BA-2wq"/>
                         <outlet property="currentCode" destination="rXy-If-NB1" id="Ahv-mQ-d4z"/>
                         <outlet property="moreView" destination="Pyj-ON-Kfs" id="6EN-ID-SW8"/>
                         <outlet property="navTitle" destination="u0p-za-S3O" id="GxZ-ou-vHd"/>
                         <outlet property="nextBtn" destination="lAs-EF-4Pf" id="h0m-Ln-4Cj"/>
+                        <outlet property="otherPad" destination="N19-6g-nH1" id="Hr4-HH-ED9"/>
+                        <outlet property="otherViewHeight" destination="S0t-x4-jNR" id="fvm-Ve-Mkd"/>
                         <outlet property="previousBtn" destination="I4K-Vd-y6M" id="Nxg-1o-Pf9"/>
                         <outlet property="testBg" destination="gfG-ac-EQp" id="PwZ-EX-qaf"/>
                         <outlet property="testPad" destination="rFo-yv-H7N" id="IAg-uE-9yN"/>
@@ -911,7 +927,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZr-jn-xpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2902.898550724638" y="129.61956521739131"/>
+            <point key="canvasLocation" x="3086" y="-800"/>
         </scene>
     </scenes>
     <resources>
@@ -929,4 +945,7 @@
         <image name="test_btn_zuoqiehuan" width="42" height="63"/>
         <image name="test_cancle" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fk9-ON-SWT"/>
+    </inferredMetricsTieBreakers>
 </document>

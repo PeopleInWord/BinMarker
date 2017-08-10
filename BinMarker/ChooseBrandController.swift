@@ -149,7 +149,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         }
     }
     
-    private func deviceTypeStrReturn(_ deviceType:NSIndexPath) ->String?
+    fileprivate func deviceTypeStrReturn(_ deviceType:NSIndexPath) ->String?
     {
         switch deviceType.row {
         case 0:
@@ -157,7 +157,7 @@ class ChooseBrandController: UIViewController ,UITableViewDataSource,UITableView
         case 1:
             return "DVD"
         case 2:
-            return "COMBI"
+            return "AUX"
         case 3:
             return "SAT"
         default:

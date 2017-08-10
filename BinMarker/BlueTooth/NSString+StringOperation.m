@@ -19,7 +19,7 @@
     return self;
 }
 
--(NSString *)fullWithLengthCount:(NSUInteger)length;
+- (NSString *)fullWithLengthCount:(NSUInteger)length;
 {
     NSString *j=self;
     while (j.length<length) {

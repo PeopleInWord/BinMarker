@@ -326,14 +326,27 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
                     }
                     return temp
                 }()
-                let code:String = self.deviceInfo.code
-                let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
-                BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
-                    CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
+//                let code:String = self.deviceInfo.code
+//                let command=BinMakeManger.shareInstance.channelCommand(code, channelNum[index], 0)
+                
+                let code = ToolsFuntion.getFastCodeDeviceIndex(self.deviceInfo.code, deviceType: .TV, keynum: UInt(sender.tag - 100))
+                BluetoothManager.getInstance()?.sendByteCommand(with: code!, deviceID: "IrRemoteControllerA", sendType: .remoteNew, success: { (returnData) in
+                    CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
                 }, fail: { (failString) -> UInt in
-                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+                    let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+                    CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
                     return 0
                 })
+                
+                
+                
+                
+//                BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: "IrRemoteControllerA", sendType: .remoteTemp, success: { (returnData) in
+//                    CommonFunction.stopAnimation(NSLocalizedString("控制成功..", comment: "控制成功.."), returnData?.description,1)
+//                }, fail: { (failString) -> UInt in
+//                    CommonFunction.stopAnimation(NSLocalizedString("操作失败..", comment: "操作失败.."), failString,1)
+//                    return 0
+//                })
             })
         }
         
@@ -365,18 +378,30 @@ class TVController: UIViewController ,UITabBarDelegate ,UITableViewDataSource ,U
     
     @IBAction func pressBtn(_ sender: UIButton) {
         print(sender.tag)
-        let code:String = deviceInfo.code
-        let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 0)
+//        let code:String = deviceInfo.code
+//        let command = BinMakeManger.shareInstance.singleCommand(code, sender.tag, 0)
         let deviceID:String="IrRemoteControllerA"
         
         CommonFunction.startAnimation(NSLocalizedString("发送中:", comment: "发送中:") + sender.tag.description, nil)
-        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
+        
+        let code = ToolsFuntion.getFastCodeDeviceIndex(deviceInfo.code, deviceType: .TV, keynum: UInt(sender.tag - 100))
+        BluetoothManager.getInstance()?.sendByteCommand(with: code!, deviceID: deviceID, sendType: .remoteNew, success: { (returnData) in
             CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
         }, fail: { (failString) -> UInt in
             let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
             CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
             return 0
         })
+        
+        
+        
+//        BluetoothManager.getInstance()?.sendByteCommand(with: command, deviceID: deviceID, sendType: .remoteTemp, success: { (returnData) in
+//            CommonFunction.stopAnimation(NSLocalizedString("发送成功", comment: "发送成功"), NSLocalizedString("长度:", comment: "长度:") + (returnData?.description)!,0.3)
+//        }, fail: { (failString) -> UInt in
+//            let failDic=["102" : NSLocalizedString("连接设备失败,请重试", comment: "连接设备失败,请重试"),"103" : NSLocalizedString("设备服务发现失败,尝试重启蓝牙", comment: "设备服务发现失败,尝试重启蓝牙"),"104" : NSLocalizedString("写入操作失败,请重试", comment: "写入操作失败,请重试")]
+//            CommonFunction.stopAnimation(NSLocalizedString("操作失败", comment: "操作失败"), failDic[failString!],0.3)
+//            return 0
+//        })
     }
     
     @IBAction func favoriteBtn(_ sender: UIBarButtonItem,_ event:UIEvent) {

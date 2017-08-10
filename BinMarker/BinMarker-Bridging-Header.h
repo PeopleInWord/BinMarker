@@ -16,3 +16,4 @@
 #import "NetWorkingManager.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import <CommonCrypto/CommonCrypto.h>
+#import "ToolsFuntion.h"

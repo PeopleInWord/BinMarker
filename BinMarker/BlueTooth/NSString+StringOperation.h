@@ -10,7 +10,7 @@
 
 @interface NSString (StringOperation)
 
-@property (nonatomic,copy,readonly) NSString*        (^fullWithLengthCountBehide)(NSUInteger length);
+@property (nonatomic,copy,readonly) NSString *(^fullWithLengthCountBehide)(NSUInteger length);
 
 /**
  *  将字符往首位填0至指定位数
@@ -39,9 +39,6 @@
  @return <#return value description#>
  */
 -(NSUInteger)ToIntWithHex;
-
-
-
 
 /**
  转16进制

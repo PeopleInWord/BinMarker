@@ -96,6 +96,7 @@
 		642597CE1F3AAA7E005635C7 /* DeviceTypeList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 642597C21F3AA40D005635C7 /* DeviceTypeList.plist */; };
 		642597CF1F3AAA81005635C7 /* SAT.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C91F3AA414005635C7 /* SAT.json */; };
 		642597D01F3AAA83005635C7 /* TV.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C51F3AA410005635C7 /* TV.json */; };
+		64CE36C51F3C3C12007C0DF0 /* NSString+StringOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 642597C81F3AA413005635C7 /* NSString+StringOperation.m */; };
 		F1ABEF3C90BFDF926B491356 /* libPods-BinMarker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B67FA0B07EA4B3430F18242D /* libPods-BinMarker.a */; };
 /* End PBXBuildFile section */
 
@@ -680,6 +681,7 @@
 				3C125CC61E94962100D8FB92 /* CommonFunction.swift in Sources */,
 				3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */,
 				642597CA1F3AAA6D005635C7 /* ToolsFuntion.m in Sources */,
+				64CE36C51F3C3C12007C0DF0 /* NSString+StringOperation.m in Sources */,
 				3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */,
 				3C125CC91E94962100D8FB92 /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
