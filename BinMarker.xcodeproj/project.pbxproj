@@ -89,6 +89,10 @@
 		3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CEE345B1EA8966D0047BA5F /* InfraredBrandList.plist */; };
 		3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */; };
 		3CFB383B1E6FD6D10069AEC6 /* ScaningController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */; };
+		64141C3A1F666D6300A89103 /* BlueToothMethoes.m in Sources */ = {isa = PBXBuildFile; fileRef = 64141C341F666D6300A89103 /* BlueToothMethoes.m */; };
+		64141C3B1F666D6400A89103 /* BlueToothObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 64141C361F666D6300A89103 /* BlueToothObject.m */; };
+		64141C3C1F666D6400A89103 /* BlueToothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 64141C381F666D6300A89103 /* BlueToothPeripheral.m */; };
+		64141C3D1F666D6400A89103 /* InfraredBrandList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64141C391F666D6300A89103 /* InfraredBrandList.plist */; };
 		642597CA1F3AAA6D005635C7 /* ToolsFuntion.m in Sources */ = {isa = PBXBuildFile; fileRef = 642597C31F3AA40E005635C7 /* ToolsFuntion.m */; };
 		642597CB1F3AAA6F005635C7 /* BluetoothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 642597C61F3AA411005635C7 /* BluetoothManager.m */; };
 		642597CC1F3AAA78005635C7 /* AUX.json in Resources */ = {isa = PBXBuildFile; fileRef = 642597C11F3AA40C005635C7 /* AUX.json */; };
@@ -212,6 +216,13 @@
 		3CEE34671EAA0E000047BA5F /* FMDBFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMDBFunctions.swift; sourceTree = "<group>"; };
 		3CFB38391E6FD6D00069AEC6 /* ScaningController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaningController.h; sourceTree = "<group>"; };
 		3CFB383A1E6FD6D00069AEC6 /* ScaningController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaningController.m; sourceTree = "<group>"; };
+		64141C331F666D6300A89103 /* BlueToothMethoes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothMethoes.h; sourceTree = "<group>"; };
+		64141C341F666D6300A89103 /* BlueToothMethoes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothMethoes.m; sourceTree = "<group>"; };
+		64141C351F666D6300A89103 /* BlueToothObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothObject.h; sourceTree = "<group>"; };
+		64141C361F666D6300A89103 /* BlueToothObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothObject.m; sourceTree = "<group>"; };
+		64141C371F666D6300A89103 /* BlueToothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueToothPeripheral.h; sourceTree = "<group>"; };
+		64141C381F666D6300A89103 /* BlueToothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueToothPeripheral.m; sourceTree = "<group>"; };
+		64141C391F666D6300A89103 /* InfraredBrandList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfraredBrandList.plist; sourceTree = "<group>"; };
 		642597BF1F3AA40B005635C7 /* DVD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DVD.json; sourceTree = "<group>"; };
 		642597C01F3AA40C005635C7 /* NSString+StringOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+StringOperation.h"; sourceTree = "<group>"; };
 		642597C11F3AA40C005635C7 /* AUX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AUX.json; sourceTree = "<group>"; };
@@ -450,6 +461,13 @@
 		642597BE1F3AA3D6005635C7 /* BlueTooth */ = {
 			isa = PBXGroup;
 			children = (
+				64141C331F666D6300A89103 /* BlueToothMethoes.h */,
+				64141C341F666D6300A89103 /* BlueToothMethoes.m */,
+				64141C351F666D6300A89103 /* BlueToothObject.h */,
+				64141C361F666D6300A89103 /* BlueToothObject.m */,
+				64141C371F666D6300A89103 /* BlueToothPeripheral.h */,
+				64141C381F666D6300A89103 /* BlueToothPeripheral.m */,
+				64141C391F666D6300A89103 /* InfraredBrandList.plist */,
 				642597C11F3AA40C005635C7 /* AUX.json */,
 				642597C91F3AA414005635C7 /* SAT.json */,
 				642597BF1F3AA40B005635C7 /* DVD.json */,
@@ -599,6 +617,7 @@
 				3C2A727B1E790E2100137EAB /* 2314.bin in Resources */,
 				642597CF1F3AAA81005635C7 /* SAT.json in Resources */,
 				3CEE34591EA8966D0047BA5F /* InfraredBrandList.plist in Resources */,
+				64141C3D1F666D6400A89103 /* InfraredBrandList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +688,7 @@
 				3C3A11CC1E762F5700C9E9E3 /* AMPController.swift in Sources */,
 				642597CB1F3AAA6F005635C7 /* BluetoothManager.m in Sources */,
 				3CDD64C51EB1F72200AD1599 /* HTTPForSoapFunction.swift in Sources */,
+				64141C3A1F666D6300A89103 /* BlueToothMethoes.m in Sources */,
 				3C33FA2F1EB072C800432C8C /* DeviceInfo.swift in Sources */,
 				3C4C878F1EB2E5F400495F97 /* NetWorkingManager.m in Sources */,
 				3C3A11CA1E73A64F00C9E9E3 /* BOXController.swift in Sources */,
@@ -682,11 +702,13 @@
 				3C482FE71E8D0F1B00012E7D /* UserInfoController.swift in Sources */,
 				642597CA1F3AAA6D005635C7 /* ToolsFuntion.m in Sources */,
 				64CE36C51F3C3C12007C0DF0 /* NSString+StringOperation.m in Sources */,
+				64141C3C1F666D6400A89103 /* BlueToothPeripheral.m in Sources */,
 				3CCF5C5A1E9768F700BFC567 /* TVController.swift in Sources */,
 				3C125CC91E94962100D8FB92 /* UIViewController+NamePrint.m in Sources */,
 				3C0D31941DDF054F00D78924 /* ChooseBrandController.swift in Sources */,
 				3C4F51501E7394CF007E32F2 /* DVDController.swift in Sources */,
 				3CE4EA221EA74B77005D0CC7 /* FavoriteSubScroll.swift in Sources */,
+				64141C3B1F666D6400A89103 /* BlueToothObject.m in Sources */,
 				3C316F601EBC82D4005D30E1 /* FavoriteInfo.swift in Sources */,
 				3C482FE01E8C985600012E7D /* LoginController.swift in Sources */,
 				3CEE34681EAA0E000047BA5F /* FMDBFunctions.swift in Sources */,

@@ -8,32 +8,22 @@
 
 #import "ToolsFuntion.h"
 #import "NSString+StringOperation.h"
-
-@interface ToolsFuntion()
-
-@property (nonatomic , strong)NSDictionary *titleList;
-
-@end
-
 @implementation ToolsFuntion
-
--(NSDictionary *)titleList
-{
-    if (!_titleList) {
-        _titleList = @{
-                       @"TV":@[@"format_num",@"custom_byte",@"use_byte",@"custom_data",@"电源",@"频道-",@"音量-",@"静相(STILL)",@"双画面",@"YELLOW",@"回看",@"菜单",@"1",@"4",@"7",@"0",@"节目单",@"静音",@"LEFT",@"DOWN",@"2",@"5",@"8",@"返回",@"RED",@"UP",@"确认",@"退出",@"3",@"6",@"9",@"BLUE",@"电视/视频",@"时间",@"RIGHT",@"频道+",@"音量+",@"喜爱",@"信号源",@"屏显",@"SYS",@"GREEN",@"日历",@"功能",@"图像",@"声音",@"游戏",@"-/--",@"下一首",@"上一首"],
-                       @"DVD":@[@"format_num",@"custom_byte",@"use_byte",@"custom_data",@"电源",@"音量-",@"A-B",@"语言",@"暂停",@"重复",@"菜单",@"1",@"4",@"7",@"0",@"角度",@"静音",@"LEFT",@"DOWN",@"2",@"5",@"8",@"返回",@"快退",@"UP",@"确认",@"清除",@"3",@"6",@"9",@"快进",@"切换",@"停止",@"RIGHT",@"音量+",@"字幕",@"缩放",@"屏显",@"进/出仓",@"播放",@"标题",@"设置",@"制式",@"声道",@"编程",@"+10",@"下一曲",@"上一曲"],
-                       @"AUX":@[@"format_num",@"custom_byte",@"use_byte",@"custom_data",@"POWER",@"CH-",@"VOL-",@"6CH INPUT",@"PAUSE",@"MENU",@"1",@"4",@"7",@"0",@"MUTE",@"LEFT",@"DOWN",@"2",@"5",@"8",@"RESET",@"REW",@"UP",@"OK",@"3",@"6",@"9",@"FF",@"STOP",@"RIGHT",@"CH+",@"VOL+",@"PLAY",@"SLEEP",@"声道模式",@"ENTER(-/--)",@"声场+",@"声场－"],
-                       @"SAT":@[@"format_num",@"custom_byte",@"use_byte",@"custom_data",@"POWER",@"CH-",@"VOL-",@"输入法/*/状态",@"指南/预告",@"PAUSE/时移",@"回看",@"菜单/主页",@"1",@"4",@"7",@"0",@"节目单/导视",@"MUTE",@"LEFT",@"DOWN",@"2",@"5",@"8",@"返回",@"REW",@"UP",@"OK",@"退出",@"3",@"6",@"9",@"FF",@"电视/视讯",@"STOP",@"RIGHT",@"CH+",@"VOL+",@"喜爱",@"点播",@"资讯/SUB",@"PLAY",@"证券/股票",@"设置/预订",@"帮助",@"声道",@"邮件/邮箱",@"信息/#",@"下页",@"上页"]
-                       };
-    }
-    return _titleList;
-}
-
-
 
 
 #pragma mark 共有方法
+
++ (void)openErrorAlertWithTarget:(UIViewController *)target errorCode:(NSString *)errorCode
+{
+    NSDictionary *errDic = @{@"403":@"蓝牙未开启",@"404":@"设备没有广播或者不在附近",@"101":@"设备连接超时断开",@"102":@"断开时候发生异常",@"103":@"设备服务列表加载失败",@"104":@"命令写入失败",@"105":@"设备没有获得反馈值",@"106":@"红外设备回应失败"};
+    NSString *note = [NSString stringWithFormat:@"错误代码:%@\n%@",errorCode,errDic[errorCode]] ;
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"错误提示" message:note preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }]];
+    [target presentViewController:alert animated:YES completion:nil];
+}
+
 + (NSString *)getTypeString:(RemoteDevice)deviceType {
     NSString *typeString = nil;
     switch (deviceType) {
@@ -63,14 +53,9 @@
     return typeString;
 }
 
-
 + (NSString *)getDeviceNum:(RemoteDevice)deviceType {
-    NSString *deviceTypeStr  = @((NSUInteger)deviceType).stringValue;
-    return [deviceTypeStr fullWithLengthCount:3];
+    return [@((NSUInteger)deviceType+1).stringValue fullWithLengthCount:3];
 }
-
-
-
 
 /**
  得到一条编码顺序
@@ -94,7 +79,7 @@
 
 /**
  得到功能序号
-
+ 
  @param deviceType <#deviceType description#>
  @return <#return value description#>
  */
@@ -213,7 +198,7 @@
         strSelect = [strSelect stringByAppendingString:temp];
     }];
     
-    NSLog(@"%@",strSelect);
+//    NSLog(@"%@",strSelect);
     return strSelect;
 }
 
@@ -378,13 +363,20 @@
 
 + (NSString *)getFavoriteCodeWithDeviceIndex:(NSString *)deviceIndexStr deviceType:(RemoteDevice)deviceType channelIndex:(NSString *)channel
 {
+    NSString *prefix = @"254";
     NSString *mode_num = @"161";
     NSString *dev_num = [self getDeviceNum:deviceType];
     NSUInteger highBit =[@(channel.integerValue/100).stringValue ToIntWithHex];
     NSString *highBitStr = [@(highBit).stringValue fullWithLengthCount:3];
     NSUInteger lowBit =[@(channel.integerValue%100).stringValue ToIntWithHex];
     NSString *lowBitString =[@(lowBit).stringValue fullWithLengthCount:3];
-    return [[NSString stringWithFormat:@"%@%@%@%@",mode_num,dev_num,highBitStr,lowBitString] fullWithLengthCountBehide:3];
+    
+    NSUInteger highDeviceIndexBit =[@(deviceIndexStr.integerValue/100).stringValue ToIntWithHex];
+    NSString *highDeviceIndexBitStr = [@(highDeviceIndexBit).stringValue fullWithLengthCount:3];
+    NSUInteger lowDeviceIndexBit =[@(deviceIndexStr.integerValue%100).stringValue ToIntWithHex];
+    NSString *lowDeviceIndexBitString =[@(lowDeviceIndexBit).stringValue fullWithLengthCount:3];
+    
+    return [[NSString stringWithFormat:@"%@%@%@%@%@%@%@",prefix,mode_num,dev_num,highDeviceIndexBitStr,lowDeviceIndexBitString,highBitStr,lowBitString] fullWithLengthCountBehide:57];
     
 }
 

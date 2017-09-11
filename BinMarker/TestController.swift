@@ -97,7 +97,8 @@ class TestController: UIViewController,UIApplicationDelegate{
     func initOtherView() -> () {
         
         var funtions = ToolsFuntion.getOriginOrder(RemoteDevice(rawValue: UInt(deviceType.row))!)
-        funtions?.removeSubrange(Range.init(NSMakeRange(0, 4))!)
+        funtions?.removeSubrange(0..<4)
+//        funtions?.removeSubrange(Range.init(NSMakeRange(0, 4))!)
         let funTags = ToolsFuntion.getfuntionOrder(RemoteDevice(rawValue: UInt(deviceType.row))!)
         var lineCount : CGFloat = CGFloat((funtions?.count)! / 3)
         if (funtions?.count)! % 3 == 0 {
